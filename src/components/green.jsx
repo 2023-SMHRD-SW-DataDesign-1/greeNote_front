@@ -5,6 +5,7 @@ const green = () => {
     <div>green
 
     <h1>apple</h1>
+    <h1>apple2</h1>
     </div>
     
   )
