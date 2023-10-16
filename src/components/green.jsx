@@ -2,7 +2,11 @@ import React from 'react'
 
 const green = () => {
   return (
-    <div>green</div>
+    <div>green
+
+    <h1>apple</h1>
+    </div>
+    
   )
 }
 
