@@ -1,0 +1,90 @@
+/* Header-home.css (별도의 CSS 파일) */
+@font-face {
+  font-family: 'KCC-Ganpan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 반응형 웹을 만들기 위해 미디어 쿼리 사용 */
+@media screen and (max-width: 768px) {
+  .blank {
+    margin: 0 5px;
+    /* 화면이 작을 때 간격 조절 */
+  }
+
+  .logo img {
+    width: 100%;
+    /* 로고 크기 줄임 */
+  }
+
+  .nav_menu a {
+    width: auto;
+    /* 텍스트에 따라 너비 조정 */
+    text-align: center;
+  }
+}
+
+header {
+  background-color: #E7F1E9;
+  padding: 2% 0;
+}
+
+.main_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  /* Flexbox 설정 */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.logo {
+  /* 로고 div */
+  width: auto;
+}
+
+.logo img { 
+  /* 로고 */
+  font-family: 'KCC-Ganpan';
+  width: 100%;
+  min-width: 180px;
+}
+
+.nav_menu {
+  display: flex;
+  text-align: center;
+  /* 아이콘 박스 크기 조정 */
+  width: 100px;
+}
+
+.mypage, .logout {
+  /* 아이콘 div 거리두기 조정 */
+  padding-right: 25%;
+}
+
+.nav_menu a {
+  margin-right: 0;
+  text-decoration: none;
+  color: #000000;
+  width: auto;
+  text-align: right;
+}
+
+.nav_menu svg {
+  /* 부트 스트랩 svg태그 아이콘 크기 조정 */
+  width: 35px;
+}
