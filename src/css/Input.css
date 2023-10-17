@@ -1,4 +1,5 @@
-/* Date.css (별도의 CSS 파일) */
+/* Input.css (별도의 CSS 파일) */
+
 @font-face {
     font-family: 'KCC-Ganpan';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
@@ -13,29 +14,44 @@
     font-style: normal;
 }
 
-.date_container {
-    font-family: 'NanumSquareNeo-Variable';
-    /* 범위 및 크기 지정 */
-    padding: 1%;
-    margin-left: 3%;
-    margin-right: 3%;
+.join_id,
+.join_pw,
+.join_name,
+.join_nickname {
+    /* 서로 상하 위치 조정 */
+    margin-top: 7%;
 
-    width: 94%;
+    /* 범위 및 크기 지정 */
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
     height: auto;
-    border-radius: 0.7em;
-    background-color: #8AC4A3;
+    padding: 2%;
+    padding-left: 4%;
+
     /* 내용 가운데 정렬 */
-    /* display: flex; */
+    text-align: left;
+
+    /* css */
+    border-radius: 0.7em;
+    background-color: #F2F2F2;
+    color: #A6A6A6;
+    border: none;
+}
+
+/********************************* 로고 이미지 css */
+.input_logo {
+    /* 상하 위치 조정 */
+    margin-top: 20%;
+    margin-bottom: 3%;
+
+    /* 내용 가운데 정렬 */
     justify-content: space-around;
     align-items: center;
     text-align: center;
 }
 
-.nav_menu2 a {
-    color: #000000;
-}
-
-.date {
-    font-weight: bolder;
-    font-size: 25px;
+.input_logo img {
+    position: relative;
+    height: 70px;
 }

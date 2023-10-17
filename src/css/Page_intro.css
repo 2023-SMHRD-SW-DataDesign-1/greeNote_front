@@ -1,0 +1,94 @@
+/* Intro.css (별도의 CSS 파일) */
+
+@font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.intro_body {
+    font-family: 'NanumSquareNeo-Variable';
+    background-color: #DDEFC7;
+}
+
+.intro_container {
+    /* 크기 지정 */
+    height: 100%;
+    max-height: 500px;
+    width: 100%;
+
+    /* 내용 가운데 정렬 */
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    /* 상하 위치 조정 */
+    margin-top: 50%;
+}
+
+/********************************* 로고 이미지 css */
+.intro_logo {
+    margin-bottom: 30%;
+}
+
+.intro_logo img {
+    position: relative;
+    height: 110px;
+}
+
+/********************************** 버튼 태그 css */
+.login_button,
+.join_button {
+    position: relative;
+    top: 50%;
+    border: 1px solid #335A3B;
+    margin-bottom: 5%;
+    display: inline-block;
+
+    /* 범위 및 크기 지정 */
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    height: auto;
+
+    /* css */
+    border-radius: 0.7em;
+    background-color: #DDEFC7;
+
+    /* 내용 가운데 정렬 */
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.login_button:hover {
+    background-color: #335A3B;
+}
+
+/********************************* link 태그 css */
+.button_link {
+    padding: 3%;
+    border-radius: 0.7em;
+    font-size: 17px;
+    color: black;
+    text-decoration-line: none;
+
+    /* div태그와 hover같이 작동 */
+    display: block;
+    width: 100%;
+}
+
+/* Link태그 hover */
+.join_button a:hover,
+.login_button a:hover {
+    background-color: #335A3B;
+    color: white;
+}

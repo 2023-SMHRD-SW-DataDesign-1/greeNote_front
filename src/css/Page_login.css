@@ -1,4 +1,4 @@
-/* Intro.css (별도의 CSS 파일) */
+/* login.css (별도의 CSS 파일) */
 
 @font-face {
     font-family: 'KCC-Ganpan';
@@ -14,39 +14,20 @@
     font-style: normal;
 }
 
+/* 폰트 설정 */
 * {
-    background-color: #DDEFC7;
     font-family: 'NanumSquareNeo-Variable';
 }
-
-.login_button {
-    /* 범위 및 크기 지정 */
-    padding: 1%;
-    margin-left: 3%;
-    margin-right: 3%;
-
-    width: 94%;
-    height: auto;
-    border-radius: 0.7em;
-    background-color: #335A3B;
-    
-    /* 내용 가운데 정렬 */
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
+.logo_font {
+    font-family: 'KCC-Ganpan';
+    font-size: 230%;
+}
+.etc_font {
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 130%;
 }
 
-.login_button {
-    /* 범위 및 크기 지정 */
-    padding: 1%;
-    margin-left: 3%;
-    margin-right: 3%;
-
-    width: 94%;
-    height: auto;
-    border-radius: 0.7em;
-    background-color: #335A3B;
-    
+.login {
     /* 내용 가운데 정렬 */
     justify-content: space-around;
     align-items: center;

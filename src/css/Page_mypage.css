@@ -1,0 +1,111 @@
+/* Mypage.css (별도의 CSS 파일) */
+
+@font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mypage {
+    /* 내용 가운데 정렬 */
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.text2 {
+    /* 서로 상하 위치 조정 */
+    margin-top: 7%;
+
+    /* 범위 및 크기 지정 */
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    height: auto;
+    padding-left: 2%;
+
+    /* 내용 가운데 정렬 */
+    text-align: left;
+
+    /* css */
+    border-top-left-radius: 0.7em;
+    border-top-right-radius: 0.7em;
+    font-weight: bolder;
+    background-color: #F2F2F2;
+}
+
+.session_info {
+    /* 범위 및 크기 지정 */
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    height: auto;
+    padding: 2%;
+    padding-top: 0;
+    padding-left: 4%;
+
+    /* 내용 가운데 정렬 */
+    text-align: left;
+
+    /* css */
+    border-bottom-left-radius: 0.7em;
+    border-bottom-right-radius: 0.7em;
+    background-color: #F2F2F2;
+}
+
+.mypage_pw,
+.mypage_nickname {
+    /* 범위 및 크기 지정 */
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    height: auto;
+    padding: 2%;
+    padding-left: 4%;
+
+    /* 내용 가운데 정렬 */
+    text-align: left;
+
+    /* css */
+    border-bottom-left-radius: 0.7em;
+    border-bottom-right-radius: 0.7em;
+    background-color: #F2F2F2;
+    color: #A6A6A6;
+    border: none;
+}
+
+/********************************** 버튼 태그 css */
+.complete_button {
+    position: relative;
+    top: 50%;
+    border: 1px solid #335A3B;
+    margin-bottom: 5%;
+    display: inline-block;
+
+    /* 범위 및 크기 지정 */
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    height: auto;
+
+    /* css */
+    border-radius: 0.7em;
+    background-color: #DDEFC7;
+
+    /* 내용 가운데 정렬 */
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.complete_button:hover {
+    background-color: #335A3B;
+}

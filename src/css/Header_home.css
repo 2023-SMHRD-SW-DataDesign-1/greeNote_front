@@ -53,7 +53,7 @@ nav {
   width: 100px;
 }
 
-.mypage, .logout {
+.icon_mypage, .icon_logout {
   /* 아이콘 div 거리두기 조정 */
   padding-right: 25%;
 }
