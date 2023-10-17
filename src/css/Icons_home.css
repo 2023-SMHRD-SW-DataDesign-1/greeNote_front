@@ -1,0 +1,41 @@
+/* Icons_home.css (별도의 CSS 파일) */
+
+@font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.foot_menu {
+  margin: 2%;
+  width: 96%;
+  height: 60px;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  /* 아이콘 div 가운데 정렬 */
+  position: relative;
+}
+.icon_AI, .icon_filpBook {
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  /* box_shadow: 왼오 위아래 퍼짐정도 진하기 */
+  box-shadow: 0px 1px 10px 0px grey;
+  border-radius: 15%;
+}
+.icon_AI img, .icon_filpBook img { 
+  /* 아이콘 크기 조정 */
+  width: 35px;
+  /* 아이콘 div 가운데 정렬 */
+  top: 50%;
+  transform: translateY(35%);
+}

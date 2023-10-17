@@ -13,24 +13,6 @@
   font-style: normal;
 }
 
-/* 반응형 웹을 만들기 위해 미디어 쿼리 사용 */
-@media screen and (max-width: 768px) {
-  .blank {
-    margin: 0 5px;
-    /* 화면이 작을 때 간격 조절 */
-  }
-
-  .logo img {
-    width: 100%;
-    /* 로고 크기 줄임 */
-  }
-
-  .nav_menu a {
-    width: auto;
-    /* 텍스트에 따라 너비 조정 */
-    text-align: center;
-  }
-}
 
 header {
   background-color: #E7F1E9;

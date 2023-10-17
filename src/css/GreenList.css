@@ -1,23 +1,87 @@
 /* GreenList.css (별도의 CSS 파일) */
 
 @font-face {
-    font-family: 'KCC-Ganpan';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'KCC-Ganpan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .list_container {
   font-family: 'NanumSquareNeo-Variable';
-  margin: 2%;
+  /* 범위 지정 */
+  margin-left: 3%;
+  margin-right: 3%;
+  padding-top: 3%;
+  width: 94%;
   background-color: #F2F2F2;
-  height: 150px;
-  width: 100%;
+  height: auto;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.all,
+.new,
+.add {
+  background-color: #335A3B;
+  color: white;
+  /* 모양 만들기 */
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  /* 내부 text 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.all {
+  background-color: #335A3B;
+  color: white;
+  /* 내부 text 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-family: 'NanumSquareNeo-Variable';
+  /* 범위 지정 */
+  margin-left: 3%;
+  margin-right: 3%;
+  padding-bottom: 3%;
+  width: 94%;
+  background-color: #F2F2F2;
+  height: auto;
+
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+
+.all2 {
+  position: relative;
+}
+
+.new2 {
+  position: relative;
+  left: 0.5%;
+}
+
+.add2 {
+  position: relative;
+  left: 0.5%;
 }
