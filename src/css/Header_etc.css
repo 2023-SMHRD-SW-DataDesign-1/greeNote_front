@@ -1,3 +1,16 @@
+/************************************** 회원정보수정/회원가입 title */
+.main_title {
+  /* 폰트 */
+  font-weight: bolder;
+  font-size: 150%;
+
+  /* 내용 가운데 정렬 */
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+
 /************************************** AiHeader.jsx */
 .icon_home a {
   margin-right: 0;
@@ -13,7 +26,7 @@
 
 .icon_home svg {
   /* 부트 스트랩 svg태그 아이콘 크기 조정 */
-  width: 35px;
+  width: 33px;
 }
 
 /************************************** Header_diary.jsx 삭제 아이콘 */
@@ -24,7 +37,7 @@
 
 .icon_bin svg {
   /* 부트 스트랩 svg태그 아이콘 크기 조정 */
-  width: 35px;
+  width: 33px;
 }
 
 .header_diary {

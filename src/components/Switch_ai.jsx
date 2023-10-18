@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Switch = (props) => {
+const Switch_ai = () => {
 
     return (
-        <div class="switch_control"> {/* 스위치 버튼 */}
+        <div className="switch_ai"> {/* 스위치 버튼 */}
             <div className='text3'>
-                {props.name}
+                AI 진단
             </div>
-            <div class="check">
+            <div className="check">
                 <input id="check-5" type="checkbox" />
                 <label for="check-5" />
             </div>
@@ -15,4 +15,4 @@ const Switch = (props) => {
     )
 }
 
-export default Switch
+export default Switch_ai

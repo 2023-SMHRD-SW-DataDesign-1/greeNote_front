@@ -11,6 +11,7 @@ import FilpBook from './pages/FilpBook';
 import AddGreen from './pages/AddGreen';
 import MyGreen from './pages/MyGreen';
 import GreenDiary from './pages/GreenDiary';
+import WriteDiary from './pages/WriteDiary';
 
 /* css파일 */
 import './css/Header_home.css';
@@ -31,6 +32,8 @@ import './css/Page_mygreen.css';
 import './css/GreenList_all.css';
 import './css/Page_greenDiary.css';
 import './css/Header_etc.css';
+import './css/Page_writeDiary.css';
+import './css/Switch_ai.css';
 
 
 /* input페이지 */
@@ -52,9 +55,11 @@ function App() {
       <Route path='/mypage' element={<Mypage/>}></Route>
       <Route path='/ai' element={<Ai/>}></Route>
       <Route path='/filpbook' element={<FilpBook/>}></Route>
-      <Route path='/addGreen' element={<AddGreen/>}></Route>
-      <Route path='/myGreen' element={<MyGreen/>}></Route>
+      <Route path='/addgreen' element={<AddGreen/>}></Route>
+      <Route path='/mygreen' element={<MyGreen/>}></Route>
       <Route path='/greendiary' element={<GreenDiary/>}></Route>
+      <Route path='/Writediary' element={<WriteDiary/>}></Route>
+
     </Routes>
   );
 }

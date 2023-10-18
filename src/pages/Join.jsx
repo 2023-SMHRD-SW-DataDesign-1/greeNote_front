@@ -10,6 +10,7 @@ const Join = () => {
       <div className='main_title'>
         회원가입
       </div>
+      
       <div className='join_input'>
         <input
           className='join_id'
