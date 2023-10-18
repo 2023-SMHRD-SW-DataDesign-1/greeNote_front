@@ -13,6 +13,9 @@ import MyGreen from './pages/MyGreen';
 import GreenDiary from './pages/GreenDiary';
 import WriteDiary from './pages/WriteDiary';
 
+/* 테스트용 페이지!! 나중에 삭제 예정 */
+import TestJoin from './pages/TestJoin';
+
 /* css파일 */
 import './css/Header_home.css';
 import './css/Calender.css';
@@ -60,6 +63,8 @@ function App() {
       <Route path='/greendiary' element={<GreenDiary/>}></Route>
       <Route path='/Writediary' element={<WriteDiary/>}></Route>
 
+      {/* 테스트용 페이지 */}
+      <Route path='/testJoin' element={<TestJoin/>}></Route>
     </Routes>
   );
 }
