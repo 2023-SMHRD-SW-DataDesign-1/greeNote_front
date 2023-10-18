@@ -39,7 +39,7 @@ nav {
   width: auto;
 }
 
-.logo img { 
+.logo img {
   /* 로고 */
   font-family: 'KCC-Ganpan';
   width: 100%;
@@ -53,11 +53,13 @@ nav {
   width: 100px;
 }
 
-.icon_mypage, .icon_logout {
+.icon_mypage,
+.icon_logout {
   /* 아이콘 div 거리두기 조정 */
   padding-right: 25%;
 }
 
+/* 헤더 아이콘들 css */
 .nav_menu a {
   margin-right: 0;
   text-decoration: none;
@@ -69,4 +71,16 @@ nav {
 .nav_menu svg {
   /* 부트 스트랩 svg태그 아이콘 크기 조정 */
   width: 35px;
+}
+
+/* 회원정보수정/회원가입 title */
+.main_title {
+  /* 폰트 */
+  font-weight: bolder;
+  font-size: 150%;
+
+  /* 내용 가운데 정렬 */
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }

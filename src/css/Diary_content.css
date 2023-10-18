@@ -35,8 +35,8 @@
 }
 
 .file {
-    width: 40%;
-    height: 100%;
+    width: 165px;
+    height: 165px;
     border: 1px solid grey;
 
     /* 내부 text 가운데 정렬 */
@@ -44,6 +44,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    /* css */
+    color: black;
+    text-underline: none;
 }
 
 .diary_content {
