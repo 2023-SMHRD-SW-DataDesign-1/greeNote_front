@@ -14,6 +14,9 @@ import GreenDiary from './pages/GreenDiary';
 import WriteDiary from './pages/WriteDiary';
 import DiaryDetail from './pages/DiaryDetail';
 
+/* 테스트용 페이지!! 나중에 삭제 예정 */
+import TestJoin from './pages/TestJoin';
+
 /* css파일 */
 import './css/Header_home.css';
 import './css/Calender.css';
@@ -64,6 +67,8 @@ function App() {
       <Route path='/writediary' element={<WriteDiary/>}></Route>
       <Route path='/diarydetail' element={<DiaryDetail/>}></Route>
 
+      {/* 테스트용 페이지 */}
+      <Route path='/testJoin' element={<TestJoin/>}></Route>
     </Routes>
   );
 }
