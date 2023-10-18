@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
-/* 페이지 컴포넌트 */
+/* 페이지 */
 import Main from './pages/Main';
 import Intro from './pages/Intro';
 import Login from './pages/Login';
@@ -8,6 +8,7 @@ import Join from './pages/Join';
 import Mypage from './pages/Mypage';
 import Ai from './pages/Ai';
 import FilpBook from './pages/FilpBook';
+import AddGreen from './pages/AddGreen';
 
 /* css파일 */
 import './css/Header_home.css';
@@ -22,6 +23,11 @@ import './css/AiPlant.css';
 import './css/AiPhoto.css';
 import './css/ItemPhoto.css';
 import './css/AiHeader.css';
+import './css/Page_AddGreen.css';
+import './css/Header_etc.css';
+import './css/Gardening.css';
+import './css/Switch.css';
+
 
 /* input페이지 */
 import './css/Input.css';
@@ -42,6 +48,7 @@ function App() {
       <Route path='/mypage' element={<Mypage/>}></Route>
       <Route path='/ai' element={<Ai/>}></Route>
       <Route path='/filpbook' element={<FilpBook/>}></Route>
+      <Route path='/addGreen' element={<AddGreen/>}></Route>
     </Routes>
   );
 }

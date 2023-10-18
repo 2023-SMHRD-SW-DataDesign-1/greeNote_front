@@ -29,13 +29,13 @@
     padding: 2%;
     padding-left: 4%;
 
-    /* 내용 가운데 정렬 */
+    /* 내용 왼쪽 정렬 */
     text-align: left;
 
     /* css */
     border-radius: 0.7em;
     background-color: #F2F2F2;
-    color: #A6A6A6;
+    color: #000000;
     border: none;
 }
 
@@ -54,4 +54,31 @@
 .input_logo img {
     position: relative;
     height: 70px;
+}
+
+.greenName,
+.greenStart,
+.Lastwater,
+.greenNickname,
+.greenText,
+.greenColor {
+    /* 서로 상하 위치 조정 */
+    margin-top: 7%;
+
+    /* 범위 및 크기 지정 */
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    height: auto;
+    padding: 2%;
+    padding-left: 4%;
+
+    /* 내용 왼쪽 정렬 */
+    text-align: left;
+
+    /* css */
+    border-radius: 0.7em;
+    background-color: #F2F2F2;
+    color: #000000;
+    border: none;
 }

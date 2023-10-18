@@ -8,7 +8,7 @@ const Join = () => {
         <img src="/Image/intro_logo.png" alt="logo" />
       </div>
       <div className='join'>
-        <h4>회원가입</h4>
+        회원가입
       </div>
       <div className='join_input'>
         <input
