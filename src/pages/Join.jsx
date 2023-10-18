@@ -7,7 +7,7 @@ const Join = () => {
       <div className="input_logo"> {/* 우리 로고 */}
         <img src="/Image/intro_logo.png" alt="logo" />
       </div>
-      <div className='join'>
+      <div className='main_title'>
         회원가입
       </div>
       <div className='join_input'>

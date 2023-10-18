@@ -7,7 +7,7 @@ const Mypage = () => {
             <div className="input_logo"> {/* 우리 로고 */}
                 <img src="/Image/intro_logo.png" alt="logo" />
             </div>
-            <div className='mypage'>
+            <div className='main_title'>
                 회원정보수정
             </div>
             <div className='text2'>

@@ -1,27 +1,29 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const GreenList = () => {
   return (
     <div className='greenlist'>
+
       <div className='list_container'>
-        <a href="#">
+        <Link to="/mygreen" className='button_link2'> {/* 전체선택 */}
           <div className='all'>
             ALL
           </div>
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/" className='button_link2'> {/* 대표식물 */}
           <div className='new'>
-            new
+            <img src="/Image/monstera.jpg" alt="green" width="70" height="70" />
           </div>
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/addgreen" className='button_link2'> {/* 식물추가 */}
           <div className='add'>
             add
           </div>
-        </a>
+        </Link>
       </div>
 
-      <div className='text'>
+      <div className='list_container2'>
         <div className='all2'>
           전체식물
         </div>
@@ -32,7 +34,6 @@ const GreenList = () => {
           반려 추가
         </div>
       </div>
-
     </div>
   )
 }

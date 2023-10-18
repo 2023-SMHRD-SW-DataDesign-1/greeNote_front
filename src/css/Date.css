@@ -24,6 +24,7 @@
     height: auto;
     border-radius: 0.7em;
     background-color: #8AC4A3;
+    
     /* 내용 가운데 정렬 */
     /* display: flex; */
     justify-content: space-around;

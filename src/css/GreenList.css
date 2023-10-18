@@ -14,21 +14,27 @@
   font-style: normal;
 }
 
+/****************************** 동그라미 사진 공간 */
 .list_container {
   font-family: 'NanumSquareNeo-Variable';
+
   /* 범위 지정 */
   margin-left: 3%;
   margin-right: 3%;
   padding-top: 3%;
   width: 94%;
-  background-color: #F2F2F2;
   height: auto;
-  
+
   /* 배치 조정 */
   display: flex;
   text-align: center;
   justify-content: space-around;
   position: relative;
+
+  /* css */
+  background-color: #F2F2F2;
+  border-top-left-radius: 0.7em;
+  border-top-right-radius: 0.7em;
 }
 
 .all,
@@ -36,10 +42,12 @@
 .add {
   background-color: #335A3B;
   color: white;
+
   /* 모양 만들기 */
   border-radius: 50%;
   width: 70px;
   height: 70px;
+
   /* 내부 text 가운데 정렬 */
   display: flex;
   flex-direction: column;
@@ -57,22 +65,43 @@
   align-items: center;
 }
 
-.text {
+/* 저장된 사진 이미지 */
+.new img {
+  /* 모양 만들기 */
+  border-radius: 50%;
+  width: 63px;
+  height: 63px;
+
+  /* 내부 text 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/****************************** 동그라미 아래 title 공간 */
+.list_container2 {
   font-family: 'NanumSquareNeo-Variable';
+
   /* 범위 지정 */
   margin-left: 3%;
   margin-right: 3%;
   padding-bottom: 3%;
   width: 94%;
-  background-color: #F2F2F2;
   height: auto;
 
+  /* 정렬 */
   display: flex;
   text-align: center;
   justify-content: space-around;
   position: relative;
-}
 
+  /* css */
+  background-color: #F2F2F2;
+  border-bottom-left-radius: 0.7em;
+  border-bottom-right-radius: 0.7em;
+}
 
 .all2 {
   position: relative;
