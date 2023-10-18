@@ -13,14 +13,14 @@ import MyGreen from './pages/MyGreen';
 
 /* css파일 */
 import './css/Header_home.css';
-import './css/Calender.css';
+import './css/Calender.scss';
 import './css/GreenList.css';
 import './css/Icons_home.css';
 import './css/Header_home2.css';
 import './css/Date.css';
 import './css/Diary_content.css';
 import './css/Page_intro.css';
-import './css/AiPlant.css';
+import './css/AiPlant.scss';
 import './css/AiPhoto.css';
 import './css/ItemPhoto.css';
 import './css/AiHeader.css';
@@ -36,6 +36,7 @@ import './css/Input.css';
 import './css/Page_join.css';
 import './css/Page_login.css';
 import './css/Page_mypage.css';
+
 
 
 
