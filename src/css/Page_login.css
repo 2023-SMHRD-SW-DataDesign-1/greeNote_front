@@ -27,7 +27,7 @@
     font-size: 130%;
 }
 
-.login {
+.login { 
     /* 내용 가운데 정렬 */
     justify-content: space-around;
     align-items: center;

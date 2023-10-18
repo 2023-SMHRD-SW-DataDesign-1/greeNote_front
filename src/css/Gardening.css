@@ -1,0 +1,77 @@
+/* Gardening.css (별도의 CSS 파일) */
+
+@font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.gardening_container {
+    /* 내용 가운데 정렬 */
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    /* 위치 조정 */
+    position: relative;
+    left: -20%;
+    margin-top: 10%;
+
+    /* 폰트 */
+    font-weight: bolder;
+    font-size: 120%;
+}
+
+.text3 {
+    width: 230px;
+}
+
+.info_text {
+    color: red;
+    text-align: right;
+    font-size: small;
+
+    /* 위치 조정 */
+    position: relative;
+    right: 15%;
+    margin-bottom: 1%;
+}
+
+/********************************** 버튼 태그 css */
+.complete_button {
+    position: relative;
+    top: 50%;
+    border: 1px solid #335A3B;
+    margin-bottom: 5%;
+    display: inline-block;
+
+    /* 범위 및 크기 지정 */
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    height: auto;
+
+    /* css */
+    border-radius: 0.7em;
+    background-color: #DDEFC7;
+
+    /* 내용 가운데 정렬 */
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.complete_button:hover {
+    background-color: #335A3B;
+}
+

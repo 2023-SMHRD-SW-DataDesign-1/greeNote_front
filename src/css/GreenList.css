@@ -23,6 +23,8 @@
   width: 94%;
   background-color: #F2F2F2;
   height: auto;
+  
+  /* 배치 조정 */
   display: flex;
   text-align: center;
   justify-content: space-around;

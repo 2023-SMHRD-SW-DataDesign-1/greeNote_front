@@ -8,7 +8,7 @@ const Mypage = () => {
                 <img src="/Image/intro_logo.png" alt="logo" />
             </div>
             <div className='mypage'>
-                <h4>회원정보수정</h4>
+                회원정보수정
             </div>
             <div className='text2'>
                 이름
