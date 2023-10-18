@@ -1,0 +1,23 @@
+.top_container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column; /* 아이템을 수직으로 나열합니다 */
+    justify-content: space-between; /* 아이템을 위아래로 균등하게 분배합니다 */
+    align-items: center; 
+}
+
+.photo_container{
+    width: 440px;
+    height: 500px;
+    background-color: bisque;
+    display: flex;
+    
+
+}
+
+.upload_btn{
+    margin: 30px;
+    margin-left: 330px;
+    fill:rgb(134, 207, 127)
+}
