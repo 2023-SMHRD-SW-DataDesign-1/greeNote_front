@@ -1,4 +1,4 @@
-/* 다이어리 작성하는 페이지 */
+/* 개별 다이어리 보는 페이지 */
 
 import React from 'react'
 import AiHeader from '../components/AiHeader'
@@ -8,38 +8,31 @@ import Date from '../components/Date'
 import Green_photo from '../components/Green_photo'
 import Input_diaryWrite from '../components/Input_diaryWrite'
 import { Link } from 'react-router-dom'
-import Footer_diary from '../components/Footer_diary'
 
-
-
-const WriteDiary = () => {
+const DiaryDetail = () => {
     return (
         <div className='writeDiary_container'>
 
             <div className='header_diary'>
-                <Switch_ai />
+                <Switch_ai /> {/* AI 진단정보 받아와야함 */}
                 <AiHeader />
             </div>
 
             <br />
             <div className='profile_container2'>
-                <Profile />
+                <Profile /> {/* 선택한 식물 정보 받아와야함 */}
             </div>
             <br />
-            <Date />
+            <Date /> {/* 날짜 받아와야함 */}
             <br />
-            <Green_photo />
+            <Green_photo /> {/* 사진 받아와야함 */}
             <br />
 
             <div className='write_container'>
-                <Input_diaryWrite />
+                <Input_diaryWrite /> {/* 내용 받아와야함 */}
             </div>
-            <Footer_diary />
 
-            <br />
-            {/*             <div className='complete_button'>
-                <Link to="/" className='button_link'>작성완료</Link>
-            </div> */}
+
 
 
 
@@ -47,4 +40,4 @@ const WriteDiary = () => {
     )
 }
 
-export default WriteDiary
+export default DiaryDetail

@@ -1,5 +1,4 @@
-/* Gardening.css (별도의 CSS 파일) */
-
+/* Input_writediary.css (별도의 CSS 파일) */
 @font-face {
     font-family: 'KCC-Ganpan';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
@@ -14,38 +13,34 @@
     font-style: normal;
 }
 
-.gardening_container {
+.write_box {
     /* 내용 가운데 정렬 */
     justify-content: space-around;
     align-items: center;
     text-align: center;
+
+    /* 상하 위치 조정 */
+    margin-bottom: 7%;
 }
 
-.title {
-    /* 위치 조정 */
-    position: relative;
-    left: -20%;
-    margin-top: 10%;
+.titleBox,
+.contentBox {
+    /* 위치 지정 */
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 100%;
+    padding: 2%;
 
-    /* 폰트 */
-    font-weight: bolder;
-    font-size: 120%;
+    /* 내용 왼쪽 정렬 */
+    text-align: left;
+
+    /* css */
+    color: #000000;
+    border: none;
 }
-
-.text3 {
-    width: 230px;
+.titleBox {
+    background-color: #DDEFC7;
 }
-
-.info_text {
-    color: red;
-    text-align: right;
-    font-size: small;
-
-    /* 위치 조정 */
-    position: relative;
-    right: 15%;
-    margin-bottom: 1%;
+.contentBox {
+    height: 200px;
 }
-
-
-

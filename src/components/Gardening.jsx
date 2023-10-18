@@ -1,6 +1,6 @@
 import React from 'react'
 import Switch from './Switch'
-import { Link } from 'react-router-dom'
+
 
 const Gardening = () => {
     return (
@@ -17,10 +17,7 @@ const Gardening = () => {
             <Switch name="영양관리"/>
             <Switch name="환기하기"/>
 
-            <br/>
-            <div className='complete_button'>
-            <Link to="/" className='button_link'>등록완료</Link>
-            </div>
+
 
 
         </div >
