@@ -10,10 +10,10 @@ const WriteDiary = () => {
     return (
         <div className='writeDiary_container'>
             <div>
-                <AiHeader />
+                <Switch_ai />
             </div>
             <div>
-                <Switch_ai />
+                <AiHeader />
             </div>
 
         </div>
