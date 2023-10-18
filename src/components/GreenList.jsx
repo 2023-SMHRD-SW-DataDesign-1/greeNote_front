@@ -11,7 +11,7 @@ const GreenList = () => {
             ALL
           </div>
         </Link>
-        <Link to="/" className='button_link2'> {/* 대표식물 */}
+        <Link to="/greendiary" className='button_link2'> {/* 대표식물 */}
           <div className='new'>
             <img src="/Image/monstera.jpg" alt="green" width="70" height="70" />
           </div>

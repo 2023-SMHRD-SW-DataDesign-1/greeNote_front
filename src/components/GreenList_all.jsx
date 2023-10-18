@@ -11,14 +11,14 @@ const GreenList_all = () => {
               ALL
             </div>
           </Link>
-          <Link to="/" className='button_link2'> {/* 대표식물 */}
+          <Link to="/greendiary" className='button_link2'> 
             <div className='green'>
               <img src="/Image/monstera.jpg" alt="green" width="70" height="70" />
             </div>
           </Link>
-          <Link to="/addgreen" className='button_link2'> {/* 식물추가 */}
+          <Link to="/greendiary" className='button_link2'> 
             <div className='green2'>
-              다른 식물
+              <img src="/Image/alocasia.jpg" alt="green" width="70" height="70" />
             </div>
           </Link>
         </div>
