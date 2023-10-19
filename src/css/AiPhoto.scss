@@ -1,5 +1,6 @@
+@use '../sass/variables' as s;
+
 .top_container{
-    margin-top: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column; /* 아이템을 수직으로 나열합니다 */
@@ -7,20 +8,25 @@
     align-items: center; 
 }
 
-.photo_container{
-    border-radius: 2%;
-    width: 330px;
-    height: 460px;
-    background-color: rgb(235, 235, 235);
+.photo_container {
+    background-color: rgb(247, 247, 247);
     display: flex;
-    
+
+    @include s.mobile {
+        width: 330px;
+        height: 460px;
+    }
 
 }
 
-.upload_btn{
-    margin: 20px;
-    margin-left: 280px;
+.upload_btn {
     border-radius: 50%;
-    fill:rgb(134, 207, 127);
+    fill: rgb(134, 207, 127);
     background-color: rgb(0, 43, 18);
+
+    @include s.mobile{
+        margin: 20px;
+        margin-left: 280px;
+    }
+
 }
