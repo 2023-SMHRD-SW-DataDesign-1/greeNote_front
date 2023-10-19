@@ -1,7 +1,31 @@
+import axios from 'axios';
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const Join = () => {
+
+  // URL 통합 관리
+  const masterURL = process.env.REACT_APP_MASTER_URL;
+
+  // 회원가입 요청 전송
+  const joinMember = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const obj = {};
+
+    formData.forEach((value, key) => {
+      obj[key] = value;
+    });
+
+    await axios.post(`${masterURL}/member/join`, obj)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
   return (
     <div className='join_container'>
       <div className="input_logo"> {/* 우리 로고 */}
@@ -11,11 +35,12 @@ const Join = () => {
         회원가입
       </div>
 
-      <form onSubmit={1}>
+      <form onSubmit={joinMember}>
         <div className='join_input'>
           <input
             className='join_id'
             placeholder='아이디'
+            name='id'
           />
           <div className='id_check'>
             이 아이디는 사용이 가능합니다.
@@ -23,19 +48,22 @@ const Join = () => {
           <input
             className='join_pw'
             placeholder='비밀번호'
+            name='password'
           />
           <input
             className='join_name'
             placeholder='이름'
+            name='username'
           />
           <input
             className='join_nickname'
             placeholder='별칭'
+            name='nickname'
           />
           <br /><br /><br /><br />
 
           <button type='submit' className='join_button'>
-            <Link to="/" className='button_link'>회원가입</Link>
+            회원가입
           </button>
         </div>
       </form>

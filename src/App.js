@@ -10,6 +10,7 @@ import Ai from './pages/Ai';
 import FilpBook from './pages/FilpBook';
 import AddGreen from './pages/AddGreen';
 import MyGreen from './pages/MyGreen';
+import AiReturn from './pages/AiReturn'
 import GreenDiary from './pages/GreenDiary';
 import WriteDiary from './pages/WriteDiary';
 import DiaryDetail from './pages/DiaryDetail';
@@ -27,9 +28,12 @@ import './css/Header_home2.css';
 import './css/Date.css';
 import './css/Diary_content.css';
 import './css/Page_intro.css';
-import './css/AiPlant.css';
+import './css/AiPlant.scss';
 import './css/AiPhoto.css';
 import './css/ItemPhoto.css';
+import './css/AiHeader.css';
+import './css/ItemAiReturn.css';
+import './css/AiPhotoReturn.css';
 import './css/Page_addGreen.css';
 import './css/Gardening.css';
 import './css/Switch.css';
@@ -52,6 +56,7 @@ import './css/Input_writeDiary.css';
 
 
 
+
 function App() {
   return (
     <Routes>
@@ -64,6 +69,7 @@ function App() {
       <Route path='/filpbook' element={<FilpBook/>}></Route>
       <Route path='/addgreen' element={<AddGreen/>}></Route>
       <Route path='/mygreen' element={<MyGreen/>}></Route>
+      <Route path='/aiReturn' element={<AiReturn/>}></Route>
       <Route path='/greendiary' element={<GreenDiary/>}></Route>
       <Route path='/writediary' element={<WriteDiary/>}></Route>
       <Route path='/diarydetail' element={<DiaryDetail/>}></Route>
