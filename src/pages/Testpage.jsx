@@ -6,7 +6,7 @@ const Testpage = () => {
     const [imageFile, setImageFile] = useState(null);
     const [previewURL, setPreviewURL] = useState(null);
 
-    const onchange = (e) => {
+    const onChange = (e) => {
         const file = e.target.files[0];
         if (file) {
             const imageURL = URL.createObjectURL(file);
@@ -15,7 +15,7 @@ const Testpage = () => {
         }
     };
 
-    const onclick = () => {
+    const onClick = () => {
         if (imageFile) {
             // 이미지 데이터를 서버로 전송하는 로직을 작성합니다.
             const formData = new FormData();
@@ -49,12 +49,12 @@ const Testpage = () => {
                     </div>
                 </div>
 
-                <button onClick={onclick}>
+                <button onClick={onClick}>
                     <div className="footer_pic">
                         <input
                             type='file'
                             accept="image/jpg,image/png,image/jpeg,image/gif"
-                            onChange={onchange}
+                            onChange={onChange}
                         />
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-image" viewBox="0 0 16 16">

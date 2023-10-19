@@ -39,8 +39,8 @@
     color: white;
     /* 모양 만들기 */
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
 
     /* 내부 text 가운데 정렬 */
     display: flex;
@@ -54,6 +54,18 @@
 
     /* 서로 상하 위치 조정 */
     margin-bottom: 1%;
+}
+
+.photoGreen img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.photoGreen2 input {
+    /* 버튼 태그로 만들면서 자동생성된 css 삭제 */
+    background: none;
+    border: none;
 }
 
 /********************************** 버튼 태그 css */
