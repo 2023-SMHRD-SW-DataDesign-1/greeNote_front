@@ -12,10 +12,10 @@ const Intro = () => {
         <img src="/Image/intro_logo.png" alt="logo" />
       </div>
       <div className='login_button'>
-        <Link to="/Login" className='button_link'>로그인</Link>
+        <Link to="/Login" className='button_links'>로그인</Link>
       </div>
       <div className='join_button'>
-        <Link to="/Join" className='button_link'>회원가입</Link>
+        <Link to="/Join" className='button_links'>회원가입</Link>
       </div>
     </div>
 

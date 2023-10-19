@@ -41,7 +41,7 @@ const Mypage = () => {
                 <br /><br /><br />
 
                 <button type='submit' className='complete_button'>
-                    <Link to="/" className='button_link'>수정완료</Link>
+                    <Link to="/" className='button_links'>수정완료</Link>
                 </button>
             </form>
 

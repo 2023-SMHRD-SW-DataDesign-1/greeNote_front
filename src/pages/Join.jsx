@@ -62,7 +62,7 @@ const Join = () => {
           />
           <br /><br /><br /><br />
 
-          <button type='submit' className='join_button'>
+          <button type='submit' className='join_button2'>
             회원가입
           </button>
         </div>

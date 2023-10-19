@@ -26,7 +26,7 @@ const Login = () => {
         <br /><br /><br /><br />
 
         <button type='submit' className='login_button'>
-          <Link to="/" className='button_link'>로그인</Link>
+          <Link to="/" className='button_links'>로그인</Link>
         </button>
       </form>
 
