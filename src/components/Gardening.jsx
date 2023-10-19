@@ -16,10 +16,6 @@ const Gardening = () => {
             <Switch name="분갈이하기"/>
             <Switch name="영양관리"/>
             <Switch name="환기하기"/>
-
-
-
-
         </div >
     )
 }
