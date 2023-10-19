@@ -7,7 +7,7 @@ import Login from './pages/Login';
 import Join from './pages/Join';
 import Mypage from './pages/Mypage';
 import Ai from './pages/Ai';
-import FilpBook from './pages/FilpBook';
+import FlipBook from './pages/FlipBook';
 import AddGreen from './pages/AddGreen';
 import MyGreen from './pages/MyGreen';
 import AiReturn from './pages/AiReturn'
@@ -27,12 +27,21 @@ import './css/Header_home2.css';
 import './css/Date.css';
 import './css/Diary_content.css';
 import './css/Page_intro.css';
+
+// ai css
+import './css/AiHeader.css';
+
+
 import './css/AiPlant.scss';
 import './css/AiPhoto.css';
 import './css/ItemPhoto.css';
-import './css/AiHeader.css';
 import './css/ItemAiReturn.css';
 import './css/AiPhotoReturn.css';
+
+// filp css
+import './css/ItemFlipBook.scss'
+import './css/FlipBook.css'
+
 import './css/Page_addGreen.css';
 import './css/Gardening.css';
 import './css/Switch.css';
@@ -65,7 +74,7 @@ function App() {
       <Route path='/join' element={<Join/>}></Route>
       <Route path='/mypage' element={<Mypage/>}></Route>
       <Route path='/ai' element={<Ai/>}></Route>
-      <Route path='/filpbook' element={<FilpBook/>}></Route>
+      <Route path='/flipbook' element={<FlipBook/>}></Route>
       <Route path='/addgreen' element={<AddGreen/>}></Route>
       <Route path='/mygreen' element={<MyGreen/>}></Route>
       <Route path='/aiReturn' element={<AiReturn/>}></Route>

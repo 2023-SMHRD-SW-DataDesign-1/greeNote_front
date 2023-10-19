@@ -1,0 +1,41 @@
+@use '../sass/variables' as s;
+
+.top_container {
+        display: flex;
+        justify-content: center;
+}
+
+.flip_container {
+    width: 330px;
+    height: 370px;
+    position: relative;
+    align-items: center;
+}
+
+
+.flip_container img {
+    @include s.mobile{
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 330px;
+    height: 370px;
+    position: relative;
+}
+    @include s.desktop{
+        display: none
+    }
+}
+
+
+.flip_text_box {
+    margin-left: 10px;
+    top: -26%;
+    left: 0;
+    transform: none;
+    bottom: 0;
+    position: relative;
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+}
+
