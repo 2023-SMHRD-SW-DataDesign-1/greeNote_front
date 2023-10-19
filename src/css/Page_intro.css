@@ -69,6 +69,7 @@
     text-align: center;
 }
 
+.join_button:hover,
 .login_button:hover {
     background-color: #335A3B;
 }
@@ -89,6 +90,5 @@
 /* Link태그 hover */
 .join_button a:hover,
 .login_button a:hover {
-    background-color: #335A3B;
     color: white;
 }
