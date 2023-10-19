@@ -94,7 +94,7 @@ const AddGreen = () => {
         <br />
 
         <button type='submit' className='complete_button'>
-          <Link to="/" className='button_link'>작성완료</Link>
+          <Link to="/" className='button_links'>작성완료</Link>
         </button>
       </form>
 
