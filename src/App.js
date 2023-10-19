@@ -10,10 +10,11 @@ import Ai from './pages/Ai';
 import FilpBook from './pages/FilpBook';
 import AddGreen from './pages/AddGreen';
 import MyGreen from './pages/MyGreen';
+import AiReturn from './pages/AiReturn'
 
 /* css파일 */
 import './css/Header_home.css';
-import './css/Calender.scss';
+import './css/Calender.css';
 import './css/GreenList.css';
 import './css/Icons_home.css';
 import './css/Header_home2.css';
@@ -24,6 +25,7 @@ import './css/AiPlant.scss';
 import './css/AiPhoto.css';
 import './css/ItemPhoto.css';
 import './css/AiHeader.css';
+import './css/ItemAiReturn.css';
 import './css/Page_AddGreen.css';
 import './css/Gardening.css';
 import './css/Switch.css';
@@ -53,6 +55,7 @@ function App() {
       <Route path='/filpbook' element={<FilpBook/>}></Route>
       <Route path='/addGreen' element={<AddGreen/>}></Route>
       <Route path='/myGreen' element={<MyGreen/>}></Route>
+      <Route path='/aiReturn' element={<AiReturn/>}></Route>
     </Routes>
   );
 }

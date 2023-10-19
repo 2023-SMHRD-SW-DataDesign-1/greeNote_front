@@ -1,4 +1,14 @@
+.ai_header_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* 아이템을 수직으로 나열합니다 */
+    align-items: center; 
+}
+
+.ai_header_box{
+    width: 360px;
+}
+
 .icon_home {
-    margin-left: 295px;
-    margin-top: 10px;
+    margin-left: 300px;
 }

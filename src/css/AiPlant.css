@@ -12,8 +12,20 @@
     font-style: normal;
 }
 
+.ai_top_container {
+    width: 360px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
+
+
+}
+
+
 .plant_container {
-    width: 100%;
+    width: 360px;
     height: 180px;
     background-color: rgb(189, 189, 189);
     justify-content: center;
@@ -72,7 +84,7 @@
 
 }
 
-.plant_main_image img{
+.plant_main_image img {
     width: 85px;
     height: 85px;
     background-color: rgb(255, 255, 255);
