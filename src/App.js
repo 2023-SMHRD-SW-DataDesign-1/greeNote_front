@@ -32,6 +32,7 @@ import './css/AiPhoto.css';
 import './css/ItemPhoto.css';
 import './css/AiHeader.css';
 import './css/ItemAiReturn.css';
+import './css/AiPhotoReturn.css';
 import './css/Page_addGreen.css';
 import './css/Gardening.css';
 import './css/Switch.css';

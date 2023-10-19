@@ -1,4 +1,5 @@
 .top_container{
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column; /* 아이템을 수직으로 나열합니다 */
@@ -7,9 +8,10 @@
 }
 
 .photo_container{
+    border-radius: 2%;
     width: 330px;
     height: 460px;
-    background-color: bisque;
+    background-color: rgb(235, 235, 235);
     display: flex;
     
 

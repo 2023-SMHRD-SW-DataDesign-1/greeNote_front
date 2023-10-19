@@ -8,9 +8,10 @@ const AiPhotoReturn = () => {
     <div className='ai_return_container'>
         <ItemAiReturn/>
 
-        <button className='retry_btn'><Link to="/ai">다시 선택하기</Link></button>
+        <div><Link to="/ai" className='retry_btn button_link'>다시 선택하기</Link></div>
         <br></br>
-        <button className='download_btn'>저장하기</button>
+        
+        <div className='download_btn button_link' >저장하기</div>
 
     </div>
 </div>

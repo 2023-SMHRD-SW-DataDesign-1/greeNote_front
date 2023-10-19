@@ -11,6 +11,8 @@
 
 .icon_home {
     margin-left: 300px;
+    margin-top: 20px;
+    fill: black;
 }
 /* 부트스트랩 아이콘 
 .icon_home a {
