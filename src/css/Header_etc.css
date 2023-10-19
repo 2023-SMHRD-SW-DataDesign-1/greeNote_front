@@ -29,22 +29,42 @@
   width: 33px;
 }
 
-/************************************** Header_diary.jsx 삭제 아이콘 */
+/************************************** Header_diary.jsx 아이콘 */
 .icon_bin {
   /* 아이콘 div 거리두기 조정 */
   padding-right: 62%;
+
+  text-decoration: none;
 }
 
 .icon_bin svg {
   /* 부트 스트랩 svg태그 아이콘 크기 조정 */
   width: 33px;
+  color: #000000;
 }
 
+/************************************** WriteDiary.jsx 아이콘 */
 .header_diary {
   /* 정렬 */
   display: flex;
   text-align: center;
   justify-content: space-around;
+  align-items: center;
 
-  padding: 3%;
+  /* 위치 및 크기 지정 */
+  width: auto;
+  height: auto;
+  padding: 5%;
+}
+
+.icon_home2 {
+  text-decoration: none;
+  width: auto;
+  text-align: right;
+}
+
+.icon_home2 svg {
+  /* 부트 스트랩 svg태그 아이콘 크기 조정 */
+  width: 33px;
+  color: #000000;
 }
