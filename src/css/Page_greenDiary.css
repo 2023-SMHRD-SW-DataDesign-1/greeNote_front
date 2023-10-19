@@ -1,4 +1,4 @@
-/* Page_join.css (별도의 CSS 파일) */
+/* Page_greenDiary.css (별도의 CSS 파일) */
 
 @font-face {
     font-family: 'KCC-Ganpan';
@@ -12,29 +12,5 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-}
-
-
-.join {
-    /* 폰트 */
-    font-weight: bolder;
-    font-size: 150%;
-
-    /* 내용 가운데 정렬 */
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
-
-/* join-button css는 Page_intro.css에! */
-
-.id_check {
-    color: red;
-    text-align: right;
-    font-size: small;
-
-    /* 위치 조정 */
-    position: relative;
-    right: 15%;
 }
 

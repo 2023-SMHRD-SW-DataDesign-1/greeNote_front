@@ -1,3 +1,5 @@
+/* 저장된 내 식물들이 보이는 리스트페이지 */
+
 import React from 'react'
 import AiHeader from '../components/AiHeader'
 import { Link } from 'react-router-dom'

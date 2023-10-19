@@ -11,6 +11,12 @@ import FilpBook from './pages/FilpBook';
 import AddGreen from './pages/AddGreen';
 import MyGreen from './pages/MyGreen';
 import AiReturn from './pages/AiReturn'
+import GreenDiary from './pages/GreenDiary';
+import WriteDiary from './pages/WriteDiary';
+import DiaryDetail from './pages/DiaryDetail';
+
+/* 테스트용 페이지!! 나중에 삭제 예정 */
+import TestJoin from './pages/TestJoin';
 
 /* css파일 */
 import './css/Header_home.css';
@@ -26,11 +32,16 @@ import './css/AiPhoto.css';
 import './css/ItemPhoto.css';
 import './css/AiHeader.css';
 import './css/ItemAiReturn.css';
-import './css/Page_AddGreen.css';
+import './css/Page_addGreen.css';
 import './css/Gardening.css';
 import './css/Switch.css';
 import './css/Page_mygreen.css';
 import './css/GreenList_all.css';
+import './css/Page_greenDiary.css';
+import './css/Header_etc.css';
+import './css/Page_writeDiary.css';
+import './css/Switch_ai.css';
+import './css/Footer_diary.css';
 
 
 /* input페이지 */
@@ -38,6 +49,7 @@ import './css/Input.css';
 import './css/Page_join.css';
 import './css/Page_login.css';
 import './css/Page_mypage.css';
+import './css/Input_writeDiary.css';
 
 
 
@@ -53,9 +65,15 @@ function App() {
       <Route path='/mypage' element={<Mypage/>}></Route>
       <Route path='/ai' element={<Ai/>}></Route>
       <Route path='/filpbook' element={<FilpBook/>}></Route>
-      <Route path='/addGreen' element={<AddGreen/>}></Route>
-      <Route path='/myGreen' element={<MyGreen/>}></Route>
+      <Route path='/addgreen' element={<AddGreen/>}></Route>
+      <Route path='/mygreen' element={<MyGreen/>}></Route>
       <Route path='/aiReturn' element={<AiReturn/>}></Route>
+      <Route path='/greendiary' element={<GreenDiary/>}></Route>
+      <Route path='/writediary' element={<WriteDiary/>}></Route>
+      <Route path='/diarydetail' element={<DiaryDetail/>}></Route>
+
+      {/* 테스트용 페이지 */}
+      <Route path='/testJoin' element={<TestJoin/>}></Route>
     </Routes>
   );
 }

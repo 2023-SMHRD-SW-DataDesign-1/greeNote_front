@@ -47,31 +47,5 @@
     margin-bottom: 1%;
 }
 
-/********************************** 버튼 태그 css */
-.complete_button {
-    position: relative;
-    top: 50%;
-    border: 1px solid #335A3B;
-    margin-bottom: 5%;
-    display: inline-block;
 
-    /* 범위 및 크기 지정 */
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 70%;
-    height: auto;
-
-    /* css */
-    border-radius: 0.7em;
-    background-color: #DDEFC7;
-
-    /* 내용 가운데 정렬 */
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
-
-.complete_button:hover {
-    background-color: #335A3B;
-}
 

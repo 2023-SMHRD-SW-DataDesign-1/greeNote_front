@@ -10,33 +10,36 @@ const Join = () => {
       <div className='main_title'>
         회원가입
       </div>
-      <div className='join_input'>
-        <input
-          className='join_id'
-          placeholder='아이디'
-        />
-        <div className='id_check'>
-          이 아이디는 사용이 가능합니다.
-        </div>
-        <input
-          className='join_pw'
-          placeholder='비밀번호'
-        />
-        <input
-          className='join_name'
-          placeholder='이름'
-        />
-        <input
-          className='join_nickname'
-          placeholder='별칭'
-        />
-        <br /><br /><br /><br />
 
-        <div className='join_button'>
-          <Link to="/" className='button_link'>회원가입</Link>
-        </div>
+      <form onSubmit={1}>
+        <div className='join_input'>
+          <input
+            className='join_id'
+            placeholder='아이디'
+          />
+          <div className='id_check'>
+            이 아이디는 사용이 가능합니다.
+          </div>
+          <input
+            className='join_pw'
+            placeholder='비밀번호'
+          />
+          <input
+            className='join_name'
+            placeholder='이름'
+          />
+          <input
+            className='join_nickname'
+            placeholder='별칭'
+          />
+          <br /><br /><br /><br />
 
-      </div>
+          <button type='submit' className='join_button'>
+            <Link to="/" className='button_link'>회원가입</Link>
+          </button>
+        </div>
+      </form>
+
 
     </div>
   )

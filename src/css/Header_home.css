@@ -73,14 +73,6 @@ nav {
   width: 35px;
 }
 
-/* 회원정보수정/회원가입 title */
-.main_title {
-  /* 폰트 */
-  font-weight: bolder;
-  font-size: 150%;
 
-  /* 내용 가운데 정렬 */
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-}
+
+
