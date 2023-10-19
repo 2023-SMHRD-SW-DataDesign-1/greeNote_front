@@ -11,6 +11,15 @@
     background-color: rgb(255, 255, 255);
 }
 
+.ai_page_info{
+    @include s.mobile{
+        display: none;
+    }
+    @include s.desktop{
+        background-color: aquamarine;
+    }
+}
+
 .plant_container {
     justify-content: center;
     display: flex;
@@ -23,17 +32,6 @@
         background-color: rgb(255, 255, 255);
     }
 
-    @include s.tablet {
-        width: 800px;
-        height: 180px;
-        background-color: rgb(5, 109, 22);
-    }
-
-    @include s.desktop {
-        width: 1000px;
-        height: 180px;
-        background-color: rgb(5, 33, 109);
-    }
 }
 
 // 식물이름
@@ -94,6 +92,11 @@
     background-color: rgb(255, 255, 255);
 
     @include s.mobile{
+        width: 85px;
+        height: 85px;
+    }
+
+    @include s.desktop{
         width: 85px;
         height: 85px;
     }

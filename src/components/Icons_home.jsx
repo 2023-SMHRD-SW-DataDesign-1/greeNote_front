@@ -8,8 +8,8 @@ const Icons_home = () => {
                 <img src="/Icon/ai.PNG" alt="ai_icon" />
             </Link>
 
-            <Link to="/filpbook" className='icon_AI'> {/* 플립북 아이콘 */}
-                <img src="/Icon/filpBook.PNG" alt="filpBook_icon" />
+            <Link to="/flipbook" className='icon_AI'> {/* 플립북 아이콘 */}
+                <img src="/Icon/flipBook.PNG" alt="flipBook_icon" />
             </Link>
 
         </div>

@@ -1,5 +1,9 @@
 .retry_btn, .download_btn{
     background-color: #46b95d;
+    width: 310px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-color: #d6d6d6;
     
 }
 
