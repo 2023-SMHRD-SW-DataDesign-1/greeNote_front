@@ -27,7 +27,6 @@ const Input_addGreen = () => {
                 className='greenColor'
                 placeholder='대표색 지정'
             />
-
         </div>
     )
 }

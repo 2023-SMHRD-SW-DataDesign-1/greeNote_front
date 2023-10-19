@@ -80,6 +80,7 @@
     text-align: center;
 }
 
-.complete_button:hover {
+.complete_button a:hover {
     background-color: #335A3B;
+    color: white;
 }

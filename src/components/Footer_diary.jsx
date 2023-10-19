@@ -27,7 +27,6 @@ const Footer_diary = () => {
                     </svg>
                 </Link>
             </div>
-
         </div>
     )
 }

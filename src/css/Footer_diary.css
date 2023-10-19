@@ -38,5 +38,16 @@
 .footer_pic,
 .footer_ok {
     /* 아이콘 div 거리두기 조정 */
-    padding-right: 5%;
+    padding-right: 3%;
+}
+
+.footer_pic,
+.footer_ok {
+    /* 버튼 태그로 만들면서 자동생성된 css 삭제 */
+    background: none;
+    border: none;
+}
+
+.footer_pic input {
+    width: 325px;
 }

@@ -1,11 +1,10 @@
 .switch_ai {
-    /* 서로 상하 위치 조정 */
-    margin-bottom: 7%;
+    /* 아이콘 div 거리두기 조정 */
+/*     padding-right: 62%; */
 
     /* 위치 및 크기 지정 */
-    margin-right: 50%;
     width: 30%;
-    height: auto;
+    height: 100%;
 
     /* css */
     border-radius: 0.7em;
@@ -14,10 +13,9 @@
 
     /* 배치 조정 */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
     align-items: center;
-    top: 7px;
 
 }
 
@@ -27,7 +25,7 @@
     --size: 25px;
 
     position: relative;
-    background: linear-gradient(90deg, #64A873, #335A3B );
+    background: linear-gradient(90deg, #64A873, #335A3B);
     line-height: 0;
     perspective: 400px;
     font-size: var(--size);
