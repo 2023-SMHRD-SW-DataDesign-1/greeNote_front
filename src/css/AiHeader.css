@@ -1,34 +1,30 @@
-.ai_header_container{
+@charset "UTF-8";
+@media (min-width: 335px) and (max-width: 757px) {
+  .top_container {
     display: flex;
     justify-content: center;
     flex-direction: column; /* 아이템을 수직으로 나열합니다 */
-    align-items: center; 
+    justify-content: space-between; /* 아이템을 위아래로 균등하게 분배합니다 */
+    align-items: center;
+  }
 }
 
-.ai_header_box{
+@media (min-width: 335px) and (max-width: 757px) {
+  .ai_header_box {
+    background-color: rgb(255, 255, 255);
     width: 360px;
+  }
 }
 
-.icon_home {
+@media (min-width: 335px) and (max-width: 757px) {
+  .icon_home {
     margin-left: 300px;
     margin-top: 20px;
     fill: black;
+  }
 }
-/* 부트스트랩 아이콘 
-.icon_home a {
-    margin-right: 0;
-    text-decoration: none;
-    color: #000000;
-    width: auto;
-    text-align: right;
-
-    /* 위치 조정 
-    margin-right: 1%;
-    position: relative;
-
+@media (min-width: 1024px) {
+  .icon_home {
+    display: none;
+  }
 }
-
-.icon_home svg {
-    /* 부트 스트랩 svg태그 아이콘 크기 조정 
-    width: 35px;
-}*/

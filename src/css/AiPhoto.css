@@ -1,26 +1,31 @@
-.top_container{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column; /* 아이템을 수직으로 나열합니다 */
-    justify-content: space-between; /* 아이템을 위아래로 균등하게 분배합니다 */
-    align-items: center; 
+@charset "UTF-8";
+.top_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* 아이템을 수직으로 나열합니다 */
+  justify-content: space-between; /* 아이템을 위아래로 균등하게 분배합니다 */
+  align-items: center;
 }
 
-.photo_container{
-    border-radius: 2%;
+.photo_container {
+  background-color: rgb(247, 247, 247);
+  display: flex;
+}
+@media (min-width: 335px) and (max-width: 757px) {
+  .photo_container {
     width: 330px;
     height: 460px;
-    background-color: rgb(235, 235, 235);
-    display: flex;
-    
-
+  }
 }
 
-.upload_btn{
+.upload_btn {
+  border-radius: 50%;
+  fill: rgb(134, 207, 127);
+  background-color: rgb(0, 43, 18);
+}
+@media (min-width: 335px) and (max-width: 757px) {
+  .upload_btn {
     margin: 20px;
     margin-left: 280px;
-    border-radius: 50%;
-    fill:rgb(134, 207, 127);
-    background-color: rgb(0, 43, 18);
+  }
 }

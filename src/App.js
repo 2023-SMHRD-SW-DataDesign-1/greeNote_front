@@ -33,14 +33,14 @@ import './css/Page_intro.css';
 import './css/AiHeader.css';
 
 
-import './css/AiPlant.scss';
+import './css/AiPlant.css';
 import './css/AiPhoto.css';
 import './css/ItemPhoto.css';
 import './css/ItemAiReturn.css';
 import './css/AiPhotoReturn.css';
 
 // filp css
-import './css/ItemFlipBook.scss'
+import './css/ItemFlipBook.css'
 import './css/FlipBook.css'
 
 import './css/Page_addGreen.css';

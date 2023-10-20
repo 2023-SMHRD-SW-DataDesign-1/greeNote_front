@@ -1,6 +1,5 @@
 import React from 'react'
 import ItemPhoto from './ItemPhoto'
-import '../css/AiPhoto.scss'
 import { Link } from 'react-router-dom'
 
 const AiPhoto = () => {

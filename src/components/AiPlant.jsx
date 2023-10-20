@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/AiPlant.scss';
+
 
 const AiPlant = () => {
   return (
