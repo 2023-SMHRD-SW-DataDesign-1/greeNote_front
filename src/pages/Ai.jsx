@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AiHeader from '../components/AiHeader'
-import AiViewBox from '../components/AiViewBox';
+import AiPhotoBox from '../components/AiPhotoBox';
 
 const Ai = () => {
 
@@ -12,7 +12,7 @@ const Ai = () => {
         <AiHeader />
       </div>
       <div>
-        <AiViewBox />
+        <AiPhotoBox />
       </div>
     </div>
     </div>

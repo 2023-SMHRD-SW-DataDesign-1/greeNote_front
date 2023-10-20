@@ -7,10 +7,10 @@ import Login from './pages/Login';
 import Join from './pages/Join';
 import Mypage from './pages/Mypage';
 import Ai from './pages/Ai';
+import AiReturn from './pages/AiReturn';
 import FlipBook from './pages/FlipBook';
 import AddGreen from './pages/AddGreen';
 import MyGreen from './pages/MyGreen';
-import AiReturn from './pages/AiReturn'
 import GreenDiary from './pages/GreenDiary';
 import WriteDiary from './pages/WriteDiary';
 import DiaryDetail from './pages/DiaryDetail';
@@ -31,14 +31,13 @@ import './css/Page_intro.css';
 
 // ai css
 import './css/AiHeader.css';
-
 import './css/AiPlant.css';
 import './css/AiPhoto.css';
 import './css/ItemPhoto.css';
 import './css/ItemAiReturn.css';
-import './css/AiPhotoReturn.css';
 
-import './css/AiViewBox.css';
+import './css/AiReturnPhoto.css'
+import './css/AiPhotoBox.css';
 
 // filp css
 import './css/ItemFlipBook.css'

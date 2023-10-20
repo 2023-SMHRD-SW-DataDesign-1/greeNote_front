@@ -8,7 +8,6 @@ const AiPhoto = () => {
             <div className='web_pageInfo'>
                 <img src='/Image/book_logo.png'></img>
                 <div className='web_infoText'>생성 AI로 나만의 이미지 만들기</div>
-
             </div>
             <div className='photo_container'>
                 <ItemPhoto />

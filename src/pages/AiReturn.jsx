@@ -1,22 +1,19 @@
 import React from 'react'
 import AiHeader from '../components/AiHeader'
-import AiPlant from '../components/AiPlant'
-import AiPhotoReturn from '../components/AiPhotoReturn'
+import AiReturnBox from '../components/AiReturnBox'
 
 const AiReturn = () => {
     return (
-        <div>
-            <div>
-                <AiHeader />
-            </div>
-            <div>
-                <AiPlant />
-            </div>
-            <div>
-                <AiPhotoReturn/>
-            </div>
-            
 
+        <div className='web_top_container'>
+            <div className='web_container'>
+                <div>
+                    <AiHeader />
+                </div>
+                <div>
+                   <AiReturnBox/>
+                </div>
+            </div>
         </div>
     )
 }
