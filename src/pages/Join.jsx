@@ -29,7 +29,7 @@ const Join = () => {
   return (
     <div className='join_container'>
       <div className="input_logo"> {/* 우리 로고 */}
-        <img src="/Image/intro_logo.png" alt="logo" />
+        <img src="/Image/book_logo.png" alt="logo" />
       </div>
 
       <div className='join_box'>

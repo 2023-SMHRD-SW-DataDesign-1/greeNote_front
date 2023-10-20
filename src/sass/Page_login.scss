@@ -23,7 +23,7 @@
 .logo_font {
     font-family: 'KCC-Ganpan';
     @include s.mobile {
-        font-size: 230%;
+        font-size: 200%;
     }
     @include s.tablet {
         font-size: 260%;
@@ -36,7 +36,7 @@
 .etc_font {
     font-family: 'NanumSquareNeo-Variable';
     @include s.mobile {
-        font-size: 130%;
+        font-size: 100%;
     }
     @include s.tablet {
         font-size: 140%;
@@ -63,7 +63,7 @@
         max-height: 500px;
 
         /* 상하 위치 조정 */
-        margin-top: 50%;
+        margin-top: 30%;
     }
 
     @include s.tablet {
@@ -92,12 +92,11 @@
 /********************************* 로고 이미지 css */
 .input_logo {
     @include s.mobile {
-        margin-bottom: 5%;
     }
 
     @include s.tablet {
         height: 150px;
-        width: 300px;
+        width: 250px;
     }
 
     @include s.desktop {
@@ -109,15 +108,15 @@
 .input_logo img {
     @include s.mobile {
         position: relative;
-        height: 110px;
+        height: 100px;
     }
 
     @include s.tablet {
-        height: 150px;
+        height: 130px;
     }
 
     @include s.desktop {
-        height: 180px;
+        height: 200px;
     }
 }
 
