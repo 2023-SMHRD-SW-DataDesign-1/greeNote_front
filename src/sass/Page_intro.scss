@@ -38,10 +38,10 @@
     @include s.tablet {
         /* 내용 가운데 정렬 */
         display: flex;
-        justify-content: center
+        justify-content: center;
 
         /* 상하 위치 조정 */
-        margin-top 25%;
+        margin-top: 25%;
     }
 
     @include s.desktop {
