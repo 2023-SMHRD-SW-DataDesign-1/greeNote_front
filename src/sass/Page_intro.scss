@@ -1,0 +1,188 @@
+/* Intro.css (별도의 CSS 파일) */
+@use '../sass/_variables.scss' as s;
+
+@font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.intro_container {
+    /* 크기 지정 */
+    height: 100%;
+    width: 100%;
+
+    /* 내용 가운데 정렬 */
+    align-items: center;
+    text-align: center;
+
+    @include s.mobile {
+        /* 내용 가운데 정렬 */
+        justify-content: space-around;
+
+        /* 크기 지정 */
+        max-height: 500px;
+
+        /* 상하 위치 조정 */
+        margin-top: 50%;
+    }
+
+    @include s.tablet {
+        /* 내용 가운데 정렬 */
+        display: flex;
+        justify-content: center;
+
+        /* 상하 위치 조정 */
+        margin-top: 25%;
+    }
+
+    @include s.desktop {
+        /* 내용 가운데 정렬 */
+        display: flex;
+        justify-content: center;
+
+        /* 상하 위치 조정 */
+        margin-top: 20%;
+    }
+}
+
+/********************************* 로고 이미지 css */
+.intro_logo {
+    @include s.mobile {
+        margin-bottom: 30%;
+    }
+
+    @include s.tablet {
+        height: 150px;
+        width: 400px;
+    }
+
+    @include s.desktop {
+        height: 200px;
+        width: 400px;
+    }
+}
+
+.intro_logo img {
+    @include s.mobile {
+        position: relative;
+        height: 110px;
+    }
+
+    @include s.tablet {
+        height: 150px;
+    }
+
+    @include s.desktop {
+        height: 180px;
+    }
+}
+
+/********************************** 버튼 태그 css */
+.buttons {
+    /* 내용 가운데 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    @include s.mobile {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.join_button2,
+.login_button,
+.join_button {
+    /* css */
+    border: 1px solid #335A3B;
+    border-radius: 0.7em;
+    background-color: #DDEFC7;
+    color: #000000;
+    font-size: 17px;
+    text-decoration-line: none;
+
+    /* 범위 및 크기 지정 */
+    display: inline-block;
+
+    @include s.mobile {
+        /* 위치 */
+        margin-bottom: 5%;
+        position: relative;
+        top: 50%;
+
+        /* 크기 */
+        height: auto;
+        width: 55%;
+    }
+
+    @include s.tablet {
+        position: relative;
+        
+        /* 위치 */
+        margin-bottom: 10%;
+
+        /* 크기 */
+        width: 180px;
+        padding: 3%;
+    }
+
+    @include s.desktop {
+        position: relative;
+
+        /* 위치 */
+        margin-bottom: 10%;
+
+        /* 크기 */
+        width: 200px;
+        padding: 3%;
+    }
+}
+
+.join_button2:hover,
+.join_button:hover,
+.login_button:hover {
+    background-color: #335A3B;
+    color: white;
+}
+
+.join_button2 {
+    padding: 10.4375px;
+}
+
+/* /********************************* link 태그 css */
+.button_links {
+    @include s.mobile {
+        padding: 3%;
+    }
+
+    /* css */
+    /*     border: 1px solid #335A3B; */
+    border-radius: 0.7em;
+    background-color: #DDEFC7;
+    color: #000000;
+    font-size: 17px;
+    text-decoration-line: none;
+
+    /* div태그와 hover같이 작동 */
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Link태그 hover */
+.join_button a:hover,
+.login_button a:hover {
+    background-color: #335A3B;
+    color: white;
+}

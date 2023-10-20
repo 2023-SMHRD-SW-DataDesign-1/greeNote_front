@@ -39,22 +39,6 @@
     border: none;
 }
 
-/********************************* 로고 이미지 css */
-.input_logo {
-    /* 상하 위치 조정 */
-    margin-top: 20%;
-    margin-bottom: 3%;
-
-    /* 내용 가운데 정렬 */
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
-
-.input_logo img {
-    position: relative;
-    height: 70px;
-}
 
 .greenName,
 .greenStart,
