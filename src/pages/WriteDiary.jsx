@@ -1,8 +1,6 @@
 /* 다이어리 작성하는 페이지 */
 
 import React, { useState } from 'react';
-import AiHeader from '../components/AiHeader'
-import Switch_ai from '../components/Switch_ai'
 import { Link } from 'react-router-dom'
 
 
