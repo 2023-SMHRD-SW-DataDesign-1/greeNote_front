@@ -1,0 +1,59 @@
+@charset "UTF-8";
+.retry_btn, .download_btn {
+  background-color: #46b95d;
+  width: 310px;
+  padding: 1%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border-color: #d6d6d6;
+  margin: 10px;
+}
+
+.retry_btn:hover, .download_btn:hover {
+  background-color: #335A3B;
+}
+
+.download_btn {
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+}
+
+/********************************* link 태그 css */
+.button_link {
+  border-radius: 0.7em;
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+  text-decoration-line: none;
+  /* div태그와 hover같이 작동 */
+  display: block;
+  width: 100%;
+}
+
+/* Link태그 hover */
+.retry_btn a:hover,
+.download_btn a:hover {
+  color: white;
+}
+
+@media (min-width: 360px) and (max-width: 799px) {
+  .return_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .return_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .return_btn_box {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,23 @@
+@use '../sass/variables' as s;
+
+@include s.mobile{
+    .item_photo{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(155, 248, 171);
+        margin: 5px;
+        border-radius: 5%;
+        cursor: pointer;
+    }
+}
+
+@include s.desktop{
+    .item_photo{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(155, 248, 171);
+    margin: 5px;
+    border-radius: 5%;
+    cursor: pointer;
+    }
+}

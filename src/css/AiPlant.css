@@ -87,9 +87,6 @@
     align-items: center;
     background-color: rgb(114, 204, 144);
   }
-  img {
-    width: 40px;
-  }
   .plant_container {
     background-color: rgb(114, 204, 144);
     display: flex;

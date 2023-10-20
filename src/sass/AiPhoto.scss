@@ -17,16 +17,16 @@
         display: flex;
         width: 330px;
         height: 460px;
-
-
     }
 
     .upload_btn {
         border-radius: 50%;
-        fill: rgb(134, 207, 127);
-        background-color: rgb(0, 43, 18);
+        fill: rgb(67, 155, 59);
         margin: 20px;
         margin-left: 280px;
+        a{
+            width: 100%;
+        }
     }
 
     .web_pageInfo{
@@ -45,7 +45,7 @@
         display: flex;
         flex-direction: row;
         width: 500px;
-        height: 100px;
+        height: 90px;
         align-items: center;
         margin-right: auto;
         margin-bottom: auto;
@@ -62,26 +62,24 @@
     }
 
     .photo_container {
-        margin-bottom: auto;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(230, 255, 201);
+        margin: auto;
+        background-color: rgb(213, 247, 182);
         display: flex;
         width: 500px;
         height: 560px;
+        border-radius: 1%;
     }
 
     .photo_btn_div {
         // background-color: bisque;
         align-items: end;
-        height: 70px;
+        height: 90px;
     }
 
     .upload_btn {
         border-radius: 50%;
-        fill: rgb(134, 207, 127);
-        background-color: rgb(0, 43, 18);
-        margin-left: 630px;
-
+        fill: rgb(67, 155, 59);
+        margin-left: 630px;      
     }
+
 }
