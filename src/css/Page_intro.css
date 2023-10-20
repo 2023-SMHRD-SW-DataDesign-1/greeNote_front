@@ -1,115 +1,190 @@
+@charset "UTF-8";
 /* Intro.css (별도의 CSS 파일) */
-
 @font-face {
-    font-family: 'KCC-Ganpan';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "KCC-Ganpan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
-
-.intro_body {
-    font-family: 'NanumSquareNeo-Variable';
-    background-color: #DDEFC7;
-}
-
 .intro_container {
-    /* 크기 지정 */
-    height: 100%;
-    max-height: 500px;
-    width: 100%;
-
+  /* 크기 지정 */
+  height: 100%;
+  width: 100%;
+  /* 내용 가운데 정렬 */
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .intro_container {
     /* 내용 가운데 정렬 */
     justify-content: space-around;
-    align-items: center;
-    text-align: center;
-
+    /* 크기 지정 */
+    max-height: 500px;
     /* 상하 위치 조정 */
     margin-top: 50%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .intro_container {
+    /* 내용 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    margin-top: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .intro_container {
+    /* 내용 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    /* 상하 위치 조정 */
+    margin-top: 20%;
+  }
 }
 
 /********************************* 로고 이미지 css */
-.intro_logo {
+@media (min-width: 360px) and (max-width: 799px) {
+  .intro_logo {
     margin-bottom: 30%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .intro_logo {
+    height: 150px;
+    width: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .intro_logo {
+    height: 200px;
+    width: 400px;
+  }
 }
 
-.intro_logo img {
+@media (min-width: 360px) and (max-width: 799px) {
+  .intro_logo img {
     position: relative;
     height: 110px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .intro_logo img {
+    height: 150px;
+  }
+}
+@media (min-width: 1200px) {
+  .intro_logo img {
+    height: 180px;
+  }
 }
 
 /********************************** 버튼 태그 css */
+.buttons {
+  /* 내용 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .buttons {
+    height: 100%;
+    width: 100%;
+  }
+}
+
 .join_button2,
 .login_button,
 .join_button {
+  /* css */
+  border: 1px solid #335A3B;
+  border-radius: 0.7em;
+  background-color: #DDEFC7;
+  color: #000000;
+  font-size: 17px;
+  text-decoration-line: none;
+  /* 범위 및 크기 지정 */
+  display: inline-block;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .join_button2,
+  .login_button,
+  .join_button {
     /* 위치 */
+    margin-bottom: 5%;
     position: relative;
     top: 50%;
-
-    /* 범위 및 크기 지정 */
-    display: inline-block;
-    margin-bottom: 5%;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 70%;
+    /* 크기 */
     height: auto;
-
-    /* css */
-    border: 1px solid #335A3B;
-    border-radius: 0.7em;
-    background-color: #DDEFC7;
-    color: #000000;
-    font-size: 17px;
-    text-decoration-line: none;
-
-    /* 내용 가운데 정렬 */
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-
-    /* div태그와 hover같이 작동 */
-    /*     display: block; */
-    text-align: center;
+    width: 55%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .join_button2,
+  .login_button,
+  .join_button {
+    position: relative;
+    /* 위치 */
+    margin-bottom: 10%;
+    /* 크기 */
+    width: 180px;
+    padding: 3%;
+  }
+}
+@media (min-width: 1200px) {
+  .join_button2,
+  .login_button,
+  .join_button {
+    position: relative;
+    /* 위치 */
+    margin-bottom: 10%;
+    /* 크기 */
+    width: 200px;
+    padding: 3%;
+  }
 }
 
 .join_button2:hover,
 .join_button:hover,
 .login_button:hover {
-    background-color: #335A3B;
-    color: white;
+  background-color: #335A3B;
+  color: white;
 }
 
 .join_button2 {
-    padding: 10.4375px;
+  padding: 10.4375px;
 }
 
 /* /********************************* link 태그 css */
 .button_links {
+  /* css */
+  /*     border: 1px solid #335A3B; */
+  border-radius: 0.7em;
+  background-color: #DDEFC7;
+  color: #000000;
+  font-size: 17px;
+  text-decoration-line: none;
+  /* div태그와 hover같이 작동 */
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .button_links {
     padding: 3%;
-
-    /* css */
-    /*     border: 1px solid #335A3B; */
-    border-radius: 0.7em;
-    background-color: #DDEFC7;
-    color: #000000;
-    font-size: 17px;
-    text-decoration-line: none;
-
-    /* div태그와 hover같이 작동 */
-    display: block;
-    width: 100%;
-    text-align: center;
+  }
 }
 
 /* Link태그 hover */
 .join_button a:hover,
 .login_button a:hover {
-    background-color: #335A3B;
-    color: white;
+  background-color: #335A3B;
+  color: white;
 }

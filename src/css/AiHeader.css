@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@media (min-width: 335px) and (max-width: 757px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .top_container {
     display: flex;
     justify-content: center;
@@ -9,21 +9,21 @@
   }
 }
 
-@media (min-width: 335px) and (max-width: 757px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .ai_header_box {
     background-color: rgb(255, 255, 255);
     width: 360px;
   }
 }
 
-@media (min-width: 335px) and (max-width: 757px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .icon_home {
     margin-left: 300px;
     margin-top: 20px;
     fill: black;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .icon_home {
     display: none;
   }

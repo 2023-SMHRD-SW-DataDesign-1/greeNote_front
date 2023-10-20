@@ -8,12 +8,12 @@
   background-color: rgb(255, 255, 255);
 }
 
-@media (min-width: 335px) and (max-width: 757px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .ai_page_info {
     display: none;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .ai_page_info {
     background-color: aquamarine;
     width: 100%;
@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 335px) and (max-width: 757px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .plant_container {
     width: 360px;
     height: 180px;
@@ -75,7 +75,7 @@
   margin-bottom: 5px;
   margin-left: 20px;
 }
-@media (min-width: 335px) and (max-width: 757px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .plant_image_color {
     width: 100px;
     height: 100px;
@@ -85,13 +85,13 @@
 .plant_main_image img {
   background-color: rgb(255, 255, 255);
 }
-@media (min-width: 335px) and (max-width: 757px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .plant_main_image img {
     width: 85px;
     height: 85px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .plant_main_image img {
     width: 85px;
     height: 85px;
@@ -103,7 +103,7 @@
   width: 60%;
   height: 50px;
 }
-@media (min-width: 335px) and (max-width: 757px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .plant_text_data {
     margin: 10px;
     margin-top: 25px;

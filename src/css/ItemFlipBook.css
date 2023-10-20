@@ -10,7 +10,7 @@
   align-items: center;
 }
 
-@media (min-width: 335px) and (max-width: 757px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .flip_container img {
     margin-top: 20px;
     border-radius: 10px;
@@ -19,7 +19,7 @@
     position: relative;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .flip_container img {
     display: none;
   }
