@@ -3,9 +3,9 @@ import React from 'react'
 
 const AiPlant = () => {
   return (
-    <div className='ai_top_container'>
+    
+    <div className='ai_plant_container'>
       <div className='plant_container'>
-        <div className='ai_page_info'>AI 사진 생성 페이지</div>
         <div className='plant_nickname'>
           무몬
         </div>

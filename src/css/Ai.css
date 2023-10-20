@@ -1,0 +1,12 @@
+@media (min-width: 1200px) {
+  .web_top_container {
+    display: flex;
+    justify-content: center;
+  }
+  .web_container {
+    margin-top: 10px;
+    width: 1200px;
+    height: 936px;
+    border-radius: 5%;
+  }
+}
