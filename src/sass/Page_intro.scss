@@ -62,7 +62,7 @@
 
     @include s.tablet {
         height: 150px;
-        width: 400px;
+        width: 350px;
     }
 
     @include s.desktop {
@@ -78,7 +78,7 @@
     }
 
     @include s.tablet {
-        height: 150px;
+        height: 120px;
     }
 
     @include s.desktop {
@@ -128,13 +128,14 @@
 
     @include s.tablet {
         position: relative;
-        
+        font-size: 15px;
+
         /* 위치 */
         margin-bottom: 10%;
 
         /* 크기 */
         width: 180px;
-        padding: 3%;
+        padding: 2%;
     }
 
     @include s.desktop {
@@ -145,7 +146,7 @@
 
         /* 크기 */
         width: 200px;
-        padding: 3%;
+        padding: 2%;
     }
 }
 
@@ -157,27 +158,24 @@
 }
 
 .join_button2 {
-    padding: 10.4375px;
+    padding: 5.875px;
 }
 
-/* /********************************* link 태그 css */
+/********************************** link 태그 css */
 .button_links {
-    @include s.mobile {
-        padding: 3%;
-    }
-
     /* css */
-    /*     border: 1px solid #335A3B; */
     border-radius: 0.7em;
-    background-color: #DDEFC7;
-    color: #000000;
-    font-size: 17px;
     text-decoration-line: none;
+    color: #000000;
 
     /* div태그와 hover같이 작동 */
     display: block;
     width: 100%;
     text-align: center;
+
+    @include s.mobile {
+        padding: 3%;
+    }
 }
 
 /* Link태그 hover */

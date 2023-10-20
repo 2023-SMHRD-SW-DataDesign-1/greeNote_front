@@ -22,12 +22,12 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .logo_font {
-    font-size: 230%;
+    font-size: 200%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .logo_font {
-    font-size: 270%;
+    font-size: 260%;
   }
 }
 @media (min-width: 1200px) {
@@ -41,12 +41,12 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .etc_font {
-    font-size: 130%;
+    font-size: 100%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .etc_font {
-    font-size: 150%;
+    font-size: 140%;
   }
 }
 @media (min-width: 1200px) {
@@ -70,7 +70,7 @@
     /* 크기 지정 */
     max-height: 500px;
     /* 상하 위치 조정 */
-    margin-top: 50%;
+    margin-top: 30%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -79,7 +79,7 @@
     display: flex;
     justify-content: center;
     /* 상하 위치 조정 */
-    margin-top: 25%;
+    margin-top: 15%;
   }
 }
 @media (min-width: 1200px) {
@@ -92,16 +92,15 @@
   }
 }
 
-/********************************* 로고 이미지 css */
-@media (min-width: 360px) and (max-width: 799px) {
-  .input_logo {
-    margin-bottom: 5%;
-  }
+.login {
+  margin-bottom: 2%;
 }
+
+/********************************* 로고 이미지 css */
 @media (min-width: 800px) and (max-width: 1199px) {
   .input_logo {
     height: 150px;
-    width: 400px;
+    width: 250px;
   }
 }
 @media (min-width: 1200px) {
@@ -114,17 +113,17 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .input_logo img {
     position: relative;
-    height: 110px;
+    height: 100px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .input_logo img {
-    height: 150px;
+    height: 130px;
   }
 }
 @media (min-width: 1200px) {
   .input_logo img {
-    height: 180px;
+    height: 200px;
   }
 }
 

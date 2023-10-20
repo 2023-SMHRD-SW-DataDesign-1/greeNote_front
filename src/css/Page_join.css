@@ -1,40 +1,167 @@
+@charset "UTF-8";
 /* Page_join.css (별도의 CSS 파일) */
-
 @font-face {
-    font-family: 'KCC-Ganpan';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "KCC-Ganpan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
-
-
-.join {
-    /* 폰트 */
-    font-weight: bolder;
-    font-size: 150%;
-
+.join_container {
+  /* 크기 지정 */
+  height: 100%;
+  width: 100%;
+  /* 내용 가운데 정렬 */
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .join_container {
     /* 내용 가운데 정렬 */
     justify-content: space-around;
-    align-items: center;
-    text-align: center;
+    /* 크기 지정 */
+    max-height: 500px;
+    /* 상하 위치 조정 */
+    margin-top: 20%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .join_container {
+    /* 내용 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    /* 상하 위치 조정 */
+    margin-top: 13%;
+  }
+}
+@media (min-width: 1200px) {
+  .join_container {
+    /* 내용 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    /* 상하 위치 조정 */
+    margin-top: 10%;
+  }
+}
+
+.join_box {
+  /* 내용 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .join_box {
+    width: 100%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .join_box {
+    width: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .join_box {
+    width: 40%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+  .join_input input {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  .join_input input {
+    font-size: 15px;
+  }
 }
 
 /* join-button css는 Page_intro.css에! */
-
-.id_check {
-    color: red;
-    text-align: right;
-    font-size: small;
-
-    /* 위치 조정 */
-    position: relative;
-    right: 15%;
+.join_id,
+.join_pw,
+.join_name,
+.join_nickname {
+  /* css */
+  border-radius: 0.7em;
+  background-color: #F2F2F2;
+  color: #000000;
+  border: none;
+  /* 범위 지정 */
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 2%;
+  padding-left: 4%;
+  /* 내용 왼쪽 정렬 */
+  text-align: left;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .join_id,
+  .join_pw,
+  .join_name,
+  .join_nickname {
+    font-size: 12px;
+    /* 서로 상하 위치 조정 */
+    margin-top: 5%;
+    /* 크기 지정 */
+    width: 60%;
+    height: auto;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .join_id,
+  .join_pw,
+  .join_name,
+  .join_nickname {
+    font-size: 15px;
+    /* 서로 상하 위치 조정 */
+    margin-top: 4%;
+    /* 크기 지정 */
+    width: 60%;
+    height: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .join_id,
+  .join_pw,
+  .join_name,
+  .join_nickname {
+    /* 서로 상하 위치 조정 */
+    margin-top: 7%;
+    /* 크기 지정 */
+    width: 55%;
+    height: auto;
+  }
 }
 
+.id_check {
+  color: red;
+  text-align: right;
+  /* 위치 조정 */
+  position: relative;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .id_check {
+    font-size: 10px;
+    right: 20%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .id_check {
+    font-size: 10px;
+    right: 20%;
+  }
+}
+@media (min-width: 1200px) {
+  .id_check {
+    font-size: 12px;
+    right: 22%;
+  }
+}
