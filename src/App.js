@@ -32,12 +32,13 @@ import './css/Page_intro.css';
 // ai css
 import './css/AiHeader.css';
 
-
 import './css/AiPlant.css';
 import './css/AiPhoto.css';
 import './css/ItemPhoto.css';
 import './css/ItemAiReturn.css';
 import './css/AiPhotoReturn.css';
+
+import './css/AiViewBox.css';
 
 // filp css
 import './css/ItemFlipBook.css'
@@ -54,6 +55,8 @@ import './css/Page_writeDiary.css';
 import './css/Switch_ai.css';
 import './css/Footer_diary.css';
 
+// 페이지
+import './css/Ai.css'
 
 /* input페이지 */
 import './css/Input.css';

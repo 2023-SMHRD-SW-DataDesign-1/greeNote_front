@@ -1,0 +1,14 @@
+@use '../sass/variables' as s;
+
+@include s.desktop{
+    .ai_view_box{
+        width: 1200px;
+        height: 800px;
+        display: flex;
+        flex-direction: row;
+        //헤더 아래 전체
+        background-color: rgb(255, 255, 255);
+    }
+
+}
+

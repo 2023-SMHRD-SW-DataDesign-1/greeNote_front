@@ -1,31 +1,59 @@
 @use '../sass/_variables.scss' as s;
 
-.top_container{
-    @include s.mobile{
+@include s.mobile {
+    .ai_header_container {
         display: flex;
+        align-items: center;
         justify-content: center;
-        flex-direction: column; /* 아이템을 수직으로 나열합니다 */
-        justify-content: space-between; /* 아이템을 위아래로 균등하게 분배합니다 */
-        align-items: center; 
-    }
-
-}
-
-.ai_header_box{
-    @include s.mobile{
+        flex-direction: column;
+      }
+      .ai_header_box {
+        display: flex;
+        margin-top: 20px;
+        justify-content: end;
         background-color: rgb(255, 255, 255);
         width: 360px;
-    }
+    
+      }
+      .icon_home_m {
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+
+      .icon_home_d{
+        display: none;
+      }
+      .web_logo{
+        display: none;
+      }
 
 }
 
-.icon_home {
-    @include s.mobile{
-        margin-left: 300px;
+@include s.desktop{
+    .ai_header_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .ai_header_box {
+        width: 1200px;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
         margin-top: 20px;
-        fill: black;
-    }
-    @include s.desktop{
+      }
+      .icon_home_d {
+        margin-top: 15px;
+        margin-right: 50px;
+      }
+      .icon_home_m{
         display: none;
-    }
+      }
+
+      .web_logo img{
+        width: 200px;
+        margin-left: 30px;
+
+      }
 }

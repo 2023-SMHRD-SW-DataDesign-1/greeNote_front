@@ -1,0 +1,9 @@
+@media (min-width: 1200px) {
+  .ai_view_box {
+    width: 1200px;
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+  }
+}
