@@ -26,7 +26,7 @@
         font-size: 230%;
     }
     @include s.tablet {
-        font-size: 270%;
+        font-size: 260%;
     }
     @include s.desktop {
         font-size: 300%;
@@ -39,7 +39,7 @@
         font-size: 130%;
     }
     @include s.tablet {
-        font-size: 150%;
+        font-size: 140%;
     }
     @include s.desktop {
         font-size: 180%;
@@ -72,7 +72,7 @@
         justify-content: center;
 
         /* 상하 위치 조정 */
-        margin-top: 25%;
+        margin-top: 15%;
     }
 
     @include s.desktop {
@@ -85,6 +85,10 @@
     }
 }
 
+.login {
+    margin-bottom: 2%;
+}
+
 /********************************* 로고 이미지 css */
 .input_logo {
     @include s.mobile {
@@ -93,7 +97,7 @@
 
     @include s.tablet {
         height: 150px;
-        width: 400px;
+        width: 300px;
     }
 
     @include s.desktop {

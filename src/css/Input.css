@@ -14,30 +14,6 @@
     font-style: normal;
 }
 
-.join_id,
-.join_pw,
-.join_name,
-.join_nickname {
-    /* 서로 상하 위치 조정 */
-    margin-top: 7%;
-
-    /* 범위 및 크기 지정 */
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 70%;
-    height: auto;
-    padding: 2%;
-    padding-left: 4%;
-
-    /* 내용 왼쪽 정렬 */
-    text-align: left;
-
-    /* css */
-    border-radius: 0.7em;
-    background-color: #F2F2F2;
-    color: #000000;
-    border: none;
-}
 
 
 .greenName,

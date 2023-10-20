@@ -25,7 +25,7 @@ const Login = () => {
             className='join_pw'
             placeholder='비밀번호'
           />
-          <br /><br /><br /><br />
+          <br /><br /><br />
 
           <button type='submit' className='login_button'>
             <Link to="/" className='button_links'>로그인</Link>
