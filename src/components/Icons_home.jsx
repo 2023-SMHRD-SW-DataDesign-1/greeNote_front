@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Icons_home = () => {
     return (
-        <div className='foot_menu'>
+        <div className='middle_menu'>
             <Link to="/ai" className='icon_AI'> {/* AI 아이콘 */}
                 <img src="/Icon/ai.PNG" alt="ai_icon" />
             </Link>

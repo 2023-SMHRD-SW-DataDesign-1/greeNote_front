@@ -14,49 +14,38 @@
 }
 
 
-header {
+.header_container,
+.header_container2 {
   background-color: #E7F1E9;
   padding: 2% 0;
-}
 
-.main_container {
+  /* 크기 지정 */
+  height: 100%;
+  width: 100%;
+
+  /* 내용 가운데 정렬 */
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-}
-
-nav {
-  display: flex;
-  /* Flexbox 설정 */
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: 0;
-}
-
-.logo {
-  /* 로고 div */
-  width: auto;
+  text-align: center;
 }
 
 .logo img {
-  /* 로고 */
-  font-family: 'KCC-Ganpan';
-  width: 100%;
-  min-width: 180px;
+  width: 150px;
 }
 
 .nav_menu {
   display: flex;
   text-align: center;
   /* 아이콘 박스 크기 조정 */
-  width: 100px;
+  width: 70px;
 }
 
 .icon_mypage,
 .icon_logout {
   /* 아이콘 div 거리두기 조정 */
-  padding-right: 25%;
+  padding-right: 30%;
 }
 
 /* 헤더 아이콘들 css */
@@ -70,9 +59,24 @@ nav {
 
 .nav_menu svg {
   /* 부트 스트랩 svg태그 아이콘 크기 조정 */
-  width: 35px;
+  width: 25px;
 }
 
+/**************************** 메인 아랫쪽 header */
+.header_container2 {
+  height: 55px;
+}
 
+.header_container2 a {
+  color: #000000;
+}
 
+.header_container2 svg {
+  /* 부트 스트랩 svg태그 아이콘 크기 조정 */
+  width: 23px;
+}
 
+.bin {
+  /* 아이콘 div 거리두기 조정 */
+  padding-right: 45%;
+}

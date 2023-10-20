@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom'
 
 const green = () => {
   return (
-    <header>
 
-      <div className="nav_menu2">
+      <div className="header_container2">
 
         <div className="bin">
           <a href="#"> {/* 휴지통 아이콘 */}
@@ -27,9 +26,6 @@ const green = () => {
 
       </div>
 
-
-
-    </header>
   )
 }
 

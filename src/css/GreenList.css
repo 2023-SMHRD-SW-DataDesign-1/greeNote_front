@@ -14,7 +14,7 @@
   font-style: normal;
 }
 
-/****************************** 동그라미 사진 공간 */
+/****************************** 식물리스트 공간 */
 .list_container {
   font-family: 'NanumSquareNeo-Variable';
 
@@ -45,8 +45,8 @@
 
   /* 모양 만들기 */
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 
   /* 내부 text 가운데 정렬 */
   display: flex;
@@ -69,8 +69,8 @@
 .new img {
   /* 모양 만들기 */
   border-radius: 50%;
-  width: 63px;
-  height: 63px;
+  width: 50px;
+  height: 50px;
 
   /* 내부 text 가운데 정렬 */
   display: flex;
@@ -83,6 +83,8 @@
 /****************************** 동그라미 아래 title 공간 */
 .list_container2 {
   font-family: 'NanumSquareNeo-Variable';
+  font-size: 14px;
+  font-weight: bolder;
 
   /* 범위 지정 */
   margin-left: 3%;
