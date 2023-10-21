@@ -43,7 +43,7 @@
     display: flex;
     justify-content: center;
     /* 상하 위치 조정 */
-    margin-top: 8%;
+    margin-top: 10%;
   }
 }
 
@@ -67,7 +67,7 @@
 }
 @media (min-width: 1200px) {
   .mypage_box {
-    width: 40%;
+    width: 30%;
   }
 }
 
@@ -109,7 +109,7 @@
 }
 @media (min-width: 1200px) {
   .text2 {
-    font-size: 14px;
+    font-size: 17px;
   }
 }
 
@@ -121,7 +121,7 @@
   height: auto;
   padding: 2%;
   padding-top: 0;
-  padding-left: 4%;
+  padding-left: 10%;
   /* 내용 가운데 정렬 */
   text-align: left;
   /* css */
@@ -147,7 +147,7 @@
   .session_info,
   .mypage_pw,
   .mypage_nickname {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 
@@ -181,7 +181,7 @@
 }
 @media (min-width: 1200px) {
   .complete_button {
-    padding: 2%;
+    padding: 3%;
   }
 }
 

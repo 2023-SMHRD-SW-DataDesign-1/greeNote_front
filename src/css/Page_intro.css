@@ -45,7 +45,7 @@
     display: flex;
     justify-content: center;
     /* 상하 위치 조정 */
-    margin-top: 20%;
+    margin-top: 8%;
   }
 }
 
@@ -63,8 +63,8 @@
 }
 @media (min-width: 1200px) {
   .intro_logo {
-    height: 200px;
-    width: 400px;
+    height: 600px;
+    width: 700px;
   }
 }
 
@@ -81,7 +81,7 @@
 }
 @media (min-width: 1200px) {
   .intro_logo img {
-    height: 180px;
+    height: 600px;
   }
 }
 
@@ -98,6 +98,11 @@
   .buttons {
     height: 100%;
     width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .buttons {
+    width: 400px;
   }
 }
 

@@ -9,7 +9,7 @@ const Intro = () => {
       
     <div className='intro_container'>
       <div className="intro_logo"> {/* 우리 로고 */}
-        <img src="/Image/intro_logo.png" alt="logo" />
+        <img src="/Image/monstera.jpg" alt="logo" />
       </div>
       <div className='buttons'>
         <div className='login_button'>

@@ -50,7 +50,7 @@
         justify-content: center;
 
         /* 상하 위치 조정 */
-        margin-top: 20%;
+        margin-top: 8%;
     }
 }
 
@@ -66,8 +66,8 @@
     }
 
     @include s.desktop {
-        height: 200px;
-        width: 400px;
+        height: 600px;
+        width: 700px;
     }
 }
 
@@ -82,7 +82,7 @@
     }
 
     @include s.desktop {
-        height: 180px;
+        height: 600px;
     }
 }
 
@@ -98,6 +98,9 @@
     @include s.mobile {
         height: 100%;
         width: 100%;
+    }
+    @include s.desktop {
+        width: 400px;
     }
 }
 
