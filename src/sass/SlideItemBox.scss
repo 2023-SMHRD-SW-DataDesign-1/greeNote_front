@@ -1,0 +1,12 @@
+@use '../sass/variables' as s;
+
+@include s.mobile {
+    .flipText {
+        margin: 20px;
+        text-align: center;
+        font-family: 'NanumSquareNeo-Variable';
+        font-size: 25px;
+        font-weight: 600;
+        color: rgb(12, 12, 12);
+    }
+}

@@ -5,7 +5,7 @@
         justify-content: center;
 }
 
-.flip_container {
+.slide_container {
     width: 330px;
     height: 370px;
     position: relative;
@@ -13,21 +13,19 @@
 }
 
 
-.flip_container img {
-    @include s.mobile{
+.slide_container img {
+
     margin-top: 20px;
     border-radius: 10px;
     width: 330px;
     height: 370px;
     position: relative;
-}
-    @include s.desktop{
-        display: none
-    }
+
+
 }
 
 
-.flip_text_box {
+.slide_text_box {
     margin-left: 10px;
     top: -26%;
     left: 0;

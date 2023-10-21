@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@media (min-width: 1200px) {
+  .web_top_container {
+    display: flex;
+    justify-content: center;
+  }
+  .web_container {
+    margin-top: 10px;
+    width: 1200px;
+    height: 936px;
+    border-radius: 5%;
+  }
+  .flipText {
+    display: none;
+  }
+}
