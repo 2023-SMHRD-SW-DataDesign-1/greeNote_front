@@ -51,11 +51,18 @@
         justify-content: center;
 
         /* 상하 위치 조정 */
-        margin-top: 10%;
+        margin-top: 8%;
     }
 }
 
 .join_box {
+    /* 내용 가운데 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    
     @include s.mobile{
         width: 100%;
     }
@@ -63,15 +70,9 @@
         width: 40%;
     }
     @include s.desktop {
-        width: 40%
+        width: 31%
     }
 
-    /* 내용 가운데 정렬 */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
 }
 
 .join_input input {

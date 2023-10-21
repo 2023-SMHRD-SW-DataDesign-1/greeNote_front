@@ -9,7 +9,7 @@ import Diary_content from '../components/Diary_content'
 
 const Main = () => {
   return (
-    <div>
+    <div className='main_container'>
       <div className='main_page1'>
         <div>
           <Header_home />

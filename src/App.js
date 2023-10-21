@@ -23,8 +23,6 @@ import TestJoin from './pages/TestJoin';
 import './css/Header_home.css';
 import './css/Calender.css';
 import './css/GreenList.css';
-import './css/Icons_home.css';
-import './css/Header_home2.css';
 import './css/Date.css';
 import './css/Diary_content.css';
 import './css/Page_intro.css';
@@ -51,7 +49,6 @@ import './css/Gardening.css';
 import './css/Switch.css';
 import './css/Page_mygreen.css';
 import './css/GreenList_all.css';
-import './css/Page_greenDiary.css';
 import './css/Header_etc.css';
 import './css/Page_writeDiary.css';
 import './css/Switch_ai.css';
@@ -62,6 +59,7 @@ import './css/Ai.css'
 
 /* input페이지 */
 import './css/Input.css';
+import './css/Page_main.css';
 import './css/Page_join.css';
 import './css/Page_login.css';
 import './css/Page_mypage.css';

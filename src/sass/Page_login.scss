@@ -81,7 +81,7 @@
         justify-content: center;
 
         /* 상하 위치 조정 */
-        margin-top: 15%;
+        margin-top: 10%;
     }
 }
 
@@ -100,7 +100,7 @@
     }
 
     @include s.desktop {
-        height: 200px;
+        height: 350px;
         width: 400px;
     }
 }
@@ -116,7 +116,7 @@
     }
 
     @include s.desktop {
-        height: 200px;
+        height: 300px;
     }
 }
 

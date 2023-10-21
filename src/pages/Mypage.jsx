@@ -7,43 +7,50 @@ const Mypage = () => {
             <div className="input_logo"> {/* 우리 로고 */}
                 <img src="/Image/intro_logo.png" alt="logo" />
             </div>
-            <div className='main_title'>
-                회원정보수정
+            <div className='mypage_box'>
+                <div className='main_title'>
+                    회원정보수정
+                </div>
+
+                <form>
+                    <div className='mypage_form'>
+                        <div className='text2'>
+                            이름
+                        </div>
+                        <div className='session_info'>
+                            session이름
+                        </div>
+                        <div className='text2'>
+                            아이디
+                        </div>
+                        <div className='session_info'>
+                            session아이디
+                        </div>
+                        <div className='text2'>
+                            비밀번호
+                        </div>
+                        <input
+                            className='mypage_pw'
+                            placeholder='비밀번호'
+                        />
+                        <div className='text2'>
+                            별칭
+                        </div>
+                        <input
+                            className='mypage_nickname'
+                            placeholder='별칭'
+                        />
+                        <br /><br />
+
+                        <button type='submit' className='complete_button'>
+                            <Link to="/" className='button_links'>수정완료</Link>
+                        </button>
+
+                    </div>
+                </form>
+
+
             </div>
-            <form>
-                <div className='text2'>
-                    이름
-                </div>
-                <div className='session_info'>
-                    session이름
-                </div>
-                <div className='text2'>
-                    아이디
-                </div>
-                <div className='session_info'>
-                    session아이디
-                </div>
-                <div className='text2'>
-                    비밀번호
-                </div>
-                <input
-                    className='mypage_pw'
-                    placeholder='비밀번호'
-                />
-
-                <div className='text2'>
-                    별칭
-                </div>
-                <input
-                    className='mypage_nickname'
-                    placeholder='별칭'
-                />
-                <br /><br /><br />
-
-                <button type='submit' className='complete_button'>
-                    <Link to="/" className='button_links'>수정완료</Link>
-                </button>
-            </form>
 
         </div>
     )
