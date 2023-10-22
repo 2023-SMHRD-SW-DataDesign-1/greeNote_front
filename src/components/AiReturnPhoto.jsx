@@ -6,7 +6,7 @@ const AiReturnPhoto = () => {
     return (
         <div className='ai_return_top_container'>
             <div className='web_pageInfo'>
-                <img src='/Image/book_logo.png'></img>
+                <img src='/Image/book_logo.png web_pageInfo_img'></img>
                 <div className='web_infoText'>생성 AI로 만든 이미지</div>
             </div>
             <div className='photo_top_container'>
