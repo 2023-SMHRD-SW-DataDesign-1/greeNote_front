@@ -7,18 +7,25 @@
   font-weight: bolder;
   
   /* 내용 가운데 정렬 */
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  text-align: center;
+
 
   @include s.mobile {
-    font-size: 27px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
   }
   @include s.tablet {
-    font-size: 20px;
+    font-size: 25px;
+    justify-content: center;
   }
   @include s.desktop {
-    font-size: 20px;
+    justify-content: flex-start;
+    font-size: 27px;
+    text-align: left;
+    margin-left: 10%;
   }
 }
 

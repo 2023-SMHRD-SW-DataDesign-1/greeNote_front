@@ -4,23 +4,29 @@
   /* 폰트 */
   font-weight: bolder;
   /* 내용 가운데 정렬 */
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  text-align: center;
 }
-@media (min-width: 380px) and (max-width: 799px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .main_title {
-    font-size: 27px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .main_title {
-    font-size: 20px;
+    font-size: 25px;
+    justify-content: center;
   }
 }
 @media (min-width: 1200px) {
   .main_title {
-    font-size: 20px;
+    justify-content: flex-start;
+    font-size: 27px;
+    text-align: left;
+    margin-left: 10%;
   }
 }
 

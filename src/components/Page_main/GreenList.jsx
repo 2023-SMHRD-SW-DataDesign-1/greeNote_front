@@ -12,8 +12,8 @@ const GreenList = () => {
           </div>
         </Link>
         <Link to="/greendiary" className='button_link2'> {/* 대표식물 */}
-          <div className='new'>
-            <img src="/Image/monstera.jpg" alt="green" width="70" height="70" />
+          <div className='photo'>
+            <img src="/Image/monstera.jpg" alt="green" />
           </div>
         </Link>
         <Link to="/addgreen" className='button_link2'> {/* 식물추가 */}
