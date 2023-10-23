@@ -1,31 +1,37 @@
-@charset "UTF-8";
+@use '../sass/_variables.scss' as s;
 /* GreenList.css (별도의 CSS 파일) */
+
 @font-face {
-  font-family: "KCC-Ganpan";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2") format("woff2");
+  font-family: 'KCC-Ganpan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: "NanumSquareNeo-Variable";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
 /****************************** 식물리스트 공간 */
 .list_container {
-  font-family: "NanumSquareNeo-Variable";
+  font-family: 'NanumSquareNeo-Variable';
+
   /* 범위 지정 */
   margin-left: 3%;
   margin-right: 3%;
   padding-top: 3%;
   width: 94%;
   height: auto;
+
   /* 배치 조정 */
   display: flex;
   text-align: center;
   justify-content: space-around;
   position: relative;
+
   /* css */
   background-color: #F2F2F2;
   border-top-left-radius: 0.7em;
@@ -38,17 +44,18 @@
 .add {
   background-color: #335A3B;
   color: white;
+
   /* 모양 만들기 */
   border-radius: 50%;
   width: 80px;
   height: 80px;
+
   /* 내부 text 가운데 정렬 */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .photo {
   background-color: orange;
 }
@@ -63,9 +70,10 @@
 
 /****************************** 동그라미 아래 title 공간 */
 .list_container2 {
-  font-family: "NanumSquareNeo-Variable";
+  font-family: 'NanumSquareNeo-Variable';
   font-size: 14px;
   font-weight: bolder;
+
   /* 범위 지정 */
   padding-top: 2%;
   margin-left: 3%;
@@ -73,11 +81,13 @@
   padding-bottom: 3%;
   width: 94%;
   height: auto;
+
   /* 정렬 */
   display: flex;
   text-align: center;
   justify-content: space-around;
   position: relative;
+
   /* css */
   background-color: #F2F2F2;
   border-bottom-left-radius: 0.7em;

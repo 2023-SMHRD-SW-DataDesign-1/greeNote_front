@@ -45,9 +45,60 @@
   }
 }
 
+/********************************* Sidebar.jsx */
 @media (min-width: 360px) and (max-width: 799px) {
   .main_big_pie1 > .sidebar {
     display: none;
+  }
+}
+
+.user_image img {
+  margin-bottom: 10px;
+  /* 모양 만들기 */
+  border-radius: 50%;
+}
+@media (min-width: 1200px) {
+  .user_image img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.user_name {
+  font-family: "KCC-Ganpan";
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .user_name {
+    font-size: 200%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .user_name {
+    font-size: 260%;
+  }
+}
+@media (min-width: 1200px) {
+  .user_name {
+    font-size: 200%;
+  }
+}
+
+.user_welcome {
+  font-family: "NanumSquareNeo-Variable";
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .user_welcome {
+    font-size: 100%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .user_welcome {
+    font-size: 140%;
+  }
+}
+@media (min-width: 1200px) {
+  .user_welcome {
+    font-size: 150%;
   }
 }
 
