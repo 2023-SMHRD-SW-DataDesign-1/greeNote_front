@@ -7,7 +7,7 @@ const Join = () => {
   const masterURL = process.env.REACT_APP_MASTER_URL;
 
   // 회원가입 요청 전송
-  const joinMember = async (e) => {
+  const signupMember = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
@@ -17,7 +17,7 @@ const Join = () => {
       obj[key] = value;
     });
 
-    await axios.post(`${masterURL}/member/join`, obj)
+    await axios.post(`${masterURL}/auth/signup`, obj)
       .then((res) => {
         console.log(res);
       })
@@ -36,12 +36,12 @@ const Join = () => {
         <div className='main_title'>
           회원가입
         </div>
-        <form onSubmit={joinMember}>
+        <form onSubmit={signupMember}>
           <div className='join_input'>
             <input
               className='join_id'
               placeholder='아이디'
-              name='id'
+              name='memberid'
             />
             <div className='id_check'>
               이 아이디는 사용이 가능합니다.
@@ -54,7 +54,7 @@ const Join = () => {
             <input
               className='join_name'
               placeholder='이름'
-              name='username'
+              name='membername'
             />
             <input
               className='join_nickname'
