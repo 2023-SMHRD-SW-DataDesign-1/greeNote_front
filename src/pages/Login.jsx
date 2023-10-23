@@ -5,6 +5,8 @@ const Login = () => {
 
   // URL 통합 관리
   const masterURL = process.env.REACT_APP_MASTER_URL;
+  // axios 설정
+  axios.defaults.withCredentials = true;
 
   // 로그인 함수
   const login = async (e) => {

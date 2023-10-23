@@ -10,7 +10,7 @@ const AddGreen = () => {
   const [imageFile, setImageFile] = useState(null);
   const [previewURL, setPreviewURL] = useState(null);
 
-  const onChange = (e) => {
+  const thumbnail = (e) => {
     const file = e.target.files[0];
     if (file) {
       const imageURL = URL.createObjectURL(file);
@@ -19,24 +19,6 @@ const AddGreen = () => {
     }
   };
 
-  const onClick = () => {
-    if (imageFile) {
-      // 이미지 데이터를 서버로 전송하는 로직을 작성합니다.
-      const formData = new FormData();
-      formData.append('image', imageFile);
-
-      // Axios 또는 fetch API를 사용하여 서버로 데이터를 전송합니다.
-      // 예: Axios 사용
-
-      // axios.post('/upload', formData)
-      //   .then(response => {
-      //     console.log('업로드 성공');
-      //   })
-      //   .catch(error => {
-      //     console.error('업로드 실패', error);
-      //   });
-    }
-  };
 
     return (
       <div className='add_container'>
@@ -53,18 +35,17 @@ const AddGreen = () => {
               <p>No Image</p>
             )}
           </div>
-          <button onClick={onClick} className='photoGreen2'>
             <input
               type='file'
               accept="image/jpg,image/png,image/jpeg,image/gif"
-              onChange={onChange}
+              onChange={thumbnail}
             />
-          </button>
           <br/><br/>
           <div className='input_container2'>
             <input
               className='greenName'
               placeholder='식물의 실제 이름'
+              name='title'
             />
             <input
               className='greenStart'
@@ -77,14 +58,17 @@ const AddGreen = () => {
             <input
               className='greenNickname'
               placeholder='애칭'
+              name='nickname'
             />
             <input
               className='greenText'
               placeholder='한 줄 메세지'
+              name='message'
             />
             <input
               className='greenColor'
               placeholder='대표색 지정'
+              name='color'
             />
           </div>
 
@@ -100,7 +84,7 @@ const AddGreen = () => {
                 물 주기
               </div>
               <div className="check">
-                <input id="check-1" type="checkbox" />
+                <input id="check-1" type="checkbox" name='water'/>
                 <label for="check-1" />
               </div>
             </div>
@@ -109,7 +93,7 @@ const AddGreen = () => {
                 분갈이하기
               </div>
               <div className="check">
-                <input id="check-2" type="checkbox" />
+                <input id="check-2" type="checkbox" name='repot'/>
                 <label for="check-2" />
               </div>
             </div>
@@ -118,7 +102,7 @@ const AddGreen = () => {
                 영양관리
               </div>
               <div className="check">
-                <input id="check-3" type="checkbox" />
+                <input id="check-3" type="checkbox" name='nutrition'/>
                 <label for="check-3" />
               </div>
             </div>
@@ -127,7 +111,7 @@ const AddGreen = () => {
                 환기하기
               </div>
               <div className="check">
-                <input id="check-4" type="checkbox" />
+                <input id="check-4" type="checkbox" name='air'/>
                 <label for="check-4" />
               </div>
             </div>
@@ -135,7 +119,7 @@ const AddGreen = () => {
           <br />
 
           <button type='submit' className='complete_button'>
-            <Link to="/" className='button_links'>작성완료</Link>
+            작성완료
           </button>
         </form>
 
