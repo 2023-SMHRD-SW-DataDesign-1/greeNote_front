@@ -1,8 +1,17 @@
 @use '../sass/variables' as s;
 
+
 .top_container {
+    @include s.mobile{
         width: 330px;
         margin: 0px auto;
+    }
+
+    @include s.desktop{
+        width: 550px;
+        height: 500px;
+    }
+    
 }
 
 .slide_container {
@@ -16,13 +25,20 @@
 
 
 .slide_container img {
-
     margin-top: 20px;
     border-radius: 10px;
-    width: 330px;
-    height: 370px;
     object-fit: cover;
     // position: relative;
+    @include s.mobile{
+        width: 330px;
+        height: 370px;
+    }
+
+    @include s.desktop{
+        width: 500px;
+        height: 500px;
+    }
+
 
 
 }

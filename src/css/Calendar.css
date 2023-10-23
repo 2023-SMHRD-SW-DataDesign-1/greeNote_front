@@ -21,7 +21,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-.body {
+.calendar_body {
   display: flex;
   align-items: center;
   padding: 0 10px;
@@ -74,33 +74,33 @@ header .current-date {
   font-weight: 500;
 }
 
-.calendar {
+.calendar_box {
   padding: 20px;
 }
 
-.calendar ul {
+.calendar_box ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   text-align: center;
 }
 
-.calendar .days {
+.calendar_box .days {
   margin-bottom: 20px;
 }
 
-.calendar li {
+.calendar_box li {
   color: #333;
   width: 14.2857142857%;
   font-size: 1.07rem;
 }
 
-.calendar .weeks li {
+.calendar_box .weeks li {
   font-weight: 500;
   cursor: default;
 }
 
-.calendar .days li {
+.calendar_box .days li {
   z-index: 1;
   cursor: pointer;
   position: relative;

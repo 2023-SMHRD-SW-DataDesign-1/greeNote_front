@@ -1,0 +1,95 @@
+@use '../sass/_variables.scss' as s;
+/* Page_myGreen.css (별도의 CSS 파일) */
+
+@font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mid_title1 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3%;
+}
+
+/******************************* 중간 소제목  */
+.mid_title2 {
+    font-weight: bolder;
+    
+    @include s.mobile {
+    }
+    
+    @include s.tablet {
+    }
+    
+    @include s.desktop {
+        font-size: 25px;
+        font-weight: bolder;
+    }
+}
+/* 이미지 */
+.mid_title2 img {
+    @include s.mobile {
+        width: 70px;
+    }
+
+    @include s.tablet {
+        width: 100px;
+    }
+
+    @include s.desktop {
+        width: 100px;
+    }
+}
+
+.icons {
+    display: flex;
+    width: 150px;
+}
+
+/* 오른쪽 삭제 아이콘 */
+.mid_title_bin img {
+    @include s.mobile {
+        margin-right: 15px;
+        width: 20px;
+    }
+
+    @include s.tablet {
+        margin-right: 30px;
+        width: 25px;
+    }
+
+    @include s.desktop {
+        margin-right: 40px;
+        width: 25px;
+    }
+}
+
+/* 부트스트랩 아이콘 */
+.icon_add {
+    width: 30px;
+}
+.icon_add a {
+    text-decoration: none;
+    color: #000000;
+    width: auto;
+}
+
+.icon_add svg {
+    /* 부트 스트랩 svg태그 아이콘 크기 조정 */
+    width: 25px;
+
+    @include s.mobile {
+        width: 20px;
+    }
+}

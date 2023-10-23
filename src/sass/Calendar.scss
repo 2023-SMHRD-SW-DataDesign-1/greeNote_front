@@ -1,27 +1,29 @@
-@charset "UTF-8";
 /* Calendar.css (별도의 CSS 파일) */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@use '../sass/_variables.scss' as s;
+
 @font-face {
-  font-family: "KCC-Ganpan";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2") format("woff2");
+  font-family: 'KCC-Ganpan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: "NanumSquareNeo-Variable";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
 /* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 .calender_container {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
-
-.body {
+.calendar_body{
   display: flex;
   align-items: center;
   padding: 0 10px;
@@ -29,26 +31,22 @@
   min-height: 100vh;
   background: #9B59B6;
 }
-
-.wrapper {
+.wrapper{
   width: 450px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
-
-.wrapper header {
+.wrapper header{
   display: flex;
   align-items: center;
   padding: 25px 30px 10px;
   justify-content: space-between;
 }
-
-header .icons {
+header .icons{
   display: flex;
 }
-
-header .icons span {
+header .icons span{
   height: 38px;
   width: 38px;
   margin: 0 1px;
@@ -60,62 +58,50 @@ header .icons span {
   user-select: none;
   border-radius: 50%;
 }
-
-.icons span:last-child {
+.icons span:last-child{
   margin-right: -10px;
 }
-
-header .icons span:hover {
+header .icons span:hover{
   background: #f2f2f2;
 }
-
-header .current-date {
+header .current-date{
   font-size: 1.45rem;
   font-weight: 500;
 }
-
-.calendar {
+.calendar_box{
   padding: 20px;
 }
-
-.calendar ul {
+.calendar_box ul{
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   text-align: center;
 }
-
-.calendar .days {
+.calendar_box .days{
   margin-bottom: 20px;
 }
-
-.calendar li {
+.calendar_box li{
   color: #333;
-  width: 14.2857142857%;
+  width: calc(100% / 7);
   font-size: 1.07rem;
 }
-
-.calendar .weeks li {
+.calendar_box .weeks li{
   font-weight: 500;
   cursor: default;
 }
-
-.calendar .days li {
+.calendar_box .days li{
   z-index: 1;
   cursor: pointer;
   position: relative;
   margin-top: 30px;
 }
-
-.days li.inactive {
+.days li.inactive{
   color: #aaa;
 }
-
-.days li.active {
+.days li.active{
   color: #fff;
 }
-
-.days li::before {
+.days li::before{
   position: absolute;
   content: "";
   left: 50%;
@@ -126,11 +112,9 @@ header .current-date {
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
-
-.days li.active::before {
+.days li.active::before{
   background: #9B59B6;
 }
-
-.days li:not(.active):hover::before {
+.days li:not(.active):hover::before{
   background: #f2f2f2;
 }

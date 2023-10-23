@@ -1,59 +1,73 @@
 @use '../sass/variables' as s;
 
-@include s.mobile {
+.photo_top_container {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
 
-    .photo_top_container {
-        display: flex;
+    @include s.mobile {
         justify-content: center;
-        flex-direction: column;
-        /* 아이템을 수직으로 나열합니다 */
-        justify-content: space-between;
-        /* 아이템을 위아래로 균등하게 분배합니다 */
         align-items: center;
-    }
-
-    .photo_second_container {
-        width: 350px;
-        height: 460px;
-        overflow: auto;
-        display: flex;
-        background-color: rgb(247, 247, 247);
-    }
-
-    .photo_container {
-        display: flex;
-        flex-wrap: wrap;
-        // width: 100%;
-    }
-
-    .upload_btn {
-        border-radius: 50%;
-        fill: rgb(67, 155, 59);
-        margin: 20px;
-        margin-left: 280px;
-        a{
-            width: 100%;
-        }
-    }
-
-    .web_pageInfo{
-        display: none;
-    }
-
-    .web_pageInfo_img{
-        width: 100px;
-        height: 100px;
     }
 }
 
-@include s.desktop {
-    .photo_top_container {
-        width: 930px;
-        display: flex;
-        flex-direction: column;
+// 사진3개씩 n줄 큰컨테이너
+.photo_second_container {
+    overflow: auto;
+    display: flex;
+    background-color: rgb(230, 230, 230);
+
+    @include s.mobile {
+        width: 350px;
+        height: 460px;
     }
 
-    .web_pageInfo {
+    @include s.desktop {
+        width: 800px;
+        height: 700px;
+        margin: auto;
+        margin-top: 20px;
+
+    }
+}
+
+.photo_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+//    .photo_container {
+//         margin: auto;
+//         background-color: rgb(213, 247, 182);
+//         display: flex;
+//         width: 500px;
+//         height: 560px;
+//         border-radius: 1%;
+//     }
+
+
+.upload_btn {
+    border-radius: 50%;
+    fill: rgb(67, 155, 59);
+
+    @include s.mobile {
+        margin: 20px;
+        margin-left: 280px;
+    }
+
+    @include s.desktop {
+        margin: 630px;
+    }
+}
+
+
+.web_pageInfo {
+    @include s.mobile {
+        display: none;
+    }
+
+    @include s.desktop {
         display: flex;
         flex-direction: row;
         width: 500px;
@@ -62,36 +76,49 @@
         margin-right: auto;
         margin-bottom: auto;
     }
+}
 
-    .web_pageInfo img {
-        width: 100px;
-        height: 100px;
+.web_pageInfo img {
+    @include s.mobile{
+        display: none;
     }
 
-    .web_infoText {
+    @include s.desktop{
+        width: 100px;
+        height: 100px; 
+    }
+
+}
+
+.web_infoText {
+    @include s.mobile{
+        display: none;
+    }
+
+    @include s.desktop{
         font-size: 20px;
         font-weight: 900;
     }
+}
 
-    .photo_container {
-        margin: auto;
-        background-color: rgb(213, 247, 182);
-        display: flex;
-        width: 500px;
-        height: 560px;
-        border-radius: 1%;
+.web_pageInfo {
+    @include s.mobile{
+        display: none;
     }
 
-    .photo_btn_div {
-        // background-color: bisque;
-        align-items: end;
-        height: 90px;
+    @include s.desktop{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 90px;
+    align-items: center;
+    margin-right: auto;
+    margin-bottom: auto;
     }
+}
 
-    .upload_btn {
-        border-radius: 50%;
-        fill: rgb(67, 155, 59);
-        margin-left: 630px;      
-    }
-
+.photo_btn_div {
+    // background-color: bisque;
+    align-items: end;
+    height: 90px;
 }

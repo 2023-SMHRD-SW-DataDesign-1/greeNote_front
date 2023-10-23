@@ -1,27 +1,24 @@
-@media (min-width: 380px) and (max-width: 799px) {
+.item_photo:nth-child(3n) {
+  clear: both;
+  background-color: rebeccapurple;
+}
+
+.item_photo {
+  background-color: rgb(155, 248, 171);
+  border-radius: 5%;
+  cursor: pointer;
+}
+@media (min-width: 360px) and (max-width: 799px) {
   .item_photo {
+    margin: 5px;
     width: 100px;
     height: 100px;
-    background-color: rgb(155, 248, 171);
-    margin: 5px;
-    border-radius: 5%;
-    cursor: pointer;
-  }
-  .item_photo:nth-child(3n) {
-    clear: both;
   }
 }
 @media (min-width: 1200px) {
   .item_photo {
-    width: 150px;
-    height: 150px;
-    background-color: rgb(155, 248, 171);
-    margin: 5px;
-    border-radius: 5%;
-    cursor: pointer;
-  }
-  .item_photo:nth-child(3n) {
-    clear: both;
-    background-color: rebeccapurple;
+    margin: 10px;
+    width: 230px;
+    height: 230px;
   }
 }

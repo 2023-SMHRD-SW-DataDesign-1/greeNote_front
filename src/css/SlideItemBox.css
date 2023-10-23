@@ -1,4 +1,4 @@
-@media (min-width: 380px) and (max-width: 799px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .flipText {
     margin: 20px;
     text-align: center;
@@ -6,5 +6,13 @@
     font-size: 25px;
     font-weight: 600;
     color: rgb(12, 12, 12);
+  }
+}
+@media (min-width: 1200px) {
+  .slide_setBox {
+    width: 930px;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
   }
 }
