@@ -15,8 +15,7 @@
   border-radius: 10px;
   width: 330px;
   height: 370px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .slide_text_box {

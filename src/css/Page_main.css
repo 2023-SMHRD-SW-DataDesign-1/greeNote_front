@@ -45,7 +45,7 @@
   }
 }
 
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .main_big_pie1 > .sidebar {
     display: none;
   }
@@ -62,19 +62,19 @@
   }
 }
 
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .main_left > .web_date {
     display: none;
   }
 }
 
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .main_pie2 {
     display: none;
   }
 }
 
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .main_page2 {
     /* 크기 지정 */
     height: 100%;

@@ -1,28 +1,27 @@
-@charset "UTF-8";
+@use '../sass/_variables.scss' as s;
+
+
 /************************************** 회원정보수정/회원가입/내 반려식물 title */
 .main_title {
   /* 폰트 */
   font-weight: bolder;
+  
   /* 내용 가운데 정렬 */
   justify-content: space-around;
   align-items: center;
   text-align: center;
-}
-@media (min-width: 380px) and (max-width: 799px) {
-  .main_title {
+
+  @include s.mobile {
     font-size: 27px;
   }
-}
-@media (min-width: 800px) and (max-width: 1199px) {
-  .main_title {
+  @include s.tablet {
+    font-size: 20px;
+  }
+  @include s.desktop {
     font-size: 20px;
   }
 }
-@media (min-width: 1200px) {
-  .main_title {
-    font-size: 20px;
-  }
-}
+
 
 /************************************** AiHeader.jsx */
 .icon_home a {
@@ -31,6 +30,7 @@
   color: #000000;
   width: auto;
   text-align: right;
+
   /* 위치 조정 */
   margin-right: 1%;
   position: relative;
@@ -45,6 +45,7 @@
 .icon_bin {
   /* 아이콘 div 거리두기 조정 */
   padding-right: 62%;
+
   text-decoration: none;
 }
 
@@ -61,6 +62,7 @@
   text-align: center;
   justify-content: space-around;
   align-items: center;
+
   /* 위치 및 크기 지정 */
   width: auto;
   height: auto;
