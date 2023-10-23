@@ -24,9 +24,11 @@ const AiHeader = ({ onSelectComponent }) => {
     return (
         <div className='ai_header_container'>
             <div className='ai_header_box'>
+                <Link to='/'>
                 <div className='m_logo'>
                 <img src="Image/ic_leaf_home.png" alt="" />
                 </div>
+                </Link>
                 <div className='web_logo'>
                     <img src="Image/web_logo.png" alt="" />
                 </div>

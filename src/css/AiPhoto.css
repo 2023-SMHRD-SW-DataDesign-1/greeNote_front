@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@media (min-width: 380px) and (max-width: 799px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .photo_top_container {
     display: flex;
     justify-content: center;
