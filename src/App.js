@@ -15,6 +15,7 @@ import GreenDiary from './pages/GreenDiary';
 import WriteDiary from './pages/WriteDiary';
 import DiaryDetail from './pages/DiaryDetail';
 import Testpage from './pages/Testpage';
+import Testpage2 from './pages/Testpage2';
 
 /* 테스트용 페이지!! 나중에 삭제 예정 */
 import TestJoin from './pages/TestJoin';
@@ -26,6 +27,7 @@ import './css/GreenList.css';
 import './css/Date.css';
 import './css/Diary_content.css';
 import './css/Page_intro.css';
+
 
 // ai css
 import './css/AiHeader.css';
@@ -87,6 +89,7 @@ function App() {
       <Route path='/writediary' element={<WriteDiary/>}></Route>
       <Route path='/diarydetail' element={<DiaryDetail/>}></Route>
       <Route path='/testpage' element={<Testpage/>}></Route>
+      <Route path='/testpage2' element={<Testpage2/>}></Route>
 
       {/* 테스트용 페이지 */}
       <Route path='/testJoin' element={<TestJoin/>}></Route>
