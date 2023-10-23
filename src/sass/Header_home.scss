@@ -1,26 +1,32 @@
-@charset "UTF-8";
 /* Header-home.css (별도의 CSS 파일) */
+@use '../sass/_variables.scss' as s;
+
 @font-face {
-  font-family: "KCC-Ganpan";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2") format("woff2");
+  font-family: 'KCC-Ganpan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: "NanumSquareNeo-Variable";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
+
 .header_container,
 .header_container2 {
   background-color: #E7F1E9;
   padding: 2% 0;
   padding-left: 3%;
   padding-right: 4%;
+
   /* 크기 지정 */
   height: 10%;
   width: 100%;
+
   /* 내용 가운데 정렬 */
   display: flex;
   flex-direction: row;

@@ -1,48 +1,51 @@
 import React from 'react'
-import Header_home from '../components/Header_home'
-import Calender from '../components/Calender'
-import GreenList from '../components/GreenList'
+import Header_home from '../components/Page_main/Header_home'
+import Calender from '../components/Page_main/Calender'
+import GreenList from '../components/Page_main/GreenList'
 import Icons_home from '../components/Icons_home'
-import Header_home2 from '../components/Header_home2'
-import Date from '../components/Date'
+import Header_home2 from '../components/Page_main/Header_home2'
+import Date from '../components/Page_main/Date'
 import Diary_content from '../components/Diary_content'
+import Sidebar from '../components/Sidebar'
+import Main_left from '../components/Page_main/Main_left'
 
 const Main = () => {
   return (
-    <div className='main_container'>
-      <div className='main_page1'>
-        <div>
-          <Header_home />
+    <div className='web_top_container'>
+      <div className='main_container'>
+        <div className='main_page1'>
+          <div>
+            <Header_home />
+          </div>
+          <div className='main_big_pie1'>
+            <Sidebar />
+            <div className='main_pie1'>
+              <Main_left />
+            </div>
+            <div className='main_pie2'>
+              <Diary_content/>
+              <Diary_content/>
+              <Diary_content/>
+            </div>
+          </div>
         </div>
+
         <br />
-        <div>
-          <Calender />
-        </div>
-        <br />
-        <div>
-          <GreenList />
-        </div>
-        <br />
-        <div>
-          <Icons_home />
+
+        <div className='main_page2'>
+          <br />
+          <div>
+            <Date />
+          </div>
+          <br />
+          <div>
+            <Diary_content />
+            <Diary_content/>
+            <Diary_content/>
+          </div>
         </div>
 
       </div>
-      <br />
-      <div className='main_page2'>
-        <div>
-          <Header_home2 />
-        </div>
-        <br/>
-        <div>
-          <Date/>
-        </div>
-        <br/>
-        <div>
-          <Diary_content/>
-        </div>
-      </div>
-
     </div>
 
 
