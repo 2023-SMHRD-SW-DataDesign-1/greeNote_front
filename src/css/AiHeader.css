@@ -26,14 +26,20 @@
     flex-direction: column;
     justify-content: end;
     cursor: pointer;
-    margin-left: 300px;
+    margin-left: 240px;
+    z-index: 2;
+  }
+  .meat_menu {
+    background-color: rgb(241, 241, 241);
+    padding: 5px;
   }
   .meat_menu:hover {
     background-color: aquamarine;
-    z-index: 999;
+    z-index: 3;
   }
   .m_logo img {
     width: 40px;
+    margin-left: 30px;
   }
 }
 @media (min-width: 1200px) {
