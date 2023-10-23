@@ -4,10 +4,9 @@ import ItemSlide from './ItemSlide'
 const SlideItemBox = () => {
   return (
     <div>
-            <div className='flipText'>플립북갤러리</div>
             <div className='web_pageInfo'>
-                <img src='/Image/book_logo.png'></img>
-                <div className='web_infoText'>플립북 갤러리</div>
+                <img src='/Image/book_logo.png' className='web_pageInfo_img'></img>
+                <div className='web_infoText'>슬라이드</div>
             </div>
             <ItemSlide/>
         </div>

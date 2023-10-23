@@ -32,6 +32,11 @@
     .web_pageInfo{
         display: none;
     }
+
+    .web_pageInfo_img{
+        width: 100px;
+        height: 100px;
+    }
 }
 
 @include s.desktop {
