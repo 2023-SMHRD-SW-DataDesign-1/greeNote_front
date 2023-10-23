@@ -1,9 +1,11 @@
 import React from 'react'
 
-const ItemPhoto = () => {
+const ItemPhoto = (props) => {
+
   return (
     <div className='item_photo'>
-        <img></img>
+        <img src=''></img>
+        <span>{props.data.name}</span>
     </div>
   )
 }

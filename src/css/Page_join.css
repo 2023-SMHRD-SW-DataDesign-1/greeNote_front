@@ -20,7 +20,7 @@
   align-items: center;
   text-align: center;
 }
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .join_container {
     /* 내용 가운데 정렬 */
     justify-content: space-around;
@@ -57,7 +57,7 @@
   align-items: center;
   text-align: center;
 }
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .join_box {
     width: 100%;
   }
@@ -102,7 +102,7 @@
   /* 내용 왼쪽 정렬 */
   text-align: left;
 }
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .join_id,
   .join_pw,
   .join_name,
@@ -147,7 +147,7 @@
   /* 위치 조정 */
   position: relative;
 }
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .id_check {
     font-size: 10px;
     right: 20%;

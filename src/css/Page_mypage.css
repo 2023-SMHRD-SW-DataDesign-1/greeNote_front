@@ -20,7 +20,7 @@
   align-items: center;
   text-align: center;
 }
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .mypage_container {
     /* 내용 가운데 정렬 */
     justify-content: space-around;
@@ -55,7 +55,7 @@
   align-items: center;
   text-align: center;
 }
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .mypage_box {
     width: 100%;
   }
@@ -97,7 +97,7 @@
   /* background-color: #F2F2F2; */
   font-weight: bolder;
 }
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .text2 {
     font-size: 13px;
   }
@@ -129,7 +129,7 @@
   border-bottom-right-radius: 0.7em;
   /* background-color: #F2F2F2; */
 }
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .session_info,
   .mypage_pw,
   .mypage_nickname {

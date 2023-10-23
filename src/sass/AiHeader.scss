@@ -1,5 +1,6 @@
 @use '../sass/_variables.scss' as s;
 
+
 @include s.mobile {
     .ai_header_container {
         display: flex;
@@ -9,11 +10,10 @@
       }
       .ai_header_box {
         display: flex;
-        margin-top: 20px;
-        justify-content: end;
+        margin-top: 30px;
         background-color: rgb(255, 255, 255);
-        width: 360px;
-    
+        width: 360px;  
+        height: 50px;
       }
       .icon_home_m {
         margin-right: 20px;
@@ -25,6 +25,21 @@
       }
       .web_logo{
         display: none;
+      }
+
+      .meat{
+        flex-direction: column;
+        justify-content: end;
+        cursor: pointer;
+        margin-left: 300px;
+      }
+
+      .meat_menu:hover{
+        background-color: aquamarine;
+      }
+
+      .m_logo img{
+        width: 40px;
       }
 
 }
@@ -54,6 +69,13 @@
       .web_logo img{
         width: 200px;
         margin-left: 30px;
+      }
 
+      .m_logo img{
+        display: none;
+      }
+
+      .meat{
+        display: none;
       }
 }

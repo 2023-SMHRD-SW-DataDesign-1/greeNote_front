@@ -1,4 +1,4 @@
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .item_photo {
     width: 100px;
     height: 100px;
@@ -6,6 +6,9 @@
     margin: 5px;
     border-radius: 5%;
     cursor: pointer;
+  }
+  .item_photo:nth-child(3n) {
+    clear: both;
   }
 }
 @media (min-width: 1200px) {
@@ -16,5 +19,9 @@
     margin: 5px;
     border-radius: 5%;
     cursor: pointer;
+  }
+  .item_photo:nth-child(3n) {
+    clear: both;
+    background-color: rebeccapurple;
   }
 }

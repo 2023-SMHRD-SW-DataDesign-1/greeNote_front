@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@media (min-width: 360px) and (max-width: 799px) {
+@media (min-width: 380px) and (max-width: 799px) {
   .photo_top_container {
     display: flex;
     justify-content: center;
@@ -9,11 +9,16 @@
     /* 아이템을 위아래로 균등하게 분배합니다 */
     align-items: center;
   }
-  .photo_container {
-    background-color: rgb(247, 247, 247);
-    display: flex;
-    width: 330px;
+  .photo_second_container {
+    width: 350px;
     height: 460px;
+    overflow: auto;
+    display: flex;
+    background-color: rgb(247, 247, 247);
+  }
+  .photo_container {
+    display: flex;
+    flex-wrap: wrap;
   }
   .upload_btn {
     border-radius: 50%;
