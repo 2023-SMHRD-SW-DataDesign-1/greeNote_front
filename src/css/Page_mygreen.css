@@ -32,6 +32,41 @@
   }
 }
 
+@media (min-width: 360px) and (max-width: 799px) {
+  .mid_title {
+    margin-right: 20%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .mid_title {
+    margin-right: 20%;
+  }
+}
+@media (min-width: 1200px) {
+  .mid_title {
+    margin-right: 66%;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 799px) {
+  .mid_title_bin img {
+    margin-right: 15px;
+    width: 20px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .mid_title_bin img {
+    margin-right: 30px;
+    width: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .mid_title_bin img {
+    margin-right: 30px;
+    width: 25px;
+  }
+}
+
 /* 부트스트랩 아이콘 */
 .icon_add a {
   margin-right: 0;
@@ -47,5 +82,10 @@
 
 .icon_add svg {
   /* 부트 스트랩 svg태그 아이콘 크기 조정 */
-  width: 35px;
+  width: 25px;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .icon_add svg {
+    width: 20px;
+  }
 }

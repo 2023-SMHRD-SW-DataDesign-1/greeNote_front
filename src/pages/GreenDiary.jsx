@@ -8,20 +8,23 @@ import AiPlant from '../components/AiPlant';
 
 const GreenDiary = () => {
   return (
-    <div className='greendiary_container'>
-      <div>
-        <Header_diary />
+    <div className='web_top_container'>
+      <div className='greendiary_container'>
+        <div>
+          <Header_diary />
+        </div>
+        <div>
+          <AiPlant />
+        </div>
+        <br/>
+        <div>
+          <Diary_content />
+          <Diary_content />
+          <Diary_content />
+          <Diary_content />
+        </div>
       </div>
-      <div>
-        <AiPlant />
-      </div>
-      <br/>
-      <div>
-        <Diary_content />
-        <Diary_content />
-        <Diary_content />
-        <Diary_content />
-      </div>
+
     </div>
   )
 }
