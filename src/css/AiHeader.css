@@ -1,4 +1,4 @@
-@media (min-width: 380px) and (max-width: 799px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .ai_header_container {
     display: flex;
     align-items: center;
@@ -30,6 +30,7 @@
   }
   .meat_menu:hover {
     background-color: aquamarine;
+    z-index: 999;
   }
   .m_logo img {
     width: 40px;
