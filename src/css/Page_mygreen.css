@@ -12,42 +12,47 @@
   font-weight: normal;
   font-style: normal;
 }
-.main_title {
+.mid_title1 {
   align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3%;
 }
 
+/******************************* 중간 소제목  */
+.mid_title2 {
+  font-weight: bolder;
+}
+@media (min-width: 1200px) {
+  .mid_title2 {
+    font-size: 25px;
+    font-weight: bolder;
+  }
+}
+
+/* 이미지 */
 @media (min-width: 360px) and (max-width: 799px) {
-  .main_title img {
+  .mid_title2 img {
     width: 70px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
-  .main_title img {
+  .mid_title2 img {
     width: 100px;
   }
 }
 @media (min-width: 1200px) {
-  .main_title img {
+  .mid_title2 img {
     width: 100px;
   }
 }
 
-@media (min-width: 360px) and (max-width: 799px) {
-  .mid_title {
-    margin-right: 20%;
-  }
-}
-@media (min-width: 800px) and (max-width: 1199px) {
-  .mid_title {
-    margin-right: 20%;
-  }
-}
-@media (min-width: 1200px) {
-  .mid_title {
-    margin-right: 66%;
-  }
+.icons {
+  display: flex;
+  width: 150px;
 }
 
+/* 오른쪽 삭제 아이콘 */
 @media (min-width: 360px) and (max-width: 799px) {
   .mid_title_bin img {
     margin-right: 15px;
@@ -62,22 +67,20 @@
 }
 @media (min-width: 1200px) {
   .mid_title_bin img {
-    margin-right: 30px;
+    margin-right: 40px;
     width: 25px;
   }
 }
 
 /* 부트스트랩 아이콘 */
+.icon_add {
+  width: 30px;
+}
+
 .icon_add a {
-  margin-right: 0;
   text-decoration: none;
   color: #000000;
   width: auto;
-  text-align: right;
-  /* 위치 조정 */
-  margin-right: 4%;
-  margin-top: 2%;
-  position: relative;
 }
 
 .icon_add svg {

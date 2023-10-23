@@ -1,8 +1,7 @@
 import React from 'react'
 import Header_home from '../components/Page_main/Header_home'
-import Calender from '../components/Page_main/Calender'
 import GreenList from '../components/Page_main/GreenList'
-import Icons_home from '../components/Icons_home'
+import Icons_home from '../components/Page_main/Icons_home'
 import Header_home2 from '../components/Page_main/Header_home2'
 import Date from '../components/Page_main/Date'
 import Diary_content from '../components/Diary_content'
@@ -20,9 +19,12 @@ const Main = () => {
           <div className='main_big_pie1'>
             <Sidebar />
             <div className='main_pie1'>
+              <br/>
               <Main_left />
             </div>
             <div className='main_pie2'>
+              <br />
+              <Diary_content/>
               <Diary_content/>
               <Diary_content/>
               <Diary_content/>

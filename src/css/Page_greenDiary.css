@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@media (min-width: 360px) and (max-width: 799px) {
+  .main_big_pie1 > .ai_plant_container {
+    display: none;
+  }
+}
+
+.diary_all {
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 오른쪽 삭제 아이콘 */
+@media (min-width: 360px) and (max-width: 799px) {
+  .mid_title_bin2 img {
+    margin-right: 15px;
+    width: 20px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .mid_title_bin2 img {
+    margin-right: 30px;
+    width: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .mid_title_bin2 img {
+    margin-right: 70px;
+    width: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .diary_photo {
+    width: 90%;
+  }
+}

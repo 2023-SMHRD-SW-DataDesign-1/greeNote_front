@@ -1,0 +1,38 @@
+@use '../sass/_variables.scss' as s;
+
+
+
+.main_big_pie1>.ai_plant_container {
+    @include s.mobile {
+        display: none;
+    }
+}
+
+.diary_all {
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 오른쪽 삭제 아이콘 */
+.mid_title_bin2 img {
+    @include s.mobile {
+        margin-right: 15px;
+        width: 20px;
+    }
+
+    @include s.tablet {
+        margin-right: 30px;
+        width: 25px;
+    }
+
+    @include s.desktop {
+        margin-right: 70px;
+        width: 25px;
+    }
+}
+
+.diary_photo {
+    @include s.desktop {
+        width: 90%;
+    }
+}
