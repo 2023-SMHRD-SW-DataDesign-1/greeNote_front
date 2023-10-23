@@ -1,10 +1,11 @@
+.ai_header_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 @media (min-width: 360px) and (max-width: 799px) {
-  .ai_header_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
   .ai_header_box {
     display: flex;
     margin-top: 30px;
@@ -12,16 +13,24 @@
     width: 360px;
     height: 50px;
   }
-  .icon_home_m {
-    margin-right: 20px;
-    margin-top: 20px;
-  }
-  .icon_home_d {
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .web_header {
     display: none;
   }
-  .web_logo {
-    display: none;
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .web_header {
+    width: 800px;
   }
+}
+@media (min-width: 1200px) {
+  .web_header {
+    width: 1200px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 799px) {
   .meat {
     flex-direction: column;
     justify-content: end;
@@ -37,40 +46,42 @@
     background-color: aquamarine;
     z-index: 3;
   }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .meat {
+    display: none;
+  }
+  .meat_menu {
+    display: none;
+  }
+  .meat_menu:hover {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .meat {
+    display: none;
+  }
+  .meat_menu {
+    display: none;
+  }
+  .meat_menu:hover {
+    display: none;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
   .m_logo img {
     width: 40px;
     margin-left: 30px;
   }
 }
-@media (min-width: 1200px) {
-  .ai_header_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .ai_header_box {
-    width: 1200px;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  .icon_home_d {
-    margin-top: 15px;
-    margin-right: 50px;
-  }
-  .icon_home_m {
-    display: none;
-  }
-  .web_logo img {
-    width: 200px;
-    margin-left: 30px;
-  }
+@media (min-width: 800px) and (max-width: 1199px) {
   .m_logo img {
     display: none;
   }
-  .meat {
+}
+@media (min-width: 1200px) {
+  .m_logo img {
     display: none;
   }
 }

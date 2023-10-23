@@ -8,3 +8,11 @@
     color: rgb(12, 12, 12);
   }
 }
+@media (min-width: 1200px) {
+  .slide_setBox {
+    width: 930px;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+  }
+}

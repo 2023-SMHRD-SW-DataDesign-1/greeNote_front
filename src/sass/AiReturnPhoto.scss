@@ -1,6 +1,7 @@
 @use '../sass/_variables.scss' as s;
 
-.retry_btn, .download_btn{
+.retry_btn,
+.download_btn {
     background-color: #46b95d;
     width: 310px;
     padding: 1%;
@@ -8,21 +9,22 @@
     border-radius: 10px;
     border-color: #d6d6d6;
     margin: 10px;
-    
+
 }
 
-.retry_btn:hover, .download_btn:hover{
+.retry_btn:hover,
+.download_btn:hover {
     background-color: #335A3B;
 }
 
-.download_btn{
+.download_btn {
     font-size: 17px;
     color: rgb(255, 255, 255);
 }
 
 
 /********************************* link 태그 css */
-.button_link{
+.button_link {
     border-radius: 0.7em;
     font-size: 17px;
     color: rgb(255, 255, 255);
@@ -40,25 +42,16 @@
     color: white;
 }
 
-@include s.mobile{
-    .return_container{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
 
+.return_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-@include s.desktop{
-    .return_container{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .return_btn_box{
+@include s.desktop {
+    .return_btn_box {
         width: 600px;
         display: flex;
         flex-direction: row;

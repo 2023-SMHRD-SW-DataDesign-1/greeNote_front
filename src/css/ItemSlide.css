@@ -1,6 +1,14 @@
-.top_container {
-  width: 330px;
-  margin: 0px auto;
+@media (min-width: 360px) and (max-width: 799px) {
+  .top_container {
+    width: 330px;
+    margin: 0px auto;
+  }
+}
+@media (min-width: 1200px) {
+  .top_container {
+    width: 550px;
+    height: 500px;
+  }
 }
 
 .slide_container {
@@ -13,10 +21,20 @@
 .slide_container img {
   margin-top: 20px;
   border-radius: 10px;
-  width: 330px;
-  height: 370px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .slide_container img {
+    width: 330px;
+    height: 370px;
+  }
+}
+@media (min-width: 1200px) {
+  .slide_container img {
+    width: 500px;
+    height: 500px;
+  }
 }
 
 .slide_text_box {

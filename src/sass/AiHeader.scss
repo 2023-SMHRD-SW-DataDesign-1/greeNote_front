@@ -1,88 +1,104 @@
 @use '../sass/_variables.scss' as s;
 
+.ai_header_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
 @include s.mobile {
-    .ai_header_container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-      .ai_header_box {
-        display: flex;
-        margin-top: 30px;
-        background-color: rgb(255, 255, 255);
-        width: 360px;  
-        height: 50px;
-      }
-      .icon_home_m {
-        margin-right: 20px;
-        margin-top: 20px;
-      }
-
-      .icon_home_d{
-        display: none;
-      }
-      .web_logo{
-        display: none;
-      }
-
-      .meat{
-        flex-direction: column;
-        justify-content: end;
-        cursor: pointer;
-        margin-left:240px;
-        z-index: 2;
-      }
-
-      .meat_menu{
-        background-color: rgb(241, 241, 241);
-        padding: 5px;
-      }
-      .meat_menu:hover{
-        background-color: aquamarine;
-        z-index: 3;
-      }
-
-      .m_logo img{
-        width: 40px;
-        margin-left: 30px;
-      }
+  .ai_header_box {
+    display: flex;
+    margin-top: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 360px;
+    height: 50px;
+  }
 
 }
 
-@include s.desktop{
-    .ai_header_container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-      .ai_header_box {
-        width: 1200px;
-        height: 70px;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-      }
-      .icon_home_d {
-        margin-top: 15px;
-        margin-right: 50px;
-      }
-      .icon_home_m{
-        display: none;
-      }
+//태블릿~웹 헤더
+.web_header {
+  @include s.mobile {
+    display: none;
+  }
 
-      .web_logo img{
-        width: 200px;
-        margin-left: 30px;
-      }
+  @include s.tablet {
+    width: 800px;
+  }
 
-      .m_logo img{
-        display: none;
-      }
+  @include s.desktop {
+    width: 1200px;
+  }
+}
 
-      .meat{
-        display: none;
-      }
+
+// 모바일 미트볼
+@include s.mobile {
+  .meat {
+    flex-direction: column;
+    justify-content: end;
+    cursor: pointer;
+    margin-left: 240px;
+    z-index: 2;
+  }
+
+  .meat_menu {
+    background-color: rgb(241, 241, 241);
+    padding: 5px;
+  }
+
+  .meat_menu:hover {
+    background-color: aquamarine;
+    z-index: 3;
+  }
+
+}
+
+@include s.tablet {
+  .meat {
+    display: none;
+  }
+
+  .meat_menu {
+    display: none;
+  }
+
+  .meat_menu:hover {
+    display: none;
+  }
+}
+
+@include s.desktop {
+  .meat {
+    display: none;
+  }
+
+  .meat_menu {
+    display: none;
+  }
+
+  .meat_menu:hover {
+    display: none;
+  }
+}
+
+
+
+
+//모바일 나뭇잎로고
+.m_logo img {
+  @include s.mobile {
+    width: 40px;
+    margin-left: 30px;
+  }
+
+  @include s.tablet {
+    display: none;
+  }
+
+  @include s.desktop {
+    display: none;
+  }
 }

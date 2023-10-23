@@ -10,3 +10,12 @@
         color: rgb(12, 12, 12);
     }
 }
+
+@include s.desktop{
+    .slide_setBox{
+        width: 930px;
+        display: flex;
+        justify-content: center;
+        margin: 50px;
+    }
+}

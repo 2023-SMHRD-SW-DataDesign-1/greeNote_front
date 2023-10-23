@@ -49,7 +49,9 @@ const SlideItemBox = () => {
                 <img src='/Image/book_logo.png' className='web_pageInfo_img'></img>
                 <div className='web_infoText'>슬라이드</div>
             </div>
+            <div className='slide_setBox'>
             <ItemSlide data={arr}/>
+            </div>
         </div>
   )
 }
