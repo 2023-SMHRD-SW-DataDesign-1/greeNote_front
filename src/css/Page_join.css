@@ -85,12 +85,12 @@
 }
 
 /* 파일선택 css */
-input[type=file] {
+inputJoin {
   width: 200px;
   margin-left: 20px;
 }
 @media (min-width: 1200px) {
-  input[type=file] {
+  inputJoin {
     margin-left: 50px;
   }
 }

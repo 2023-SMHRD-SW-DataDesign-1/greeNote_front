@@ -50,6 +50,9 @@
     padding-right: 10%;
     width: 120px;
   }
+  @include s.desktop {
+    width: 80px;
+  }
 }
 
 .icon_mypage,
@@ -60,6 +63,9 @@
   }
   @include s.tablet{
     padding-right: 80%;
+  }
+  @include s.desktop {
+    padding-right: 30%;
   }
 }
 
