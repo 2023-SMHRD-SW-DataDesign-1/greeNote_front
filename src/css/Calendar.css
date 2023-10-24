@@ -22,22 +22,8 @@
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
-@media (min-width: 1200px) {
-  .wrapper {
-    width: 400px;
-    height: 380px;
-  }
-}
-@media (min-width: 800px) and (max-width: 1199px) {
-  .wrapper {
-    width: 350px;
-  }
-}
-@media (min-width: 360px) and (max-width: 799px) {
-  .wrapper {
-    width: 340px;
-  }
+  width: 90%;
+  height: 380px;
 }
 
 .calendar_header {

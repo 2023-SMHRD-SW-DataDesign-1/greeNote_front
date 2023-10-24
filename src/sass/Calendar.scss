@@ -27,16 +27,9 @@
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 
-  @include s.desktop {
-    width: 400px;
-    height: 380px;
-  }
-  @include s.tablet {
-    width: 350px;
-  }
-  @include s.mobile {
-    width: 340px;
-  }
+  width: 90%;
+  height: 380px;
+
 }
 .calendar_header{
   display: flex;

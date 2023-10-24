@@ -57,15 +57,23 @@
   }
 }
 
-.user_image img {
-  margin-bottom: 10px;
-  /* 모양 만들기 */
-  border-radius: 50%;
-}
 @media (min-width: 1200px) {
   .user_image img {
+    margin-bottom: 10px;
+    /* 모양 만들기 */
+    border-radius: 50%;
     width: 150px;
     height: 150px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .user_image img {
+    display: none;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .user_image img {
+    display: none;
   }
 }
 
@@ -74,12 +82,12 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .user_name {
-    font-size: 200%;
+    display: none;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .user_name {
-    font-size: 260%;
+    display: none;
   }
 }
 @media (min-width: 1200px) {
@@ -93,12 +101,12 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .user_welcome {
-    font-size: 100%;
+    display: none;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .user_welcome {
-    font-size: 140%;
+    display: none;
   }
 }
 @media (min-width: 1200px) {
@@ -108,25 +116,30 @@
 }
 
 /***************************************** 중간 */
+/* 일자, 캘린더, 식물리스트 */
 .main_left {
-  /* 일자, 캘린더, 식물리스트 */
+  width: 100%;
 }
-@media (min-width: 1200px) {
-  .main_left {
-    width: 465px;
-    height: 100%;
-  }
-}
-
 @media (min-width: 360px) and (max-width: 799px) {
   .main_left > .web_date {
     display: none;
   }
 }
 
+/* 다이어리 부분 */
 @media (min-width: 360px) and (max-width: 799px) {
   .main_pie2 {
     display: none;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .main_pie2 {
+    width: 70%;
+  }
+}
+@media (min-width: 1200px) {
+  .main_pie2 {
+    width: 70%;
   }
 }
 

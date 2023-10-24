@@ -57,23 +57,30 @@
 }
 
 .user_image img {
-    margin-bottom: 10px; 
-
-    /* 모양 만들기 */
-    border-radius: 50%;
-
+    
     @include s.desktop {
+        margin-bottom: 10px; 
+    
+        /* 모양 만들기 */
+        border-radius: 50%;
+
         width: 150px;
         height: 150px;
+    }
+    @include s.tablet {
+        display: none;
+    }
+    @include s.mobile {
+        display: none;
     }
 }
 .user_name {
     font-family: 'KCC-Ganpan';
     @include s.mobile {
-        font-size: 200%;
+        display: none;
     }
     @include s.tablet {
-        font-size: 260%;
+        display: none;
     }
     @include s.desktop {
         font-size: 200%;
@@ -83,10 +90,10 @@
 .user_welcome {
     font-family: 'NanumSquareNeo-Variable';
     @include s.mobile {
-        font-size: 100%;
+        display: none;
     }
     @include s.tablet {
-        font-size: 140%;
+        display: none;
     }
     @include s.desktop {
         font-size: 150%;
@@ -94,12 +101,14 @@
 }
 
 /***************************************** 중간 */
+/* 일자, 캘린더, 식물리스트 */
 .main_left {
+    width: 100%;
+    @include s.tablet {
 
-    /* 일자, 캘린더, 식물리스트 */
+    }
     @include s.desktop {
-        width: 465px;
-        height: 100%;
+
     }
 }
 
@@ -109,9 +118,16 @@
     }
 }
 
+/* 다이어리 부분 */
 .main_pie2 {
     @include s.mobile {
         display: none;
+    }
+    @include s.tablet{
+        width: 70%;
+    }
+    @include s.desktop {
+        width: 70%;
     }
 }
 
