@@ -21,7 +21,6 @@
   padding: 4%;
   /* 크기 조정 */
   height: 185px;
-  width: 94%;
   border-radius: 0.7em;
   /* 배치 조정 */
   display: flex;
@@ -29,6 +28,16 @@
   align-items: center;
   /* box_shadow: 왼오 위아래 퍼짐정도 진하기 */
   box-shadow: 0px 1px 7px 0px grey;
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .diary_container {
+    width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  .diary_container {
+    width: 90%;
+  }
 }
 
 .file {

@@ -56,6 +56,9 @@
     @include s.mobile {
         display: none;
     }
+    @include s.tablet{
+        display: none;
+    }
 }
 
 .user_image img {
@@ -109,6 +112,7 @@
     @include s.tablet {
         max-width: 500px;
         min-width: 400px;
+        padding: 5%;
     }
     @include s.desktop {
         width: 500px;
@@ -180,3 +184,4 @@
     width: 30px;
     margin-top: 9px;
 }
+
