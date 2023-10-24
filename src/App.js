@@ -14,6 +14,7 @@ import MyGreen from './pages/MyGreen';
 import GreenDiary from './pages/GreenDiary';
 import WriteDiary from './pages/WriteDiary';
 import DiaryDetail from './pages/DiaryDetail';
+import Testpage from './pages/Testpage';
 
 /* input페이지 */
 import './css/Input.css';
@@ -24,7 +25,6 @@ import './css/Page_mypage.css';
 import './css/Input_writeDiary.css';
 
 /* 테스트용 페이지!! 나중에 삭제 예정 */
-import Testpage from './pages/Testpage';
 import Testpage2 from './pages/Testpage2';
 import TestJoin from './pages/TestJoin';
 
@@ -43,8 +43,8 @@ import './css/AiHeader.css';
 import './css/AiPlant.css';
 import './css/AiPhoto.css';
 import './css/ItemPhoto.css';
-import './css/ItemAiReturn.css';
 
+import './css/ItemAiReturn.css';
 import './css/AiReturnPhoto.css'
 import './css/AiPhotoBox.css';
 

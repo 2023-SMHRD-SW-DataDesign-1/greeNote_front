@@ -11,11 +11,24 @@
     }
 }
 
-@include s.desktop{
-    .slide_setBox{
-        width: 930px;
-        display: flex;
-        justify-content: center;
+.slide_setBox{
+    display: flex;
+    justify-content: center;
+    @include s.mobile{
+        width: 360px;
+        margin: 10px;
+    }
+
+    @include s.tablet{
+        width: 500px;
+        height: 600px;
         margin: 50px;
     }
+
+    @include s.desktop{
+        width: 930px;
+        margin: 50px;
+    }
+
 }
+
