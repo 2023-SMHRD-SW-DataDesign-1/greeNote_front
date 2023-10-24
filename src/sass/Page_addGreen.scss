@@ -1,0 +1,155 @@
+/* Page_AddGreen.css (별도의 CSS 파일) */
+@use '../sass/_variables.scss' as s;
+
+
+@font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.add_container {
+    /* 내용 가운데 정렬 */
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    /* 상하 위치 조정 */
+    margin-bottom: 7%;
+
+    @include s.desktop {
+        width: 1200px;
+        height: 936px;
+        border-radius: 5%;
+    }
+}
+
+/* 소제목 */
+.addGreen {
+    /* 폰트 */
+    font-weight: bolder;
+    font-size: 150%;
+
+    /* 서로 상하 위치 조정 */
+    margin-top: 7%;
+    margin-bottom: 3%;
+}
+
+/********************************* 전체 틀  */
+.photo_container,
+.gardening_container,
+.input_container2 {
+    @include s.tablet {
+        width: 250px;
+        height: 100%;
+    }
+    @include s.desktop {
+        width: 400px;
+        height: 100%;
+    }
+}
+
+
+/* 사진이 들어갈 부분 */
+.photoGreen {
+    background-color: #335A3B;
+    color: white;
+    /* 모양 만들기 */
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    overflow: hidden;
+
+    /* 내부 text 가운데 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* 서로 상하 위치 조정 */
+    margin-bottom: 1%;
+
+    /* 가운데 정렬 */
+    position: relative;
+
+@include s.mobile {
+    height: 200px;
+    width: 200px;
+    left: 1%
+}
+@include s.tablet {
+    width: 250px;
+    height: 250px;
+    left: 10%;
+}
+@include s.desktop {
+    width: 350px;
+    height: 350px;
+    left: 8%;
+}
+}
+
+.photoGreen img {
+    border-radius: 50%;
+
+    @include s.mobile {
+        height: 200px;
+        width: 200px;
+        left: 1%
+    }
+    @include s.tablet {
+        width: 250px;
+        height: 250px;
+        left: 10%;
+    }
+    @include s.desktop {
+        width: 350px;
+        height: 350px;
+        left: 8%;
+    }
+}
+
+.photoGreen2 input {
+    /* 버튼 태그로 만들면서 자동생성된 css 삭제 */
+    background: none;
+    border: none;
+}
+
+
+
+/********************************** 버튼 태그 css */
+.complete_button {
+    position: relative;
+    top: 50%;
+    border: 1px solid #335A3B;
+    margin-bottom: 5%;
+    display: inline-block;
+
+    /* 범위 및 크기 지정 */
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 2%;
+    width: 70%;
+    height: auto;
+
+    /* css */
+    border-radius: 0.7em;
+    background-color: #DDEFC7;
+
+    /* 내용 가운데 정렬 */
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.complete_button a:hover {
+    background-color: #335A3B;
+    color: white;
+}

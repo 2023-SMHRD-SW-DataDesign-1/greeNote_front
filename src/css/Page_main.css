@@ -35,6 +35,7 @@
 }
 
 .main_big_pie1 {
+  justify-content: center;
   /* 헤더 제외 하단 영역 */
 }
 @media (min-width: 800px) and (max-width: 1199px) {

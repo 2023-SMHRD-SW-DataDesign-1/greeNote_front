@@ -38,6 +38,8 @@
 }
 
 .main_big_pie1 {
+    justify-content: center;
+    
     /* 헤더 제외 하단 영역 */
     @include s.tablet {
         display: flex;
