@@ -45,7 +45,7 @@
     display: flex;
     justify-content: center;
     /* 상하 위치 조정 */
-    margin-top: 8%;
+    margin-top: 3%;
   }
 }
 
@@ -81,6 +81,17 @@
 @media (min-width: 1200px) {
   .join_input input {
     font-size: 15px;
+  }
+}
+
+/* 파일선택 css */
+input[type=file] {
+  width: 200px;
+  margin-left: 20px;
+}
+@media (min-width: 1200px) {
+  input[type=file] {
+    margin-left: 50px;
   }
 }
 
@@ -134,7 +145,7 @@
   .join_name,
   .join_nickname {
     /* 서로 상하 위치 조정 */
-    margin-top: 7%;
+    margin-top: 5%;
     /* 크기 지정 */
     width: 55%;
     height: auto;
@@ -163,5 +174,69 @@
   .id_check {
     font-size: 12px;
     right: 22%;
+  }
+}
+
+/* 유저 사진 */
+.join_photo {
+  background-color: #335A3B;
+  color: white;
+  /* 모양 만들기 */
+  border-radius: 50%;
+  /* 내부 text 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* 서로 상하 위치 조정 */
+  margin-top: 2%;
+  margin-bottom: 1%;
+  position: relative;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .join_photo {
+    left: 24%;
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .join_photo {
+    left: 22%;
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .join_photo {
+    left: 25%;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.join_photo img {
+  border-radius: 50%;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .join_photo img {
+    /* 가운데 정렬 */
+    left: 24%;
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .join_photo img {
+    left: 22%;
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .join_photo img {
+    left: 14%;
+    width: 300px;
+    height: 300px;
   }
 }

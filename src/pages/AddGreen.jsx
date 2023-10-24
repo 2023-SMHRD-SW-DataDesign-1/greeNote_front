@@ -42,30 +42,23 @@ const AddGreen = () => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
-    const plentObj = {
+    const plantObj = {
       image: imageUrl,
       title: formData.get('title'),
       startDate: formData.get('startDate'),
       wateringDate: formData.get('wateringDate'),
       nickname: formData.get('nickname'),
       message: formData.get('message'),
-      color: formData.get('color')
+      color: formData.get('color'),
+      gardeningDto: {
+        water: formData.get('water') === 'on' ? 'on' : null,
+        repot: formData.get('repot') === 'on' ? 'on' : null,
+        nutrition: formData.get('nutrition') === 'on' ? 'on' : null,
+        ventilation: formData.get('ventilation') === 'on' ? 'on' : null
+      }  
     };
 
-    const gardeningObj = {
-      water: formData.get('water') === 'on' ? 'on' : null,
-      repot: formData.get('repot') === 'on' ? 'on' : null,
-      nutrition: formData.get('nutrition') === 'on' ? 'on' : null,
-      ventilation: formData.get('ventilation') === 'on' ? 'on' : null
-    };
-
-    console.log(plentObj);
-    console.log(gardeningObj);
-
-    await axios.post(`${masterURL}/plant/addPlantList`, {
-      plentObj: plentObj,
-      gardeningObj: gardeningObj
-    })
+    await axios.post(`${masterURL}/plant/addPlantList`, plantObj )
       .then((res) => {
         console.log(res);
       })
@@ -73,12 +66,12 @@ const AddGreen = () => {
         console.log(err);
         if (err.message === "Request failed with status code 401") {
           await axios.get(`${masterURL}/auth/reissue`)
-          .then((res)=>{
-            console.log(res.data);
-          })
-          .catch((err)=>{
-            console.log(err);
-          })
+            .then((res) => {
+              console.log(res.data);
+            })
+            .catch((err) => {
+              console.log(err);
+            })
         }
       })
   }

@@ -90,6 +90,7 @@ function App() {
       <Route path='/writediary' element={<WriteDiary/>}></Route>
       <Route path='/diarydetail' element={<DiaryDetail/>}></Route>
       <Route path='/testpage' element={<Testpage/>}></Route>
+      <Route path='/testpage2' element={<Testpage2/>}></Route>
 
       {/* 테스트용 페이지 */}
       <Route path='/testJoin' element={<TestJoin/>}></Route>

@@ -1,79 +1,76 @@
+@charset "UTF-8";
 /* Diary_content.css (별도의 CSS 파일) */
 @font-face {
-    font-family: 'KCC-Ganpan';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "KCC-Ganpan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
-
 .diary_container {
-    font-family: 'NanumSquareNeo-Variable';
-
-    /* 위치 지정 */
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-bottom: 3%;
-    padding: 4%;
-
-    /* 크기 조정 */
-    height: 185px;
-    width: 94%;
-    border-radius: 0.7em;
-
-    /* 배치 조정 */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    /* box_shadow: 왼오 위아래 퍼짐정도 진하기 */
-    box-shadow: 0px 1px 7px 0px grey;
+  font-family: "NanumSquareNeo-Variable";
+  /* 위치 지정 */
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 3%;
+  padding: 4%;
+  /* 크기 조정 */
+  height: 185px;
+  width: 94%;
+  border-radius: 0.7em;
+  /* 배치 조정 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* box_shadow: 왼오 위아래 퍼짐정도 진하기 */
+  box-shadow: 0px 1px 7px 0px grey;
 }
 
 .file {
-    width: 160px;
-    height: 160px;
-    border: 1px solid grey;
-
-    /* 내부 text 가운데 정렬 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    /* css */
-    color: black;
+  width: 160px;
+  height: 160px;
+  border: 1px solid grey;
+  /* 내부 text 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* css */
+  color: black;
 }
 
 .diary_content {
-    width: 56%;
-    height: 100%;
-    /* 내부 text 가운데 정렬 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 56%;
+  height: 100%;
+  /* 내부 text 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
+
 .title2 {
-    font-size: 17px;
-    font-weight: border;
-    margin-right: 10px;
+  font-size: 17px;
+  font-weight: border;
+  margin-right: 10px;
 }
+
 .top img {
-    width: 23px;
-    height: 23px;
+  width: 23px;
+  height: 23px;
 }
+
 .contents {
-    font-size: 15px;
+  font-size: 15px;
 }

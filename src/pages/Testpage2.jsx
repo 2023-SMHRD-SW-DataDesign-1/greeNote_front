@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from '../components/Sidebar'
 import Header_home from '../components/Page_main/Header_home'
 import Diary_content from '../components/Diary_content'
+import Calendar from '../components/Page_main/Calendar'
 
 
 
@@ -15,11 +16,9 @@ const Testpage2 = () => {
                     <div className='main_big_pie1'>
                         <Sidebar />
                         <div className='main_pie1'>
-                            
+                            <Calendar/>
                         </div>
-                        <div className='main_pie2'>
-                            <Diary_content />
-                        </div>
+                
                     </div>
                 </div>
             </div>
