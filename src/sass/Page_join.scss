@@ -51,7 +51,7 @@
         justify-content: center;
 
         /* 상하 위치 조정 */
-        margin-top: 8%;
+        margin-top: 4%;
     }
 }
 
@@ -62,13 +62,15 @@
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    
-    @include s.mobile{
+
+    @include s.mobile {
         width: 100%;
     }
+
     @include s.tablet {
         width: 40%;
     }
+
     @include s.desktop {
         width: 31%
     }
@@ -79,10 +81,20 @@
     @include s.tablet {
         font-size: 12px;
     }
+
     @include s.desktop {
         font-size: 15px;
     }
 }
+/* 파일선택 css */
+input[type='file'] {
+    width: 200px;
+    margin-left: 20px; 
+
+    @include s.desktop {
+        margin-left: 50px; 
+    }
+  }
 
 /* join-button css는 Page_intro.css에! */
 
@@ -118,7 +130,7 @@
 
     @include s.tablet {
         font-size: 15px;
-        
+
         /* 서로 상하 위치 조정 */
         margin-top: 4%;
 
@@ -129,7 +141,7 @@
 
     @include s.desktop {
         /* 서로 상하 위치 조정 */
-        margin-top: 7%;
+        margin-top: 5%;
 
         /* 크기 지정 */
         width: 55%;
@@ -140,20 +152,85 @@
 .id_check {
     color: red;
     text-align: right;
-    
+
     /* 위치 조정 */
     position: relative;
-    
-    @include s.mobile{
+
+    @include s.mobile {
         font-size: 10px;
         right: 20%;
     }
-    @include s.tablet{
+
+    @include s.tablet {
         font-size: 10px;
         right: 20%;
     }
+
     @include s.desktop {
         font-size: 12px;
         right: 22%;
+    }
+}
+
+/* 유저 사진 */
+.join_photo {
+    background-color: #335A3B;
+    color: white;
+    border: 2px solid #ccc;
+    overflow: hidden;
+    
+    /* 모양 만들기 */
+    border-radius: 50%;
+
+    /* 내부 text 가운데 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* 서로 상하 위치 조정 */
+    margin-top: 2%;
+    margin-bottom: 1%;
+    position: relative;
+
+    @include s.mobile {
+        left: 24%;
+        width: 200px;
+        height: 200px;
+    }
+
+    @include s.tablet {
+        left: 22%;
+        width: 200px;
+        height: 200px;
+    }
+
+    @include s.desktop {
+        left: 29%;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.join_photo img {
+    border-radius: 50%;
+
+    @include s.mobile {
+        /* 가운데 정렬 */
+        left: 24%;
+        width: 200px;
+        height: 200px;
+    }
+
+    @include s.tablet {
+        left: 22%;
+        width: 200px;
+        height: 200px;
+    }
+
+    @include s.desktop {
+        left: 29%;
+        width: 250px;
+        height: 250px;
     }
 }

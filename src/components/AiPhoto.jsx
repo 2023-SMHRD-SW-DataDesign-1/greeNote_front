@@ -1,71 +1,89 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ItemPhoto from './ItemPhoto'
-import { Link } from 'react-router-dom'
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const AiPhoto = () => {
 
     const arr = [
         {
-            url :'123',
-            name : '몬스테라',
+            url: '001',
+            name: '1',
         },
         {
-            url :'123',
-            name : '몬스테라',
+            url: '002',
+            name: '2',
         },
         {
-            url :'123',
-            name : '몬스테라',
+            url: '003',
+            name: '3',
         },
         {
-            url :'123',
-            name : '몬스테라',
+            url: '004',
+            name: '4',
         },
         {
-            url :'123',
-            name : '몬스테라',
+            url: '005',
+            name: '5',
         },
         {
-            url :'123',
-            name : '몬스테라',
+            url: '006',
+            name: '6',
         },
         {
-            url :'123',
-            name : '몬스테라',
+            url: '007',
+            name: '7',
         },
         {
-            url :'123',
-            name : '몬스테라',
+            url: '008',
+            name: '8',
         },
         {
-            url :'123',
-            name : '몬스테라',
+            url: '009',
+            name: '9',
         },
         {
-            url :'123',
-            name : '몬스테라',
+            url: '010',
+            name: '10',
         },
         {
-            url :'123',
-            name : '몬스테라',
-        },
-        {
-            url :'123',
-            name : '몬스테라',
-        },
-        {
-            url :'123',
-            name : '몬스테라',
-        },
-        {
-            url :'123',
-            name : '몬스테라',
-        },
-        {
-            url :'123',
-            name : '몬스테라',
-        },
+            url: '011',
+            name: '11',
+        }
+
     ]
+    const [selectedImage, setSelectedImage] = useState(0);
+
+
+
+    const handleImageClick = (image) => {
+        if (selectedImage.url === image.url) {
+            setSelectedImage(0); // 이미 선택된 이미지를 다시 클릭하면 선택 해제
+        } else {
+            setSelectedImage(image); // 새 이미지를 선택
+        }
+        console.log('selectedImage:', selectedImage);
+    };
+
+    const handleUpload = () => {
+        if (selectedImage) {
+            // 선택된 이미지를 업로드
+            console.log("url",selectedImage.url);
+            axios
+                .post('/your-upload-api-endpoint', { url: selectedImage.url })
+                .then((response) => {
+                    console.log('Image uploaded successfully:', response.data);
+                    // 업로드가 성공하면 이동하거나 다른 작업을 수행
+                })
+                .catch((error) => {
+                    console.error('Image upload failed:', error);
+                    // 업로드 실패 시 오류 처리
+                });
+        } else {
+            // 이미지를 선택하지 않았을 때 처리
+            console.log('Please select an image to upload.');
+        }
+    };
 
     return (
         <div className='photo_top_container'>
@@ -76,16 +94,17 @@ const AiPhoto = () => {
             <div className="photo_second_container">
                 <div className='photo_container'>
                     {arr.map((img, idx) => (
-                        <ItemPhoto key={idx} data={img} />
+                        <ItemPhoto key={idx} data={img} selected={selectedImage.url === img.url}
+                            onClick={() => handleImageClick(img)} />
                     ))}
                 </div>
             </div>
 
             <div className='photo_btn_div'>
-                <Link to="/aiReturn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-up-circle-fill upload_btn" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
-                    </svg>
+                <Link to='/aiReturn'>
+                    <button className="uploadBtn" onClick={handleUpload}>
+                        AI 이미지 생성
+                    </button>
                 </Link>
             </div>
 

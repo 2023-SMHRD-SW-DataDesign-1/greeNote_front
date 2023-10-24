@@ -22,6 +22,13 @@
         height: 460px;
     }
 
+    @include s.tablet{
+        width: 500px;
+        height: 700px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
     @include s.desktop {
         width: 800px;
         height: 700px;
@@ -37,34 +44,22 @@
     justify-content: center;
 }
 
-//    .photo_container {
-//         margin: auto;
-//         background-color: rgb(213, 247, 182);
-//         display: flex;
-//         width: 500px;
-//         height: 560px;
-//         border-radius: 1%;
-//     }
 
-
-.upload_btn {
-    border-radius: 50%;
-    fill: rgb(67, 155, 59);
-
-    @include s.mobile {
-        margin: 20px;
-        margin-left: 280px;
-    }
-
-    @include s.desktop {
-        margin: 630px;
-    }
-}
 
 
 .web_pageInfo {
     @include s.mobile {
         display: none;
+    }
+
+    @include s.tablet{
+        display: flex;
+        flex-direction: row;
+        width: 600px;
+        height: 90px;
+        align-items: center;
+        margin-right: auto;
+        margin-bottom: auto;
     }
 
     @include s.desktop {
@@ -83,6 +78,11 @@
         display: none;
     }
 
+    @include s.tablet{
+        width: 100px;
+        height: 100px; 
+    }
+
     @include s.desktop{
         width: 100px;
         height: 100px; 
@@ -95,30 +95,40 @@
         display: none;
     }
 
+    @include s.tablet{
+        font-size: 18px;
+        font-weight: 900;
+    }
+
     @include s.desktop{
         font-size: 20px;
         font-weight: 900;
     }
 }
 
-.web_pageInfo {
-    @include s.mobile{
-        display: none;
+
+.photo_btn_div {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin: 30px;
+}
+
+.uploadBtn{
+    width: 130px;
+    background-color: #46b95d;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    
+    @include s.tablet{
+        width: 200px;
     }
 
     @include s.desktop{
-    display: flex;
-    flex-direction: row;
-    width: 500px;
-    height: 90px;
-    align-items: center;
-    margin-right: auto;
-    margin-bottom: auto;
+        width: 300px;
     }
 }
 
-.photo_btn_div {
-    // background-color: bisque;
-    align-items: end;
-    height: 90px;
+.uploadBtn:hover{
+    background-color: #335A3B;
 }

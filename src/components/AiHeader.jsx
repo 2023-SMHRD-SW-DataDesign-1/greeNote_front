@@ -34,9 +34,15 @@ const AiHeader = ({ onSelectComponent }) => {
                     <img src='Image/ic_meatball.png' className='ic_meat' /> {/*미트볼 아이콘 */}
                     {isMenuOpen && (
                         <div >
-                            <div className='meat_menu' onClick={() => handleMenuSelect("diary")}>Diary</div>
-                            <div className='meat_menu' onClick={() => handleMenuSelect("ai")}>AI</div>
-                            <div className='meat_menu' onClick={() => handleMenuSelect("slide")}>Slide</div>
+                            <Link to='/greendiary' className='menuLink'>
+                                <div className='meat_menu'>Diary</div>
+                            </Link>
+                            <Link to='/ai'className='menuLink'>
+                                <div className='meat_menu'>ai</div>
+                            </Link>
+                            <Link to='/slide' className='menuLink'>
+                                <div className='meat_menu'>slide</div>
+                            </Link>
                         </div>
                     )}
                 </div>

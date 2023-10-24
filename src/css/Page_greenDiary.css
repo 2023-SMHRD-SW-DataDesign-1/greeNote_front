@@ -1,4 +1,12 @@
 @charset "UTF-8";
+@media (min-width: 1200px) {
+  .greendiary_container {
+    width: 1200px;
+    height: 936px;
+    border-radius: 5%;
+  }
+}
+
 @media (min-width: 360px) and (max-width: 799px) {
   .main_big_pie1 > .ai_plant_container {
     display: none;
@@ -31,7 +39,7 @@
 }
 
 @media (min-width: 1200px) {
-  .diary_photo {
-    width: 90%;
+  .diary_box {
+    width: 100%;
   }
 }

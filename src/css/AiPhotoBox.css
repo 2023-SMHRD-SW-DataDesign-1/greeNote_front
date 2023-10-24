@@ -1,9 +1,18 @@
-@media (min-width: 1200px) {
+@media (min-width: 800px) and (max-width: 1199px) {
   .web_box {
-    width: 1200px;
-    height: 800px;
     display: flex;
     flex-direction: row;
+    width: 800px;
+    height: 800px;
+    background-color: rgb(255, 252, 252);
+  }
+}
+@media (min-width: 1200px) {
+  .web_box {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 800px;
     background-color: rgb(255, 252, 252);
   }
 }

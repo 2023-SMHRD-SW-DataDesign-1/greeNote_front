@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /* Calendar.css (별도의 CSS 파일) */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 @font-face {
   font-family: "KCC-Ganpan";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2") format("woff2");
@@ -15,42 +14,54 @@
 }
 /* Import Google font - Poppins */
 .calender_container {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-.calendar_body {
   display: flex;
-  align-items: center;
-  padding: 0 10px;
   justify-content: center;
-  min-height: 100vh;
-  background: #9B59B6;
 }
 
 .wrapper {
-  width: 450px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 90%;
+    min-width: 450px;
+    height: 430px;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .wrapper {
+    width: 90%;
+    height: 430px;
+  }
+}
 
-.wrapper header {
+.calendar_header {
   display: flex;
-  align-items: center;
-  padding: 25px 30px 10px;
+  height: 10%;
+  width: 100%;
+  padding: 10px 25px 10px;
   justify-content: space-between;
 }
 
-header .icons {
+.calendar_header .current-date {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/************************* 아이콘 */
+.iconBox {
+  width: 25px;
+}
+
+.calendar_header .icons2 {
   display: flex;
 }
 
-header .icons span {
-  height: 38px;
-  width: 38px;
+.iconBox img {
+  height: 20px;
+  width: 20px;
   margin: 0 1px;
   cursor: pointer;
   color: #878787;
@@ -61,21 +72,13 @@ header .icons span {
   border-radius: 50%;
 }
 
-.icons span:last-child {
-  margin-right: -10px;
-}
-
-header .icons span:hover {
+.iconBox img:hover {
   background: #f2f2f2;
 }
 
-header .current-date {
-  font-size: 1.45rem;
-  font-weight: 500;
-}
-
+/************************** 날짜 부분 */
 .calendar_box {
-  padding: 20px;
+  padding: 10px;
 }
 
 .calendar_box ul {
@@ -83,6 +86,8 @@ header .current-date {
   flex-wrap: wrap;
   list-style: none;
   text-align: center;
+  padding: 0%;
+  margin: 0%;
 }
 
 .calendar_box .days {
@@ -101,6 +106,7 @@ header .current-date {
 }
 
 .calendar_box .days li {
+  /* 날짜 하루하루의 칸 */
   z-index: 1;
   cursor: pointer;
   position: relative;
@@ -128,9 +134,9 @@ header .current-date {
 }
 
 .days li.active::before {
-  background: #9B59B6;
+  background: #335A3B;
 }
 
 .days li:not(.active):hover::before {
-  background: #f2f2f2;
+  background: #9FC9A8;
 }

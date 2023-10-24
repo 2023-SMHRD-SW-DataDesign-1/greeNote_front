@@ -12,7 +12,7 @@ const AiPlant = () => {
         <div className='plant_data'>
 
           <div className='circle plant_image_color'>
-            <div className='circle plant_main_image'>
+            <div className='circle plant_main_image' >
               <img className='circle plant_main_image' src='/Image/plant_ex.jpg' />
             </div>
           </div>
