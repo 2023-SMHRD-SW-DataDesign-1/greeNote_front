@@ -7,6 +7,7 @@ import Date from '../components/Page_main/Date'
 import Diary_content from '../components/Diary_content'
 import Sidebar from '../components/Sidebar'
 import Main_left from '../components/Page_main/Main_left'
+import { Link } from 'react-router-dom'
 
 const Main = () => {
   return (
@@ -19,15 +20,15 @@ const Main = () => {
           <div className='main_big_pie1'>
             <Sidebar />
             <div className='main_pie1'>
-              <br/>
+              <br />
               <Main_left />
             </div>
             <div className='main_pie2'>
               <br />
-              <Diary_content/>
-              <Diary_content/>
-              <Diary_content/>
-              <Diary_content/>
+              <Diary_content />
+              <Diary_content />
+              <Diary_content />
+              <Diary_content />
             </div>
           </div>
         </div>
@@ -39,11 +40,16 @@ const Main = () => {
           <div>
             <Date />
           </div>
+          <button>
+            <Link to="/writediary">
+              테스트용
+            </Link>
+          </button>
           <br />
           <div>
             <Diary_content />
-            <Diary_content/>
-            <Diary_content/>
+            <Diary_content />
+            <Diary_content />
           </div>
         </div>
 

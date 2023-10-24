@@ -5,7 +5,6 @@ import AiHeader from '../components/AiHeader'
 import firebaseApp from "../Firebase";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import axios from 'axios';
-import { async } from 'q';
 
 const AddGreen = () => {
 
@@ -15,7 +14,7 @@ const AddGreen = () => {
   // 이미지 핸들러
   const [imageFile, setImageFile] = useState(null);
   const [previewURL, setPreviewURL] = useState(null);
-  const [imageUpload, setImageUpload] = useState(null); // 새로운 상태 추가
+  const [imageUpload, setImageUpload] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
   const storage = getStorage(firebaseApp);
   const thumbnail = async (e) => {
@@ -38,24 +37,24 @@ const AddGreen = () => {
   };
 
   // 목록 등록 함수
-  const addPlentList = async (e) => {
+  const addPlantList = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
     const plantObj = {
       image: imageUrl,
       title: formData.get('title'),
-      startDate: formData.get('startDate'),
-      wateringDate: formData.get('wateringDate'),
+      start_date: formData.get('startDate'),
+      watering_date: formData.get('wateringDate'),
       nickname: formData.get('nickname'),
       message: formData.get('message'),
       color: formData.get('color'),
       gardeningDto: {
-        water: formData.get('water') === 'on' ? 'on' : null,
-        repot: formData.get('repot') === 'on' ? 'on' : null,
-        nutrition: formData.get('nutrition') === 'on' ? 'on' : null,
-        ventilation: formData.get('ventilation') === 'on' ? 'on' : null
-      }  
+        watering: formData.get('water') === 'on' ? 7 : null,
+        repotting: formData.get('repot') === 'on' ? 90 : null,
+        nutrition_management: formData.get('nutrition') === 'on' ? 80 : null,
+        ventilation: formData.get('ventilation') === 'on' ? 40 : null
+      }
     };
 
     await axios.post(`${masterURL}/plant/addPlantList`, plantObj )
@@ -83,7 +82,7 @@ const AddGreen = () => {
         내 반려 식물의 프로필
       </div>
 
-      <form onSubmit={addPlentList}>
+      <form onSubmit={addPlantList}>
         <div className='photoGreen'>{/* 사진과 입력 */}
           {previewURL ? (
             <img src={previewURL} alt="green" />
