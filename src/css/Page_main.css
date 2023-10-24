@@ -19,7 +19,6 @@
 }
 @media (min-width: 1200px) {
   .main_container {
-    margin-top: 10px;
     width: 1200px;
     height: 936px;
     border-radius: 5%;
@@ -37,6 +36,12 @@
 
 .main_big_pie1 {
   /* 헤더 제외 하단 영역 */
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .main_big_pie1 {
+    display: flex;
+    width: 100%;
+  }
 }
 @media (min-width: 1200px) {
   .main_big_pie1 {
@@ -102,12 +107,12 @@
   }
 }
 
+/***************************************** 중간 */
 .main_left {
   /* 일자, 캘린더, 식물리스트 */
 }
 @media (min-width: 1200px) {
   .main_left {
-    padding-top: 20px;
     width: 465px;
     height: 100%;
   }

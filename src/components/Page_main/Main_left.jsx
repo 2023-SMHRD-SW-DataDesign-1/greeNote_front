@@ -1,7 +1,8 @@
 import React from 'react'
 import Date from './Date'
-import Calender from './Calender'
+
 import GreenList from './GreenList'
+import Icons_home from './Icons_home'
 
 const Main_left = () => {
   return (
@@ -9,8 +10,9 @@ const Main_left = () => {
       <div className='web_date'>
         <Date />
       </div>
-        <Calender/>
-        <GreenList />
+      
+      <GreenList />
+      <Icons_home />
     </div>
   )
 }
