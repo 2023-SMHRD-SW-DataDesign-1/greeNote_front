@@ -25,7 +25,6 @@ import './css/Page_mypage.css';
 import './css/Input_writeDiary.css';
 
 /* 테스트용 페이지!! 나중에 삭제 예정 */
-import Testpage from './pages/Testpage';
 import Testpage2 from './pages/Testpage2';
 import TestJoin from './pages/TestJoin';
 

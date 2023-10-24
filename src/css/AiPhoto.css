@@ -21,6 +21,14 @@
     height: 460px;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .photo_second_container {
+    width: 500px;
+    height: 700px;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
 @media (min-width: 1200px) {
   .photo_second_container {
     width: 800px;
@@ -36,25 +44,20 @@
   justify-content: center;
 }
 
-.upload_btn {
-  border-radius: 50%;
-  fill: rgb(67, 155, 59);
-}
-@media (min-width: 360px) and (max-width: 799px) {
-  .upload_btn {
-    margin: 20px;
-    margin-left: 280px;
-  }
-}
-@media (min-width: 1200px) {
-  .upload_btn {
-    margin: 630px;
-  }
-}
-
 @media (min-width: 360px) and (max-width: 799px) {
   .web_pageInfo {
     display: none;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .web_pageInfo {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 90px;
+    align-items: center;
+    margin-right: auto;
+    margin-bottom: auto;
   }
 }
 @media (min-width: 1200px) {
@@ -72,6 +75,12 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .web_pageInfo img {
     display: none;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .web_pageInfo img {
+    width: 100px;
+    height: 100px;
   }
 }
 @media (min-width: 1200px) {
@@ -86,6 +95,12 @@
     display: none;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .web_infoText {
+    font-size: 18px;
+    font-weight: 900;
+  }
+}
 @media (min-width: 1200px) {
   .web_infoText {
     font-size: 20px;
@@ -93,24 +108,30 @@
   }
 }
 
-@media (min-width: 360px) and (max-width: 799px) {
-  .web_pageInfo {
-    display: none;
+.photo_btn_div {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin: 30px;
+}
+
+.uploadBtn {
+  width: 130px;
+  background-color: #46b95d;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .uploadBtn {
+    width: 200px;
   }
 }
 @media (min-width: 1200px) {
-  .web_pageInfo {
-    display: flex;
-    flex-direction: row;
-    width: 500px;
-    height: 90px;
-    align-items: center;
-    margin-right: auto;
-    margin-bottom: auto;
+  .uploadBtn {
+    width: 300px;
   }
 }
 
-.photo_btn_div {
-  align-items: end;
-  height: 90px;
+.uploadBtn:hover {
+  background-color: #335A3B;
 }

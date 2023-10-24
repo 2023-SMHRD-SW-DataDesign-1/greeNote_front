@@ -46,6 +46,10 @@
     background-color: aquamarine;
     z-index: 3;
   }
+  .menuLink {
+    text-decoration: none;
+    color: black;
+  }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .meat {

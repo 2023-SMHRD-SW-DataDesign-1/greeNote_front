@@ -54,6 +54,11 @@
     z-index: 3;
   }
 
+  .menuLink{
+    text-decoration: none;
+    color: black;
+  }
+
 }
 
 @include s.tablet {

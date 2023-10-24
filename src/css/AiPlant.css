@@ -14,16 +14,16 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .ai_plant_container {
-    width: 204px;
-    height: 800px;
+    width: 200px;
+    height: 845px;
     background-color: rgb(114, 204, 144);
   }
 }
 @media (min-width: 1200px) {
   .ai_plant_container {
-    width: 300px;
-    height: 800px;
-    background-color: rgb(114, 204, 144);
+    width: 200px;
+    height: 845px;
+    background-color: rgb(11, 126, 49);
   }
 }
 
@@ -45,7 +45,7 @@
     width: 200px;
     height: 300px;
     margin-top: 100px;
-    background-color: rgb(134, 48, 48);
+    background-color: rgb(114, 204, 144);
   }
 }
 @media (min-width: 1200px) {
@@ -76,7 +76,6 @@
   .plant_nickname {
     width: 200px;
     height: 30px;
-    background-color: rgb(255, 255, 255);
   }
 }
 @media (min-width: 1200px) {
@@ -99,6 +98,12 @@
     background-color: #ffffff;
     height: 120px;
     margin-top: 10px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .plant_data {
+    height: 250px;
+    flex-direction: column;
   }
 }
 @media (min-width: 1200px) {
@@ -132,6 +137,11 @@
     margin-left: 20px;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .plant_image_color {
+    background-color: rgb(0, 18, 175);
+  }
+}
 @media (min-width: 1200px) {
   .plant_image_color {
     background-color: rgb(39, 0, 129);
@@ -150,6 +160,18 @@
     height: 50px;
     margin: 10px;
     margin-top: 25px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .plant_text_data {
+    background-color: rgb(114, 204, 144);
+    width: 200px;
+    height: 70px;
+    margin: 10px;
+    margin-top: 25px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (min-width: 1200px) {

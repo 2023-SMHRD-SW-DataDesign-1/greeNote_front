@@ -8,11 +8,26 @@
     color: rgb(12, 12, 12);
   }
 }
+.slide_setBox {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .slide_setBox {
+    width: 360px;
+    margin: 10px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .slide_setBox {
+    width: 500px;
+    height: 600px;
+    margin: 50px;
+  }
+}
 @media (min-width: 1200px) {
   .slide_setBox {
     width: 930px;
-    display: flex;
-    justify-content: center;
     margin: 50px;
   }
 }

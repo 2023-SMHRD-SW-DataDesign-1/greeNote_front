@@ -7,16 +7,20 @@
   font-style: normal;
 }
 
-@include s.desktops {
-
-
-  .web_container {
+.web_container {
+  @include s.mobile{
+    width: 360px;
+    height: 800px;
+  }
+  @include s.desktop{
     margin-top: 10px;
     width: 1200px;
     height: 936px;
     border-radius: 5%;
   }
+}
 
+@include s.desktops {
   .flipText {
     display: none;
   }
