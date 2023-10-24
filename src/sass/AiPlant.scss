@@ -1,5 +1,6 @@
 @use '../sass/_variables.scss' as s;
 
+
 .ai_plant_container {
     display: flex;
     flex-direction: column;
@@ -13,29 +14,14 @@
         background-color: rgb(255, 255, 255);
     }
 
-    @include s.desktop {
-        width: 270px;
+    @include s.tablet{
+        width: 204px;
         height: 800px;
         background-color: rgb(114, 204, 144);
     }
-}
-
-
-.ai_plant_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include s.mobile {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        background-color: rgb(255, 255, 255);
-    }
 
     @include s.desktop {
-        width: 270px;
+        width: 300px;
         height: 800px;
         background-color: rgb(114, 204, 144);
     }
@@ -52,6 +38,14 @@
         height: 180px;
         background-color: rgb(255, 255, 255);
 
+    }
+
+    
+    @include s.tablet{
+        width: 200px;
+        height: 300px;
+        margin-top: 100px;
+        background-color: rgb(134, 48, 48);
     }
 
     @include s.desktop {
@@ -74,6 +68,13 @@
     @include s.mobile {
         width: 300px;
         height: 40px;
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    @include s.tablet {
+        width: 200px;
+        height: 30px;
         background-color: rgb(255, 255, 255);
 
     }

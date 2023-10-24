@@ -8,10 +8,7 @@
 }
 
 @include s.desktops {
-  .web_top_container {
-    display: flex;
-    justify-content: center;
-  }
+
 
   .web_container {
     margin-top: 10px;
