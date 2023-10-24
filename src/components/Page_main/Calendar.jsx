@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
-
+import React, { useState } from 'react';
 
 
 const Calendar = () => {
@@ -38,20 +36,25 @@ const Calendar = () => {
     };
   
     const handleIconClick = (isPrevious) => {
+      let newYear = currYear;
+      let newMonth = currMonth;
+    
       if (isPrevious) {
-        setCurrMonth(currMonth - 1);
+        newMonth -= 1;
+        if (newMonth < 0) {
+          newMonth = 11;
+          newYear -= 1;
+        }
       } else {
-        setCurrMonth(currMonth + 1);
+        newMonth += 1;
+        if (newMonth > 11) {
+          newMonth = 0;
+          newYear += 1;
+        }
       }
-  
-      if (currMonth < 0 || currMonth > 11) {
-        const newDate = new Date(currYear, currMonth, date.getDate());
-        setCurrYear(newDate.getFullYear());
-        setCurrMonth(newDate.getMonth());
-      } else {
-        setCurrYear(date.getFullYear());
-        setCurrMonth(date.getMonth());
-      }
+    
+      setCurrYear(newYear);
+      setCurrMonth(newMonth);
     };
 
 
@@ -63,7 +66,7 @@ const Calendar = () => {
                     <div id="prev" className="iconBox" onClick={() => handleIconClick(true)}>
                         <img src="/Icon/back.png" alt="prev" />
                     </div>
-                    {/* <p className="current-date">{`${months[currMonth]} ${currYear}`}</p> {/* 현재년월 */}
+                    <p className="current-date">{`${months[currMonth]} ${currYear}`}</p>
                     <div id="next" className="iconBox" onClick={() => handleIconClick(false)}>
                         <img src="/Icon/next.png" alt="next" />
                     </div>

@@ -105,9 +105,11 @@
 .main_left {
     width: 100%;
     @include s.tablet {
-
+        max-width: 500px;
+        min-width: 400px;
     }
     @include s.desktop {
+        width: 500px;
 
     }
 }

@@ -120,6 +120,18 @@
 .main_left {
   width: 100%;
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .main_left {
+    max-width: 500px;
+    min-width: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .main_left {
+    width: 500px;
+  }
+}
+
 @media (min-width: 360px) and (max-width: 799px) {
   .main_left > .web_date {
     display: none;

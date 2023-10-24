@@ -23,7 +23,8 @@
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
   width: 90%;
-  height: 380px;
+  min-width: 450px;
+  height: 430px;
 }
 
 .calendar_header {
@@ -123,9 +124,9 @@
 }
 
 .days li.active::before {
-  background: #9B59B6;
+  background: #335A3B;
 }
 
 .days li:not(.active):hover::before {
-  background: #f2f2f2;
+  background: #9FC9A8;
 }
