@@ -85,13 +85,13 @@
 }
 
 /* 파일선택 css */
-inputJoin {
+.inputJoin {
   width: 200px;
   margin-left: 20px;
 }
 @media (min-width: 1200px) {
-  inputJoin {
-    margin-left: 50px;
+  .inputJoin {
+    margin-left: 10px;
   }
 }
 
