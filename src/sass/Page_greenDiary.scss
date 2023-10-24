@@ -1,6 +1,13 @@
 @use '../sass/_variables.scss' as s;
 
 
+.greendiary_container {
+    @include s.desktop {
+        width: 1200px;
+        height: 936px;
+        border-radius: 5%;
+    }
+}
 
 .main_big_pie1>.ai_plant_container {
     @include s.mobile {
@@ -31,8 +38,8 @@
     }
 }
 
-.diary_photo {
+.diary_box {
     @include s.desktop {
-        width: 90%;
+        width: 100%;
     }
 }

@@ -43,7 +43,7 @@
     display: flex;
     justify-content: center;
     /* 상하 위치 조정 */
-    margin-top: 10%;
+    margin-top: 5%;
   }
 }
 
@@ -73,11 +73,9 @@
 
 .mypage_form {
   width: auto;
-  margin-top: 10%;
   /* 내용 가운데 정렬 */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   text-align: center;
 }
@@ -188,3 +186,73 @@
 .complete_button:hover {
   background-color: #335A3B;
 }
+
+/* 유저 사진 */
+.mypage_photo {
+  background-color: #335A3B;
+  color: white;
+  /* 모양 만들기 */
+  border-radius: 50%;
+  /* 내부 text 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* 서로 상하 위치 조정 */
+  margin-top: 2%;
+  margin-bottom: 1%;
+  position: relative;
+  border: 2px solid #ccc;
+  overflow: hidden;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .mypage_photo {
+    left: 24%;
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .mypage_photo {
+    left: 22%;
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .mypage_photo {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.mypage_photo img {
+  border-radius: 50%;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .mypage_photo img {
+    /* 가운데 정렬 */
+    left: 24%;
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .mypage_photo img {
+    left: 22%;
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .mypage_photo img {
+    left: 14%;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* input[type='file'] {
+    display: none;
+    /* 원래 파일 입력 필드를 숨김
+} */

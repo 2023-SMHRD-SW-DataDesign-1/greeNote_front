@@ -22,6 +22,12 @@
 
     /* 상하 위치 조정 */
     margin-bottom: 7%;
+
+    @include s.desktop {
+        width: 1200px;
+        height: 936px;
+        border-radius: 5%;
+    }
 }
 
 .addGreen {
@@ -41,6 +47,8 @@
     border-radius: 50%;
     width: 300px;
     height: 300px;
+    border: 2px solid #ccc;
+    overflow: hidden;
 
     /* 내부 text 가운데 정렬 */
     display: flex;

@@ -24,7 +24,7 @@ const GreenDiary = () => {
                 <img src="/Icon/bin.png" alt="bin" />
               </div>
             </div>
-            <div className='diary_photo'>
+            <div className='diary_box'>
               <Diary_content />
               <Diary_content />
               <Diary_content />
