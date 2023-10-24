@@ -3,6 +3,7 @@ import Date from './Date'
 
 import GreenList from './GreenList'
 import Icons_home from './Icons_home'
+import Calendar from './Calendar'
 
 const Main_left = () => {
   return (
@@ -10,7 +11,7 @@ const Main_left = () => {
       <div className='web_date'>
         <Date />
       </div>
-      
+      <Calendar />
       <GreenList />
       <Icons_home />
     </div>
