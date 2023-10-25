@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/Page_main/Sidebar'
 import Header_home2 from '../components/Page_main/Header_home2'
 import Diary_content from '../components/Diary_content'
 import Calendar from '../components/Page_main/Calendar'
