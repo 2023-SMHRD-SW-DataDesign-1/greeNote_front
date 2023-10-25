@@ -36,8 +36,6 @@
 
   @include s.desktop {
     width: 1200px;
-    position: relative;
-    left: 18.5%;
   }
 }
 
@@ -144,7 +142,7 @@
   color: #000000;
 }
 .header_menu a:hover {
-  background-color: #9FC9A8;
+  background-color: #65c265;
   border-radius: 50%;
   font-size: 20px;
   font-weight: border;

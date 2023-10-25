@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(255, 255, 255);
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .ai_plant_container {
@@ -10,21 +11,20 @@
     width: 100%;
     height: 100%;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .ai_plant_container {
     width: 200px;
     height: 800px;
-    background-color: rgb(114, 204, 144);
+    background-color: rgb(243, 243, 243);
   }
 }
 @media (min-width: 1200px) {
   .ai_plant_container {
     width: 200px;
     height: 800px;
-    background-color: rgb(11, 126, 49);
+    background-color: rgb(243, 243, 243);
   }
 }
 
@@ -46,7 +46,6 @@
     width: 200px;
     height: 300px;
     margin-top: 100px;
-    background-color: rgb(114, 204, 144);
   }
 }
 @media (min-width: 1200px) {
@@ -54,7 +53,6 @@
     width: 200px;
     height: 300px;
     margin-top: 100px;
-    background-color: rgb(114, 204, 144);
   }
 }
 
@@ -70,7 +68,8 @@
   .plant_nickname {
     width: 300px;
     height: 40px;
-    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    background-color: rgb(243, 243, 243);
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -165,7 +164,6 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .plant_text_data {
-    background-color: rgb(114, 204, 144);
     width: 200px;
     height: 70px;
     margin: 10px;
@@ -177,7 +175,6 @@
 }
 @media (min-width: 1200px) {
   .plant_text_data {
-    background-color: rgb(114, 204, 144);
     width: 200px;
     height: 70px;
     margin: 10px;

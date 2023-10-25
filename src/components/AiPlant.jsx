@@ -6,7 +6,7 @@ const AiPlant = () => {
   // 임시 식물
   const defaultPlant = {
     image_url: '/Image/plant_ex.jpg',
-    color: 'blue',
+    color: '#3b53d8',
     plant_id: 2,
     nickname: '무몬',
     species: '식물종',
@@ -36,6 +36,7 @@ const AiPlant = () => {
 
   const bgStyle = {
     backgroundColor: selectedPlantData.color,
+
   }
 
 
