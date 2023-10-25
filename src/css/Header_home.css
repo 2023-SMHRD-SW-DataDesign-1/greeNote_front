@@ -15,7 +15,7 @@
 .header_container,
 .header_container2 {
   background-color: #E7F1E9;
-  padding: 2% 0;
+  padding: 1% 0;
   padding-left: 3%;
   padding-right: 4%;
   /* 크기 지정 */
@@ -27,6 +27,14 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
+}
+@media (min-width: 1200px) {
+  .header_container,
+  .header_container2 {
+    width: 1200px;
+    position: relative;
+    left: 18.5%;
+  }
 }
 
 .logo img {

@@ -14,9 +14,7 @@ const Main = () => {
     <div className='web_top_container'>
       <div className='main_container'>
         <div className='main_page1'>
-          <div>
-            <Header_home2 />
-          </div>
+
           <div className='main_big_pie1'>
             <Sidebar />
             <div className='main_pie1'>
