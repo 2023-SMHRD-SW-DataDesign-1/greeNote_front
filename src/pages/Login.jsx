@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
@@ -7,6 +8,8 @@ const Login = () => {
   const masterURL = process.env.REACT_APP_MASTER_URL;
   // axios 설정
   axios.defaults.withCredentials = true;
+  // navigate 선언
+  const nav = useNavigate();
 
   // 로그인 함수
   const login = async (e) => {
@@ -22,6 +25,7 @@ const Login = () => {
     await axios.post(`${masterURL}/auth/login`, obj)
       .then((res) => {
         console.log(res);
+        nav('/');
       })
       .catch((err) => {
         console.log(err);

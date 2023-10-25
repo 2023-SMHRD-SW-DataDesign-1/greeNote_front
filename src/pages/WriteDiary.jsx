@@ -1,7 +1,7 @@
 /* 다이어리 작성하는 페이지 */
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import firebaseApp from "../Firebase";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import axios from 'axios';
@@ -10,6 +10,9 @@ const WriteDiary = () => {
 
     // URL 통합 관리
     const masterURL = process.env.REACT_APP_MASTER_URL;
+
+    // 식물 목록별 조회하기 위한 id값 가져오기
+    const { plant_id } = useParams();
 
     const today2 = new Date();
 
@@ -66,7 +69,7 @@ const WriteDiary = () => {
         formData.forEach((value, key) => {
             obj[key] = value;
         });
-        obj['plant_id'] = 1; // Plant_id는 현재 임의의 값 넣어놨음. 나중에 조회 기능 만들때 client에서부터 가져올 수 있도록 할 것
+        obj['plant_id'] = plant_id;
         obj['ai_result'] = '흰가루병'; // 나중에 제대로 만들 것
         obj['diary_imageDto'] = imageUrls;
 

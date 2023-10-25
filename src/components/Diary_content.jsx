@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Diary_content = () => {
+const Diary_content = ({ props }) => {
   return (
     <div className='diary_container'>
       <Link to="/" className='button_link2'>
@@ -14,14 +14,12 @@ const Diary_content = () => {
       <div className='diary_content'>
         <div className="top">
           <div className='title2'>
-            제목제목
+            {props.title}
           </div>
           <img src="/Icon/bin.png" alt="bin" /> {/* 휴지통 아이콘 */}
         </div>
         <div className='contents'>
-          새 잎이 난 지 꽤 됐는데 말린 잎이 아직 펴지기까지 얼마나 더 걸릴려나…
-          자꾸 만지면 안 좋은데 새 잎 특유의 연한 촉감이 좋아서 만지게 된다
-          (●ˇ∀ˇ●)
+          {props.content}
         </div>
       </div>
     </div>

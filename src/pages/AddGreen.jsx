@@ -135,8 +135,8 @@ const AddGreen = () => {
                 name='message'
               />
               <input
+                type='color'
                 className='greenColor'
-                placeholder='대표색 지정'
                 name='color'
               />
             </div>

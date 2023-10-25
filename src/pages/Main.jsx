@@ -40,11 +40,6 @@ const Main = () => {
           <div>
             <Date />
           </div>
-          <button>
-            <Link to="/writediary">
-              테스트용
-            </Link>
-          </button>
           <br />
           <div>
             <Diary_content />
