@@ -167,6 +167,13 @@
     text-align: center;
     justify-content: space-around;
     align-items: center;
+
+    @include s.desktop {
+        display: none;
+      }
+      @include s.tablet {
+        display: none;
+      }
 }
 
 .icon_AI,

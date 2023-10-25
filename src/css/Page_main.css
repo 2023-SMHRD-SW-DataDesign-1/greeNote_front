@@ -189,6 +189,16 @@
   justify-content: space-around;
   align-items: center;
 }
+@media (min-width: 1200px) {
+  .middle_menu {
+    display: none;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .middle_menu {
+    display: none;
+  }
+}
 
 .icon_AI,
 .icon_filpBook {
