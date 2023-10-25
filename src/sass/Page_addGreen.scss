@@ -53,6 +53,10 @@
     font-weight: bolder;
     
     @include s.mobile {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
     }
     
     @include s.tablet {
@@ -103,6 +107,10 @@
 
 
 /* 사진이 들어갈 부분 */
+.photoGreen1 {
+    width: auto;
+}
+
 .photoGreen {
     background-color: #335A3B;
     color: white;
@@ -126,7 +134,7 @@
     @include s.mobile {
         height: 200px;
         width: 200px;
-        left: 1%
+        left: 25%
     }
 
     @include s.tablet {
@@ -147,7 +155,7 @@
     @include s.mobile {
         height: 200px;
         width: 200px;
-        left: 1%
+        left: 25%
     }
 
     @include s.tablet {
@@ -166,7 +174,8 @@
     /* 버튼 태그로 만들면서 자동생성된 css 삭제 */
     background: none;
     border: none;
-    margin-left: 90px;
+    width: 200px;
+
 
 }
 

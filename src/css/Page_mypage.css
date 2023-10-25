@@ -85,6 +85,16 @@
     margin-left: 180px;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .inputMypage {
+    margin-left: 170px;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .inputMypage {
+    margin-left: 185px;
+  }
+}
 
 .mypage_form2 {
   margin-top: 10px;
@@ -112,7 +122,7 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .text2 {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -146,7 +156,7 @@
   .session_info,
   .mypage_pw,
   .mypage_nickname {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -225,14 +235,12 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .mypage_photo {
-    left: 24%;
     width: 200px;
     height: 200px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .mypage_photo {
-    left: 22%;
     width: 200px;
     height: 200px;
   }
@@ -249,22 +257,18 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .mypage_photo img {
-    /* 가운데 정렬 */
-    left: 24%;
     width: 200px;
     height: 200px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .mypage_photo img {
-    left: 22%;
     width: 200px;
     height: 200px;
   }
 }
 @media (min-width: 1200px) {
   .mypage_photo img {
-    left: 14%;
     width: 250px;
     height: 250px;
   }

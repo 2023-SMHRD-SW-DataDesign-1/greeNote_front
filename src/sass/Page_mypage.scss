@@ -87,6 +87,12 @@
     @include s.desktop {
         margin-left: 180px;
     }
+    @include s.tablet {
+        margin-left: 170px;
+    }
+    @include s.mobile {
+        margin-left: 185px;
+    }
 }
 
 .mypage_form2 {
@@ -124,7 +130,7 @@
     font-weight: bolder;
 
     @include s.mobile {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     @include s.tablet {
@@ -155,7 +161,7 @@
     /* background-color: #F2F2F2; */
 
     @include s.mobile {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     @include s.tablet {
@@ -234,13 +240,11 @@
     overflow: hidden;
 
     @include s.mobile {
-        left: 24%;
         width: 200px;
         height: 200px;
     }
 
     @include s.tablet {
-        left: 22%;
         width: 200px;
         height: 200px;
     }
@@ -255,20 +259,16 @@
     border-radius: 50%;
 
     @include s.mobile {
-        /* 가운데 정렬 */
-        left: 24%;
         width: 200px;
         height: 200px;
     }
 
     @include s.tablet {
-        left: 22%;
         width: 200px;
         height: 200px;
     }
 
     @include s.desktop {
-        left: 14%;
         width: 250px;
         height: 250px;
     }

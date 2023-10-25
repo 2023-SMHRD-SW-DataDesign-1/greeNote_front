@@ -54,7 +54,7 @@ const Login = () => {
           />
           <br /><br /><br />
 
-          <button type='submit' className='login_button'>
+          <button type='submit' className='login_button2'>
             로그인
           </button>
         </form>

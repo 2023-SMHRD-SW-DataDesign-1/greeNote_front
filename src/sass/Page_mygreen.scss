@@ -62,7 +62,16 @@
 
 .icons {
     display: flex;
-    width: 150px;
+
+    @include s.mobile{
+        width: 80px;
+    }
+    @include s.tablet {
+        width: 130px;
+    }
+    @include s.desktop {
+        width: 160px;
+    }
 }
 
 /* 오른쪽 삭제 아이콘 */

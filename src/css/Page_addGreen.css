@@ -50,6 +50,14 @@
 .mid_title3 {
   font-weight: bolder;
 }
+@media (min-width: 360px) and (max-width: 799px) {
+  .mid_title3 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+  }
+}
 @media (min-width: 800px) and (max-width: 1199px) {
   .mid_title3 {
     font-size: 20px;
@@ -104,6 +112,10 @@
 }
 
 /* 사진이 들어갈 부분 */
+.photoGreen1 {
+  width: auto;
+}
+
 .photoGreen {
   background-color: #335A3B;
   color: white;
@@ -125,7 +137,7 @@
   .photoGreen {
     height: 200px;
     width: 200px;
-    left: 1%;
+    left: 25%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -149,7 +161,7 @@
   .photoGreen img {
     height: 200px;
     width: 200px;
-    left: 1%;
+    left: 25%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -170,7 +182,7 @@
   /* 버튼 태그로 만들면서 자동생성된 css 삭제 */
   background: none;
   border: none;
-  margin-left: 90px;
+  width: 200px;
 }
 
 .mini_title1,
