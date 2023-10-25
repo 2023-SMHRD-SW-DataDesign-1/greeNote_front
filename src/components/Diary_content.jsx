@@ -14,12 +14,12 @@ const Diary_content = ({ props }) => {
       <div className='diary_content'>
         <div className="top">
           <div className='title2'>
-            {props.title}
+            {props && props.title}
           </div>
           <img src="/Icon/bin.png" alt="bin" /> {/* 휴지통 아이콘 */}
         </div>
         <div className='contents'>
-          {props.content}
+          {props && props.content}
         </div>
       </div>
     </div>
