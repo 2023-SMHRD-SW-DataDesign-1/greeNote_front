@@ -1,24 +1,21 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .item_photo:nth-child(2n) {
     clear: both;
-    background-color: rebeccapurple;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .item_photo:nth-child(3n) {
     clear: both;
-    background-color: rgb(177, 151, 202);
   }
 }
 @media (min-width: 1200px) {
   .item_photo:nth-child(3n) {
     clear: both;
-    background-color: rebeccapurple;
   }
 }
 
 .item_photo {
-  background-color: rgb(155, 248, 171);
+  background-color: rgb(155, 202, 151);
   border-radius: 5%;
   cursor: pointer;
 }

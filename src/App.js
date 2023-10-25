@@ -69,6 +69,7 @@ import './css/Footer_diary.css';
 // 페이지
 import './css/Ai.css'
 import Header_home2 from './components/Page_main/Header_home2';
+import AiHeader from './components/AiHeader';
 
 
 
@@ -78,16 +79,13 @@ function App() {
     <div>
       <Routes>
         {/* 헤더 있는 페이지 */}
-        <Route path='/' element={<><Header_home2 /><Main /></>} />
-        <Route path='/mypage' element={<><Header_home2 /><Mypage /></>} />
-        <Route path='/ai' element={<><Header_home2 /><Ai /></>} />
-        <Route path='/slide' element={<><Header_home2 /><Slide /></>} />
-        <Route path='/addgreen' element={<><Header_home2 /><AddGreen /></>} />
-        <Route path='/mygreen' element={<><Header_home2 /><MyGreen /></>} />
-        <Route path='/aiReturn' element={<><Header_home2 /><AiReturn /></>} />
-        <Route path='/greendiary/:plant_id' element={<><Header_home2 /><GreenDiary /></>} />
-        <Route path='/writediary/:plant_id' element={<><Header_home2 /><WriteDiary /></>} />
-        <Route path='/diarydetail' element={<><Header_home2 /><DiaryDetail /></>} />
+        <Route path='/' element={<><AiHeader /><Main /></>} />
+        <Route path='/mypage' element={<><AiHeader /><Mypage /></>} />
+        <Route path='/addgreen' element={<><AiHeader /><AddGreen /></>} />
+        <Route path='/mygreen' element={<><AiHeader /><MyGreen /></>} />
+        <Route path='/greendiary/:plant_id' element={<><AiHeader /><GreenDiary /></>} />
+        <Route path='/writediary/:plant_id' element={<><AiHeader /><WriteDiary /></>} />
+        <Route path='/diarydetail' element={<><AiHeader /><DiaryDetail /></>} />
 
         {/* 테스트용 페이지 */}
         <Route path='/testFlask' element={<TestFlask />}></Route>
@@ -98,6 +96,9 @@ function App() {
         <Route path='/intro' element={<Intro />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/join' element={<Join />}></Route>
+        <Route path='/ai' element={<Ai />}/>
+        <Route path='/slide' element={<Slide />} />
+        <Route path='/aiReturn' element={<AiReturn />} />
 
       </Routes>
 

@@ -110,3 +110,10 @@
         width: 20px;
     }
 }
+
+
+.header_container {
+    @include s.mobile{
+        display: none;
+    }
+}

@@ -1,11 +1,7 @@
 import React from 'react'
-import Header_home from '../components/Page_main/Header_home'
-import GreenList from '../components/Page_main/GreenList'
-import Icons_home from '../components/Page_main/Icons_home'
-import Header_home2 from '../components/Page_main/Header_home2'
 import Date from '../components/Page_main/Date'
 import Diary_content from '../components/Diary_content'
-import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/Page_main/Sidebar'
 import Main_left from '../components/Page_main/Main_left'
 import { Link } from 'react-router-dom'
 

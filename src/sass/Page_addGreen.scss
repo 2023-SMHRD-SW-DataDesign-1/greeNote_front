@@ -22,6 +22,11 @@
     align-items: center;
     text-align: center;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     /* 상하 위치 조정 */
     margin-bottom: 7%;
 
