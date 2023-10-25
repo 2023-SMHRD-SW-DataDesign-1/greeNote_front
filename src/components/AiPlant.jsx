@@ -7,69 +7,117 @@ const AiPlant = () => {
   // 모달의 표시 여부를 관리하는 상태
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // 임시 식물
+  const defaultPlant = {
+    image_url: '/Image/plant_ex.jpg',
+    color: 'blue',
+    plant_id: 2,
+    nickname: '무몬',
+    species:'식물종',
+    start_date:'2023년 5월 27일'
+  }
+  const [selectedPlantData, setSelectedPlantData] = useState(defaultPlant);
+
+  // 식물 클릭시 모달창 열리고 x누르면 닫힘
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
+
+  // 아이템 클릭시 모달창 닫힘
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  // 리스트에서 꺼내온 식물 정보
+  const handleItemChoiceClick = (selectedPlant) => {
+    console.log('Selected Plant:', selectedPlant);
+    setSelectedPlantData(selectedPlant)
+  };
+
+  const bgStyle = {
+    backgroundColor: selectedPlantData.color,
+  }
+
 
   // 식물 전체 리스트 받아오기
   const plantList = [
     {
       image_url: '/Image/monstera.jpg',
-      color: 'black',
+      color: '#E17E0E',
       plant_id: 0,
-      nickname: '몬스테라1'
+      nickname: '테스트1',
+      species:'식물1',
+      start_date:'2023년 5월 1일'
     },
     {
       image_url: '/Image/monstera2.jpg',
-      color: 'red',
+      color: '#87E04C',
       plant_id: 1,
-      nickname: '몬스테라2'
+      nickname: '테스트2',
+      species:'식물2',
+      start_date:'2023년 6월 1일'
     },
     {
       image_url: '/Image/plant_ex.jpg',
-      color: 'blue',
+      color: '#DE5DAC',
       plant_id: 2,
-      nickname: '무몬'
+      nickname: '테스트3',
+      species:'식물3',
+      start_date:'2023년 7월 1일'
+      
     },
     {
       image_url: '/Image/monstera.jpg',
-      color: 'black',
+      color: '#DE5D5F',
       plant_id: 0,
-      nickname: '몬스테라1'
-    },
+      nickname: '테스트4',
+      species:'식물4',
+      start_date:'2023년 8월 10일'
+    }
+    ,
     {
       image_url: '/Image/monstera2.jpg',
-      color: 'red',
+      color: '#97DE5D',
       plant_id: 1,
-      nickname: '몬스테라2'
+      nickname: '테스트5',
+      species:'식물5',
+      start_date:'2023년 9월 15일'
     },
     {
       image_url: '/Image/plant_ex.jpg',
-      color: 'blue',
+      color: '#DEC45D',
       plant_id: 2,
-      nickname: '무몬'
+      nickname: '테스트6',
+      species:'식물6',
+      start_date:'2023년 10월 20일'
     }
-  ,
-  {
-    image_url: '/Image/monstera.jpg',
-    color: 'black',
-    plant_id: 0,
-    nickname: '몬스테라1'
-  },
-  {
-    image_url: '/Image/monstera2.jpg',
-    color: 'red',
-    plant_id: 1,
-    nickname: '몬스테라2'
-  },
-  {
-    image_url: '/Image/plant_ex.jpg',
-    color: 'blue',
-    plant_id: 2,
-    nickname: '무몬'
-  }
+    ,
+    {
+      image_url: '/Image/monstera.jpg',
+      color: '#69E0D8',
+      plant_id: 0,
+      nickname: '테스트7',
+      species:'식물7',
+      start_date:'2023년 11월 15일'
+    },
+    {
+      image_url: '/Image/monstera2.jpg',
+      color: '#5E72E0',
+      plant_id: 1,
+      nickname: '테스트8',
+      species:'식물8',
+      start_date:'2023년 11월 30일'
+    },
+    {
+      image_url: '/Image/plant_ex.jpg',
+      color: '#E63C2C',
+      plant_id: 2,
+      nickname: '테스트9',
+      species:'식물9',
+      start_date:'2023년 12월 20일'
+    }
 
-  
+
   ]
 
 
@@ -79,19 +127,19 @@ const AiPlant = () => {
     <div className='ai_plant_container'>
       <div className='plant_container'>
         <div className='plant_nickname'>
-          무몬
+        {selectedPlantData.nickname}
         </div>
         <div className='plant_data'>
 
-          <div className='circle plant_image_color'>
+          <div className='circle plant_image_color' style={bgStyle} >
             <div className='circle' >
-              <img className="circle plant_main_image" src="/Image/plant_ex.jpg" alt="Plant" onClick={toggleModal} />
+              <img className="circle plant_main_image" src={selectedPlantData.image_url} alt="Plant" onClick={toggleModal} />
             </div>
           </div>
 
           <div className='plant_text_data'>
-            <div className='plant_species'>몬스테라 델리오사</div>
-            <div className='plant_date'>2023년 5월 27일</div>
+            <div className='plant_species'>{selectedPlantData.species}</div>
+            <div className='plant_date'>{selectedPlantData.start_date}</div>
           </div>
 
         </div>
@@ -107,11 +155,11 @@ const AiPlant = () => {
               <div className='modal_info'>내 반려식물</div>
             </div>
             <div className='modal_plant_list'>
-            {plantList.map((data, idx) => (
-              <ItemPlantChoice key={idx} data={data}/>
-                    ))}
+              {plantList.map((data, idx) => (
+                <ItemPlantChoice key={idx} data={data} onItemClick={handleItemChoiceClick} closeModal={closeModal}/>
+              ))}
+            </div>
 
-              </div>
           </div>
         </div>
       )}
