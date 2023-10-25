@@ -1,2 +1,18 @@
 @use '../sass/variables' as s;
 
+.item_plant_choice_container {
+    margin: 10px;
+    width: 100px;
+    // background-color: beige;
+}
+
+.plant_choice_nickname{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 600;
+    
+}
+
+.circle{
+    margin: 10px;
+}

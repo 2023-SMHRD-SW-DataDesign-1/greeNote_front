@@ -47,6 +47,8 @@ import './css/ItemAiReturn.css';
 import './css/AiReturnPhoto.css'
 import './css/AiPhotoBox.css';
 
+import './css/ItemPlantChoice.css'
+
 
 // slide css
 import './css/ItemSlide.css'

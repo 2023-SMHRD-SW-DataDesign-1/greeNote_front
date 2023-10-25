@@ -1,15 +1,77 @@
 import React, { useState } from 'react'
+import ItemPlantChoice from './ItemPlantChoice'
 
 
 const AiPlant = () => {
 
-    // 모달의 표시 여부를 관리하는 상태
-    const [isModalOpen, setIsModalOpen] = useState(false);
+  // 모달의 표시 여부를 관리하는 상태
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  // 식물 전체 리스트 받아오기
+  const plantList = [
+    {
+      image_url: '/Image/monstera.jpg',
+      color: 'black',
+      plant_id: 0,
+      nickname: '몬스테라1'
+    },
+    {
+      image_url: '/Image/monstera2.jpg',
+      color: 'red',
+      plant_id: 1,
+      nickname: '몬스테라2'
+    },
+    {
+      image_url: '/Image/plant_ex.jpg',
+      color: 'blue',
+      plant_id: 2,
+      nickname: '무몬'
+    },
+    {
+      image_url: '/Image/monstera.jpg',
+      color: 'black',
+      plant_id: 0,
+      nickname: '몬스테라1'
+    },
+    {
+      image_url: '/Image/monstera2.jpg',
+      color: 'red',
+      plant_id: 1,
+      nickname: '몬스테라2'
+    },
+    {
+      image_url: '/Image/plant_ex.jpg',
+      color: 'blue',
+      plant_id: 2,
+      nickname: '무몬'
+    }
+  ,
+  {
+    image_url: '/Image/monstera.jpg',
+    color: 'black',
+    plant_id: 0,
+    nickname: '몬스테라1'
+  },
+  {
+    image_url: '/Image/monstera2.jpg',
+    color: 'red',
+    plant_id: 1,
+    nickname: '몬스테라2'
+  },
+  {
+    image_url: '/Image/plant_ex.jpg',
+    color: 'blue',
+    plant_id: 2,
+    nickname: '무몬'
+  }
+
   
-    const toggleModal = () => {
-      setIsModalOpen(!isModalOpen);
-    };
-  
+  ]
+
 
 
   return (
@@ -22,8 +84,8 @@ const AiPlant = () => {
         <div className='plant_data'>
 
           <div className='circle plant_image_color'>
-            <div className='circle plant_main_image' >
-            <img className="circle plant_main_image" src="/Image/plant_ex.jpg" alt="Plant" onClick={toggleModal} />
+            <div className='circle' >
+              <img className="circle plant_main_image" src="/Image/plant_ex.jpg" alt="Plant" onClick={toggleModal} />
             </div>
           </div>
 
@@ -36,18 +98,24 @@ const AiPlant = () => {
 
       </div>
       {isModalOpen && (
-                <div className="modal_background">
-                    <div className="modal_content">
-                        {/* 모달 내용을 이곳에 추가 */}
-                        <p onClick={toggleModal}>X</p>
-                        <div className='modal_info_container'>
-                        <img src='/Image/ic_leaf_home.png'/>
-                        <div className='modal_info'>내 반려식물</div>
-                        </div>
-                    </div>
-                </div>
-            )}
-     
+        <div className="modal_background">
+          <div className="modal_content">
+            {/* 모달 내용을 이곳에 추가 */}
+            <p onClick={toggleModal}>X</p>
+            <div className='modal_info_container'>
+              <img src='/Image/ic_leaf_home.png' />
+              <div className='modal_info'>내 반려식물</div>
+            </div>
+            <div className='modal_plant_list'>
+            {plantList.map((data, idx) => (
+              <ItemPlantChoice key={idx} data={data}/>
+                    ))}
+
+              </div>
+          </div>
+        </div>
+      )}
+
     </div>
 
   )
