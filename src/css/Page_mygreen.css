@@ -116,3 +116,9 @@
     width: 20px;
   }
 }
+
+@media (min-width: 360px) and (max-width: 799px) {
+  .header_container {
+    display: none;
+  }
+}

@@ -78,7 +78,7 @@ const AddGreen = () => {
   return (
     <div className='web_top_container'>
       <div className='add_container'>
-        <AiHeader />
+    
         <div className='mid_title3'>
           <img src="/Image/book_logo.PNG" alt="book" />
           내 반려 식물의 프로필
