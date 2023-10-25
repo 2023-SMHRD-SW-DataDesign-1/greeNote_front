@@ -81,6 +81,7 @@ const Join = () => {
               accept="image/jpg,image/png,image/jpeg,image/gif"
               onChange={thumbnail}
               name='image'
+              className='inputJoin'
             />
             <input
               className='join_id'

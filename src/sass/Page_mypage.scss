@@ -47,7 +47,7 @@
         justify-content: center;
 
         /* 상하 위치 조정 */
-        margin-top: 10%;
+        margin-top: 5%;
     }
 }
 
@@ -74,12 +74,10 @@
 
 .mypage_form {
     width: auto;
-    margin-top: 10%;
 
     /* 내용 가운데 정렬 */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     text-align: center;
 }
@@ -109,6 +107,7 @@
     @include s.tablet {
         font-size: 16px;
     }
+
     @include s.desktop {
         font-size: 17px;
     }
@@ -135,9 +134,11 @@
     @include s.mobile {
         font-size: 12px;
     }
+
     @include s.tablet {
         font-size: 14px;
     }
+
     @include s.desktop {
         font-size: 15px;
     }
@@ -172,6 +173,7 @@
     @include s.tablet {
         padding: 2%;
     }
+
     @include s.desktop {
         padding: 3%;
     }
@@ -180,3 +182,71 @@
 .complete_button:hover {
     background-color: #335A3B;
 }
+
+/* 유저 사진 */
+.mypage_photo {
+    background-color: #335A3B;
+    color: white;
+    /* 모양 만들기 */
+    border-radius: 50%;
+
+    /* 내부 text 가운데 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* 서로 상하 위치 조정 */
+    margin-top: 2%;
+    margin-bottom: 1%;
+    position: relative;
+
+    border: 2px solid #ccc;
+    overflow: hidden;
+
+    @include s.mobile {
+        left: 24%;
+        width: 200px;
+        height: 200px;
+    }
+
+    @include s.tablet {
+        left: 22%;
+        width: 200px;
+        height: 200px;
+    }
+
+    @include s.desktop {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.mypage_photo img {
+    border-radius: 50%;
+
+    @include s.mobile {
+        /* 가운데 정렬 */
+        left: 24%;
+        width: 200px;
+        height: 200px;
+    }
+
+    @include s.tablet {
+        left: 22%;
+        width: 200px;
+        height: 200px;
+    }
+
+    @include s.desktop {
+        left: 14%;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* input[type='file'] {
+    display: none;
+    /* 원래 파일 입력 필드를 숨김
+} */
+

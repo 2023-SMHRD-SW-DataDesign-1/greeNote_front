@@ -45,7 +45,7 @@
     display: flex;
     justify-content: center;
     /* 상하 위치 조정 */
-    margin-top: 3%;
+    margin-top: 4%;
   }
 }
 
@@ -85,13 +85,13 @@
 }
 
 /* 파일선택 css */
-input[type=file] {
+.inputJoin {
   width: 200px;
   margin-left: 20px;
 }
 @media (min-width: 1200px) {
-  input[type=file] {
-    margin-left: 50px;
+  .inputJoin {
+    margin-left: 10px;
   }
 }
 
@@ -181,6 +181,8 @@ input[type=file] {
 .join_photo {
   background-color: #335A3B;
   color: white;
+  border: 2px solid #ccc;
+  overflow: hidden;
   /* 모양 만들기 */
   border-radius: 50%;
   /* 내부 text 가운데 정렬 */
@@ -209,9 +211,9 @@ input[type=file] {
 }
 @media (min-width: 1200px) {
   .join_photo {
-    left: 25%;
-    width: 300px;
-    height: 300px;
+    left: 29%;
+    width: 250px;
+    height: 250px;
   }
 }
 
@@ -235,8 +237,8 @@ input[type=file] {
 }
 @media (min-width: 1200px) {
   .join_photo img {
-    left: 14%;
-    width: 300px;
-    height: 300px;
+    left: 29%;
+    width: 250px;
+    height: 250px;
   }
 }

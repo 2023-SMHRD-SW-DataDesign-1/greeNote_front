@@ -37,13 +37,45 @@
   display: flex;
   text-align: center;
   /* 아이콘 박스 크기 조정 */
-  width: 90px;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .nav_menu {
+    width: 80px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .nav_menu {
+    padding-right: 10%;
+    width: 120px;
+  }
+}
+@media (min-width: 1200px) {
+  .nav_menu {
+    width: 80px;
+  }
 }
 
 .icon_mypage,
 .icon_logout {
   /* 아이콘 div 거리두기 조정 */
-  padding-right: 40%;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .icon_mypage,
+  .icon_logout {
+    padding-right: 25%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .icon_mypage,
+  .icon_logout {
+    padding-right: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .icon_mypage,
+  .icon_logout {
+    padding-right: 30%;
+  }
 }
 
 /* 헤더 아이콘들 css */

@@ -38,6 +38,8 @@
 }
 
 .main_big_pie1 {
+    justify-content: center;
+    
     /* 헤더 제외 하단 영역 */
     @include s.tablet {
         display: flex;
@@ -46,12 +48,16 @@
     @include s.desktop {
         display: flex;
         width: 100%;
+        height: 100%;
     }
 }
 
 /********************************* Sidebar.jsx */
 .main_big_pie1>.sidebar {
     @include s.mobile {
+        display: none;
+    }
+    @include s.tablet{
         display: none;
     }
 }
@@ -107,6 +113,7 @@
     @include s.tablet {
         max-width: 500px;
         min-width: 400px;
+        padding: 5%;
     }
     @include s.desktop {
         width: 500px;
@@ -178,3 +185,4 @@
     width: 30px;
     margin-top: 9px;
 }
+

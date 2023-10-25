@@ -20,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     padding-left: 3%;
+    width: 100%;
 }
 
 /******************************* 중간 소제목  */
@@ -30,11 +31,18 @@
     }
     
     @include s.tablet {
+        font-size: 20px;
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
     }
     
     @include s.desktop {
         font-size: 25px;
         font-weight: bolder;
+
+
     }
 }
 /* 이미지 */
@@ -44,7 +52,7 @@
     }
 
     @include s.tablet {
-        width: 100px;
+        width: 70px;
     }
 
     @include s.desktop {
