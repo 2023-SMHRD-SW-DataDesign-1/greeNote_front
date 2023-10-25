@@ -87,12 +87,12 @@
     }
 }
 /* 파일선택 css */
-input[type='file'] {
+.inputJoin {
     width: 200px;
     margin-left: 20px; 
 
     @include s.desktop {
-        margin-left: 50px; 
+        margin-left: 10px; 
     }
   }
 

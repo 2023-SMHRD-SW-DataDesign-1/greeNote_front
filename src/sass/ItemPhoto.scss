@@ -1,8 +1,23 @@
 @use '../sass/variables' as s;
 
+@include s.mobile{
+    .item_photo:nth-child(2n) {
+        clear: both;
+        background-color: rebeccapurple;
+    }
+}
+
 .item_photo:nth-child(3n) {
-    clear: both;
-    background-color: rebeccapurple;
+    @include s.tablet{
+        clear: both;
+        background-color: rgb(177, 151, 202);
+    }
+
+    @include s.desktop{
+        clear: both;
+        background-color: rebeccapurple;
+    }
+
 }
 
 
@@ -12,8 +27,8 @@
     cursor: pointer;
     @include s.mobile{
         margin: 5px;
-        width: 100px;
-        height: 100px;
+        width: 140px;
+        height: 140px;
     }
 
     @include s.tablet{

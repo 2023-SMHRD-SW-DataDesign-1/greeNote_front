@@ -49,6 +49,11 @@
     width: 120px;
   }
 }
+@media (min-width: 1200px) {
+  .nav_menu {
+    width: 80px;
+  }
+}
 
 .icon_mypage,
 .icon_logout {
@@ -64,6 +69,12 @@
   .icon_mypage,
   .icon_logout {
     padding-right: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .icon_mypage,
+  .icon_logout {
+    padding-right: 30%;
   }
 }
 

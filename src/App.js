@@ -17,7 +17,6 @@ import DiaryDetail from './pages/DiaryDetail';
 import Testpage from './pages/Testpage';
 
 /* input페이지 */
-import './css/Input.css';
 import './css/Page_main.css';
 import './css/Page_join.css';
 import './css/Page_login.css';
