@@ -25,7 +25,7 @@ import './css/Input_writeDiary.css';
 
 /* 테스트용 페이지!! 나중에 삭제 예정 */
 import Testpage2 from './pages/Testpage2';
-import TestJoin from './pages/TestJoin';
+import TestFlask from './pages/TestFlask';
 
 /* css파일 */
 import './css/Header_home.css';
@@ -87,14 +87,14 @@ function App() {
       <Route path='/addgreen' element={<AddGreen/>}></Route>
       <Route path='/mygreen' element={<MyGreen/>}></Route>
       <Route path='/aiReturn' element={<AiReturn/>}></Route>
-      <Route path='/greendiary' element={<GreenDiary/>}></Route>
-      <Route path='/writediary' element={<WriteDiary/>}></Route>
+      <Route path='/greendiary/:plant_id' element={<GreenDiary/>}></Route>
+      <Route path='/writediary/:plant_id' element={<WriteDiary/>}></Route>
       <Route path='/diarydetail' element={<DiaryDetail/>}></Route>
       <Route path='/testpage' element={<Testpage/>}></Route>
       <Route path='/testpage2' element={<Testpage2/>}></Route>
 
       {/* 테스트용 페이지 */}
-      <Route path='/testJoin' element={<TestJoin/>}></Route>
+      <Route path='/testFlask' element={<TestFlask />}></Route>
 
 
     </Routes>

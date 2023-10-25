@@ -1,7 +1,31 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const GreenList = () => {
+
+  // URL 통합 관리
+  const masterURL = process.env.REACT_APP_MASTER_URL;
+
+  // 식물 목록 저장 State
+  const [plantList, setPlantList] = useState([]);
+
+  // 식물 목록 가져오는 함수
+  const readPlantList = async () => {
+    await axios.get(`${masterURL}/plant/readPlantList`)
+      .then((res) => {
+        console.log(res); // 리스트 형태로 들어있음
+        setPlantList(res.data)
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
+  useEffect(() => {
+    readPlantList();
+  }, [])
+
   return (
     <div className='greenlist'>
 
@@ -11,11 +35,13 @@ const GreenList = () => {
             ALL
           </div>
         </Link>
-        <Link to="/greendiary" className='button_link2'> {/* 대표식물 */}
-          <div className='photo'>
-            <img src="/Image/monstera.jpg" alt="green" />
-          </div>
-        </Link>
+        {plantList.map((value) => (
+          <Link to={`/greendiary/${value.plant_id}`} className='button_link2'> {/* 대표식물 */}
+            <div className='photo'>
+              <img src={`${value.image_url}`} alt="green" />
+            </div>
+          </Link>
+        ))}
         <Link to="/addgreen" className='button_link2'> {/* 식물추가 */}
           <div className='add'>
             add

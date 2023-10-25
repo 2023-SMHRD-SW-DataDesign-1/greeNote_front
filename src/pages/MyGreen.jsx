@@ -1,16 +1,36 @@
 /* 저장된 내 식물들이 보이는 리스트페이지 */
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import AiHeader from '../components/AiHeader'
 import { Link } from 'react-router-dom'
 import GreenList_all from '../components/GreenList_all'
+import axios from 'axios'
 
 const MyGreen = () => {
+
+  // URL 통합 관리
+  const masterURL = process.env.REACT_APP_MASTER_URL;
+
+  // 식물 목록 가져오는 함수
+  const readPlantList = async () => {
+    await axios.get(`${masterURL}/plant/readPlantList`)
+      .then((res) => {
+        console.log(res); // 리스트 형태로 들어있음
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
+  useEffect(() => {
+    readPlantList();
+  }, [])
+
   return (
     <div className='web_top_container'>
       <div className='myGreen_container'>
         <AiHeader /> {/* header */}
-        
+
         <div className='mid_title1'>
           <div className='mid_title2'>
             <img src="/Image/book_logo.PNG" alt="book" />
