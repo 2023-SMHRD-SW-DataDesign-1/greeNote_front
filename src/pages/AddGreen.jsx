@@ -78,10 +78,17 @@ const AddGreen = () => {
   return (
     <div className='web_top_container'>
       <div className='add_container'>
-    
-        <div className='mid_title3'>
-          <img src="/Image/book_logo.PNG" alt="book" />
-          내 반려 식물의 프로필
+
+        <div className='mid_title1'>
+          <div className='mid_title3'>
+            <img src="/Image/book_logo.PNG" alt="book" />
+            내 반려 식물의 프로필
+          </div>
+          <div className='icons'>
+            <div className='mid_title_bin3'>
+              <img src="/Icon/bin.png" alt="bin" />
+            </div>
+          </div>
         </div>
 
         <form onSubmit={addPlantList}>
@@ -103,7 +110,7 @@ const AddGreen = () => {
               />
             </div>
             <br /><br />
-            <div className='input_container2'>
+            <div className='basicInfo'>
               <div className='mini_title1'>
                 기본 정보
               </div>
@@ -112,12 +119,18 @@ const AddGreen = () => {
                 placeholder='식물의 실제 이름'
                 name='title'
               />
+              <div className='title_text'>
+                키우기 시작 한 날
+              </div>
               <input
                 className='greenStart'
                 placeholder='키우기 시작한 날    ex) 23-10-18'
                 type='date'
                 name='startDate'
               />
+              <div className='title_text'>
+                마지막 물 준 날
+              </div>
               <input
                 className='Lastwater'
                 placeholder='마지막 물 준 날       ex) 23-10-18'
@@ -134,13 +147,16 @@ const AddGreen = () => {
                 placeholder='한 줄 메세지'
                 name='message'
               />
+              <div className='title_text'>
+                색상 선택
+              </div>
               <input
                 type='color'
                 className='greenColor'
                 name='color'
               />
             </div>
-            <br/><br/>
+            <br /><br />
 
             <div className='gardening_container'> {/* 관리주기설정 */}
               <div className='mini_title2'>

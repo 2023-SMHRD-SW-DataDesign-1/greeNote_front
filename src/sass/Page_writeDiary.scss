@@ -148,6 +148,14 @@
     }
 }
 /*************************************  파일선택하면 사진 뜨는 공간 */
+
+.diary_photo1 {
+    @include s.mobile {
+        display: none;
+    }
+}
+
+
 .green_photo {
     /* 내부 text 가운데 정렬 */
     display: flex;
@@ -160,7 +168,7 @@
 
     @include s.desktop {
         width: 100%;
-        height: 300px;
+        height: auto;
     }
     
 }
@@ -168,10 +176,19 @@
 .green_photo img {
     width: auto;
     height: auto;
-    max-width: 90%;
-    max-height: 80%;
-
-    @include s.desktop {}
+    
+    @include s.desktop {
+        max-height: 500px;
+        max-width: 90%;
+    }
+    @include s.tablet{
+        max-height: 80%;
+        max-width: 90%;
+    }
+    @include s.mobile {
+        max-height: 80%;
+        max-width: 90%;
+    }
 }
 
 .inputWrite {

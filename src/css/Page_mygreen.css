@@ -12,12 +12,36 @@
   font-weight: normal;
   font-style: normal;
 }
-.mid_title1 {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 3%;
+.myGreen_container {
+  /* 크기 지정 */
+  height: 100%;
   width: 100%;
+}
+@media (min-width: 1200px) {
+  .myGreen_container {
+    width: 1200px;
+    height: 936px;
+    border-radius: 5%;
+  }
+}
+
+.mid_title1 {
+  font-weight: bolder;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+}
+@media (min-width: 1200px) {
+  .mid_title1 {
+    padding-left: 3%;
+    display: flex;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .mid_title1 {
+    font-size: 20px;
+  }
 }
 
 /******************************* 중간 소제목  */

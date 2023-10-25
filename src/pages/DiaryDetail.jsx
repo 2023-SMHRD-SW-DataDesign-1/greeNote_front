@@ -15,7 +15,6 @@ const DiaryDetail = () => {
 
             <div className='header_diary'>
                 <Switch_ai /> {/* AI 진단정보 받아와야함 */}
-                <AiHeader />
             </div>
 
             <br />

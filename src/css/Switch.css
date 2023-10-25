@@ -2,9 +2,8 @@
 .switch_control {
   /* 서로 상하 위치 조정 */
   margin-bottom: 7%;
-  margin-left: 7%;
   /* 위치 및 크기 지정 */
-  height: auto;
+  height: 35px;
   padding: 2%;
   /* 내용 왼쪽 정렬 */
   text-align: left;
@@ -21,7 +20,7 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .switch_control {
-    width: 70%;
+    width: 90%;
     padding-left: 4%;
     position: relative;
     left: 8%;
@@ -29,7 +28,7 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .switch_control {
-    width: 80%;
+    width: 70%;
     padding-left: 7%;
     position: relative;
     left: 4%;
@@ -37,10 +36,10 @@
 }
 @media (min-width: 1200px) {
   .switch_control {
-    width: 80%;
+    width: 70%;
     padding-left: 7%;
     position: relative;
-    left: 4%;
+    left: -3%;
   }
 }
 

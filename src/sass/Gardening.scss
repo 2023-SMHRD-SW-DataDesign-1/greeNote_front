@@ -1,0 +1,76 @@
+/* Gardening.css (별도의 CSS 파일) */
+@use '../sass/_variables.scss' as s;
+
+@font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.gardening_container {
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+
+    @include s.mobile {
+        width: auto;
+    }
+    
+    @include s.tablet {
+        width: 250px;
+        height: 100%;
+    }
+    
+    @include s.desktop {
+        display: grid;
+        width: 400px;
+        height: 100%;
+    }
+}
+
+
+
+.title {
+    /* 위치 조정 */
+    position: relative;
+    left: -20%;
+    margin-top: 10%;
+
+    /* 폰트 */
+    font-weight: bolder;
+    font-size: 120%;
+}
+
+.text3 {
+    width: 230px;
+}
+
+.info_text {
+    color: red;
+    text-align: right;
+    font-size: small;
+
+    margin-bottom: 1%;
+
+    /* 위치 조정 */
+    position: relative;
+
+    @include s.desktop {
+        left: 18%;
+    }
+    @include s.mobile {
+        left: -6%;
+    }
+}
+
+
+

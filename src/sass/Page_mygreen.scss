@@ -15,21 +15,45 @@
     font-style: normal;
 }
 
-.mid_title1 {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 3%;
+.myGreen_container {
+    /* 크기 지정 */
+    height: 100%;
     width: 100%;
+
+    @include s.desktop {
+        width: 1200px;
+        height: 936px;
+        border-radius: 5%;
+    }
 }
+
+
+
+
+.mid_title1 {
+    font-weight: bolder;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    
+    @include s.desktop {
+        padding-left: 3%;
+        display: flex;
+    }
+    @include s.mobile {
+        font-size: 20px;
+    }
+}
+
+
 
 /******************************* 중간 소제목  */
 .mid_title2 {
     font-weight: bolder;
-    
-    @include s.mobile {
-    }
-    
+
+    @include s.mobile {}
+
     @include s.tablet {
         font-size: 20px;
         font-weight: bolder;
@@ -37,7 +61,7 @@
         align-items: center;
         padding-left: 30px;
     }
-    
+
     @include s.desktop {
         font-size: 25px;
         font-weight: bolder;
@@ -45,6 +69,7 @@
 
     }
 }
+
 /* 이미지 */
 .mid_title2 img {
     @include s.mobile {
@@ -63,12 +88,14 @@
 .icons {
     display: flex;
 
-    @include s.mobile{
+    @include s.mobile {
         width: 80px;
     }
+
     @include s.tablet {
         width: 130px;
     }
+
     @include s.desktop {
         width: 160px;
     }
@@ -96,6 +123,7 @@
 .icon_add {
     width: 30px;
 }
+
 .icon_add a {
     text-decoration: none;
     color: #000000;
@@ -113,7 +141,7 @@
 
 
 .header_container {
-    @include s.mobile{
+    @include s.mobile {
         display: none;
     }
 }
