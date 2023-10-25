@@ -167,14 +167,11 @@
 /********************************** link 태그 css */
 .button_links {
     /* css */
-    border-radius: 0.7em;
     text-decoration-line: none;
     color: #000000;
 
     /* div태그와 hover같이 작동 */
     display: block;
-    width: 100%;
-    text-align: center;
 
     @include s.mobile {
         padding: 3%;

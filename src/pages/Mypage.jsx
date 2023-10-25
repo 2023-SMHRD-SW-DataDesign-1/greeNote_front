@@ -59,38 +59,42 @@ const Mypage = () => {
                             accept="image/jpg,image/png,image/jpeg,image/gif"
                             onChange={thumbnail}
                             name='image'
+                            className='inputMypage'
                         />
-                        <div className='text2'>
-                            이름
-                        </div>
-                        <div className='session_info'>
-                            session이름
-                        </div>
-                        <div className='text2'>
-                            아이디
-                        </div>
-                        <div className='session_info'>
-                            session아이디
-                        </div>
-                        <div className='text2'>
-                            비밀번호
-                        </div>
-                        <input
-                            className='mypage_pw'
-                            placeholder='비밀번호'
-                        />
-                        <div className='text2'>
-                            별칭
-                        </div>
-                        <input
-                            className='mypage_nickname'
-                            placeholder='별칭'
-                        />
-                        <br /><br />
+                        <div className='mypage_form2'>
+                            <div className='text2'>
+                                이름
+                            </div>
+                            <div className='session_info'>
+                                session이름
+                            </div>
+                            <div className='text2'>
+                                아이디
+                            </div>
+                            <div className='session_info'>
+                                session아이디
+                            </div>
+                            <div className='text2'>
+                                비밀번호
+                            </div>
+                            <input
+                                className='mypage_pw'
+                                placeholder='비밀번호'
+                            />
+                            <div className='text2'>
+                                별칭
+                            </div>
+                            <input
+                                className='mypage_nickname'
+                                placeholder='별칭'
+                            />
+                            <br /><br />
 
-                        <button type='submit' className='complete_button'>
-                            <Link to="/" className='button_links'>수정완료</Link>
-                        </button>
+                            <button type='submit' className='complete_button2'>
+                                <Link to="/" className='button_links'>수정완료</Link>
+                            </button>
+
+                        </div>
 
                     </div>
                 </form>
