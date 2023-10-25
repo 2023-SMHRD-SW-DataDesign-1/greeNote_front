@@ -80,11 +80,8 @@ function App() {
         {/* 헤더 있는 페이지 */}
         <Route path='/' element={<><Header_home2 /><Main /></>} />
         <Route path='/mypage' element={<><Header_home2 /><Mypage /></>} />
-        <Route path='/ai' element={<><Header_home2 /><Ai /></>} />
-        <Route path='/slide' element={<><Header_home2 /><Slide /></>} />
         <Route path='/addgreen' element={<><Header_home2 /><AddGreen /></>} />
         <Route path='/mygreen' element={<><Header_home2 /><MyGreen /></>} />
-        <Route path='/aiReturn' element={<><Header_home2 /><AiReturn /></>} />
         <Route path='/greendiary/:plant_id' element={<><Header_home2 /><GreenDiary /></>} />
         <Route path='/writediary/:plant_id' element={<><Header_home2 /><WriteDiary /></>} />
         <Route path='/diarydetail' element={<><Header_home2 /><DiaryDetail /></>} />
@@ -98,6 +95,9 @@ function App() {
         <Route path='/intro' element={<Intro />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/join' element={<Join />}></Route>
+        <Route path='/ai' element={<Ai />}/>
+        <Route path='/slide' element={<Slide />} />
+        <Route path='/aiReturn' element={<AiReturn />} />
 
       </Routes>
 

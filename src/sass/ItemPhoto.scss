@@ -3,26 +3,23 @@
 @include s.mobile{
 .item_photo:nth-child(2n) {
         clear: both;
-        background-color: rebeccapurple;
     }
 }
 
 .item_photo:nth-child(3n) {
     @include s.tablet{
         clear: both;
-        background-color: rgb(177, 151, 202);
     }
 
     @include s.desktop{
         clear: both;
-        background-color: rebeccapurple;
     }
 
 }
 
 
 .item_photo{
-    background-color: rgb(155, 248, 171);
+    background-color: rgb(155, 202, 151);
     border-radius: 5%;
     cursor: pointer;
     @include s.mobile{
@@ -44,31 +41,6 @@
 
     }
 }
-
-
-// .item_photo img{
-//     background-color: rgb(155, 248, 171);
-//     border-radius: 5%;
-//     cursor: pointer;
-//     @include s.mobile{
-//         margin: 5px;
-//         width: 100px;
-//         height: 100px;
-//     }
-
-//     @include s.tablet{
-//         width: 130px;
-//         height: 130px;
-//         margin: 7px;
-//     }
-
-//     @include s.desktop{
-//         margin: 10px;
-//         width: 230px;
-//         height: 230px;
-
-//     }
-// }
 
 
 

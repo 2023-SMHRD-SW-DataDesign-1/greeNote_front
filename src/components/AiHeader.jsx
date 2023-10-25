@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header_home from './Page_main/Header_home'
+import Header_home2 from './Page_main/Header_home2'
 
 
 const AiHeader = () => {
@@ -32,7 +32,7 @@ const AiHeader = () => {
                             <Link to='/greendiary' className='menuLink'>
                                 <div className='meat_menu'>Diary</div>
                             </Link>
-                            <Link to='/ai'className='menuLink'>
+                            <Link to='/ai' className='menuLink'>
                                 <div className='meat_menu'>ai</div>
                             </Link>
                             <Link to='/slide' className='menuLink'>
@@ -41,9 +41,8 @@ const AiHeader = () => {
                         </div>
                     )}
                 </div>
-
                 <div className='web_header'>
-                    <Header_home />
+                    <Header_home2 />
                 </div>
             </div>
 

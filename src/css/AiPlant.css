@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(255, 255, 255);
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .ai_plant_container {
@@ -10,21 +11,20 @@
     width: 100%;
     height: 100%;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .ai_plant_container {
     width: 200px;
     height: 800px;
-    background-color: rgb(114, 204, 144);
+    background-color: rgb(243, 243, 243);
   }
 }
 @media (min-width: 1200px) {
   .ai_plant_container {
     width: 200px;
     height: 800px;
-    background-color: rgb(11, 126, 49);
+    background-color: rgb(243, 243, 243);
   }
 }
 
@@ -46,7 +46,6 @@
     width: 200px;
     height: 300px;
     margin-top: 100px;
-    background-color: rgb(114, 204, 144);
   }
 }
 @media (min-width: 1200px) {
@@ -54,7 +53,6 @@
     width: 200px;
     height: 300px;
     margin-top: 100px;
-    background-color: rgb(114, 204, 144);
   }
 }
 
@@ -70,7 +68,8 @@
   .plant_nickname {
     width: 300px;
     height: 40px;
-    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    background-color: rgb(243, 243, 243);
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -165,7 +164,6 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .plant_text_data {
-    background-color: rgb(114, 204, 144);
     width: 200px;
     height: 70px;
     margin: 10px;
@@ -177,7 +175,6 @@
 }
 @media (min-width: 1200px) {
   .plant_text_data {
-    background-color: rgb(114, 204, 144);
     width: 200px;
     height: 70px;
     margin: 10px;
@@ -207,6 +204,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 /* 모달 내용 스타일링 */
@@ -217,8 +215,11 @@
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   /* 약간의 회색 그림자 */
-  width: 300px;
+  min-width: 300px;
+  width: 45%;
+  max-width: 850px;
   max-height: 500px;
+  z-index: 2;
 }
 
 /* 모달 내용 내에 있는 닫기 버튼 스타일링 */
@@ -231,11 +232,17 @@
   cursor: pointer;
 }
 
+.modal_header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+
 .modal_info_container {
   display: flex;
-  flex-direction: row;
-  width: 155px;
+  width: 200px;
   height: 50px;
+  margin-top: 20px;
 }
 
 .modal_info_container img {
@@ -248,16 +255,29 @@
   height: 30px;
   font-size: 20px;
   font-weight: 800;
-  align-items: center;
   margin-left: 15px;
+  margin-top: 10px;
+}
+
+.modal_plant_container {
+  display: flex;
+  justify-content: center;
 }
 
 .modal_plant_list {
   display: flex;
   flex-wrap: wrap;
-  width: 260px;
+  min-width: 260px;
+  width: 90%;
   max-height: 370px;
   align-items: center;
   margin-left: 10px;
   overflow: auto;
+}
+
+.modal_close {
+  display: flex;
+  font-size: 25px;
+  font-weight: 900;
+  margin-right: 4%;
 }

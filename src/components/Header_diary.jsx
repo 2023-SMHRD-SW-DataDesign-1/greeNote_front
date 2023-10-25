@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Header_diary = () => {
     return (
-        <div className='header_container'>
+        <div className='web_top_container'>
+        <div className='header_container2'>
 
             <div className="logo"> {/* 우리 로고 */}
                 <Link to="/">
@@ -31,6 +32,7 @@ const Header_diary = () => {
                 </div>
             </div>
 
+        </div>
         </div>
     )
 }
