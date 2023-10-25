@@ -59,7 +59,21 @@
 
 .icons {
   display: flex;
-  width: 150px;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .icons {
+    width: 80px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .icons {
+    width: 130px;
+  }
+}
+@media (min-width: 1200px) {
+  .icons {
+    width: 160px;
+  }
 }
 
 /* 오른쪽 삭제 아이콘 */

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header_home from './Page_main/Header_home'
 
 
-const AiHeader = ({ onSelectComponent }) => {
+const AiHeader = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -13,11 +13,6 @@ const AiHeader = ({ onSelectComponent }) => {
     };
 
     const handleMenuLeave = () => {
-        setIsMenuOpen(false);
-    };
-
-    const handleMenuSelect = (componentName) => {
-        onSelectComponent(componentName);
         setIsMenuOpen(false);
     };
 

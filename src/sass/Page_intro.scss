@@ -104,6 +104,7 @@
     }
 }
 
+.login_button2,
 .join_button2,
 .login_button,
 .join_button {
@@ -125,8 +126,7 @@
         top: 50%;
 
         /* 크기 */
-        height: auto;
-        width: 55%;
+        width: 150px;
     }
 
     @include s.tablet {
@@ -153,28 +153,34 @@
     }
 }
 
+.login_button2:hover,
 .join_button2:hover,
 .join_button:hover,
 .login_button:hover {
     background-color: #335A3B;
     color: white;
+    
 }
 
+.complete_button2,
+.join_button2,
+.login_button2,
 .join_button2 {
-    padding: 5.875px;
+    padding: 4.4375px;
+
+    @include s.desktop {
+        padding: 8px;
+    }
 }
 
 /********************************** link 태그 css */
 .button_links {
     /* css */
-    border-radius: 0.7em;
     text-decoration-line: none;
     color: #000000;
 
     /* div태그와 hover같이 작동 */
     display: block;
-    width: 100%;
-    text-align: center;
 
     @include s.mobile {
         padding: 3%;
@@ -182,8 +188,10 @@
 }
 
 /* Link태그 hover */
+.login_button2 a:hover,
 .join_button a:hover,
 .login_button a:hover {
     background-color: #335A3B;
     color: white;
+    border-radius: 0.7em;
 }

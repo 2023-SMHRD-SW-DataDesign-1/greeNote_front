@@ -110,3 +110,45 @@
   /* 아이콘 div 거리두기 조정 */
   padding-right: 45%;
 }
+
+/********************** Header_home2.jsx */
+.headerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 150px;
+}
+@media (min-width: 1200px) {
+  .headerBox {
+    width: 550px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .headerBox {
+    width: 400px;
+  }
+}
+
+.header_menu {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-left: 30px;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .header_menu {
+    display: none;
+  }
+}
+
+.header_menu a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.header_menu a:hover {
+  background-color: #9FC9A8;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: border;
+}
