@@ -18,6 +18,7 @@ const Join = () => {
     formData.forEach((value, key) => {
       obj[key] = value;
     });
+    obj['profileImg'] = imageUrl;
 
     await axios.post(`${masterURL}/auth/signup`, obj)
       .then((res) => {
@@ -27,8 +28,6 @@ const Join = () => {
         console.log(err);
       })
   }
-
-
 
   // 이미지 핸들러
   const [imageFile, setImageFile] = useState(null);
