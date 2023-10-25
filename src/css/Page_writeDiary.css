@@ -13,15 +13,9 @@
   font-style: normal;
 }
 .writeDiary_container {
-  font-family: "NanumSquareNeo-Variable";
-  /* 범위 지정 */
-  margin-left: 3%;
-  margin-right: 3%;
-  width: 94%;
-  height: auto;
   /* 내용 가운데 정렬 */
+  display: flex;
   justify-content: space-around;
-  align-items: center;
   text-align: center;
   /* 상하 위치 조정 */
   margin-bottom: 7%;
