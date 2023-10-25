@@ -77,24 +77,20 @@
 
 }
 
-.join_input input {
-    @include s.tablet {
-        font-size: 12px;
-    }
-
-    @include s.desktop {
-        font-size: 15px;
-    }
-}
 /* 파일선택 css */
 .inputJoin {
-    width: 200px;
-    margin-left: 20px; 
+    width: 180px;
+    font-size: 13px;
 
     @include s.desktop {
-        margin-left: 10px; 
+        margin-left: 20px; 
     }
+    @include s.tablet {
+        margin-left: 170px;
+    }
+    @include s.mobile {
   }
+}
 
 /* join-button css는 Page_intro.css에! */
 

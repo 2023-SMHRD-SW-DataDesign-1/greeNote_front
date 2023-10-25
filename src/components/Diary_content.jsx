@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Diary_content = ({ props }) => {
   return (
     <div className='diary_container'>
-      <Link to="/" className='button_links'>
+      <Link to="/diarydetail" className='button_links'>
         <div className='diaryFile'>
           선택 된 사진이 <br />없습니다.
         </div>

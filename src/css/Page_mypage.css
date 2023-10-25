@@ -25,7 +25,7 @@
     /* 내용 가운데 정렬 */
     justify-content: space-around;
     /* 상하 위치 조정 */
-    margin-top: 20%;
+    margin-top: 10%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -34,7 +34,7 @@
     display: flex;
     justify-content: center;
     /* 상하 위치 조정 */
-    margin-top: 13%;
+    margin-top: 4%;
   }
 }
 @media (min-width: 1200px) {
@@ -43,7 +43,7 @@
     display: flex;
     justify-content: center;
     /* 상하 위치 조정 */
-    margin-top: 5%;
+    margin-top: 3%;
   }
 }
 
@@ -80,6 +80,9 @@
   text-align: center;
 }
 
+.inputMypage {
+  font-size: 13px;
+}
 @media (min-width: 1200px) {
   .inputMypage {
     margin-left: 180px;
@@ -92,7 +95,7 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .inputMypage {
-    margin-left: 185px;
+    width: 180px;
   }
 }
 
@@ -241,8 +244,8 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .mypage_photo {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
 }
 @media (min-width: 1200px) {

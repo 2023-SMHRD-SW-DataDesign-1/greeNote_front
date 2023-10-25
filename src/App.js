@@ -68,36 +68,40 @@ import './css/Footer_diary.css';
 
 // 페이지
 import './css/Ai.css'
-
-
+import Header_home2 from './components/Page_main/Header_home2';
 
 
 
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<Main/>}></Route>
-      <Route path='/intro' element={<Intro/>}></Route>
-      <Route path='/login' element={<Login/>}></Route>
-      <Route path='/join' element={<Join/>}></Route>
-      <Route path='/mypage' element={<Mypage/>}></Route>
-      <Route path='/ai' element={<Ai/>}></Route>
-      <Route path='/slide' element={<Slide/>}></Route>
-      <Route path='/addgreen' element={<AddGreen/>}></Route>
-      <Route path='/mygreen' element={<MyGreen/>}></Route>
-      <Route path='/aiReturn' element={<AiReturn/>}></Route>
-      <Route path='/greendiary/:plant_id' element={<GreenDiary/>}></Route>
-      <Route path='/writediary/:plant_id' element={<WriteDiary/>}></Route>
-      <Route path='/diarydetail' element={<DiaryDetail/>}></Route>
-      <Route path='/testpage' element={<Testpage/>}></Route>
-      <Route path='/testpage2' element={<Testpage2/>}></Route>
+    <div>
+      <Routes>
+        {/* 헤더 있는 페이지 */}
+        <Route path='/' element={<><Header_home2 /><Main /></>} />
+        <Route path='/mypage' element={<><Header_home2 /><Mypage /></>} />
+        <Route path='/ai' element={<><Header_home2 /><Ai /></>} />
+        <Route path='/slide' element={<><Header_home2 /><Slide /></>} />
+        <Route path='/addgreen' element={<><Header_home2 /><AddGreen /></>} />
+        <Route path='/mygreen' element={<><Header_home2 /><MyGreen /></>} />
+        <Route path='/aiReturn' element={<><Header_home2 /><AiReturn /></>} />
+        <Route path='/greendiary/:plant_id' element={<><Header_home2 /><GreenDiary /></>} />
+        <Route path='/writediary/:plant_id' element={<><Header_home2 /><WriteDiary /></>} />
+        <Route path='/diarydetail' element={<><Header_home2 /><DiaryDetail /></>} />
 
-      {/* 테스트용 페이지 */}
-      <Route path='/testFlask' element={<TestFlask />}></Route>
+        {/* 테스트용 페이지 */}
+        <Route path='/testFlask' element={<TestFlask />}></Route>
+        <Route path='/testpage' element={<><Header_home2 /><Testpage /></>} />
+        <Route path='/testpage2' element={<><Header_home2 /><Testpage2 /></>} />
 
+        {/* 헤더 없는 페이지 */}
+        <Route path='/intro' element={<Intro />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/join' element={<Join />}></Route>
 
-    </Routes>
+      </Routes>
+
+    </div>
   );
 }
 

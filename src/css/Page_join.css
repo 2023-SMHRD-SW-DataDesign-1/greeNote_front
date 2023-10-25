@@ -73,28 +73,21 @@
   }
 }
 
-@media (min-width: 800px) and (max-width: 1199px) {
-  .join_input input {
-    font-size: 12px;
-  }
-}
-@media (min-width: 1200px) {
-  .join_input input {
-    font-size: 15px;
-  }
-}
-
 /* 파일선택 css */
 .inputJoin {
-  width: 200px;
-  margin-left: 20px;
+  width: 180px;
+  font-size: 13px;
 }
 @media (min-width: 1200px) {
   .inputJoin {
-    margin-left: 10px;
+    margin-left: 20px;
   }
 }
-
+@media (min-width: 800px) and (max-width: 1199px) {
+  .inputJoin {
+    margin-left: 170px;
+  }
+}
 /* join-button css는 Page_intro.css에! */
 .join_id,
 .join_pw,

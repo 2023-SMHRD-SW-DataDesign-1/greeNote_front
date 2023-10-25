@@ -97,6 +97,11 @@
 }
 
 /********************************* 로고 이미지 css */
+@media (min-width: 360px) and (max-width: 799px) {
+  .input_logo {
+    display: none;
+  }
+}
 @media (min-width: 800px) and (max-width: 1199px) {
   .input_logo {
     height: 150px;

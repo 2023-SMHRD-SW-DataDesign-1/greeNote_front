@@ -29,7 +29,7 @@
         justify-content: space-around;
 
         /* 상하 위치 조정 */
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
     @include s.tablet {
@@ -38,7 +38,7 @@
         justify-content: center;
 
         /* 상하 위치 조정 */
-        margin-top: 13%;
+        margin-top: 4%;
     }
 
     @include s.desktop {
@@ -47,7 +47,7 @@
         justify-content: center;
 
         /* 상하 위치 조정 */
-        margin-top: 5%;
+        margin-top: 3%;
     }
 }
 
@@ -84,6 +84,8 @@
 }
 
 .inputMypage {
+    font-size: 13px;
+    
     @include s.desktop {
         margin-left: 180px;
     }
@@ -91,7 +93,8 @@
         margin-left: 170px;
     }
     @include s.mobile {
-        margin-left: 185px;
+        width: 180px;
+
     }
 }
 
@@ -245,8 +248,8 @@
     }
 
     @include s.tablet {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 
     @include s.desktop {
