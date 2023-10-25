@@ -1,6 +1,20 @@
-.item_photo:nth-child(3n) {
-  clear: both;
-  background-color: rebeccapurple;
+@media (min-width: 360px) and (max-width: 799px) {
+  .item_photo:nth-child(2n) {
+    clear: both;
+    background-color: rebeccapurple;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .item_photo:nth-child(3n) {
+    clear: both;
+    background-color: rgb(177, 151, 202);
+  }
+}
+@media (min-width: 1200px) {
+  .item_photo:nth-child(3n) {
+    clear: both;
+    background-color: rebeccapurple;
+  }
 }
 
 .item_photo {
@@ -11,8 +25,8 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .item_photo {
     margin: 5px;
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
