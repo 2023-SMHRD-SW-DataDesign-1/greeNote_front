@@ -53,6 +53,10 @@
     font-weight: bolder;
     
     @include s.mobile {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
     }
     
     @include s.tablet {
@@ -103,6 +107,10 @@
 
 
 /* 사진이 들어갈 부분 */
+.photoGreen1 {
+    width: auto;
+}
+
 .photoGreen {
     background-color: #335A3B;
     color: white;
@@ -126,7 +134,7 @@
     @include s.mobile {
         height: 200px;
         width: 200px;
-        left: 1%
+        left: 25%
     }
 
     @include s.tablet {
@@ -147,7 +155,7 @@
     @include s.mobile {
         height: 200px;
         width: 200px;
-        left: 1%
+        left: 25%
     }
 
     @include s.tablet {
@@ -166,7 +174,8 @@
     /* 버튼 태그로 만들면서 자동생성된 css 삭제 */
     background: none;
     border: none;
-    margin-left: 90px;
+    width: 200px;
+
 
 }
 
@@ -241,19 +250,20 @@
 .complete_button {
     position: relative;
     top: 50%;
-    border: 1px solid #335A3B;
-    margin-bottom: 5%;
-    display: inline-block;
-
+    
     /* 범위 및 크기 지정 */
+    display: inline-block;
+    margin-bottom: 5%;
     margin-left: 15%;
     margin-right: 15%;
     padding: 2%;
     width: 70%;
     height: auto;
-
+    
     /* css */
+    border: 1px solid #335A3B;
     border-radius: 0.7em;
+    text-decoration-line: none;
     background-color: #DDEFC7;
 
     /* 내용 가운데 정렬 */
@@ -270,7 +280,11 @@
     }
 }
 
-.complete_button a:hover {
+.complete_button {
+    padding: 7.875px;
+}
+
+.complete_button:hover {
     background-color: #335A3B;
     color: white;
 }

@@ -74,12 +74,41 @@
 
 .mypage_form {
     width: auto;
-
+    
     /* 내용 가운데 정렬 */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
+}
+
+.inputMypage {
+    @include s.desktop {
+        margin-left: 180px;
+    }
+    @include s.tablet {
+        margin-left: 170px;
+    }
+    @include s.mobile {
+        margin-left: 185px;
+    }
+}
+
+.mypage_form2 {
+    margin-top: 10px;
+
+    @include s.mobile {
+
+    }
+
+    @include s.tablet {
+
+    }
+
+    @include s.desktop {
+        width: 300px;
+    }
 }
 
 .text2 {
@@ -101,7 +130,7 @@
     font-weight: bolder;
 
     @include s.mobile {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     @include s.tablet {
@@ -132,7 +161,7 @@
     /* background-color: #F2F2F2; */
 
     @include s.mobile {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     @include s.tablet {
@@ -152,7 +181,9 @@
 }
 
 /********************************** 버튼 태그 css */
-.complete_button {
+.complete_button2 {
+    position: relative;
+    top: 50%;
     border: 1px solid #335A3B;
     margin-bottom: 5%;
     display: inline-block;
@@ -160,7 +191,8 @@
     /* 범위 및 크기 지정 */
     margin-left: 15%;
     margin-right: 15%;
-    width: 100%;
+    padding: 2%;
+    width: 70%;
     height: auto;
 
     /* css */
@@ -168,22 +200,25 @@
     background-color: #DDEFC7;
 
     /* 내용 가운데 정렬 */
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
 
-    @include s.tablet {
-        padding: 2%;
-    }
 
-    @include s.desktop {
-        padding: 3%;
-    }
 }
-
-.complete_button:hover {
+/* link태그 제외부분 패딩, 마진 부위 호버 */
+.complete_button2:hover {
     background-color: #335A3B;
+    color: white;
+}
+/* link태그 부분 호버 */
+.complete_button2 a:hover {
+    background-color: #335A3B;
+    color: white;
 }
 
-/* 유저 사진 */
+
+/************************************* 유저 사진 */
 .mypage_photo {
     background-color: #335A3B;
     color: white;
@@ -205,13 +240,11 @@
     overflow: hidden;
 
     @include s.mobile {
-        left: 24%;
         width: 200px;
         height: 200px;
     }
 
     @include s.tablet {
-        left: 22%;
         width: 200px;
         height: 200px;
     }
@@ -226,20 +259,16 @@
     border-radius: 50%;
 
     @include s.mobile {
-        /* 가운데 정렬 */
-        left: 24%;
         width: 200px;
         height: 200px;
     }
 
     @include s.tablet {
-        left: 22%;
         width: 200px;
         height: 200px;
     }
 
     @include s.desktop {
-        left: 14%;
         width: 250px;
         height: 250px;
     }
@@ -249,4 +278,6 @@
     display: none;
     /* 원래 파일 입력 필드를 숨김
 } */
+
+
 

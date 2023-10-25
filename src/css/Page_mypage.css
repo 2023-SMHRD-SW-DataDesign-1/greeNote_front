@@ -80,6 +80,31 @@
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  .inputMypage {
+    margin-left: 180px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .inputMypage {
+    margin-left: 170px;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .inputMypage {
+    margin-left: 185px;
+  }
+}
+
+.mypage_form2 {
+  margin-top: 10px;
+}
+@media (min-width: 1200px) {
+  .mypage_form2 {
+    width: 300px;
+  }
+}
+
 .text2 {
   /* 서로 상하 위치 조정 */
   margin-top: 7%;
@@ -97,7 +122,7 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .text2 {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -131,7 +156,7 @@
   .session_info,
   .mypage_pw,
   .mypage_nickname {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -157,37 +182,40 @@
 }
 
 /********************************** 버튼 태그 css */
-.complete_button {
+.complete_button2 {
+  position: relative;
+  top: 50%;
   border: 1px solid #335A3B;
   margin-bottom: 5%;
   display: inline-block;
   /* 범위 및 크기 지정 */
   margin-left: 15%;
   margin-right: 15%;
-  width: 100%;
+  padding: 2%;
+  width: 70%;
   height: auto;
   /* css */
   border-radius: 0.7em;
   background-color: #DDEFC7;
   /* 내용 가운데 정렬 */
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
 }
-@media (min-width: 800px) and (max-width: 1199px) {
-  .complete_button {
-    padding: 2%;
-  }
-}
-@media (min-width: 1200px) {
-  .complete_button {
-    padding: 3%;
-  }
-}
 
-.complete_button:hover {
+/* link태그 제외부분 패딩, 마진 부위 호버 */
+.complete_button2:hover {
   background-color: #335A3B;
+  color: white;
 }
 
-/* 유저 사진 */
+/* link태그 부분 호버 */
+.complete_button2 a:hover {
+  background-color: #335A3B;
+  color: white;
+}
+
+/************************************* 유저 사진 */
 .mypage_photo {
   background-color: #335A3B;
   color: white;
@@ -207,14 +235,12 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .mypage_photo {
-    left: 24%;
     width: 200px;
     height: 200px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .mypage_photo {
-    left: 22%;
     width: 200px;
     height: 200px;
   }
@@ -231,22 +257,18 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .mypage_photo img {
-    /* 가운데 정렬 */
-    left: 24%;
     width: 200px;
     height: 200px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .mypage_photo img {
-    left: 22%;
     width: 200px;
     height: 200px;
   }
 }
 @media (min-width: 1200px) {
   .mypage_photo img {
-    left: 14%;
     width: 250px;
     height: 250px;
   }

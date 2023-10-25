@@ -75,6 +75,7 @@ const WriteDiary = () => {
         await axios.post(`${masterURL}/diary/addDiary`, obj)
             .then((res) => {
                 console.log(res);
+                const image_url = JSON.parse(res.data[1].image_url)
             })
             .catch(async (err) => {
                 console.log(err);
