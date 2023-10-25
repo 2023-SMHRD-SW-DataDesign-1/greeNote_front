@@ -3,10 +3,6 @@ import ItemPlantChoice from './ItemPlantChoice'
 
 
 const AiPlant = () => {
-
-  // 모달의 표시 여부를 관리하는 상태
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   // 임시 식물
   const defaultPlant = {
     image_url: '/Image/plant_ex.jpg',
@@ -17,6 +13,10 @@ const AiPlant = () => {
     start_date:'2023년 5월 27일'
   }
   const [selectedPlantData, setSelectedPlantData] = useState(defaultPlant);
+
+    // 모달의 표시 여부를 관리하는 상태
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   // 식물 클릭시 모달창 열리고 x누르면 닫힘
   const toggleModal = () => {
@@ -45,24 +45,24 @@ const AiPlant = () => {
       image_url: '/Image/monstera.jpg',
       color: '#E17E0E',
       plant_id: 0,
-      nickname: '테스트1',
-      species:'식물1',
+      nickname: '별명1',
+      species:'식물종1',
       start_date:'2023년 5월 1일'
     },
     {
       image_url: '/Image/monstera2.jpg',
       color: '#87E04C',
       plant_id: 1,
-      nickname: '테스트2',
-      species:'식물2',
+      nickname: '별명2',
+      species:'식물종2',
       start_date:'2023년 6월 1일'
     },
     {
       image_url: '/Image/plant_ex.jpg',
       color: '#DE5DAC',
       plant_id: 2,
-      nickname: '테스트3',
-      species:'식물3',
+      nickname: '별명3',
+      species:'식물종3',
       start_date:'2023년 7월 1일'
       
     },
@@ -70,8 +70,8 @@ const AiPlant = () => {
       image_url: '/Image/monstera.jpg',
       color: '#DE5D5F',
       plant_id: 0,
-      nickname: '테스트4',
-      species:'식물4',
+      nickname: '별명4',
+      species:'식물종4',
       start_date:'2023년 8월 10일'
     }
     ,
@@ -79,16 +79,16 @@ const AiPlant = () => {
       image_url: '/Image/monstera2.jpg',
       color: '#97DE5D',
       plant_id: 1,
-      nickname: '테스트5',
-      species:'식물5',
+      nickname: '별명5',
+      species:'식물종5',
       start_date:'2023년 9월 15일'
     },
     {
       image_url: '/Image/plant_ex.jpg',
       color: '#DEC45D',
       plant_id: 2,
-      nickname: '테스트6',
-      species:'식물6',
+      nickname: '별명6',
+      species:'식물종6',
       start_date:'2023년 10월 20일'
     }
     ,
@@ -96,24 +96,24 @@ const AiPlant = () => {
       image_url: '/Image/monstera.jpg',
       color: '#69E0D8',
       plant_id: 0,
-      nickname: '테스트7',
-      species:'식물7',
+      nickname: '별명7',
+      species:'식물종7',
       start_date:'2023년 11월 15일'
     },
     {
       image_url: '/Image/monstera2.jpg',
       color: '#5E72E0',
       plant_id: 1,
-      nickname: '테스트8',
-      species:'식물8',
+      nickname: '별명8',
+      species:'식물종8',
       start_date:'2023년 11월 30일'
     },
     {
       image_url: '/Image/plant_ex.jpg',
       color: '#E63C2C',
       plant_id: 2,
-      nickname: '테스트9',
-      species:'식물9',
+      nickname: '별명9',
+      species:'식물종9',
       start_date:'2023년 12월 20일'
     }
 
