@@ -29,7 +29,7 @@ const MyGreen = () => {
   return (
     <div className='web_top_container'>
       <div className='myGreen_container'>
-        <AiHeader /> {/* header */}
+
 
         <div className='mid_title1'>
           <div className='mid_title2'>

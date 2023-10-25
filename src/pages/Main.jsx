@@ -1,7 +1,7 @@
 import React from 'react'
 import Date from '../components/Page_main/Date'
 import Diary_content from '../components/Diary_content'
-import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/Page_main/Sidebar'
 import Main_left from '../components/Page_main/Main_left'
 import { Link } from 'react-router-dom'
 
