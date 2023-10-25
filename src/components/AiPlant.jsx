@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 const AiPlant = () => {
+
+    // 모달의 표시 여부를 관리하는 상태
+    const [isModalOpen, setIsModalOpen] = useState(false);
+  
+    const toggleModal = () => {
+      setIsModalOpen(!isModalOpen);
+    };
+  
+
+
   return (
-    
+
     <div className='ai_plant_container'>
       <div className='plant_container'>
         <div className='plant_nickname'>
@@ -13,7 +23,7 @@ const AiPlant = () => {
 
           <div className='circle plant_image_color'>
             <div className='circle plant_main_image' >
-              <img className='circle plant_main_image' src='/Image/plant_ex.jpg' />
+            <img className="circle plant_main_image" src="/Image/plant_ex.jpg" alt="Plant" onClick={toggleModal} />
             </div>
           </div>
 
@@ -25,6 +35,19 @@ const AiPlant = () => {
         </div>
 
       </div>
+      {isModalOpen && (
+                <div className="modal_background">
+                    <div className="modal_content">
+                        {/* 모달 내용을 이곳에 추가 */}
+                        <p onClick={toggleModal}>X</p>
+                        <div className='modal_info_container'>
+                        <img src='/Image/ic_leaf_home.png'/>
+                        <div className='modal_info'>내 반려식물</div>
+                        </div>
+                    </div>
+                </div>
+            )}
+     
     </div>
 
   )
