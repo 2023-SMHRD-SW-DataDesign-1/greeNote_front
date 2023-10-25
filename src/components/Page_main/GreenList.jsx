@@ -54,7 +54,9 @@ const GreenList = () => {
           전체식물
         </div>
         <div className='new2'>
-          몬스테라
+          {plantList.map((value)=> (
+            value.title
+          ))}
         </div>
         <div className='add2'>
           반려 추가

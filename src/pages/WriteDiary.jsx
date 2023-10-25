@@ -18,6 +18,10 @@ const WriteDiary = () => {
 
     /* 오늘 날짜 출력하기 */
     const Today2 = today2.toLocaleDateString();
+    const year = today2.getFullYear();
+    const month = String(today2.getMonth() + 1).padStart(2, '0'); // 월은 0부터 시작하므로 +1 해주고 두 자리로 포맷팅
+    const day = String(today2.getDate()).padStart(2, '0'); // 일을 두 자리로 포맷팅
+    const registration_date = `${year}-${month}-${day}`;
 
     /* 오늘 요일 출력하기 */
     const options = { weekday: 'long' };
@@ -72,6 +76,7 @@ const WriteDiary = () => {
         obj['plant_id'] = plant_id;
         obj['ai_result'] = '흰가루병'; // 나중에 제대로 만들 것
         obj['diary_imageDto'] = imageUrls;
+        obj['registration_date'] = registration_date;
 
         console.log(obj);
 
