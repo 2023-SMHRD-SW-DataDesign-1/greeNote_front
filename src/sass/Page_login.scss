@@ -92,6 +92,7 @@
 /********************************* 로고 이미지 css */
 .input_logo {
     @include s.mobile {
+        display: none;
     }
 
     @include s.tablet {
