@@ -7,6 +7,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import axios from 'axios';
 import Sidebar from '../components/Page_main/Sidebar'
 import Diary_Sidebar from '../components/Page_wirteDiary/Diary_Sidebar';
+import AiPlant from '../components/AiPlant';
 
 const WriteDiary = () => {
 
@@ -108,13 +109,11 @@ const WriteDiary = () => {
             <div className='writeDiary_container'>
 
                 <div className='main_big_pie1'>
-                    <Diary_Sidebar />
+                    <AiPlant />
                     <div className='main_pie1'>
-                        <div className='mid_title1'> {/* 소제목 */}
-                            <div className='mid_title2'>
-                                <img src="/Image/book_logo.PNG" alt="book" />
-                                다이어리 작성하기
-                            </div>
+                        <div className='web_pageInfo'>
+                            <img src='/Image/book_logo.png' className='web_pageInfo_img'></img>
+                            <div className='web_infoText'>다이어리 작성하기</div>
                         </div>
 
                         <div className='diary_pie'>
