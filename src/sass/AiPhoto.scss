@@ -22,7 +22,7 @@
         height: 460px;
     }
 
-    @include s.tablet{
+    @include s.tablet {
         width: 500px;
         height: 700px;
         margin: auto;
@@ -52,7 +52,7 @@
         display: none;
     }
 
-    @include s.tablet{
+    @include s.tablet {
         display: flex;
         flex-direction: row;
         width: 600px;
@@ -74,39 +74,115 @@
 }
 
 .web_pageInfo img {
-    @include s.mobile{
+    @include s.mobile {
         display: none;
     }
 
-    @include s.tablet{
+    @include s.tablet {
         width: 100px;
-        height: 100px; 
+        height: 100px;
     }
 
-    @include s.desktop{
+    @include s.desktop {
         width: 100px;
-        height: 100px; 
+        height: 100px;
     }
 
 }
 
 .web_infoText {
-    @include s.mobile{
+    @include s.mobile {
         display: none;
     }
 
-    @include s.tablet{
+    @include s.tablet {
         font-size: 20px;
         font-weight: 900;
     }
 
-    @include s.desktop{
+    @include s.desktop {
         font-size: 20px;
         font-weight: 900;
     }
 }
 
+// 라디오 버튼 css
+.radio_container {
+    margin-top: 20px;
 
+    @include s.mobile {
+        width: 360px;
+    }
+
+    @include s.tablet {
+        width: 500px;
+    }
+}
+
+.radio_box {
+    display: flex;
+    justify-content: center;
+    @include s.tablet{
+        width: 600px;
+        justify-content: start;
+        margin-left: 50px;  
+    }
+    @include s.desktop{
+     justify-content: start;
+     margin-left: 100px;   
+    }
+
+}
+
+.radio_text {
+    font-weight: 700;
+    font-size: 20px;
+    @include s.tablet{
+        margin-left: 50px;
+    }
+    @include s.desktop{
+        margin-left: 100px;
+    }
+}
+
+.radio {
+    font-size: 18px;
+    margin: 5px 10px 0px 0px;
+}
+
+.radio_label {
+            margin-top: 10px;
+        width: 100px;
+    width: 80px;
+    cursor: pointer;
+    text-align: center;
+    padding: 1%;
+    background: linear-gradient(to bottom, #9ecc9c, #57a548);
+    color: #fff;
+    border-radius: 5%;
+    margin: 10px 5px 0px 0px;
+    @include s.tablet{
+        margin-top: 10px;
+        width: 100px;
+    }
+
+    @include s.desktop{
+        margin: 10px 5px;
+        width: 140px;
+
+    }
+}
+
+.checked {
+    background: linear-gradient(to bottom, #1b84ada8, #6272a7);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+
+// 버튼 css
 .photo_btn_div {
     display: flex;
     justify-content: center;
@@ -114,22 +190,22 @@
     margin: 30px;
 }
 
-.uploadBtn{
+.uploadBtn {
     width: 130px;
-    background-color: #46b95d;
+    background-color: #548488;
     border-radius: 10px;
     padding: 4%;
     color: rgb(255, 255, 255);
-    
-    @include s.tablet{
+
+    @include s.tablet {
         width: 200px;
     }
 
-    @include s.desktop{
+    @include s.desktop {
         width: 300px;
     }
 }
 
-.uploadBtn:hover{
-    background-color: #335A3B;
+.uploadBtn:hover {
+    background-color: #33455a;
 }

@@ -20,16 +20,23 @@ const AiHeader = () => {
     return (
         <div className='ai_header_container'>
             <div className='ai_header_box'>
-                <Link to='/'>
+                
                     <div className='m_logo'>
+                    <Link to='/'>
                         <img src="Image/ic_leaf_home.png" alt="" />
+                        </Link>
+                        <div className='m_pageInfo'>
+                        {window.location.pathname === '/ai' && '생성 AI' }
+                        {window.location.pathname === '/aiReturn' &&'AI 이미지'}
+                        {window.location.pathname === '/slide' &&'슬라이드'}
+                        </div>
                     </div>
-                </Link>
+
                 <div className='meat' onMouseEnter={handleMenuEnter} onMouseLeave={handleMenuLeave}>
                     <img src='Image/ic_meatball.png' className='ic_meat' /> {/*미트볼 아이콘 */}
                     {isMenuOpen && (
                         <div >
-                            <Link to='/greendiary' className='menuLink'>
+                            <Link to='/greenDiary' className='menuLink'>
                                 <div className='meat_menu'>Diary</div>
                             </Link>
                             <Link to='/ai' className='menuLink'>

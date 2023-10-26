@@ -7,6 +7,7 @@ import Diary_content from '../components/Diary_content'
 import AiPlant from '../components/AiPlant';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
+import GreenDiary_photo from '../components/GreenDiary_photo';
 
 const GreenDiary = () => {
 
@@ -61,6 +62,11 @@ const GreenDiary = () => {
 
             <div className='diary_box'>
               {diaryList.map((value) => <Diary_content key={value.diary_id} diary={value.diary} imgUrl={value.imgUrl} />)}
+              <div className='diary_box2'>
+                <GreenDiary_photo />
+              </div>
+
+
             </div>
 
 

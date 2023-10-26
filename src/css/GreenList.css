@@ -12,29 +12,37 @@
   font-weight: normal;
   font-style: normal;
 }
+.greenlist {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 /****************************** 식물리스트 공간 */
 .list_container {
-  font-family: "NanumSquareNeo-Variable";
   /* 범위 지정 */
-  margin-left: 3%;
-  margin-right: 3%;
-  padding-top: 3%;
+  padding: 3%;
   width: 94%;
   height: auto;
   /* 배치 조정 */
   display: flex;
   text-align: center;
-  justify-content: space-around;
-  position: relative;
   /* css */
   background-color: #F2F2F2;
-  border-top-left-radius: 0.7em;
-  border-top-right-radius: 0.7em;
+  border-radius: 0.7em;
+  overflow: auto;
+  text-decoration-line: none;
+  color: #000000;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .list_container {
+    width: 300px;
+  }
 }
 
 /* 큰 동그라미 부분 */
-.all,
 .photo,
+.all,
 .add {
   background-color: #335A3B;
   color: white;
@@ -49,10 +57,6 @@
   align-items: center;
 }
 
-.photo {
-  background-color: orange;
-}
-
 /* 작은 동그라미 / 저장된 사진 이미지 */
 .photo img {
   /* 모양 만들기 */
@@ -62,38 +66,13 @@
 }
 
 /****************************** 동그라미 아래 title 공간 */
-.list_container2 {
-  font-family: "NanumSquareNeo-Variable";
-  font-size: 14px;
-  font-weight: bolder;
-  /* 범위 지정 */
-  padding-top: 2%;
-  margin-left: 3%;
-  margin-right: 3%;
-  padding-bottom: 3%;
-  width: 94%;
-  height: auto;
-  /* 정렬 */
-  display: flex;
-  text-align: center;
-  justify-content: space-around;
-  position: relative;
-  /* css */
-  background-color: #F2F2F2;
-  border-bottom-left-radius: 0.7em;
-  border-bottom-right-radius: 0.7em;
+.linkText {
+  margin-top: 3%;
+  font-size: 15px;
 }
 
-.all2 {
-  position: relative;
-}
-
-.new2 {
-  position: relative;
-  left: 0.5%;
-}
-
-.add2 {
-  position: relative;
-  left: 0.5%;
+.linkPhoto {
+  padding: 3%;
+  color: black;
+  text-decoration-line: none;
 }

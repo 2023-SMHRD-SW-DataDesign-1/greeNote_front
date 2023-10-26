@@ -67,41 +67,32 @@ const GreenList = () => {
     <div className='greenlist'>
 
       <div className='list_container'>
-        <Link to="/mygreen" className='button_link2'> {/* 전체선택 */}
+        <Link to="/mygreen" className='linkPhoto'> {/* 전체선택 */}
           <div className='all'>
             ALL
           </div>
+          <div className='linkText'>전체식물</div>
         </Link>
+        <Link to="/addgreen" className='linkPhoto'> {/* 식물추가 */}
+          <div className='add'>
+            add
+          </div>
+          <div className='linkText'>식물추가</div>
+        </Link>
+
         {plantList.map((value) => (
-          <Link to={`/greendiary/${value.plantId}`} className='button_link2'> {/* 대표식물 */}
-            <div className='photo'>
+          <Link to={`/greendiary/${value.plantId}`} className='linkPhoto'> {/* 대표식물 */}
+            <div className='photo' style={{ backgroundColor: value.color }}>
               <img src={`${value.image}`} alt="green" />
             </div>
-            <div>
+            <div className='linkText'>
               {value.title}
             </div>
           </Link>
         ))}
-        <Link to="/addgreen" className='button_link2'> {/* 식물추가 */}
-          <div className='add'>
-            add
-          </div>
-        </Link>
       </div>
 
-      <div className='list_container2'>
-        <div className='all2'>
-          전체식물
-        </div>
-        <div className='new2'>
-          {plantList.map((value) => (
-            value.title
-          ))}
-        </div>
-        <div className='add2'>
-          반려 추가
-        </div>
-      </div>
+
     </div>
   )
 }
