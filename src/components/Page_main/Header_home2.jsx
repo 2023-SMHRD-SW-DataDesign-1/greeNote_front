@@ -16,7 +16,7 @@ const Header_home2 = () => {
           </div>
 
           <div className="header_menu">
-            <Link to="/writediary/a" >
+            <Link to="/greendiary/a" >
               다이어리
             </Link>
 
