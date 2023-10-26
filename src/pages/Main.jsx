@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Date from '../components/Page_main/Date'
 import Diary_content from '../components/Diary_content'
 import Sidebar from '../components/Page_main/Sidebar'
 import Main_left from '../components/Page_main/Main_left'
-import { Link } from 'react-router-dom'
+import { DataContext } from '../contexts/DataContext'
 
 const Main = () => {
+
+  // 선택된 날짜의 다이어리 리스트
+  const { dailyDiary } = useContext(DataContext);
+
   return (
     <div className='web_top_container'>
       <div className='main_container'>
@@ -36,9 +40,7 @@ const Main = () => {
           </div>
           <br />
           <div>
-            <Diary_content />
-            <Diary_content />
-            <Diary_content />
+            {dailyDiary && dailyDiary.map((value) => (<Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl}/>))}
           </div>
         </div>
 

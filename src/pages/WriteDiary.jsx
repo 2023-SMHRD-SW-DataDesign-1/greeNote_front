@@ -22,8 +22,8 @@ const WriteDiary = () => {
     /* 오늘 날짜 출력하기 */
     const Today2 = today2.toLocaleDateString();
     const year = today2.getFullYear();
-    const month = String(today2.getMonth() + 1).padStart(2, '0'); // 월은 0부터 시작하므로 +1 해주고 두 자리로 포맷팅
-    const day = String(today2.getDate()).padStart(2, '0'); // 일을 두 자리로 포맷팅
+    const month = String(today2.getMonth() + 1).padStart(2, '0');
+    const day = String(today2.getDate()).padStart(2, '0');
     const registration_date = `${year}-${month}-${day}`;
 
     /* 오늘 요일 출력하기 */

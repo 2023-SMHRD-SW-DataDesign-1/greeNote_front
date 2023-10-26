@@ -8,11 +8,9 @@ import { getCookie } from './Cookies';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <CookiesProvider cookies={getCookie("accessToken")}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </CookiesProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

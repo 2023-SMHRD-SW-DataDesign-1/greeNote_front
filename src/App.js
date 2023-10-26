@@ -68,39 +68,50 @@ import AiPhotoBox from './pages/AiPhotoBox';
 import AiReturnBox from './pages/AiReturnBox';
 import SlideBox from './pages/SlideBox';
 
-
-
+// Context
+import { DataContext } from './contexts/DataContext'
+import { useState } from 'react';
 
 function App() {
+
+  // 일별 다이어리 담을 State
+  const [dailyDiary, setDailyDiary] = useState([]);
+
+  const dataContextValue = {
+    // 날짜 관리
+    dailyDiary: dailyDiary,
+    setDailyDiary: setDailyDiary
+  }
   return (
     <div>
-      <Routes>
-        {/* 헤더 있는 페이지 */}
-        <Route path='/' element={<><AiHeader /><Main /></>} />
-        <Route path='/mypage' element={<><AiHeader /><Mypage /></>} />
-        <Route path='/addgreen' element={<><AiHeader /><AddGreen /></>} />
-        <Route path='/mygreen' element={<><AiHeader /><MyGreen /></>} />
-        <Route path='/greendiary/:plant_id' element={<><AiHeader /><GreenDiary /></>} />
-        <Route path='/writediary/:plant_id' element={<><AiHeader /><WriteDiary /></>} />
-        <Route path='/diarydetail' element={<><AiHeader /><DiaryDetail /></>} />
-        <Route path='/ai' element={<><AiHeader /><AiPhotoBox /></>} />
-        <Route path='/slide' element={<><AiHeader /><SlideBox /></>} />
-        <Route path='/aiReturn' element={<><AiHeader /><AiReturnBox /></>} />
+      <DataContext.Provider value={dataContextValue}>
+        <Routes>
+          {/* 헤더 있는 페이지 */}
+          <Route path='/' element={<><AiHeader /><Main /></>} />
+          <Route path='/mypage' element={<><AiHeader /><Mypage /></>} />
+          <Route path='/addgreen' element={<><AiHeader /><AddGreen /></>} />
+          <Route path='/mygreen' element={<><AiHeader /><MyGreen /></>} />
+          <Route path='/greendiary/:plant_id' element={<><AiHeader /><GreenDiary /></>} />
+          <Route path='/writediary/:plant_id' element={<><AiHeader /><WriteDiary /></>} />
+          <Route path='/diarydetail' element={<><AiHeader /><DiaryDetail /></>} />
+          <Route path='/ai' element={<><AiHeader /><AiPhotoBox /></>} />
+          <Route path='/slide' element={<><AiHeader /><SlideBox /></>} />
+          <Route path='/aiReturn' element={<><AiHeader /><AiReturnBox /></>} />
 
-        {/* 테스트용 페이지 */}
-        <Route path='/testFlask' element={<TestFlask />}></Route>
-        <Route path='/testpage' element={<><Header_home2 /><Testpage /></>} />
-      
-
-        {/* 헤더 없는 페이지 */}
-        <Route path='/intro' element={<Intro />}></Route>
-        <Route path='/login' element={<Login />}></Route>
-        <Route path='/join' element={<Join />}></Route>
+          {/* 테스트용 페이지 */}
+          <Route path='/testFlask' element={<TestFlask />}></Route>
+          <Route path='/testpage' element={<><Header_home2 /><Testpage /></>} />
 
 
-      </Routes>
+          {/* 헤더 없는 페이지 */}
+          <Route path='/intro' element={<Intro />}></Route>
+          <Route path='/login' element={<Login />}></Route>
+          <Route path='/join' element={<Join />}></Route>
 
-    </div>
+
+        </Routes>
+    </DataContext.Provider >
+    </div >
   );
 }
 
