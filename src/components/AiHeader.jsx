@@ -22,7 +22,7 @@ const AiHeader = () => {
             <div className='ai_header_box'>
                 
                     <div className='m_logo'>
-                    <Link to='/'>
+                    <Link to='/main'>
                         <img src="Image/ic_leaf_home.png" alt="" />
                         </Link>
                         <div className='m_pageInfo'>

@@ -91,7 +91,7 @@ const Mypage = () => {
                             <br /><br />
 
                             <button type='submit' className='complete_button2'>
-                                <Link to="/" className='button_links'>수정완료</Link>
+                                <Link to="/main" className='button_links'>수정완료</Link>
                             </button>
 
                         </div>

@@ -8,7 +8,7 @@ const Header_diary = () => {
         <div className='header_container2'>
 
             <div className="logo"> {/* 우리 로고 */}
-                <Link to="/">
+                <Link to="/main">
                     <img src="/Image/home_logo.PNG" alt="logo" />
                 </Link>
             </div>
