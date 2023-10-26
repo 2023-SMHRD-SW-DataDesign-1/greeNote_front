@@ -48,7 +48,7 @@ const GreenDiary = () => {
             <div className='mid_title'>
               <div className='mid_title2'>
                 <img src="/Image/book_logo.PNG" alt="book" />
-                내 반려식물의 다이어리 모아보기
+                다이어리 모아보기
               </div>
               <div className='icons2'>
                 <div className='mid_title_bin2'>
@@ -61,12 +61,10 @@ const GreenDiary = () => {
             </div>
 
             <div className='diary_box'>
-              {diaryList.map((value) => <Diary_content key={value.diary_id} diary={value.diary} imgUrl={value.imgUrl} />)}
+              {/* {diaryList.map((value) => <Diary_content key={value.diary_id} diary={value.diary} imgUrl={value.imgUrl} />)} */}
               <div className='diary_box2'>
                 <GreenDiary_photo />
               </div>
-
-
             </div>
 
 

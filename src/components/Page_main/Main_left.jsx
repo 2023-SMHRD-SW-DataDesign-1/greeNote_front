@@ -15,7 +15,7 @@ const Main_left = () => {
       <Calendar />
       <br/>
       <GreenList />
-      <Icons_home />
+{/*       <Icons_home /> */}
     </div>
   )
 }
