@@ -3,10 +3,9 @@
 .switch_control {
     /* 서로 상하 위치 조정 */
     margin-bottom: 7%;
-    margin-left: 7%;
 
     /* 위치 및 크기 지정 */
-    height: auto;
+    height: 35px;
     padding: 2%;
 
     /* 내용 왼쪽 정렬 */
@@ -25,23 +24,23 @@
     align-items: center;
 
     @include s.mobile {
-        width: 70%;
+        width: 90%;
         padding-left: 4%;
         position: relative;
         left: 8%;
 
     }
     @include s.tablet {
-        width: 80%;
+        width: 70%;
         padding-left: 7%;
         position: relative;
         left: 4%;
     }
     @include s.desktop {
-        width: 80%;
+        width: 70%;
         padding-left: 7%;
         position: relative;
-        left: 4%;
+        left: -3%;
     }
 }
 

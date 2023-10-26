@@ -32,7 +32,6 @@
 
     @include s.desktop {
         width: 1200px;
-        height: 936px;
         border-radius: 5%;
     }
 }
@@ -40,8 +39,11 @@
 
 /********************************* 전체 틀  */
 .photoGreen1,
-.gardening_container,
-.input_container2 {
+.basicInfo {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
     @include s.tablet {
         width: 250px;
         height: 100%;
@@ -56,21 +58,22 @@
 /******************************* 중간 소제목  */
 .mid_title3 {
     font-weight: bolder;
-    
+
     @include s.mobile {
         font-size: 20px;
         display: flex;
         align-items: center;
         padding-left: 40px;
+        width: 360px;
     }
-    
+
     @include s.tablet {
         font-size: 20px;
         display: flex;
         align-items: center;
         padding-left: 30px;
     }
-    
+
     @include s.desktop {
         font-size: 25px;
         display: flex;
@@ -79,6 +82,7 @@
 
     }
 }
+
 /* 이미지 */
 .mid_title3 img {
     @include s.mobile {
@@ -94,17 +98,25 @@
     }
 }
 
+.mid_title_bin3 img {
+    width: 20px;
+    display: none;
+}
+
+
+
 .main_big_pie2 {
     justify-content: center;
-    
+
     /* 헤더 제외 하단 영역 */
     @include s.tablet {
         display: flex;
         width: 100%;
     }
+
     @include s.desktop {
         display: flex;
-        width: 100%;
+        width: 1200px;
         height: 100%;
         margin-top: 3%;
     }
@@ -112,10 +124,6 @@
 
 
 /* 사진이 들어갈 부분 */
-.photoGreen1 {
-    width: auto;
-}
-
 .photoGreen {
     background-color: #335A3B;
     color: white;
@@ -133,13 +141,10 @@
     /* 서로 상하 위치 조정 */
     margin-bottom: 1%;
 
-    /* 가운데 정렬 */
-    position: relative;
 
     @include s.mobile {
         height: 200px;
         width: 200px;
-        left: 25%
     }
 
     @include s.tablet {
@@ -148,9 +153,9 @@
     }
 
     @include s.desktop {
-        width: 330px;
-        height: 330px;
-        left: 8%;
+        width: 300px;
+        height: 300px;
+
     }
 }
 
@@ -169,9 +174,8 @@
     }
 
     @include s.desktop {
-        width: 330px;
-        height: 330px;
-        left: 8%;
+        width: 300px;
+        height: 300px;
     }
 }
 
@@ -194,39 +198,60 @@
 .mini_title1 {
     /* 위치 조정 */
     position: relative;
-    left: -20%;
-    @include s.tablet{
+    
+    @include s.desktop {
         margin-bottom: 2%;
+        left: -15%;
     }
+
     @include s.tablet {
         margin-bottom: 2%;
     }
+
 }
+
 .mini_title2 {
     /* 위치 조정 */
     position: relative;
-    left: -10%;
+    
+    @include s.desktop {
+        margin-bottom: 2%;
+        left: -15%;
+    }
 }
 
+.title_text {
+    color: #000000;
+    text-align: center;
+    font-size: small;
+    width: 100px;
 
+    /* 서로 상하 위치 조정 */
+    margin-top: 7%;
+
+    /* 위치 조정 */
+    position: relative;
+
+    @include s.desktop {
+        right: 22%;
+    }
+
+}
 
 .greenName,
-.greenStart,
-.Lastwater,
 .greenNickname,
-.greenText,
-.greenColor {
+.greenText {
     /* 서로 상하 위치 조정 */
     margin-top: 7%;
 
     /* 범위 및 크기 지정 */
-    height: auto;
+    height: 35px;
     padding: 2%;
-    
+
     /* 내용 왼쪽 정렬 */
     text-align: left;
 
-    
+
     /* css */
     border-radius: 0.7em;
     background-color: #F2F2F2;
@@ -234,16 +259,50 @@
     border: none;
 
     @include s.mobile {
-        width: 70%;
+        width: 85%;
         padding-left: 4%;
     }
+
     @include s.tablet {
         width: 80%;
         padding-left: 7%;
     }
+
     @include s.desktop {
         width: 70%;
         padding-left: 7%;
+    }
+}
+
+.greenStart,
+.Lastwater,
+.greenColor {
+    height: 35px;
+
+    /* 내용 왼쪽 정렬 */
+    text-align: left;
+
+    /* css */
+    border-radius: 0.7em;
+    background-color: #F2F2F2;
+    border: none;
+
+    @include s.mobile {
+        width: 85%;
+        padding-left: 4%;
+        padding-right: 3%;
+    }
+
+    @include s.tablet {
+        width: 80%;
+        padding-left: 7%;
+        padding-right: 3%;
+    }
+
+    @include s.desktop {
+        width: 70%;
+        padding-left: 7%;
+        padding-right: 3%;
     }
 }
 
@@ -255,7 +314,7 @@
 .complete_button {
     position: relative;
     top: 50%;
-    
+
     /* 범위 및 크기 지정 */
     display: inline-block;
     margin-bottom: 5%;
@@ -264,7 +323,7 @@
     padding: 2%;
     width: 70%;
     height: auto;
-    
+
     /* css */
     border: 1px solid #335A3B;
     border-radius: 0.7em;

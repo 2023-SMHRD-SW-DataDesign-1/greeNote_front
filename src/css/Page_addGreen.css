@@ -27,24 +27,27 @@
 @media (min-width: 1200px) {
   .add_container {
     width: 1200px;
-    height: 936px;
     border-radius: 5%;
   }
 }
 
 /********************************* 전체 틀  */
+.photoGreen1,
+.basicInfo {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
 @media (min-width: 800px) and (max-width: 1199px) {
   .photoGreen1,
-  .gardening_container,
-  .input_container2 {
+  .basicInfo {
     width: 250px;
     height: 100%;
   }
 }
 @media (min-width: 1200px) {
   .photoGreen1,
-  .gardening_container,
-  .input_container2 {
+  .basicInfo {
     width: 400px;
     height: 100%;
   }
@@ -60,6 +63,7 @@
     display: flex;
     align-items: center;
     padding-left: 40px;
+    width: 360px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -96,6 +100,11 @@
   }
 }
 
+.mid_title_bin3 img {
+  width: 20px;
+  display: none;
+}
+
 .main_big_pie2 {
   justify-content: center;
   /* 헤더 제외 하단 영역 */
@@ -109,17 +118,13 @@
 @media (min-width: 1200px) {
   .main_big_pie2 {
     display: flex;
-    width: 100%;
+    width: 1200px;
     height: 100%;
     margin-top: 3%;
   }
 }
 
 /* 사진이 들어갈 부분 */
-.photoGreen1 {
-  width: auto;
-}
-
 .photoGreen {
   background-color: #335A3B;
   color: white;
@@ -134,14 +139,11 @@
   align-items: center;
   /* 서로 상하 위치 조정 */
   margin-bottom: 1%;
-  /* 가운데 정렬 */
-  position: relative;
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .photoGreen {
     height: 200px;
     width: 200px;
-    left: 25%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -152,9 +154,8 @@
 }
 @media (min-width: 1200px) {
   .photoGreen {
-    width: 330px;
-    height: 330px;
-    left: 8%;
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -176,9 +177,8 @@
 }
 @media (min-width: 1200px) {
   .photoGreen img {
-    width: 330px;
-    height: 330px;
-    left: 8%;
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -199,11 +199,11 @@
 .mini_title1 {
   /* 위치 조정 */
   position: relative;
-  left: -20%;
 }
-@media (min-width: 800px) and (max-width: 1199px) {
+@media (min-width: 1200px) {
   .mini_title1 {
     margin-bottom: 2%;
+    left: -15%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -215,19 +215,37 @@
 .mini_title2 {
   /* 위치 조정 */
   position: relative;
-  left: -10%;
+}
+@media (min-width: 1200px) {
+  .mini_title2 {
+    margin-bottom: 2%;
+    left: -15%;
+  }
+}
+
+.title_text {
+  color: #000000;
+  text-align: center;
+  font-size: small;
+  width: 100px;
+  /* 서로 상하 위치 조정 */
+  margin-top: 7%;
+  /* 위치 조정 */
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .title_text {
+    right: 22%;
+  }
 }
 
 .greenName,
-.greenStart,
-.Lastwater,
 .greenNickname,
-.greenText,
-.greenColor {
+.greenText {
   /* 서로 상하 위치 조정 */
   margin-top: 7%;
   /* 범위 및 크기 지정 */
-  height: auto;
+  height: 35px;
   padding: 2%;
   /* 내용 왼쪽 정렬 */
   text-align: left;
@@ -239,35 +257,65 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .greenName,
-  .greenStart,
-  .Lastwater,
   .greenNickname,
-  .greenText,
-  .greenColor {
-    width: 70%;
+  .greenText {
+    width: 85%;
     padding-left: 4%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .greenName,
-  .greenStart,
-  .Lastwater,
   .greenNickname,
-  .greenText,
-  .greenColor {
+  .greenText {
     width: 80%;
     padding-left: 7%;
   }
 }
 @media (min-width: 1200px) {
   .greenName,
+  .greenNickname,
+  .greenText {
+    width: 70%;
+    padding-left: 7%;
+  }
+}
+
+.greenStart,
+.Lastwater,
+.greenColor {
+  height: 35px;
+  /* 내용 왼쪽 정렬 */
+  text-align: left;
+  /* css */
+  border-radius: 0.7em;
+  background-color: #F2F2F2;
+  border: none;
+}
+@media (min-width: 360px) and (max-width: 799px) {
   .greenStart,
   .Lastwater,
-  .greenNickname,
-  .greenText,
+  .greenColor {
+    width: 85%;
+    padding-left: 4%;
+    padding-right: 3%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .greenStart,
+  .Lastwater,
+  .greenColor {
+    width: 80%;
+    padding-left: 7%;
+    padding-right: 3%;
+  }
+}
+@media (min-width: 1200px) {
+  .greenStart,
+  .Lastwater,
   .greenColor {
     width: 70%;
     padding-left: 7%;
+    padding-right: 3%;
   }
 }
 

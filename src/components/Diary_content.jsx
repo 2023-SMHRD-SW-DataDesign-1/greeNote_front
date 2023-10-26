@@ -2,24 +2,27 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Diary_content = ({ props }) => {
+const Diary_content = ({ diary, imgUrl }) => {
+
+  const image_url = imgUrl && JSON.parse(imgUrl.image_url)
+
   return (
     <div className='diary_container'>
       <Link to="/diarydetail" className='button_links'>
         <div className='diaryFile'>
-          선택 된 사진이 <br />없습니다.
+          {/* <img src={diary && image_url[0].image_url} alt='plantImg'/> */}
         </div>
       </Link>
 
       <div className='diary_content'>
         <div className="top">
           <div className='title2'>
-            {props && props.title}
+            {diary && diary.title}
           </div>
           <img src="/Icon/bin.png" alt="bin" /> {/* 휴지통 아이콘 */}
         </div>
         <div className='contents'>
-          {props && props.content}
+          {diary && diary.content}
         </div>
       </div>
     </div>

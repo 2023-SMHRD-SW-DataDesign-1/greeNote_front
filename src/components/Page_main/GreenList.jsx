@@ -40,6 +40,9 @@ const GreenList = () => {
             <div className='photo'>
               <img src={`${value.image_url}`} alt="green" />
             </div>
+            <div>
+              {value.title}
+            </div>
           </Link>
         ))}
         <Link to="/addgreen" className='button_link2'> {/* 식물추가 */}
@@ -54,7 +57,9 @@ const GreenList = () => {
           전체식물
         </div>
         <div className='new2'>
-          몬스테라
+          {plantList.map((value) => (
+            value.title
+          ))}
         </div>
         <div className='add2'>
           반려 추가

@@ -60,7 +60,7 @@ const GreenDiary = () => {
               </div>
             </div>
             <div className='diary_box'>
-              {diaryList.map((value) => <Diary_content key={value.diary_id} props={value}/>)}
+              {diaryList.map((value) => <Diary_content key={value.diary_id} diary={value.diary} imgUrl={value.imgUrl}/>)}
             </div>
           </div>
         </div>

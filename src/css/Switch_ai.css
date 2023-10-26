@@ -3,14 +3,11 @@
   /* 아이콘 div 거리두기 조정 */
   /*     padding-right: 62%; */
   /* 위치 및 크기 지정 */
-  width: 30%;
   height: auto;
   /* css */
   border-radius: 0.7em;
   color: #000000;
   border: none;
-  margin-top: 7%;
-  margin-bottom: 4%;
   padding: 2%;
   /* 배치 조정 */
   display: flex;
@@ -21,6 +18,12 @@
   .switch_ai {
     position: relative;
     left: 60%;
+    width: 30%;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .switch_ai {
+    width: 50%;
   }
 }
 
