@@ -10,7 +10,7 @@ const Header_home2 = () => {
 
         <div className='headerBox'>
           <div className="logo"> {/* 우리 로고 */}
-            <Link to="/">
+            <Link to="/main">
               <img src="/Image/home_logo.PNG" alt="logo" />
             </Link>
           </div>

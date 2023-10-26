@@ -37,9 +37,9 @@ const GreenList_all = () => {
         </Link>
 
         {plantList.map((value) => (
-          <Link to={`/greendiary/${value.plant_id}`} className='linkPhoto'>
+          <Link to={`/greendiary/${value.plantId}`} className='linkPhoto'>
             <div className='green' style={{ backgroundColor: value.color }}>
-              <img src={`${value.image_url}`} alt="green" />
+              <img src={`${value.image}`} alt="green" />
             </div>
             {value.nickname}
           </Link>

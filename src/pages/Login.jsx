@@ -25,7 +25,7 @@ const Login = () => {
     await axios.post(`${masterURL}/auth/login`, obj)
       .then((res) => {
         console.log(res);
-        nav('/');
+        nav('/main');
       })
       .catch((err) => {
         console.log(err);

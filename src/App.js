@@ -88,7 +88,7 @@ function App() {
       <DataContext.Provider value={dataContextValue}>
         <Routes>
           {/* 헤더 있는 페이지 */}
-          <Route path='/' element={<><AiHeader /><Main /></>} />
+          <Route path='/main' element={<><AiHeader /><Main /></>} />
           <Route path='/mypage' element={<><AiHeader /><Mypage /></>} />
           <Route path='/addgreen' element={<><AiHeader /><AddGreen /></>} />
           <Route path='/mygreen' element={<><AiHeader /><MyGreen /></>} />
@@ -105,7 +105,7 @@ function App() {
 
 
           {/* 헤더 없는 페이지 */}
-          <Route path='/intro' element={<Intro />}></Route>
+          <Route path='/' element={<Intro />}></Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/join' element={<Join />}></Route>
 
