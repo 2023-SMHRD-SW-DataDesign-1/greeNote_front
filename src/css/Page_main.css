@@ -178,6 +178,11 @@
     display: none;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .main_page2 {
+    display: none;
+  }
+}
 
 .middle_menu {
   margin: 2%;

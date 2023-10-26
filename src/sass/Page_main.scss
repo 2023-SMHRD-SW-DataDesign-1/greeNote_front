@@ -154,6 +154,9 @@
     @include s.desktop {
         display: none;
     }
+    @include s.tablet {
+        display: none;
+    }
 }
 
 
@@ -192,4 +195,6 @@
     width: 30px;
     margin-top: 9px;
 }
+
+
 

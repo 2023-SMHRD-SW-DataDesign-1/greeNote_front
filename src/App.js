@@ -15,6 +15,10 @@ import GreenDiary from './pages/GreenDiary';
 import WriteDiary from './pages/WriteDiary';
 import DiaryDetail from './pages/DiaryDetail';
 import Testpage from './pages/Testpage';
+import './css/Ai.css'
+import Header_home2 from './components/Page_main/Header_home2';
+import AiHeader from './components/AiHeader';
+
 
 /* input페이지 */
 import './css/Page_main.css';
@@ -23,9 +27,6 @@ import './css/Page_login.css';
 import './css/Page_mypage.css';
 import './css/Input_writeDiary.css';
 
-/* 테스트용 페이지!! 나중에 삭제 예정 */
-import Testpage2 from './pages/Testpage2';
-import TestFlask from './pages/TestFlask';
 
 /* css파일 */
 import './css/Header_home.css';
@@ -35,6 +36,16 @@ import './css/Date.css';
 import './css/Diary_content.css';
 import './css/Page_intro.css';
 import './css/Page_greenDiary.css';
+import './css/Page_diaryDetail.css';
+import './css/Page_addGreen.css';
+import './css/Gardening.css';
+import './css/Switch.css';
+import './css/Page_mygreen.css';
+import './css/GreenList_all.css';
+import './css/Header_etc.css';
+import './css/Page_writeDiary.css';
+import './css/Switch_ai.css';
+import './css/Footer_diary.css';
 
 
 // ai css
@@ -56,20 +67,11 @@ import './css/SlideItemBox.css'
 import './css/Slide.css'
 
 
-import './css/Page_addGreen.css';
-import './css/Gardening.css';
-import './css/Switch.css';
-import './css/Page_mygreen.css';
-import './css/GreenList_all.css';
-import './css/Header_etc.css';
-import './css/Page_writeDiary.css';
-import './css/Switch_ai.css';
-import './css/Footer_diary.css';
 
-// 페이지
-import './css/Ai.css'
-import Header_home2 from './components/Page_main/Header_home2';
-import AiHeader from './components/AiHeader';
+
+/* 테스트용 페이지!! 나중에 삭제 예정 */
+import Testpage2 from './pages/Testpage2';
+import TestFlask from './pages/TestFlask';
 
 
 
