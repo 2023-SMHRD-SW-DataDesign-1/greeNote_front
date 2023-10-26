@@ -14,16 +14,53 @@ const GreenList = () => {
   const readPlantList = async () => {
     await axios.get(`${masterURL}/plant/readPlantList`)
       .then((res) => {
-        console.log(res); // 리스트 형태로 들어있음
+        console.log(res.data); // 리스트 형태로 들어있음
         setPlantList(res.data)
+        alarmDate(res.data);
       })
       .catch((err) => {
         console.log(err);
       })
   }
 
+  // 알람 on/off State
+  const [alarm, setAlarm] = useState(false);
+
+  // 알람 날짜 판단 함수
+  const alarmDate = (list) => {
+    const registration_date = new Date();
+    registration_date.setHours(0, 0, 0, 0);
+    const fields = ['watering', 'repotting', 'ventilation', 'nutrition_management'];
+    let onOff = false;
+    list.forEach((value) => {
+      const date = new Date(value.start_date);
+      fields.forEach((field) => {
+        let currentDate = new Date(date);
+        while (true) {
+          currentDate = addDays(new Date(currentDate), value.gardening[field]);
+          if (currentDate.toISOString().slice(0, 10) === registration_date.toISOString().slice(0, 10)) {
+            onOff = true;
+            break;
+          } else if (currentDate > registration_date) {
+            break;
+          }
+        }
+      });
+    });
+    // alarm 값에 따라서 사용하면 됨, DB의 alarm 컬럼은 현재 미사용중, 반영할지 안할지는 나중에 결정할 것
+    setAlarm(onOff);
+  }
+
+  // 날짜 더하는 함수
+  const addDays = (date, days) => {
+    const result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
+  }
+
+  // 마운트 시 실행
   useEffect(() => {
-    readPlantList();
+    readPlantList()
   }, [])
 
   return (
@@ -36,9 +73,9 @@ const GreenList = () => {
           </div>
         </Link>
         {plantList.map((value) => (
-          <Link to={`/greendiary/${value.plant_id}`} className='button_link2'> {/* 대표식물 */}
+          <Link to={`/greendiary/${value.plantId}`} className='button_link2'> {/* 대표식물 */}
             <div className='photo'>
-              <img src={`${value.image_url}`} alt="green" />
+              <img src={`${value.image}`} alt="green" />
             </div>
             <div>
               {value.title}
