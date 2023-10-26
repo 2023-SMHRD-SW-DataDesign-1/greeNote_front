@@ -11,7 +11,7 @@ import MyGreen from './pages/MyGreen';
 import GreenDiary from './pages/GreenDiary';
 import WriteDiary from './pages/WriteDiary';
 import DiaryDetail from './pages/DiaryDetail';
-import Testpage from './pages/Testpage';
+import Testpage2 from './pages/Testpage2';
 import TestFlask from './pages/TestFlask';
 
 
@@ -100,7 +100,7 @@ function App() {
 
           {/* 테스트용 페이지 */}
           <Route path='/testFlask' element={<TestFlask />}></Route>
-          <Route path='/testpage' element={<><Header_home2 /><Testpage /></>} />
+          <Route path='/testpage2' element={<><Header_home2 /><Testpage2 /></>} />
 
 
           {/* 헤더 없는 페이지 */}

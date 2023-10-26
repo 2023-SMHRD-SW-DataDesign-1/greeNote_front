@@ -5,9 +5,8 @@ import { Link, useParams } from 'react-router-dom'
 import firebaseApp from "../Firebase";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import axios from 'axios';
-import Sidebar from '../components/Page_main/Sidebar'
-import Diary_Sidebar from '../components/Page_wirteDiary/Diary_Sidebar';
 import AiPlant from '../components/AiPlant';
+import GreenProfile from '../components/GreenProfile';
 
 const WriteDiary = () => {
 
@@ -104,6 +103,8 @@ const WriteDiary = () => {
 
 
 
+
+
     return (
         <div className='web_top_container'>
             <div className='writeDiary_container'>
@@ -153,9 +154,7 @@ const WriteDiary = () => {
                                     </div>
 
                                     <div className='profile_container2'> {/* 사진(모바일만) */}
-                                        <div className='profile_green'>
-                                            <img src="/Image/monstera.jpg" alt="green" />
-                                        </div>
+                                        <GreenProfile />
                                     </div>
 
 
