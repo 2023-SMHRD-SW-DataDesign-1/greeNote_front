@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ItemPhoto from './ItemPhoto'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import AiRadio from './AiRadio';
 
 const AiPhoto = () => {
 
@@ -68,7 +69,7 @@ const AiPhoto = () => {
     const handleUpload = () => {
         if (selectedImage) {
             // 선택된 이미지를 업로드
-            console.log("url",selectedImage.url);
+            console.log("url", selectedImage.url);
             axios
                 .post('/your-upload-api-endpoint', { url: selectedImage.url })
                 .then((response) => {
@@ -85,6 +86,12 @@ const AiPhoto = () => {
         }
     };
 
+    const [selectedOption, setSelectedOption] = useState(null);
+
+    const handleRadioChange = (event) => {
+        setSelectedOption(event.target.value);
+    };
+
     return (
         <div className='photo_top_container'>
             <div className='web_pageInfo'>
@@ -97,6 +104,42 @@ const AiPhoto = () => {
                         <ItemPhoto key={idx} data={img} selected={selectedImage.url === img.url}
                             onClick={() => handleImageClick(img)} />
                     ))}
+                </div>
+            </div>
+
+            <div className='radio_container'>
+                <div className='radio_text'>스타일 선택</div>
+                <div className='radio_box'>
+                    <AiRadio
+                        label="모자이크"
+                        name="radioGroup"
+                        value="모자이크"
+                        checked={selectedOption === "모자이크"}
+                        onChange={handleRadioChange}
+                    />
+                    <AiRadio
+                        label="점묘화"
+                        name="radioGroup"
+                        value="점묘화"
+                        checked={selectedOption === "점묘화"}
+                        onChange={handleRadioChange}
+                    />
+                    <AiRadio
+                        label="판화"
+                        name="radioGroup"
+                        value="판화"
+                        checked={selectedOption === "판화"}
+                        onChange={handleRadioChange}
+                    />
+                    <AiRadio
+                        label="폴리곤"
+                        name="radioGroup"
+                        value="폴리곤"
+                        checked={selectedOption === "폴리곤"}
+                        onChange={handleRadioChange}
+                    />
+
+                    {/* <p>Selected option: {selectedOption}</p> */}
                 </div>
             </div>
 
