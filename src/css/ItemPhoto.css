@@ -40,3 +40,30 @@
     height: 230px;
   }
 }
+
+.item_photo img {
+  background-color: rgb(155, 202, 151);
+  border-radius: 5%;
+  cursor: pointer;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .item_photo img {
+    margin: 5px;
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .item_photo img {
+    width: 130px;
+    height: 130px;
+    margin: 7px;
+  }
+}
+@media (min-width: 1200px) {
+  .item_photo img {
+    margin: 10px;
+    width: 230px;
+    height: 230px;
+  }
+}

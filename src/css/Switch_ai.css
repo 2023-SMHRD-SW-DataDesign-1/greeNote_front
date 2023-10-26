@@ -42,7 +42,9 @@
 .switch_ai .check label::before,
 .switch_ai .check label::after,
 .switch_ai .check {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   display: inline-block;
   border-radius: var(--size);
   border: 0;
