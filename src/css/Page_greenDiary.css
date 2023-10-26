@@ -78,8 +78,46 @@
   }
 }
 
+/********************************** 다이어리 아랫 공간 */
+.diary_box {
+  display: flex;
+  justify-content: center;
+}
 @media (min-width: 1200px) {
   .diary_box {
     width: 1000px;
+  }
+}
+
+.diary_box2 {
+  display: flex;
+  margin-top: 2%;
+  overflow: auto;
+  flex-wrap: wrap;
+}
+@media (min-width: 1200px) {
+  .diary_box2 {
+    width: 615px;
+    height: 597px;
+    background-color: beige;
+  }
+}
+
+.diaryFile2 {
+  /* 내부 text 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  /* css */
+  color: black;
+  border: 1px solid grey;
+  margin: 0.5%;
+}
+@media (min-width: 1200px) {
+  .diaryFile2 {
+    width: 193px;
+    height: 193px;
   }
 }

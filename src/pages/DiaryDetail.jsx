@@ -3,8 +3,7 @@
 import React from 'react'
 import Switch_ai from '../components/Switch_ai'
 import Date from '../components/Page_main/Date'
-import Input_diaryWrite from '../components/Input_diaryWrite'
-import Diary_Sidebar from '../components/Page_wirteDiary/Diary_Sidebar'
+import Diary_Sidebar from '../components/Page_Diary/Diary_Sidebar'
 
 const DiaryDetail = () => {
     return (

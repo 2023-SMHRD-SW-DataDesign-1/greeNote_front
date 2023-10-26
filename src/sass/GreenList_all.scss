@@ -46,9 +46,7 @@
     height: 250px;
   }
 }
-.green {
-  background-color: crimson;
-}
+
 .green2 {
   background-color: lightskyblue;
 }
@@ -71,8 +69,8 @@
   }
 
   @include s.desktop {
-    width: 240px;
-    height: 240px;
+    width: 235px;
+    height: 235px;
   }
 }
 

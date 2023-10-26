@@ -30,36 +30,22 @@ const GreenList_all = () => {
     <div className='greenlist'>
 
       <div className='list_container'>
-        <Link to="/mygreen" className='button_link2'> {/* 전체선택 */}
+        <Link to="/mygreen" className='linkPhoto'> {/* 전체선택 */}
           <div className='select_all'>
             ALL
           </div>
         </Link>
+
         {plantList.map((value) => (
-          <Link to={`/greendiary/${value.plant_id}`} className='button_link2'>
-            <div className='green'>
+          <Link to={`/greendiary/${value.plant_id}`} className='linkPhoto'>
+            <div className='green' style={{ backgroundColor: value.color }}>
               <img src={`${value.image_url}`} alt="green" />
             </div>
+            {value.nickname}
           </Link>
         ))}
-        <Link to="/addgreen" className='button_link2'>
-          <div className='green2'>
-            <img src="/Image/alocasia.jpg" alt="green" />
-          </div>
-        </Link>
       </div>
 
-      <div className='list_container2'>
-        <div className='allList_all'>
-          전체식물
-        </div>
-        <div className='allList_new'>
-          몬스테라
-        </div>
-        <div className='allList_add'>
-          반려 추가
-        </div>
-      </div>
     </div>
   )
 }
