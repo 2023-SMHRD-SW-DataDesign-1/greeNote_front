@@ -13,7 +13,8 @@
     margin-top: 30px;
     background-color: rgb(255, 255, 255);
     width: 360px;
-    height: 50px;
+    height: 60px;
+    flex-direction: row;
   }
 
 }
@@ -40,7 +41,8 @@
     flex-direction: column;
     justify-content: end;
     cursor: pointer;
-    margin-left: 240px;
+    margin-left: 25px;
+    margin-top: 5px;
     z-index: 2;
   }
 
@@ -54,7 +56,7 @@
     z-index: 3;
   }
 
-  .menuLink{
+  .menuLink {
     text-decoration: none;
     color: black;
   }
@@ -90,6 +92,10 @@
 }
 
 
+.m_logo {
+  display: flex;
+  flex-direction: row;
+}
 
 
 //모바일 나뭇잎로고
@@ -106,4 +112,22 @@
   @include s.desktop {
     display: none;
   }
+}
+
+//모바일 소개text
+.m_pageInfo {
+  @include s.mobile {
+    width: 190px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0px 0px 10px;
+  }
+  @include s.tablet{
+    display: none;
+  }
+  @include s.desktop{
+    display: none;
+  }
+
 }
