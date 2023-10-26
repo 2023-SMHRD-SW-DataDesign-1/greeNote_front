@@ -6,9 +6,6 @@ import Intro from './pages/Intro';
 import Login from './pages/Login';
 import Join from './pages/Join';
 import Mypage from './pages/Mypage';
-import Ai from './pages/Ai';
-import AiReturn from './pages/AiReturn';
-import Slide from './pages/Slide';
 import AddGreen from './pages/AddGreen';
 import MyGreen from './pages/MyGreen';
 import GreenDiary from './pages/GreenDiary';
@@ -53,8 +50,6 @@ import './css/ItemPlantChoice.css'
 // slide css
 import './css/ItemSlide.css'
 import './css/SlideItemBox.css'
-import './css/Slide.css'
-
 
 import './css/Page_addGreen.css';
 import './css/Gardening.css';
@@ -67,9 +62,11 @@ import './css/Switch_ai.css';
 import './css/Footer_diary.css';
 
 // 페이지
-import './css/Ai.css'
 import Header_home2 from './components/Page_main/Header_home2';
 import AiHeader from './components/AiHeader';
+import AiPhotoBox from './pages/AiPhotoBox';
+import AiReturnBox from './pages/AiReturnBox';
+import SlideBox from './pages/SlideBox';
 
 
 
@@ -86,6 +83,9 @@ function App() {
         <Route path='/greendiary/:plant_id' element={<><AiHeader /><GreenDiary /></>} />
         <Route path='/writediary/:plant_id' element={<><AiHeader /><WriteDiary /></>} />
         <Route path='/diarydetail' element={<><AiHeader /><DiaryDetail /></>} />
+        <Route path='/ai' element={<><AiHeader /><AiPhotoBox /></>} />
+        <Route path='/slide' element={<><AiHeader /><SlideBox /></>} />
+        <Route path='/aiReturn' element={<><AiHeader /><AiReturnBox /></>} />
 
         {/* 테스트용 페이지 */}
         <Route path='/testFlask' element={<TestFlask />}></Route>
@@ -96,9 +96,11 @@ function App() {
         <Route path='/intro' element={<Intro />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/join' element={<Join />}></Route>
+
+        {/* 수정중
         <Route path='/ai' element={<Ai />}/>
         <Route path='/slide' element={<Slide />} />
-        <Route path='/aiReturn' element={<AiReturn />} />
+        <Route path='/aiReturn' element={<AiReturn />} /> */}
 
       </Routes>
 

@@ -16,3 +16,23 @@
     background-color: rgb(255, 252, 252);
   }
 }
+
+.web_top_container {
+  display: flex;
+  justify-content: center;
+}
+
+.web_container {
+  height: 963px;
+  border-radius: 5%;
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .web_container {
+    width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .web_container {
+    width: 1200px;
+  }
+}
