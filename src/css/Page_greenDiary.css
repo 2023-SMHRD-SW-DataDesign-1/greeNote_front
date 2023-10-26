@@ -18,28 +18,68 @@
   justify-content: space-between;
 }
 
-/* 오른쪽 삭제 아이콘 */
+/* 작성 및 삭제 아이콘 */
+.icons2 {
+  display: flex;
+}
 @media (min-width: 360px) and (max-width: 799px) {
+  .icons2 {
+    width: 80px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .icons2 {
+    width: 130px;
+  }
+}
+@media (min-width: 1200px) {
+  .icons2 {
+    width: 125px;
+  }
+}
+
+.mid_title {
+  font-weight: bolder;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+}
+@media (min-width: 1200px) {
+  .mid_title {
+    display: flex;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .mid_title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 799px) {
+  .mid_tilte_edit img,
   .mid_title_bin2 img {
     margin-right: 15px;
     width: 20px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
+  .mid_tilte_edit img,
   .mid_title_bin2 img {
     margin-right: 30px;
     width: 25px;
   }
 }
 @media (min-width: 1200px) {
+  .mid_tilte_edit img,
   .mid_title_bin2 img {
-    margin-right: 70px;
+    margin-right: 38px;
     width: 25px;
   }
 }
 
 @media (min-width: 1200px) {
   .diary_box {
-    width: 100%;
+    width: 1000px;
   }
 }

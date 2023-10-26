@@ -112,9 +112,14 @@ const WriteDiary = () => {
                 <div className='main_big_pie1'>
                     <AiPlant />
                     <div className='main_pie1'>
-                        <div className='web_pageInfo'>
-                            <img src='/Image/book_logo.png' className='web_pageInfo_img'></img>
-                            <div className='web_infoText'>다이어리 작성하기</div>
+                        <div className='mid_title'>
+                            <div className='mid_title2'>
+                                <img src="/Image/book_logo.PNG" alt="book" className='bookLogo'/>
+                                다이어리 작성하기
+                            </div>
+                            <Link to="/greendiary/a" className='mid_title_bin2'>
+                                <img src="/Icon/back.png" alt="bin" />
+                            </Link>
                         </div>
 
                         <div className='diary_pie'>

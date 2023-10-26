@@ -18,7 +18,7 @@
 .main_container {
     /* 크기 지정 */
     height: 100%;
-    width: 100%;
+    width: 90%;
 
     @include s.desktop {
         width: 1200px;

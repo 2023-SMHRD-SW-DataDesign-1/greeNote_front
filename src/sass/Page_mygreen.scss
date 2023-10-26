@@ -36,7 +36,6 @@
     justify-content: space-between;
     width: 100%;
     display: flex;
-    margin-left: 5%;
     
     @include s.desktop {
         padding-left: 3%;
@@ -64,7 +63,7 @@
     }
 
     @include s.desktop {
-        font-size: 25px;
+        font-size: 23px;
         font-weight: bolder;
 
 
@@ -103,6 +102,7 @@
 }
 
 /* 오른쪽 삭제 아이콘 */
+.binLogo,
 .mid_title_bin img {
     @include s.mobile {
         margin-right: 15px;
@@ -115,7 +115,7 @@
     }
 
     @include s.desktop {
-        margin-right: 40px;
+        margin-right: 50px;
         width: 25px;
     }
 }

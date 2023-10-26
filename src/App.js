@@ -43,6 +43,7 @@ import './css/Switch_ai.css';
 import './css/Footer_diary.css';
 
 
+
 // ai css
 import './css/AiHeader.css';
 import './css/AiPlant.css';
