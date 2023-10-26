@@ -36,13 +36,15 @@ const GreenList = () => {
       const date = new Date(value.start_date);
       fields.forEach((field) => {
         let currentDate = new Date(date);
+        if (value.gardening[field] != 0) {
         while (true) {
-          currentDate = addDays(new Date(currentDate), value.gardening[field]);
-          if (currentDate.toISOString().slice(0, 10) === registration_date.toISOString().slice(0, 10)) {
-            onOff = true;
-            break;
-          } else if (currentDate > registration_date) {
-            break;
+            currentDate = addDays(new Date(currentDate), value.gardening[field]);
+            if (currentDate.toISOString().slice(0, 10) === registration_date.toISOString().slice(0, 10)) {
+              onOff = true;
+              break;
+            } else if (currentDate > registration_date) {
+              break;
+            }
           }
         }
       });
