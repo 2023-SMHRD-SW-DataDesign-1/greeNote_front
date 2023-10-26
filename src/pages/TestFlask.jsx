@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-const Test = () => {
+const TestFlask = () => {
 
     const [contentImageFile, setContentImageFile] = useState(null);
     const [styleImageFile, setStyleImageFile] = useState(null);
+
+    // 결과 이미지
+    const [imageData, setImageData] = useState('');
 
     const handleContentImageChange = (e) => {
         const file = e.target.files[0];
@@ -25,6 +28,7 @@ const Test = () => {
         await axios.post(`http://127.0.0.1:5000/perform_nst`, formData)
             .then((res) => {
                 console.log(res);
+                setImageData(res.data.imageData);
             })
             .catch((err) => {
                 console.log(err);
@@ -54,8 +58,10 @@ const Test = () => {
             </form>
 
             <button onClick={action}>동작 테스트</button>
+
+            {imageData && <img src={`data:image/*;base64,${imageData}`} alt="NST Image" />}
         </div>
     )
 }
 
-export default Test
+export default TestFlask

@@ -23,10 +23,7 @@ const Main = () => {
             </div>
             <div className='main_pie2'>
               <br />
-              <Diary_content />
-              <Diary_content />
-              <Diary_content />
-              <Diary_content />
+              {dailyDiary && dailyDiary.map((value) => (<Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />))}
             </div>
           </div>
         </div>
@@ -40,7 +37,7 @@ const Main = () => {
           </div>
           <br />
           <div>
-            {dailyDiary && dailyDiary.map((value) => (<Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl}/>))}
+            {dailyDiary && dailyDiary.map((value) => (<Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />))}
           </div>
         </div>
 
