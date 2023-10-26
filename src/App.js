@@ -96,12 +96,6 @@ function App() {
         <Route path='/intro' element={<Intro />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/join' element={<Join />}></Route>
-
-        {/* 수정중
-        <Route path='/ai' element={<Ai />}/>
-        <Route path='/slide' element={<Slide />} />
-        <Route path='/aiReturn' element={<AiReturn />} /> */}
-
       </Routes>
 
     </div>
