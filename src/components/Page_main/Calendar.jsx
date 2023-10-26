@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../../contexts/DataContext';
 import axios from 'axios';
 
@@ -19,7 +19,7 @@ const Calendar = () => {
 
   // 일별 다이어리 조회 함수
   const changeDate = (day) => {
-    const selected = new Date(currYear, currMonth, day);
+    const selected = new Date(currYear, currMonth, day+1);
     const formattedDate = selected.toISOString().split('T')[0];
     axios.get(`${masterURL}/diary/readByDay?registration_date=${formattedDate}`)
       .then((res) => {
@@ -30,6 +30,10 @@ const Calendar = () => {
         console.log(err);
       })
   };
+
+  useEffect(()=>{
+    changeDate(date.getDate());
+  },[])
 
   const renderCalendar = () => {
     const firstDayofMonth = new Date(currYear, currMonth, 1).getDay();
@@ -44,7 +48,7 @@ const Calendar = () => {
 
     for (let i = 1; i <= lastDateofMonth; i++) {
       const isToday = i === date.getDate() && currMonth === date.getMonth() && currYear === date.getFullYear();
-      liTag.push(<li key={`current-${i}`} className={isToday ? "active" : ""} onClick={() => changeDate(i + 1)}>{i}</li>);
+      liTag.push(<li key={`current-${i}`} className={isToday ? "active" : ""} onClick={() => changeDate(i)}>{i}</li>);
     }
 
     for (let i = lastDayofMonth; i < 6; i++) {
