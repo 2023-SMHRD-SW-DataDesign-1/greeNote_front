@@ -1,7 +1,7 @@
 @use '../sass/variables' as s;
 
 .web_box {
-    @include s.tablet{
+    @include s.tablet {
         display: flex;
         flex-direction: row;
         width: 800px;
@@ -20,4 +20,22 @@
         background-color: rgb(255, 252, 252);
     }
 
+}
+.web_top_container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.web_container {
+    height: 963px;
+    border-radius: 5%;
+
+    @include s.tablet {
+        width: 800px;
+    }
+
+    @include s.desktop {
+        width: 1200px;
+    }
 }

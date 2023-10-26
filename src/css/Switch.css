@@ -58,7 +58,9 @@
 .switch_control .check label::before,
 .switch_control .check label::after,
 .switch_control .check {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   display: inline-block;
   border-radius: var(--size);
   border: 0;

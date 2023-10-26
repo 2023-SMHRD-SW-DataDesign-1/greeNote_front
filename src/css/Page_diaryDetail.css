@@ -1,0 +1,37 @@
+@media (min-width: 1200px) {
+  .forMobile {
+    display: none;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .forMobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .forDesktop2 {
+    width: 50%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .forDesktop2 {
+    width: 45%;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .forDesktop2 {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .diaryPie {
+    width: 1000px;
+  }
+}
+
+.diaryBottom {
+  display: flex;
+  justify-content: center;
+}
