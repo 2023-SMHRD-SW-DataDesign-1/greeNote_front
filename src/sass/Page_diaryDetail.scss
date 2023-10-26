@@ -1,2 +1,32 @@
 @use '../sass/_variables.scss' as s;
 
+.forMobile {
+    @include s.desktop{
+        display: none;
+    }
+    @include s.tablet {
+        display: none;
+    }
+}
+.forDesktop2 {
+    @include s.desktop{
+        width: 50%;
+    }
+    @include s.tablet {
+        width: 45%;
+    }
+    @include s.mobile{
+        display: none;
+    }
+}
+
+.diaryPie {
+    @include s.desktop{
+        width: 1000px;
+    }
+}
+
+.diaryBottom {
+    display: flex;
+    justify-content: center;
+}

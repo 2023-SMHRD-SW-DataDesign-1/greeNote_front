@@ -16,7 +16,6 @@
 }
 
 .writeDiary_container {
-
     /* 내용 가운데 정렬 */
     display: flex;
     justify-content: space-around;
@@ -185,20 +184,23 @@
     }
 }
 
+/* 사진 받아오는 input */
 .inputWrite {
     margin: 10px;
-
     width: 200px;
 }
 
 /*************************************  일기 작성하는 곳 */
 .input_container2 {
+    margin-left: 5%;
+    margin-right: 5%;
+
     @include s.mobile {
-        width: 320px;
+        margin: 5%;
     }
 
     @include s.tablet {
-        width: 400px;
+        margin: 5%;
     }
 
     @include s.desktop {
@@ -206,3 +208,7 @@
         height: 90%;
     }
 }
+
+
+
+
