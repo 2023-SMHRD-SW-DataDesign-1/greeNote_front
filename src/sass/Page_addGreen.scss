@@ -30,6 +30,10 @@
     /* 상하 위치 조정 */
     margin-bottom: 7%;
 
+    /* 크기 지정 */
+    height: 100%;
+    width: 90%;
+
     @include s.desktop {
         width: 1200px;
         border-radius: 5%;
@@ -55,53 +59,7 @@
     }
 }
 
-/******************************* 중간 소제목  */
-.mid_title3 {
-    font-weight: bolder;
 
-    @include s.mobile {
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-        padding-left: 40px;
-        width: 360px;
-    }
-
-    @include s.tablet {
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-        padding-left: 30px;
-    }
-
-    @include s.desktop {
-        font-size: 25px;
-        display: flex;
-        align-items: center;
-        padding-left: 30px;
-
-    }
-}
-
-/* 이미지 */
-.mid_title3 img {
-    @include s.mobile {
-        width: 70px;
-    }
-
-    @include s.tablet {
-        width: 70px;
-    }
-
-    @include s.desktop {
-        width: 100px;
-    }
-}
-
-.mid_title_bin3 img {
-    width: 20px;
-    display: none;
-}
 
 
 
@@ -198,7 +156,7 @@
 .mini_title1 {
     /* 위치 조정 */
     position: relative;
-    
+
     @include s.desktop {
         margin-bottom: 2%;
         left: -15%;
@@ -213,7 +171,7 @@
 .mini_title2 {
     /* 위치 조정 */
     position: relative;
-    
+
     @include s.desktop {
         margin-bottom: 2%;
         left: -15%;

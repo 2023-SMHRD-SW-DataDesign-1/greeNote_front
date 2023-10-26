@@ -40,33 +40,34 @@ const GreenDiary = () => {
   return (
     <div className='web_top_container'>
       <div className='greendiary_container'>
-        <Header_diary /> {/* header */}
 
         <div className='main_big_pie1'>
           <AiPlant />
           <div className='diary_all'>
-            <div className='mid_title1'>
+            <div className='mid_title'>
               <div className='mid_title2'>
                 <img src="/Image/book_logo.PNG" alt="book" />
                 내 반려식물의 다이어리 모아보기
               </div>
-              {<button>
-                <Link to={`/writediary/${plant_id}`}>
-                  테스트 버튼
+              <div className='icons2'>
+                <div className='mid_title_bin2'>
+                  <img src="/Icon/bin.png" alt="bin" />
+                </div>
+                <Link to={`/writediary/${plant_id}`} className='mid_tilte_edit'>
+                  <img src="/Icon/edit.png" alt="edit" />
                 </Link>
-              </button>}
-              <div className='mid_title_bin2'>
-                <img src="/Icon/bin.png" alt="bin" />
               </div>
             </div>
+
             <div className='diary_box'>
-              {diaryList.map((value) => <Diary_content key={value.diary_id} diary={value.diary} imgUrl={value.imgUrl}/>)}
+              {diaryList.map((value) => <Diary_content key={value.diary_id} diary={value.diary} imgUrl={value.imgUrl} />)}
             </div>
+
+
+
           </div>
         </div>
-
       </div>
-
     </div>
   )
 }

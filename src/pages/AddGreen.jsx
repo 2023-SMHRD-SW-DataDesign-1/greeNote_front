@@ -80,15 +80,11 @@ const AddGreen = () => {
       <div className='add_container'>
 
         <div className='mid_title1'>
-          <div className='mid_title3'>
+          <div className='mid_title2'>
             <img src="/Image/book_logo.PNG" alt="book" />
             내 반려 식물의 프로필
           </div>
-          <div className='icons'>
-            <div className='mid_title_bin3'>
-              <img src="/Icon/bin.png" alt="bin" />
-            </div>
-          </div>
+              <img src="/Icon/bin.png" alt="bin" className='binLogo'/>
         </div>
 
         <form onSubmit={addPlantList}>

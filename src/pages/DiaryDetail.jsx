@@ -15,11 +15,9 @@ const DiaryDetail = () => {
                     <div className='diaryPie'>
 
                         <div className='diaryTop'>
-                            <div className='mid_title1'> {/* 소제목 */}
-                                <div className='mid_title2'>
-                                    <img src="/Image/book_logo.PNG" alt="book" />
-                                    다이어리 보기
-                                </div>
+                            <div className='web_pageInfo'>
+                                <img src='/Image/book_logo.png' className='web_pageInfo_img'></img>
+                                <div className='web_infoText'>다이어리 보기</div>
                             </div>
                             <div className='forMobile'>
                                 <Switch_ai /> {/* AI 진단정보 받아와야함 */}
@@ -30,7 +28,7 @@ const DiaryDetail = () => {
                                     <img src="/Image/monstera.jpg" alt="green" />
                                 </div>
                             </div>
-                                <br />
+                            <br />
                         </div>
 
                         <div className='diaryBottom'>

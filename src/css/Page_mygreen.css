@@ -31,7 +31,6 @@
   justify-content: space-between;
   width: 100%;
   display: flex;
-  margin-left: 5%;
 }
 @media (min-width: 1200px) {
   .mid_title1 {
@@ -60,7 +59,7 @@
 }
 @media (min-width: 1200px) {
   .mid_title2 {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: bolder;
   }
 }
@@ -103,20 +102,23 @@
 
 /* 오른쪽 삭제 아이콘 */
 @media (min-width: 360px) and (max-width: 799px) {
+  .binLogo,
   .mid_title_bin img {
     margin-right: 15px;
     width: 20px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
+  .binLogo,
   .mid_title_bin img {
     margin-right: 30px;
     width: 25px;
   }
 }
 @media (min-width: 1200px) {
+  .binLogo,
   .mid_title_bin img {
-    margin-right: 40px;
+    margin-right: 50px;
     width: 25px;
   }
 }

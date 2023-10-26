@@ -27,7 +27,6 @@
     @include s.desktop {
         width: 1200px;
         height: 936px;
-        border-radius: 5%;
     }
 }
 
@@ -64,37 +63,37 @@
 .partLeft {
     @include s.desktop {
         width: 500px;
+        margin-top: 5%;
  
     }
 }
 
-/************************************* Profile.css(CSS 파일) */
+/************************************* 모바일 식물정보 화면 */
 .profile_container2 {
     /* 배치 조정 */
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 
     @include s.desktop {
         display: none;
     }
+    @include s.tablet {
+        display: none;
+    }
+
+.plant_container2 {
+    width: 360px;
+    margin-bottom: 2%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 
-.profile_green {
-    background-color: #335A3B;
-    color: white;
-
-    /* 모양 만들기 */
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-
-    /* 내부 text 가운데 정렬 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 /* 저장된 사진 이미지 */
@@ -127,7 +126,16 @@
         display: none;
     }
 }
-
+.diaryDate2 {
+    @include s.mobile {
+        margin-left: 25%;
+        margin-right: 25%;
+        border-radius: 0.7em;
+        padding: 2%;
+        width: auto;
+        background-color: #8AC4A3;
+    }
+}
 
 .diary_photo2,
 .Diary_Sidebar,

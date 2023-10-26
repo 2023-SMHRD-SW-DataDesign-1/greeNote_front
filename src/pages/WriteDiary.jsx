@@ -5,8 +5,8 @@ import { Link, useParams } from 'react-router-dom'
 import firebaseApp from "../Firebase";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import axios from 'axios';
-import Sidebar from '../components/Page_main/Sidebar'
-import Diary_Sidebar from '../components/Page_wirteDiary/Diary_Sidebar';
+import AiPlant from '../components/AiPlant';
+import GreenProfile from '../components/GreenProfile';
 
 const WriteDiary = () => {
 
@@ -21,8 +21,8 @@ const WriteDiary = () => {
     /* 오늘 날짜 출력하기 */
     const Today2 = today2.toLocaleDateString();
     const year = today2.getFullYear();
-    const month = String(today2.getMonth() + 1).padStart(2, '0'); // 월은 0부터 시작하므로 +1 해주고 두 자리로 포맷팅
-    const day = String(today2.getDate()).padStart(2, '0'); // 일을 두 자리로 포맷팅
+    const month = String(today2.getMonth() + 1).padStart(2, '0');
+    const day = String(today2.getDate()).padStart(2, '0');
     const registration_date = `${year}-${month}-${day}`;
 
     /* 오늘 요일 출력하기 */
@@ -103,18 +103,23 @@ const WriteDiary = () => {
 
 
 
+
+
     return (
         <div className='web_top_container'>
             <div className='writeDiary_container'>
 
                 <div className='main_big_pie1'>
-                    <Diary_Sidebar />
+                    <AiPlant />
                     <div className='main_pie1'>
-                        <div className='mid_title1'> {/* 소제목 */}
+                        <div className='mid_title'>
                             <div className='mid_title2'>
-                                <img src="/Image/book_logo.PNG" alt="book" />
+                                <img src="/Image/book_logo.PNG" alt="book" className='bookLogo'/>
                                 다이어리 작성하기
                             </div>
+                            <Link to="/greendiary/a" className='mid_title_bin2'>
+                                <img src="/Icon/back.png" alt="bin" />
+                            </Link>
                         </div>
 
                         <div className='diary_pie'>
@@ -154,9 +159,7 @@ const WriteDiary = () => {
                                     </div>
 
                                     <div className='profile_container2'> {/* 사진(모바일만) */}
-                                        <div className='profile_green'>
-                                            <img src="/Image/monstera.jpg" alt="green" />
-                                        </div>
+                                        <GreenProfile />
                                     </div>
 
 
