@@ -202,7 +202,7 @@ input[type=radio] {
 
 .uploadBtn {
   width: 130px;
-  background-color: #46b95d;
+  background-color: #548488;
   border-radius: 10px;
   padding: 4%;
   color: rgb(255, 255, 255);
@@ -219,5 +219,5 @@ input[type=radio] {
 }
 
 .uploadBtn:hover {
-  background-color: #335A3B;
+  background-color: #33455a;
 }
