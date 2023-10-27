@@ -99,7 +99,6 @@
   .diary_box2 {
     width: 615px;
     height: 597px;
-    background-color: beige;
   }
 }
 
@@ -112,7 +111,6 @@
   text-decoration: none;
   /* css */
   color: black;
-  border: 1px solid grey;
   margin: 0.5%;
 }
 @media (min-width: 1200px) {
