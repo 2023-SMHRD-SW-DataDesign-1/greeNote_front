@@ -7,8 +7,8 @@ const AiPhotoBox = () => {
         <div className='web_top_container'>
             <div className='web_container'>
                 <div className='web_box'>
-                <AiPlant />
-                <AiPhoto />
+                    <AiPlant />
+                    <AiPhoto />
                 </div>
             </div>
         </div>

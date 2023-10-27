@@ -16,27 +16,35 @@ const DiaryDetail = () => {
     const { diaryId } = useParams();
 
     // 다이어리 정보 State
-    const [diaryDetail, setDiaryDetail] = useState();
+    const [diaryDetail, setDiaryDetail] = useState([]);
 
     // 다이어리 이미지 리스트
-    const [imgList, setImgList] = useState();
+    const [imgList, setImgList] = useState([]);
 
     // 개별 다이어리 조회 함수
-    const readOneDiary = () => {
-        axios.get(`${masterURL}/diary/readOneDiary?diaryId=${diaryId}`)
-            .then((res) => {
-                console.log(res);
-                setDiaryDetail(res.data);
-                setImgList(JSON.parse(res.data.imgUrl.image_url))
-            })
-            .catch((err) => {
-                console.log(err);
-            })
+    const readOneDiary = async () => {
+        try {
+            await axios.get(`${masterURL}/diary/readOneDiary?diaryId=${diaryId}`)
+                .then((res) => {
+                    console.log(res);
+                    const image = JSON.parse(res.data.imgUrl.image_url);
+
+                    setDiaryDetail(res.data.diary);
+                    setImgList(image);
+
+                    console.log(image);
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
+        } catch (error) {
+
+        }
     }
 
     useEffect(() => {
         readOneDiary();
-    }, [])
+    }, []);
 
     return (
         <div className='web_top_container'>
@@ -66,18 +74,22 @@ const DiaryDetail = () => {
                             <div className='forDesktop'>
                                 <Date />
                                 <br />
-                                <div className='green_photo'>
-                                    <img src={imgList[0].image_url} alt="green" />
-                                </div>
+                                {imgList.length > 0 ? (
+                                    <div className='green_photo'>
+                                        <img src={imgList[0].image_url} alt="green" />
+                                    </div>
+                                ) : (
+                                    <div>등록된 사진이 없습니다!</div>
+                                )}
                             </div>
 
                             <div className='forDesktop2'>
                                 <div className='input_container2'>
                                     <div className='titleBox'>
-                                        {diaryDetail.diary.title}
+                                        {diaryDetail.title}
                                     </div>
                                     <div className='contentBox'>
-                                    {diaryDetail.diary.content}
+                                        {diaryDetail.content}
                                     </div>
                                 </div>
                             </div>
