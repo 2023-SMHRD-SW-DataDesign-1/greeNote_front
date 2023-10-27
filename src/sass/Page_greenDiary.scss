@@ -60,10 +60,10 @@
     }
 }
 
-.mid_tilte_edit img,
+.mid_title_edit img,
 .mid_title_bin2 img {
     @include s.mobile {
-        margin-right: 15px;
+        margin-right: 20px;
         width: 20px;
     }
 
@@ -95,17 +95,17 @@
 
     @include s.desktop {
         width: 615px;
-        height: 597px;
+        height: 575px;
     }
 
     @include s.tablet {
         width: 550px;
-        height: 542px;
+        height: 520px;
     }
 
     @include s.mobile {
         width: 319px;
-        height: 475px;
+        height: 455px;
     }
 }
 
@@ -135,5 +135,21 @@
     @include s.mobile {
         width: 155px;
         height: 155px;
+    }
+}
+
+.diary_info {
+    /* 위치 */
+    position: relative;
+    margin-right: 80px;
+    top: -30%;
+
+    /* CSS */
+    font-size: 15px;
+    font-weight: bolder;
+    color: #000000;
+
+    @include s.mobile {
+        font-size: 12px;
     }
 }

@@ -7,6 +7,10 @@ const GreenDiary_photo = (props) => {
             <Link to="/diarydetail" className='button_links'>
                 <img className='diaryFile2' onClick={props.onClick} src={props.data.url}></img>
             </Link>
+            <div className='diary_info'>
+                <div className='diary_title'>{props.data.title}</div>
+                <div className='diary_'>{props.data.date}</div>
+            </div>
         </div>
 
     )

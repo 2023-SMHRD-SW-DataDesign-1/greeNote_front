@@ -26,7 +26,6 @@
 .list_container {
   /* 범위 지정 */
   padding: 3%;
-  width: 100%;
   height: auto;
   
   /* 배치 조정 */
@@ -41,6 +40,12 @@
   color: #000000;
   
   @include s.mobile {
+    width: 90%;
+  }
+  @include s.tablet {
+    width: 100%;
+  }
+  @include s.desktop {
     width: 90%;
   }
   
