@@ -6,6 +6,7 @@
 
     /* 위치 및 크기 지정 */
     height: auto;
+    position: relative;
     
     /* css */
     border-radius: 0.7em;
@@ -19,12 +20,13 @@
     align-items: center;
     
     @include s.desktop {
-        position: relative;
         left: 60%;
         width: 30%;
     }
     @include s.mobile {
-        width: 50%;
+        width: 38%;
+        left: 60%;
+
     }
 }
 

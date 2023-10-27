@@ -1,4 +1,9 @@
 @charset "UTF-8";
+.greendiary_container {
+  /* 크기 지정 */
+  height: 100%;
+  width: 100%;
+}
 @media (min-width: 1200px) {
   .greendiary_container {
     width: 1200px;
@@ -16,6 +21,7 @@
 .diary_all {
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 /* 작성 및 삭제 아이콘 */
@@ -91,7 +97,6 @@
 
 .diary_box2 {
   display: flex;
-  margin-top: 2%;
   overflow: auto;
   flex-wrap: wrap;
 }
@@ -99,6 +104,18 @@
   .diary_box2 {
     width: 615px;
     height: 597px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .diary_box2 {
+    width: 550px;
+    height: 542px;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .diary_box2 {
+    width: 319px;
+    height: 475px;
   }
 }
 
@@ -117,5 +134,17 @@
   .diaryFile2 {
     width: 193px;
     height: 193px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .diaryFile2 {
+    width: 175px;
+    height: 175px;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .diaryFile2 {
+    width: 155px;
+    height: 155px;
   }
 }

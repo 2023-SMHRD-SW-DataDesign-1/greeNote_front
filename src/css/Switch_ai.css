@@ -4,6 +4,7 @@
   /*     padding-right: 62%; */
   /* 위치 및 크기 지정 */
   height: auto;
+  position: relative;
   /* css */
   border-radius: 0.7em;
   color: #000000;
@@ -16,14 +17,14 @@
 }
 @media (min-width: 1200px) {
   .switch_ai {
-    position: relative;
     left: 60%;
     width: 30%;
   }
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .switch_ai {
-    width: 50%;
+    width: 38%;
+    left: 60%;
   }
 }
 
