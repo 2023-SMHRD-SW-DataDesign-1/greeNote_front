@@ -23,6 +23,7 @@ const Main = () => {
             </div>
             <div className='main_pie2'>
               <br />
+              <img src="/Image/webDiary.PNG" alt="logo" className='webDiary' />
               {dailyDiary && dailyDiary.map((value) => (<Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />))}
             </div>
           </div>
@@ -37,6 +38,7 @@ const Main = () => {
           </div>
           <br />
           <div>
+            <img src="/Image/webDiary.PNG" alt="logo" className='webDiary' />
             {dailyDiary && dailyDiary.map((value) => (<Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />))}
           </div>
         </div>

@@ -9,7 +9,7 @@ const Intro = () => {
   return (
       
     <div className='intro_container'>
-      <div className="intro_logo"> {/* 우리 로고 */}
+      <div className="intro_logo">
       {/* 이미지 */}
         <ItemIntroSlide/>
       </div>

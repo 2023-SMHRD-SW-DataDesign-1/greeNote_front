@@ -221,3 +221,19 @@
   width: 30px;
   margin-top: 9px;
 }
+
+@media (min-width: 1200px) {
+  .webDiary {
+    width: 100%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .webDiary {
+    width: 100%;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .webDiary {
+    width: 100%;
+  }
+}

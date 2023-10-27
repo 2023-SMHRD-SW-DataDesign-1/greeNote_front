@@ -13,7 +13,7 @@ const Diary_content = ({ diary, imgUrl }) => {
           {/* <img src={diary && image_url[0].image_url} alt='plantImg'/> */}
         </div>
       </Link>
-
+      
       <div className='diary_content'>
         <div className="top">
           <div className='title2'>
@@ -25,6 +25,8 @@ const Diary_content = ({ diary, imgUrl }) => {
           {diary && diary.content}
         </div>
       </div>
+
+
     </div>
   )
 }
