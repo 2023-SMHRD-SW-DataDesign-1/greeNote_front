@@ -1,6 +1,7 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { DataContext } from '../../contexts/DataContext';
 
 const GreenList = () => {
 
@@ -8,7 +9,7 @@ const GreenList = () => {
   const masterURL = process.env.REACT_APP_MASTER_URL;
 
   // 식물 목록 저장 State
-  const [plantList, setPlantList] = useState([]);
+  const { plantList, setPlantList } = useContext(DataContext);
 
   // 식물 목록 가져오는 함수
   const readPlantList = async () => {
@@ -37,7 +38,7 @@ const GreenList = () => {
       fields.forEach((field) => {
         let currentDate = new Date(date);
         if (value.gardening[field] != 0) {
-        while (true) {
+          while (true) {
             currentDate = addDays(new Date(currentDate), value.gardening[field]);
             if (currentDate.toISOString().slice(0, 10) === registration_date.toISOString().slice(0, 10)) {
               onOff = true;
@@ -82,7 +83,7 @@ const GreenList = () => {
           <div className='linkText'>식물추가</div>
         </Link>
 
-        {plantList.map((value) => (
+        {plantList && plantList.map((value) => (
           <Link to={`/greendiary/${value.plantId}`} className='linkPhoto'> {/* 대표식물 */}
             <div className='photo' style={{ backgroundColor: value.color }}>
               <img src={`${value.image}`} alt="green" />

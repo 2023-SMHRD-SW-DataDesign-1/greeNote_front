@@ -20,6 +20,8 @@ const GreenDiary = () => {
   // 다이어리 목록을 담을 State
   const [diaryList, setDiaryList] = useState([]);
 
+  // 
+
   // 식물 목록별 다이어리 조회
   const readDiary = () => {
     console.log(plant_id);
@@ -27,6 +29,7 @@ const GreenDiary = () => {
       .then((res) => {
         console.log(res);
         setDiaryList(res.data);
+
       })
       .catch((err) => {
         console.log(err);
@@ -96,6 +99,7 @@ const GreenDiary = () => {
     }
 
   ]
+
   const [selectedImage, setSelectedImage] = useState(0);
 
   const handleImageClick = (image) => {
@@ -106,8 +110,6 @@ const GreenDiary = () => {
     }
     console.log('selectedImage:', selectedImage);
   };
-
-
 
   return (
     <div className='web_top_container'>
@@ -134,9 +136,9 @@ const GreenDiary = () => {
             {/* {diaryList.map((value) => <Diary_content key={value.diary_id} diary={value.diary} imgUrl={value.imgUrl} />)} */}
             <div className='diary_box'>
               <div className='diary_box2'>
-                {arr.map((img, idx) => (
-                  <GreenDiary_photo key={idx} data={img} selected={selectedImage.url === img.url}
-                    onClick={() => handleImageClick(img)} />
+                {diaryList && diaryList.map((item, idx) => (
+                  <GreenDiary_photo key={idx} data={item} selected={selectedImage.url === JSON.parse(item.imgUrl.image_url).image_url}
+                    onClick={() => handleImageClick(JSON.parse(item.imgUrl.image_url).image_url)} />
                 ))}
               </div>
             </div>
