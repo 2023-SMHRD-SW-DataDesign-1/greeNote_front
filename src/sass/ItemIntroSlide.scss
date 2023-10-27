@@ -1,0 +1,24 @@
+@use '../sass/_variables.scss' as s;
+
+.top_container {
+    @include s.mobile {
+        width: 330px;
+        margin: 0px auto;
+    }
+
+    @include s.tablet {
+        width: 400px;
+        height: 500px;
+
+    }
+
+    @include s.desktop {
+        width: 550px;
+        height: 500px;
+    }
+
+}
+
+.intro_slide_container{
+    
+}

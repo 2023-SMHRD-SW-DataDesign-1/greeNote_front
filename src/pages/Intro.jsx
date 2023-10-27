@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ItemIntroSlide from '../components/ItemIntroSlide'
 
 
 const Intro = () => {
@@ -9,7 +10,8 @@ const Intro = () => {
       
     <div className='intro_container'>
       <div className="intro_logo"> {/* 우리 로고 */}
-        <img src="/Image/monstera.jpg" alt="logo" />
+      {/* 이미지 */}
+        <ItemIntroSlide/>
       </div>
       <div className='buttons'>
         <div className='login_button'>
