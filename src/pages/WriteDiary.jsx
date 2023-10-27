@@ -110,21 +110,22 @@ const WriteDiary = () => {
             <div className='writeDiary_container'>
 
                 <div className='main_big_pie1'>
-                    <AiPlant />
+                    <div className='forDesktop2'>
+                        <AiPlant />
+                    </div>
                     <div className='main_pie1'>
                         <div className='mid_title'>
                             <div className='mid_title2'>
-                                <img src="/Image/book_logo.PNG" alt="book" className='bookLogo'/>
+                                <img src="/Image/book_logo.PNG" alt="book" className='bookLogo' />
                                 다이어리 작성하기
                             </div>
-                            <Link to="/greendiary/a" className='mid_title_bin2'>
+                            <Link to="/greendiary/a" className='mid_title_edit'>
                                 <img src="/Icon/back.png" alt="bin" />
                             </Link>
                         </div>
 
-                        <div className='diary_pie'>
+                        <div className='diary_pie'> {/* PC/tablet에서 보이는 부분 */}
                             <div className='partRight'>
-
                                 <div className='diaryDate1'> {/* 날짜 */}
                                     <div className='date'>
                                         {Today2}
@@ -133,6 +134,7 @@ const WriteDiary = () => {
                                         {dayOfWeek2}
                                     </div>
                                 </div>
+                               
                                 <div className='diary_photo1'>
                                     <div className='green_photo'>
                                         {previewURL ? (
@@ -142,13 +144,11 @@ const WriteDiary = () => {
                                         )}
                                     </div>
                                 </div>
-
                             </div>
-                            <br />
+                          
 
-                            <div className='partLeft'>
+                            <div className='partLeft'> {/* 모바일에서 보이는 부분 */}
                                 <form onSubmit={addDiary}>
-
                                     <div className='diaryDate2'> {/* 날짜 */}
                                         <div className='date'>
                                             {Today2}
@@ -172,7 +172,6 @@ const WriteDiary = () => {
                                             )}
                                         </div>
                                     </div>
-
                                     <div className="switch_ai"> {/* 스위치 버튼 */}
                                         <div className='text3'>
                                             AI 진단
@@ -181,6 +180,9 @@ const WriteDiary = () => {
                                             <input id="check-5" type="checkbox" />
                                             <label for="check-5" />
                                         </div>
+                                    </div>
+                                    <div className='text_alarm'>
+                                        AI진단을 원할 경우,<br/> 가까이에서 찍은 사진으로 업로드 바랍니다.
                                     </div>
 
                                     <div className=''>

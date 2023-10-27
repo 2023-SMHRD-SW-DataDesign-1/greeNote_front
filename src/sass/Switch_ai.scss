@@ -23,6 +23,10 @@
         left: 60%;
         width: 30%;
     }
+    @include s.tablet {
+        left: 67%;
+        width: 30%;
+    }
     @include s.mobile {
         width: 38%;
         left: 60%;

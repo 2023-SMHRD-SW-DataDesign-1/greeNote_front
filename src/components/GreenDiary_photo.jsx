@@ -10,6 +10,10 @@ const GreenDiary_photo = ({ data }) => {
                 src={JSON.parse(data.imgUrl.image_url)[0].image_url}
                 />
             </Link>
+            <div className='diary_info'>
+                <div className='diary_title'>{props.data.title}</div>
+                <div className='diary_'>{props.data.date}</div>
+            </div>
         </div>
 
     )

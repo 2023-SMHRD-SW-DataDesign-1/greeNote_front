@@ -44,6 +44,11 @@
     display: flex;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .diary_pie {
+    width: 600px;
+  }
+}
 
 @media (min-width: 1200px) {
   .main_pie1 {
@@ -82,13 +87,23 @@
     display: none;
   }
 }
-.profile_container2 .plant_container2 {
-  width: 360px;
+
+.plant_container2 {
   margin-bottom: 2%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .plant_container2 {
+    width: 360px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .plant_container2 {
+    width: 100%;
+  }
 }
 
 /* 저장된 사진 이미지 */
@@ -108,6 +123,17 @@
 @media (min-width: 1200px) {
   .diaryDate1 {
     margin-bottom: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 0.7em;
+    padding: 2%;
+    width: auto;
+    background-color: #8AC4A3;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .diaryDate1 {
+    margin-bottom: 2%;
     margin-left: 25%;
     margin-right: 25%;
     border-radius: 0.7em;
@@ -167,6 +193,21 @@
 @media (min-width: 1200px) {
   .green_photo {
     width: 100%;
+    min-height: 100px;
+    height: auto;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .green_photo {
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .green_photo {
+    width: 100%;
+    min-height: 70px;
     height: auto;
   }
 }
@@ -177,19 +218,19 @@
 }
 @media (min-width: 1200px) {
   .green_photo img {
-    max-height: 500px;
+    max-height: 400px;
     max-width: 90%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .green_photo img {
-    max-height: 80%;
+    max-height: 300px;
     max-width: 90%;
   }
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .green_photo img {
-    max-height: 80%;
+    max-height: 200px;
     max-width: 90%;
   }
 }
@@ -219,5 +260,28 @@
   .input_container2 {
     width: 90%;
     height: 90%;
+  }
+}
+
+.text_alarm {
+  font-size: 14px;
+  font-weight: bolder;
+  text-align: right;
+  margin-bottom: 4%;
+  position: relative;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .text_alarm {
+    right: 5%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .text_alarm {
+    right: 5%;
+  }
+}
+@media (min-width: 1200px) {
+  .text_alarm {
+    right: 5%;
   }
 }

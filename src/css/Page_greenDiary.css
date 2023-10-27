@@ -63,21 +63,21 @@
 }
 
 @media (min-width: 360px) and (max-width: 799px) {
-  .mid_tilte_edit img,
+  .mid_title_edit img,
   .mid_title_bin2 img {
-    margin-right: 15px;
+    margin-right: 20px;
     width: 20px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
-  .mid_tilte_edit img,
+  .mid_title_edit img,
   .mid_title_bin2 img {
     margin-right: 30px;
     width: 25px;
   }
 }
 @media (min-width: 1200px) {
-  .mid_tilte_edit img,
+  .mid_title_edit img,
   .mid_title_bin2 img {
     margin-right: 38px;
     width: 25px;
@@ -103,19 +103,19 @@
 @media (min-width: 1200px) {
   .diary_box2 {
     width: 615px;
-    height: 597px;
+    height: 575px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .diary_box2 {
     width: 550px;
-    height: 542px;
+    height: 520px;
   }
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_box2 {
     width: 319px;
-    height: 475px;
+    height: 455px;
   }
 }
 
@@ -146,5 +146,21 @@
   .diaryFile2 {
     width: 155px;
     height: 155px;
+  }
+}
+
+.diary_info {
+  /* 위치 */
+  position: relative;
+  margin-right: 80px;
+  top: -30%;
+  /* CSS */
+  font-size: 15px;
+  font-weight: bolder;
+  color: #000000;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .diary_info {
+    font-size: 12px;
   }
 }
