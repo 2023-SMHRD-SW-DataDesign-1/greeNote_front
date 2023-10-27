@@ -1,11 +1,43 @@
 /* 개별 다이어리 보는 페이지 */
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Switch_ai from '../components/Switch_ai'
 import Date from '../components/Page_main/Date'
 import Diary_Sidebar from '../components/Page_Diary/Diary_Sidebar'
+import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
 const DiaryDetail = () => {
+
+    // URL 통합 관리
+    const masterURL = process.env.REACT_APP_MASTER_URL;
+
+    // 식물 목록별 조회하기 위한 id값 가져오기
+    const { diaryId } = useParams();
+
+    // 다이어리 정보 State
+    const [diaryDetail, setDiaryDetail] = useState();
+
+    // 다이어리 이미지 리스트
+    const [imgList, setImgList] = useState();
+
+    // 개별 다이어리 조회 함수
+    const readOneDiary = () => {
+        axios.get(`${masterURL}/diary/readOneDiary?diaryId=${diaryId}`)
+            .then((res) => {
+                console.log(res);
+                setDiaryDetail(res.data);
+                setImgList(JSON.parse(res.data.imgUrl.image_url))
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
+    useEffect(() => {
+        readOneDiary();
+    }, [])
+
     return (
         <div className='web_top_container'>
             <div className='writeDiary_container'>
@@ -35,17 +67,17 @@ const DiaryDetail = () => {
                                 <Date />
                                 <br />
                                 <div className='green_photo'>
-                                    <img src="/Image/monstera.jpg" alt="green" />
+                                    <img src={imgList[0].image_url} alt="green" />
                                 </div>
                             </div>
 
                             <div className='forDesktop2'>
                                 <div className='input_container2'>
                                     <div className='titleBox'>
-                                        다이어리 제목
+                                        {diaryDetail.diary.title}
                                     </div>
                                     <div className='contentBox'>
-                                        다이어리 내용
+                                    {diaryDetail.diary.content}
                                     </div>
                                 </div>
                             </div>
