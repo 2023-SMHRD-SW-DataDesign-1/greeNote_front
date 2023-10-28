@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const GreenDiary_photo = ({ data }) => {
-
+    console.log(data);
     return (
         <div className='diaryFile2'>
             <Link to={`/diarydetail/${data.diary.diaryId}`} className='button_links'>
@@ -11,8 +11,8 @@ const GreenDiary_photo = ({ data }) => {
                 />
             </Link>
             <div className='diary_info'>
-                <div className='diary_title'>{props.data.title}</div>
-                <div className='diary_'>{props.data.date}</div>
+                <div className='diary_title'>{data.diary.title}</div>
+                <div className='diary_'>{data.diary.date}</div>
             </div>
         </div>
 
