@@ -74,6 +74,7 @@ const DiaryDetail = () => {
                             <div className='forDesktop'>
                                 <Date />
                                 <br />
+                                {/* 현재 제일 첫번째 사진 1장만 반영됨 */}
                                 {imgList.length > 0 ? (
                                     <div className='green_photo'>
                                         <img src={imgList[0].image_url} alt="green" />
@@ -93,7 +94,7 @@ const DiaryDetail = () => {
                                     </div>
                                 </div>
                             </div>
-
+                            
                         </div>
 
                     </div>

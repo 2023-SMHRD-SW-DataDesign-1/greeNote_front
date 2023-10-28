@@ -81,6 +81,9 @@ function App() {
   // 식물 목록 저장할 State
   const [plantList, setPlantList] = useState([]);
 
+  // 선택된 식물 관리 State
+  const [selectedPlantData, setSelectedPlantData] = useState([]);
+
   const dataContextValue = {
     // 날짜 관리
     dailyDiary: dailyDiary,
@@ -89,6 +92,10 @@ function App() {
     // 식물 목록
     plantList: plantList,
     setPlantList, setPlantList,
+
+    // 선택된 식물
+    selectedPlantData: selectedPlantData,
+    setSelectedPlantData: setSelectedPlantData,
   }
 
   return (
@@ -119,7 +126,7 @@ function App() {
 
 
         </Routes>
-    </DataContext.Provider >
+      </DataContext.Provider >
     </div >
   );
 }
