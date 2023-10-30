@@ -44,6 +44,10 @@
   justify-content: center;
 }
 
+.selected {
+  border: 6px solid #5192B3;
+}
+
 @media (min-width: 360px) and (max-width: 799px) {
   .web_pageInfo {
     display: none;
@@ -217,8 +221,9 @@ input[type=radio] {
   width: 130px;
   background-color: #548488;
   border-radius: 10px;
-  padding: 4%;
+  height: 50px;
   color: rgb(255, 255, 255);
+  text-align: center;
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .uploadBtn {

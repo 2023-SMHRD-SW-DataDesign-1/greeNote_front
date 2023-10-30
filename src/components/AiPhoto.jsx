@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ItemPhoto from './ItemPhoto'
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import AiRadio from './AiRadio';
 import AiStylePreview from './AiStylePreview';
 import { DataContext } from '../contexts/DataContext';
@@ -17,16 +16,20 @@ const AiPhoto = () => {
     // 사진 정보 저장할 State
     const [diaryImages, setDiaryImages] = useState([]);
 
+
     // 선택된 식물의 다이어리 사진들 가져오기
     const readDiaryImg = () => {
         axios.get(`${masterURL}/diary/readDiaryImg?plantId=${selectedPlantData.plantId}`)
             .then((res) => {
                 setDiaryImages(res.data);
+                console.log(res.data);
+                console.log(diaryImages);
             })
             .catch((err) => {
                 console.log(err);
             })
     }
+
 
     const [selectedImage, setSelectedImage] = useState(0);
 
@@ -43,23 +46,31 @@ const AiPhoto = () => {
     const closeModal = () => {
         setIsModalOpen(false);
     };
+    
 
-
-
-
-    const handleImageClick = (image) => {
-        if (selectedImage.url === image.url) {
-            setSelectedImage(0); // 이미 선택된 이미지를 다시 클릭하면 선택 해제
-        } else {
-            setSelectedImage(image); // 새 이미지를 선택
-        }
-        console.log('selectedImage:', selectedImage);
     const handleImageClick = (e) => {
-            if (selectedImage.url === e.target.src) {
-                setSelectedImage(0); // 이미 선택된 이미지를 다시 클릭하면 선택 해제
-            } else {
-                setSelectedImage(e.target.src); // 새 이미지를 선택
-            }
+        // const clickedImage = e.target;
+        // if (selectedImage === e.target.src) {
+        //     // console.log('e.target:', e.target)
+        //     setSelectedImage(0); // 이미 선택된 이미지를 다시 클릭하면 선택 해제
+        //     clickedImage.style.border = 'none';
+        // } else {
+        //     // 이미 선택된 이미지에 선택 해제 스타일 적용
+        //     if (selectedImage) {
+        //         const previouslySelectedImage = document.querySelector(`[src="${selectedImage}"]`);
+
+        //         previouslySelectedImage.style.border = 'none'; // 선택 해제 스타일 적용
+
+        //     }
+        //     setSelectedImage(e.target.src); // 새 이미지를 선택
+        //     clickedImage.style.border = '6px solid #5192B3';
+        // }
+        // console.log('selectedImage:', e.target.src);
+        if(selectedImage === e.target.src){
+            setSelectedImage(null);
+        } else{
+            setSelectedImage(e.target.src)
+        }
     };
 
     const handleUpload = () => {
@@ -83,6 +94,7 @@ const AiPhoto = () => {
         readDiaryImg();
     }, [selectedPlantData])
 
+
     return (
         <div className='photo_top_container'>
             <div className='web_pageInfo'>
@@ -90,10 +102,17 @@ const AiPhoto = () => {
                 <div className='web_infoText'>생성 AI로 나만의 이미지 만들기</div>
             </div>
             <div className="photo_second_container">
-                <div className='photo_container'>
+                <div className="photo_container">
                     {diaryImages.map((data, idx) => (
-                        <ItemPhoto key={idx} data={data} selected={selectedImage.url === data.image_url}
-                            onClick={(e) => handleImageClick(e)} />
+                        JSON.parse(data.image_url).map((url) => (
+                            <div key={idx}>
+                                <img
+                                    className={`item_photo ${selectedImage === url ? 'selected' : ''}`}
+                                    onClick={(e) => handleImageClick(e)}
+                                    src={url.image_url}
+                                />
+                            </div>
+                        ))
                     ))}
                 </div>
             </div>
@@ -138,9 +157,9 @@ const AiPhoto = () => {
             </div>
 
             <div className='photo_btn_div'>
-                    <button className="uploadBtn" onClick={handleUpload}>
-                        AI 이미지 생성
-                    </button>
+                <button className="uploadBtn" onClick={handleUpload}>
+                    AI 이미지 생성
+                </button>
             </div>
 
 
@@ -158,7 +177,7 @@ const AiPhoto = () => {
                             </div>
                         </div>
                         <div className='modal_plant_container'>
-                            <AiStylePreview/>
+                            <AiStylePreview />
                         </div>
                     </div>
                 </div>
@@ -166,6 +185,6 @@ const AiPhoto = () => {
 
         </div >
     )
-}
+
 }
 export default AiPhoto

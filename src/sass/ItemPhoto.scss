@@ -1,9 +1,9 @@
 @use '../sass/variables' as s;
 
 @include s.mobile{
-.item_photo:nth-child(2n) {
-        clear: both;
-    }
+// .item_photo:nth-child(2n) {
+//         clear: both;
+//     }
 }
 
 .item_photo:nth-child(3n) {
