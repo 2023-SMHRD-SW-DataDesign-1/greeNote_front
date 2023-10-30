@@ -24,14 +24,14 @@
     align-items: center;
 
     @include s.mobile {
-        width: 90%;
+        width: 85%;
         padding-left: 4%;
         position: relative;
         left: 8%;
 
     }
     @include s.tablet {
-        width: 70%;
+        width: 80%;
         padding-left: 7%;
         position: relative;
         left: 4%;

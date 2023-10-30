@@ -157,6 +157,11 @@
 }
 
 /***************************************** 다이어리 부분 */
+.main_pie2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 @media (min-width: 360px) and (max-width: 799px) {
   .main_pie2 {
     display: none;
