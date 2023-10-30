@@ -7,6 +7,8 @@ const Join = () => {
 
   // URL 통합 관리
   const masterURL = process.env.REACT_APP_MASTER_URL;
+  // axios 설정
+  axios.defaults.withCredentials = true;
 
   // 회원가입 요청 전송
   const signupMember = async (e) => {

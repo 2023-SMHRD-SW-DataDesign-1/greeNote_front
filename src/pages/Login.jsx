@@ -1,6 +1,7 @@
 import axios from 'axios';
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { DataContext } from '../contexts/DataContext';
 
 const Login = () => {
 
@@ -10,6 +11,9 @@ const Login = () => {
   axios.defaults.withCredentials = true;
   // navigate 선언
   const nav = useNavigate();
+
+  // 회원정보 State
+  const { memberInfo, setMemberInfo } = useContext(DataContext);
 
   // 로그인 함수
   const login = async (e) => {
@@ -25,6 +29,9 @@ const Login = () => {
     await axios.post(`${masterURL}/auth/login`, obj)
       .then((res) => {
         console.log(res);
+        setMemberInfo(res.data);
+        sessionStorage.setItem('id', res.data.id);
+        sessionStorage.setItem('memberid', res.data.memberid);
         nav('/main');
       })
       .catch((err) => {

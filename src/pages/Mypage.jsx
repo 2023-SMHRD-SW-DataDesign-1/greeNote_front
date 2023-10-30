@@ -1,26 +1,27 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom'
 import firebaseApp from "../Firebase";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { DataContext } from '../contexts/DataContext';
+import axios from 'axios';
 
 const Mypage = () => {
 
     // URL 통합 관리
     const masterURL = process.env.REACT_APP_MASTER_URL;
 
+    // 멤버 정보
+    const { memberInfo } = useContext(DataContext);
+
     // 이미지 핸들러
-    const [imageFile, setImageFile] = useState(null);
-    const [previewURL, setPreviewURL] = useState(null);
-    const [imageUpload, setImageUpload] = useState(null); // 새로운 상태 추가
-    const [imageUrl, setImageUrl] = useState(null);
+    const [previewURL, setPreviewURL] = useState(memberInfo.profileImg);
+    const [imageUrl, setImageUrl] = useState(memberInfo.profileImg);
     const storage = getStorage(firebaseApp);
 
     const thumbnail = async (e) => {
         const file = e.target.files[0];
-        setImageUpload(file)
         if (file) {
             const imageURL = URL.createObjectURL(file);
-            setImageFile(file);
             setPreviewURL(imageURL);
         }
         if (file === null) return;
@@ -35,6 +36,29 @@ const Mypage = () => {
         });
     };
 
+    // 회원정보 수정 요청 전송
+    const updateMember = async (e) => {
+        e.preventDefault();
+    
+        const formData = new FormData(e.target);
+        const obj = {};
+    
+        formData.forEach((value, key) => {
+          obj[key] = value;
+        });
+        obj['memberid'] = memberInfo.memberid;
+        obj['membername'] = memberInfo.membername;
+        obj['profileImg'] = imageUrl;
+    
+        await axios.post(`${masterURL}/auth/update`, obj)
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+      }
+
     return (
         <div className='mypage_container'>
             <div className="input_logo"> {/* 우리 로고 */}
@@ -45,7 +69,7 @@ const Mypage = () => {
                     회원정보수정
                 </div>
 
-                <form>
+                <form onSubmit={updateMember}>
                     <div className='mypage_form'>
                         <div className='mypage_photo'>{/* 사진과 입력 */}
                             {previewURL ? (
@@ -66,20 +90,21 @@ const Mypage = () => {
                                 이름
                             </div>
                             <div className='session_info'>
-                                session이름
+                                {memberInfo.membername}
                             </div>
                             <div className='text2'>
                                 아이디
                             </div>
                             <div className='session_info'>
-                                session아이디
+                                {memberInfo.memberid}
                             </div>
                             <div className='text2'>
                                 비밀번호
                             </div>
                             <input
                                 className='mypage_pw'
-                                placeholder='비밀번호'
+                                placeholder='비밀번호를 입력하세요'
+                                name='password'
                             />
                             <div className='text2'>
                                 별칭
@@ -87,11 +112,13 @@ const Mypage = () => {
                             <input
                                 className='mypage_nickname'
                                 placeholder='별칭'
+                                defaultValue={memberInfo.nickname}
+                                name='nickname'
                             />
                             <br /><br />
 
                             <button type='submit' className='complete_button2'>
-                                <Link to="/main" className='button_links'>수정완료</Link>
+                                수정완료
                             </button>
 
                         </div>
