@@ -103,19 +103,16 @@
 @media (min-width: 1200px) {
   .diary_box2 {
     width: 615px;
-    height: 575px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .diary_box2 {
     width: 550px;
-    height: 520px;
   }
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_box2 {
     width: 319px;
-    height: 455px;
   }
 }
 
@@ -150,10 +147,7 @@
 }
 
 .diary_info {
-  /* 위치 */
   position: relative;
-  margin-right: 80px;
-  top: -30%;
   /* CSS */
   font-size: 15px;
   font-weight: bolder;
@@ -162,5 +156,34 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_info {
     font-size: 12px;
+    top: -35%;
+    margin-right: 10px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .diary_info {
+    /* 위치 */
+    margin-right: 20px;
+    top: -33%;
+  }
+}
+@media (min-width: 1200px) {
+  .diary_info {
+    /* 위치 */
+    margin-right: 40px;
+    top: -30%;
+  }
+}
+
+.diary_title {
+  /* 크기 */
+  width: 120px;
+  height: 22.5px;
+  /* CSS */
+  overflow: hidden;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .diary_title {
+    height: 17px;
   }
 }

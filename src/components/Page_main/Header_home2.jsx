@@ -29,7 +29,7 @@ const Header_home2 = () => {
             </Link>
 
             <Link to="/slide" >
-              플립북
+              슬라이드
             </Link>
           </div>
         </div>

@@ -95,17 +95,14 @@
 
     @include s.desktop {
         width: 615px;
-        height: 575px;
     }
 
     @include s.tablet {
         width: 550px;
-        height: 520px;
     }
 
     @include s.mobile {
         width: 319px;
-        height: 455px;
     }
 }
 
@@ -139,17 +136,39 @@
 }
 
 .diary_info {
-    /* 위치 */
     position: relative;
-    margin-right: 80px;
-    top: -30%;
-
+    
     /* CSS */
     font-size: 15px;
     font-weight: bolder;
     color: #000000;
-
+    
     @include s.mobile {
         font-size: 12px;
+        top: -35%;
+        margin-right: 10px;
+    }
+    @include s.tablet {
+        /* 위치 */
+        margin-right: 20px;
+        top: -33%;
+    }
+    @include s.desktop {
+        /* 위치 */
+        margin-right: 40px;
+        top: -30%;
+    }
+}
+
+.diary_title {
+    /* 크기 */
+    width: 120px;
+    height: 22.5px;
+
+    /* CSS */
+    overflow: hidden;
+
+    @include s.mobile {
+        height: 17px;
     }
 }

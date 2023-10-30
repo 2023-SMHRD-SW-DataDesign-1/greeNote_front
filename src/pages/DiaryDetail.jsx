@@ -7,7 +7,7 @@ import Diary_Sidebar from '../components/Page_Diary/Diary_Sidebar'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-const DiaryDetail = () => {
+const DiaryDetail = ({ data }) => {
 
     // URL 통합 관리
     const masterURL = process.env.REACT_APP_MASTER_URL;
@@ -72,7 +72,14 @@ const DiaryDetail = () => {
 
                         <div className='diaryBottom'>
                             <div className='forDesktop'>
-                                <Date />
+                                <div className='date_container'> {/* 작성된 날자 */}
+                                    <div className='date'>
+                                        {data.diary.registrationDate}
+                                    </div>
+                                    <div className='week'>
+                                        
+                                    </div>
+                                </div>
                                 <br />
                                 {/* 현재 제일 첫번째 사진 1장만 반영됨 */}
                                 {imgList.length > 0 ? (
@@ -94,7 +101,7 @@ const DiaryDetail = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
 
                     </div>

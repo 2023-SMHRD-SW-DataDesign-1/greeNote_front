@@ -3,6 +3,7 @@ import ItemPhoto from './ItemPhoto'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import AiRadio from './AiRadio';
+import AiStylePreview from './AiStylePreview';
 import { DataContext } from '../contexts/DataContext';
 
 const AiPhoto = () => {
@@ -29,6 +30,30 @@ const AiPhoto = () => {
 
     const [selectedImage, setSelectedImage] = useState(0);
 
+    // 모달의 표시 여부를 관리하는 상태
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+    // 식물 클릭시 모달창 열리고 x누르면 닫힘
+    const toggleModal = () => {
+        setIsModalOpen(!isModalOpen);
+    };
+
+    // 아이템 클릭시 모달창 닫힘
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+
+
+
+    const handleImageClick = (image) => {
+        if (selectedImage.url === image.url) {
+            setSelectedImage(0); // 이미 선택된 이미지를 다시 클릭하면 선택 해제
+        } else {
+            setSelectedImage(image); // 새 이미지를 선택
+        }
+        console.log('selectedImage:', selectedImage);
     const handleImageClick = (e) => {
             if (selectedImage.url === e.target.src) {
                 setSelectedImage(0); // 이미 선택된 이미지를 다시 클릭하면 선택 해제
@@ -74,7 +99,10 @@ const AiPhoto = () => {
             </div>
 
             <div className='radio_container'>
-                <div className='radio_text'>스타일 선택</div>
+                <div className='radio_text_box'>
+                    <div className='radio_text'>스타일 선택</div>
+                    <img className='img_question' src='./Image/question.png' onClick={toggleModal}></img>
+                </div>
                 <div className='radio_box'>
                     <AiRadio
                         label="모자이크"
@@ -115,8 +143,29 @@ const AiPhoto = () => {
                     </button>
             </div>
 
+
+            {isModalOpen && (
+                <div className="modal_background">
+                    <div className="modal_content">
+                        {/* 모달 내용을 이곳에 추가 */}
+                        <div className='modal_header'>
+                            <div className='modal_info_container'>
+                                <img src='/Image/ic_leaf_home.png' />
+                                <div className='modal_info'>AI 스타일</div>
+                            </div>
+                            <div className="modal_close">
+                                <span onClick={toggleModal}>X</span>
+                            </div>
+                        </div>
+                        <div className='modal_plant_container'>
+                            <AiStylePreview/>
+                        </div>
+                    </div>
+                </div>
+            )}
+
         </div >
     )
 }
-
+}
 export default AiPhoto

@@ -15,14 +15,12 @@ const Main = () => {
       <div className='main_container'>
         <div className='main_page1'>
 
-          <div className='main_big_pie1'>
             <Sidebar />
             <div className='main_pie1'>
               <br />
               <Main_left />
             </div>
             <div className='main_pie2'>
-              <br />
               {Array.isArray(dailyDiary) && dailyDiary.length === 0 ? (
                 <img src="/Image/webDiary.PNG" alt="logo" className='webDiary' />
               ) : (
@@ -31,21 +29,19 @@ const Main = () => {
                 ))
               )}
             </div>
-          </div>
+         
         </div>
 
         <br />
 
-        <div className='main_page2'>
-          <br />
+        <div className='main_page2'> {/* 모바일 화면에서만 보이는 부분 */}
           <div>
             <Date />
           </div>
-          <br />
           <div>
             {/* {dailyDiary && dailyDiary.map((value) => (<Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />))} */}
             {Array.isArray(dailyDiary) && dailyDiary.length === 0 ? (
-              <img src="/Image/webDiary.PNG" alt="logo" className='webDiary' />
+              <img src="/Image/mobileDiary.PNG" alt="logo" className='webDiary' />
             ) : (
               dailyDiary.map((value) => (
                 <Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />
