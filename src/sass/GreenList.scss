@@ -38,8 +38,11 @@
   overflow: auto;
   text-decoration-line: none;
   color: #000000;
+  
   padding-left: 2%;
   padding-right: 2%;
+  padding-bottom: 3%;
+
   
   @include s.mobile {
     width: 90%;
