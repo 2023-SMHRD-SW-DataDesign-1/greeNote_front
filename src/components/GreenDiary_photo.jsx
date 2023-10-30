@@ -12,7 +12,7 @@ const GreenDiary_photo = ({ data }) => {
             </Link>
             <div className='diary_info'>
                 <div className='diary_title'>{data.diary.title}</div>
-                <div className='diary_'>{data.diary.date}</div>
+                <div className='diary_date'>{data.diary.registrationDate}</div>
             </div>
         </div>
 

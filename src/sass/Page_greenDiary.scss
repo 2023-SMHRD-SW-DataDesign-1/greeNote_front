@@ -138,7 +138,7 @@
 .diary_info {
     /* 위치 */
     position: relative;
-    margin-right: 80px;
+    margin-right: 40px;
     top: -30%;
 
     /* CSS */
@@ -149,4 +149,13 @@
     @include s.mobile {
         font-size: 12px;
     }
+}
+
+.diary_title {
+    /* 크기 */
+    width: 120px;
+    height: 22.5px;
+
+    /* CSS */
+    overflow: hidden;
 }
