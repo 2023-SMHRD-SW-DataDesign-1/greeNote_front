@@ -103,19 +103,16 @@
 @media (min-width: 1200px) {
   .diary_box2 {
     width: 615px;
-    height: 575px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .diary_box2 {
     width: 550px;
-    height: 520px;
   }
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_box2 {
     width: 319px;
-    height: 455px;
   }
 }
 
