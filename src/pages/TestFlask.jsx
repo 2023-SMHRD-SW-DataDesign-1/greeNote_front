@@ -35,20 +35,6 @@ const TestFlask = () => {
             })
     }
 
-    const action = async (e) => {
-        e.preventDefault();
-        console.log("테스트");
-
-        await axios.get(`http://127.0.0.1:5000/test`)
-            .then((res) => {
-                console.log(res);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-
-    }
-
     return (
         <div>
             <form onSubmit={test} enctype="multipart/form-data">
@@ -56,8 +42,6 @@ const TestFlask = () => {
                 <input type="file" name="style_image" accept="image/*" onChange={handleStyleImageChange} />
                 <button type='submit'>클릭</button>
             </form>
-
-            <button onClick={action}>동작 테스트</button>
 
             {imageData && <img src={`data:image/*;base64,${imageData}`} alt="NST Image" />}
         </div>

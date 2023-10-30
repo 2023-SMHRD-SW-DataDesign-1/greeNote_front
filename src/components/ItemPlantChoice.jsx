@@ -2,7 +2,6 @@ import React from 'react'
 
 const ItemPlantChoice = ({data, onItemClick, closeModal}) => {
 
-
   const bgStyle = {
     backgroundColor: data.color,
     width: '80px',
@@ -29,7 +28,7 @@ const ItemPlantChoice = ({data, onItemClick, closeModal}) => {
     <div className='item_plant_choice_container' onClick={handleItemClick}  >
       <div className='circle plant_bg_color' style={bgStyle}>
         <div className='circle' >
-          <img className="circle plant_choice_image" style={imgStyle} src={data.image_url} alt="Plant" />
+          <img className="circle plant_choice_image" style={imgStyle} src={data.image} alt="Plant" />
         </div>
         </div>
       <div className='plant_choice_nickname'>

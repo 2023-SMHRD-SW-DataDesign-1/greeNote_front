@@ -110,6 +110,7 @@
 /* 일자, 캘린더, 식물리스트 */
 .main_left {
     width: 100%;
+    
     @include s.tablet {
         max-width: 500px;
         min-width: 400px;
@@ -196,5 +197,15 @@
     margin-top: 9px;
 }
 
-
+.webDiary {
+    @include s.desktop {
+        width: 100%;
+    }
+    @include s.tablet {
+        width: 100%;
+    }
+    @include s.mobile {
+        width: 100%;
+    }
+}
 

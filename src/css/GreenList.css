@@ -22,7 +22,6 @@
 .list_container {
   /* 범위 지정 */
   padding: 3%;
-  width: 94%;
   height: auto;
   /* 배치 조정 */
   display: flex;
@@ -36,7 +35,17 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .list_container {
-    width: 300px;
+    width: 90%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .list_container {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .list_container {
+    width: 90%;
   }
 }
 

@@ -20,6 +20,8 @@ const GreenDiary = () => {
   // 다이어리 목록을 담을 State
   const [diaryList, setDiaryList] = useState([]);
 
+  // 
+
   // 식물 목록별 다이어리 조회
   const readDiary = () => {
     console.log(plant_id);
@@ -27,6 +29,7 @@ const GreenDiary = () => {
       .then((res) => {
         console.log(res);
         setDiaryList(res.data);
+
       })
       .catch((err) => {
         console.log(err);
@@ -38,57 +41,65 @@ const GreenDiary = () => {
   }, [])
 
 
-
-
-
-
   const arr = [
     {
       url: 'https://bloomingnme.com/web/product/big/202202/8db17f5a11ddc87b3333d5506156ec17.jpg',
-      name: '1',
+      title: '1',
+      date: '23.01.01'
     },
     {
       url: 'https://image.babosarang.co.kr/product/detail/EKE/7610691492/_401.jpg',
-      name: '2',
+      title: '2',
+      date: '23.02.01'
     },
     {
       url: 'https://m.bfagarden.com/web/upload/NNEditor/20190711/copy-1562832260-IMG_4821.JPG',
-      name: '3',
+      title: '3',
+      date: '23.04.15'
     },
     {
       url: 'https://cdn.imweb.me/upload/S201905295cee7c0f94cee/f08cf31ba5aa2.jpeg',
-      name: '4',
+      title: '4',
+      date: '23.04.15'
     },
     {
       url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7QQ2n-KWzAP84wnEwfQTF6JIUub2E0Ua31w&usqp=CAU',
-      name: '5',
+      title: '5',
+      date: '23.04.15'
     },
     {
       url: 'https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/2843513800/B.jpg?391000000',
-      name: '6',
+      title: '6',
+      date: '23.04.15'
     },
     {
       url: 'https://www.dailimseed.co.kr/modules/shop/files/2021/04/27/8351_1.jpg?v=20221021225123',
-      name: '7',
+      title: '7',
+      date: '23.04.15'
     },
     {
       url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzf2g1NXpXDIGmko4N-PPz0sGdHEMlgIaqA&usqp=CAU',
-      name: '8',
+      title: '8',
+      date: '23.04.15'
     },
     {
       url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD8EZuv9gNTL1gWht2nKZkm2eI5b7mzRPcJA&usqp=CAU',
-      name: '9',
+      title: '9',
+      date: '23.04.15'
     },
     {
       url: 'https://blog.kakaocdn.net/dn/cVOH8a/btqDRMK9kRl/EHXKPRgcrQbNIsOc8k8ycK/img.jpg',
-      name: '10',
+      title: '10',
+      date: '23.04.15'
     },
     {
       url: 'https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/cDjc/image/iW__wJmW9VmK_7af57pqEulPAF0.jpg',
-      name: '11',
+      title: '11',
+      date: '23.04.15'
     }
 
   ]
+
   const [selectedImage, setSelectedImage] = useState(0);
 
   const handleImageClick = (image) => {
@@ -99,13 +110,6 @@ const GreenDiary = () => {
     }
     console.log('selectedImage:', selectedImage);
   };
-
-
-
-
-
-
-
 
   return (
     <div className='web_top_container'>
@@ -123,7 +127,7 @@ const GreenDiary = () => {
                 <div className='mid_title_bin2'>
                   <img src="/Icon/bin.png" alt="bin" />
                 </div>
-                <Link to={`/writediary/${plant_id}`} className='mid_tilte_edit'>
+                <Link to={`/writediary/${plant_id}`} className='mid_title_edit'>
                   <img src="/Icon/edit.png" alt="edit" />
                 </Link>
               </div>
@@ -132,9 +136,9 @@ const GreenDiary = () => {
             {/* {diaryList.map((value) => <Diary_content key={value.diary_id} diary={value.diary} imgUrl={value.imgUrl} />)} */}
             <div className='diary_box'>
               <div className='diary_box2'>
-                {arr.map((img, idx) => (
-                  <GreenDiary_photo key={idx} data={img} selected={selectedImage.url === img.url}
-                    onClick={() => handleImageClick(img)} />
+                {diaryList && diaryList.map((item, idx) => (
+                  <GreenDiary_photo key={idx} data={item} selected={selectedImage.url === JSON.parse(item.imgUrl.image_url).image_url}
+                    onClick={() => handleImageClick(JSON.parse(item.imgUrl.image_url).image_url)} />
                 ))}
               </div>
             </div>

@@ -78,11 +78,26 @@ function App() {
   // 일별 다이어리 담을 State
   const [dailyDiary, setDailyDiary] = useState([]);
 
+  // 식물 목록 저장할 State
+  const [plantList, setPlantList] = useState([]);
+
+  // 선택된 식물 관리 State
+  const [selectedPlantData, setSelectedPlantData] = useState([]);
+
   const dataContextValue = {
     // 날짜 관리
     dailyDiary: dailyDiary,
-    setDailyDiary: setDailyDiary
+    setDailyDiary: setDailyDiary,
+
+    // 식물 목록
+    plantList: plantList,
+    setPlantList, setPlantList,
+
+    // 선택된 식물
+    selectedPlantData: selectedPlantData,
+    setSelectedPlantData: setSelectedPlantData,
   }
+
   return (
     <div>
       <DataContext.Provider value={dataContextValue}>
@@ -94,7 +109,7 @@ function App() {
           <Route path='/mygreen' element={<><AiHeader /><MyGreen /></>} />
           <Route path='/greendiary/:plant_id' element={<><AiHeader /><GreenDiary /></>} />
           <Route path='/writediary/:plant_id' element={<><AiHeader /><WriteDiary /></>} />
-          <Route path='/diarydetail' element={<><AiHeader /><DiaryDetail /></>} />
+          <Route path='/diarydetail/:diaryId' element={<><AiHeader /><DiaryDetail /></>} />
           <Route path='/ai' element={<><AiHeader /><AiPhotoBox /></>} />
           <Route path='/slide' element={<><AiHeader /><SlideBox /></>} />
           <Route path='/aiReturn' element={<><AiHeader /><AiReturnBox /></>} />
@@ -111,7 +126,7 @@ function App() {
 
 
         </Routes>
-    </DataContext.Provider >
+      </DataContext.Provider >
     </div >
   );
 }

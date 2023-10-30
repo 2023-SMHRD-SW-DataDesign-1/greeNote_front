@@ -1,59 +1,33 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ItemPhoto from './ItemPhoto'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import AiRadio from './AiRadio';
 import AiStylePreview from './AiStylePreview';
+import { DataContext } from '../contexts/DataContext';
 
 const AiPhoto = () => {
 
-    const arr = [
-        {
-            url: 'https://bloomingnme.com/web/product/big/202202/8db17f5a11ddc87b3333d5506156ec17.jpg',
-            name: '1',
-        },
-        {
-            url: 'https://image.babosarang.co.kr/product/detail/EKE/7610691492/_401.jpg',
-            name: '2',
-        },
-        {
-            url: 'https://m.bfagarden.com/web/upload/NNEditor/20190711/copy-1562832260-IMG_4821.JPG',
-            name: '3',
-        },
-        {
-            url: 'https://cdn.imweb.me/upload/S201905295cee7c0f94cee/f08cf31ba5aa2.jpeg',
-            name: '4',
-        },
-        {
-            url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7QQ2n-KWzAP84wnEwfQTF6JIUub2E0Ua31w&usqp=CAU',
-            name: '5',
-        },
-        {
-            url: 'https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/2843513800/B.jpg?391000000',
-            name: '6',
-        },
-        {
-            url: 'https://www.dailimseed.co.kr/modules/shop/files/2021/04/27/8351_1.jpg?v=20221021225123',
-            name: '7',
-        },
-        {
-            url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzf2g1NXpXDIGmko4N-PPz0sGdHEMlgIaqA&usqp=CAU',
-            name: '8',
-        },
-        {
-            url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD8EZuv9gNTL1gWht2nKZkm2eI5b7mzRPcJA&usqp=CAU',
-            name: '9',
-        },
-        {
-            url: 'https://blog.kakaocdn.net/dn/cVOH8a/btqDRMK9kRl/EHXKPRgcrQbNIsOc8k8ycK/img.jpg',
-            name: '10',
-        },
-        {
-            url: 'https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/cDjc/image/iW__wJmW9VmK_7af57pqEulPAF0.jpg',
-            name: '11',
-        }
+    // URL 통합 관리
+    const masterURL = process.env.REACT_APP_MASTER_URL;
 
-    ]
+    // 선택된 식물 정보 데이터
+    const { selectedPlantData } = useContext(DataContext);
+
+    // 사진 정보 저장할 State
+    const [diaryImages, setDiaryImages] = useState([]);
+
+    // 선택된 식물의 다이어리 사진들 가져오기
+    const readDiaryImg = () => {
+        axios.get(`${masterURL}/diary/readDiaryImg?plantId=${selectedPlantData.plantId}`)
+            .then((res) => {
+                setDiaryImages(res.data);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
     const [selectedImage, setSelectedImage] = useState(0);
 
     // 모달의 표시 여부를 관리하는 상태
@@ -80,25 +54,22 @@ const AiPhoto = () => {
             setSelectedImage(image); // 새 이미지를 선택
         }
         console.log('selectedImage:', selectedImage);
+    const handleImageClick = (e) => {
+            if (selectedImage.url === e.target.src) {
+                setSelectedImage(0); // 이미 선택된 이미지를 다시 클릭하면 선택 해제
+            } else {
+                setSelectedImage(e.target.src); // 새 이미지를 선택
+            }
     };
 
     const handleUpload = () => {
         if (selectedImage) {
             // 선택된 이미지를 업로드
-            console.log("url", selectedImage.url);
-            axios
-                .post('/your-upload-api-endpoint', { url: selectedImage.url })
-                .then((response) => {
-                    console.log('Image uploaded successfully:', response.data);
-                    // 업로드가 성공하면 이동하거나 다른 작업을 수행
-                })
-                .catch((error) => {
-                    console.error('Image upload failed:', error);
-                    // 업로드 실패 시 오류 처리
-                });
+            console.log("url", selectedImage);
+            // 여기다가 생성 AI 구문 작성할 것
         } else {
             // 이미지를 선택하지 않았을 때 처리
-            console.log('Please select an image to upload.');
+            console.log('사진을 선택해주세요.');
         }
     };
 
@@ -108,6 +79,10 @@ const AiPhoto = () => {
         setSelectedOption(event.target.value);
     };
 
+    useEffect(() => {
+        readDiaryImg();
+    }, [selectedPlantData])
+
     return (
         <div className='photo_top_container'>
             <div className='web_pageInfo'>
@@ -116,9 +91,9 @@ const AiPhoto = () => {
             </div>
             <div className="photo_second_container">
                 <div className='photo_container'>
-                    {arr.map((img, idx) => (
-                        <ItemPhoto key={idx} data={img} selected={selectedImage.url === img.url}
-                            onClick={() => handleImageClick(img)} />
+                    {diaryImages.map((data, idx) => (
+                        <ItemPhoto key={idx} data={data} selected={selectedImage.url === data.image_url}
+                            onClick={(e) => handleImageClick(e)} />
                     ))}
                 </div>
             </div>
@@ -163,11 +138,9 @@ const AiPhoto = () => {
             </div>
 
             <div className='photo_btn_div'>
-                <Link to='/aiReturn'>
                     <button className="uploadBtn" onClick={handleUpload}>
                         AI 이미지 생성
                     </button>
-                </Link>
             </div>
 
 
@@ -194,5 +167,5 @@ const AiPhoto = () => {
         </div >
     )
 }
-
+}
 export default AiPhoto

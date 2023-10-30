@@ -13,18 +13,20 @@ const Diary_content = ({ diary, imgUrl }) => {
           {/* <img src={diary && image_url[0].image_url} alt='plantImg'/> */}
         </div>
       </Link>
-
+      
       <div className='diary_content'>
         <div className="top">
           <div className='title2'>
             {diary && diary.title}
           </div>
-          <img src="/Icon/bin.png" alt="bin" /> {/* 휴지통 아이콘 */}
+          <img src="/Icon/bin.png" alt="bin" className='diaryContent_bin'/> {/* 휴지통 아이콘 */}
         </div>
         <div className='contents'>
           {diary && diary.content}
         </div>
       </div>
+
+
     </div>
   )
 }

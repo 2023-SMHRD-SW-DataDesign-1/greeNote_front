@@ -23,7 +23,13 @@ const Main = () => {
             </div>
             <div className='main_pie2'>
               <br />
-              {dailyDiary && dailyDiary.map((value) => (<Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />))}
+              {Array.isArray(dailyDiary) && dailyDiary.length === 0 ? (
+                <img src="/Image/webDiary.PNG" alt="logo" className='webDiary' />
+              ) : (
+                dailyDiary.map((value) => (
+                  <Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />
+                ))
+              )}
             </div>
           </div>
         </div>
@@ -37,7 +43,14 @@ const Main = () => {
           </div>
           <br />
           <div>
-            {dailyDiary && dailyDiary.map((value) => (<Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />))}
+            {/* {dailyDiary && dailyDiary.map((value) => (<Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />))} */}
+            {Array.isArray(dailyDiary) && dailyDiary.length === 0 ? (
+              <img src="/Image/webDiary.PNG" alt="logo" className='webDiary' />
+            ) : (
+              dailyDiary.map((value) => (
+                <Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />
+              ))
+            )}
           </div>
         </div>
 

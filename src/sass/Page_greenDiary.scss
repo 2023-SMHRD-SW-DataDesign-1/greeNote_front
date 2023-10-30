@@ -2,6 +2,10 @@
 
 
 .greendiary_container {
+    /* 크기 지정 */
+    height: 100%;
+    width: 100%;
+
     @include s.desktop {
         width: 1200px;
         height: 936px;
@@ -18,6 +22,7 @@
 .diary_all {
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 
@@ -45,19 +50,20 @@
     justify-content: space-between;
     width: 100%;
     display: flex;
-    
+
     @include s.desktop {
         display: flex;
     }
+
     @include s.mobile {
         font-size: 20px;
     }
 }
 
-.mid_tilte_edit img,
+.mid_title_edit img,
 .mid_title_bin2 img {
     @include s.mobile {
-        margin-right: 15px;
+        margin-right: 20px;
         width: 20px;
     }
 
@@ -81,15 +87,22 @@
         width: 1000px;
     }
 }
+
 .diary_box2 {
     display: flex;
-    margin-top: 2%;
     overflow: auto;
     flex-wrap: wrap;
 
     @include s.desktop {
         width: 615px;
-        height: 597px;
+    }
+
+    @include s.tablet {
+        width: 550px;
+    }
+
+    @include s.mobile {
+        width: 319px;
     }
 }
 
@@ -101,7 +114,7 @@
     align-items: center;
 
     text-decoration: none;
-    
+
     /* css */
     color: black;
     margin: 0.5%;
@@ -110,4 +123,39 @@
         width: 193px;
         height: 193px;
     }
+
+    @include s.tablet {
+        width: 175px;
+        height: 175px;
+    }
+
+    @include s.mobile {
+        width: 155px;
+        height: 155px;
+    }
+}
+
+.diary_info {
+    /* 위치 */
+    position: relative;
+    margin-right: 40px;
+    top: -30%;
+
+    /* CSS */
+    font-size: 15px;
+    font-weight: bolder;
+    color: #000000;
+
+    @include s.mobile {
+        font-size: 12px;
+    }
+}
+
+.diary_title {
+    /* 크기 */
+    width: 120px;
+    height: 22.5px;
+
+    /* CSS */
+    overflow: hidden;
 }

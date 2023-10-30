@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom'
+import { DataContext } from '../../contexts/DataContext';
 
 const Header_home2 = () => {
+
+  const { plantList } = useContext(DataContext);
+
   return (
 
     <div className='web_top_container'>
@@ -16,7 +20,7 @@ const Header_home2 = () => {
           </div>
 
           <div className="header_menu">
-            <Link to="/greendiary/a" >
+            <Link to={`/greendiary/1`} >
               다이어리
             </Link>
 
@@ -25,7 +29,7 @@ const Header_home2 = () => {
             </Link>
 
             <Link to="/slide" >
-              플립북
+              슬라이드
             </Link>
           </div>
         </div>
