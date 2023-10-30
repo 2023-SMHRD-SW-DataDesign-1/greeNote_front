@@ -36,7 +36,7 @@ const AiHeader = () => {
                     <img src='Image/ic_meatball.png' className='ic_meat' /> {/*미트볼 아이콘 */}
                     {isMenuOpen && (
                         <div >
-                            <Link to='/greenDiary' className='menuLink'>
+                            <Link to='/greenDiary/1' className='menuLink'>
                                 <div className='meat_menu'>Diary</div>
                             </Link>
                             <Link to='/ai' className='menuLink'>

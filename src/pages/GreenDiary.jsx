@@ -115,6 +115,7 @@ const GreenDiary = () => {
 
         <div className='main_page1'>
           <AiPlant />
+          
           <div className='diary_all'>
             <div className='mid_title'>
               <div className='mid_title2'>
@@ -122,7 +123,7 @@ const GreenDiary = () => {
                 다이어리 모아보기
               </div>
               <div className='icons2'>
-                <div className='mid_title_bin2'>
+                <div className='mid_title_bin2'> 
                   <img src="/Icon/bin.png" alt="bin" />
                 </div>
                 <Link to={`/writediary/${plant_id}`} className='mid_title_edit'>
