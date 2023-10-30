@@ -8,7 +8,7 @@ const Diary_content = ({ diary, imgUrl }) => {
 
   return (
     <div className='diary_container'>
-      <Link to="/diarydetail" className='button_links'>
+      <Link to="/diarydetail" className='linkFile'>
         <div className='diaryFile'>
           {/* <img src={diary && image_url[0].image_url} alt='plantImg'/> */}
         </div>
