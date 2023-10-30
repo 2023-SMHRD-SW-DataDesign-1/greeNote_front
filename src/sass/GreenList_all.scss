@@ -39,7 +39,8 @@
     width: 90%;
   }
   @include s.tablet {
-    width: 100%;
+    width: 90%;
+    height: 410px;
   }
   @include s.desktop {
     width: 90%;
