@@ -50,7 +50,6 @@ const MyGreen = () => {
             </div>
           </div>
         </div>
-        <br />
 
         <GreenList_all />
 

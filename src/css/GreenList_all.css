@@ -12,6 +12,40 @@
   font-weight: normal;
   font-style: normal;
 }
+/****************************** 식물리스트 공간 */
+.list_container2 {
+  /* 범위 지정 */
+  height: auto;
+  /* 배치 조정 */
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  /* css */
+  background-color: #F2F2F2;
+  border-radius: 0.7em;
+  overflow: auto;
+  text-decoration-line: none;
+  color: #000000;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .list_container2 {
+    width: 90%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .list_container2 {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .list_container2 {
+    width: 90%;
+    height: 680px;
+  }
+}
+
 /****************************** 동그라미 사진 공간 */
 .green,
 .green2,
@@ -46,8 +80,8 @@
   .green,
   .green2,
   .select_all {
-    width: 250px;
-    height: 250px;
+    width: 275px;
+    height: 275px;
   }
 }
 
@@ -78,8 +112,8 @@
 @media (min-width: 1200px) {
   .green img,
   .green2 img {
-    width: 235px;
-    height: 235px;
+    width: 260px;
+    height: 260px;
   }
 }
 

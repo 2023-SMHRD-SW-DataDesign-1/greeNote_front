@@ -70,7 +70,7 @@ const GreenList_all = () => {
   return (
     <div className='greenlist'>
 
-      <div className='list_container'>
+      <div className='list_container2'>
         <Link to="/mygreen" className='linkPhoto'> {/* 전체선택 */}
           <div className='select_all'>
             ALL

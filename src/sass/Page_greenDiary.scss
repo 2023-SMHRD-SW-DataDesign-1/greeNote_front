@@ -136,18 +136,27 @@
 }
 
 .diary_info {
-    /* 위치 */
     position: relative;
-    margin-right: 40px;
-    top: -30%;
-
+    
     /* CSS */
     font-size: 15px;
     font-weight: bolder;
     color: #000000;
-
+    
     @include s.mobile {
         font-size: 12px;
+        top: -35%;
+        margin-right: 10px;
+    }
+    @include s.tablet {
+        /* 위치 */
+        margin-right: 20px;
+        top: -33%;
+    }
+    @include s.desktop {
+        /* 위치 */
+        margin-right: 40px;
+        top: -30%;
     }
 }
 
@@ -158,4 +167,8 @@
 
     /* CSS */
     overflow: hidden;
+
+    @include s.mobile {
+        height: 17px;
+    }
 }
