@@ -33,6 +33,7 @@
   color: #000000;
   padding-left: 2%;
   padding-right: 2%;
+  padding-bottom: 3%;
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .list_container {

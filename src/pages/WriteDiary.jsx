@@ -1,7 +1,7 @@
 /* 다이어리 작성하는 페이지 */
 
 import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import firebaseApp from "../Firebase";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import axios from 'axios';
@@ -15,6 +15,9 @@ const WriteDiary = () => {
 
     // 식물 목록별 조회하기 위한 id값 가져오기
     const { plant_id } = useParams();
+
+    // navigate 선언
+    const nav = useNavigate();
 
     const today2 = new Date();
 
@@ -85,7 +88,7 @@ const WriteDiary = () => {
         await axios.post(`${masterURL}/diary/addDiary`, obj)
             .then((res) => {
                 console.log(res);
-                const image_url = JSON.parse(res.data[1].image_url)
+                nav(`/greendiary/${res.data[0].plantId}`)
             })
             .catch(async (err) => {
                 console.log(err);
@@ -109,11 +112,11 @@ const WriteDiary = () => {
         <div className='web_top_container'>
             <div className='writeDiary_container'>
 
-                <div className='main_big_pie1'>
-                    <div className='forDesktop2'>
+                <div className='main_page1'>
+                    <div className='withDesktop'>
                         <AiPlant />
                     </div>
-                    <div className='main_pie1'>
+                    <div className='diary_Bigpie'>
                         <div className='mid_title'>
                             <div className='mid_title2'>
                                 <img src="/Image/book_logo.PNG" alt="book" className='bookLogo' />
@@ -134,7 +137,7 @@ const WriteDiary = () => {
                                         {dayOfWeek2}
                                     </div>
                                 </div>
-                               
+
                                 <div className='diary_photo1'>
                                     <div className='green_photo'>
                                         {previewURL ? (
@@ -145,7 +148,7 @@ const WriteDiary = () => {
                                     </div>
                                 </div>
                             </div>
-                          
+
 
                             <div className='partLeft'> {/* 모바일에서 보이는 부분 */}
                                 <form onSubmit={addDiary}>
@@ -182,11 +185,11 @@ const WriteDiary = () => {
                                         </div>
                                     </div>
                                     <div className='text_alarm'>
-                                        AI진단을 원할 경우,<br/> 가까이에서 찍은 사진으로 업로드 바랍니다.
+                                        AI진단을 원할 경우,<br /> 가까이에서 찍은 사진으로 업로드 바랍니다.
                                     </div>
 
                                     <div className=''>
-                                        <div className='input_container2'>
+                                        <div className='input_container2'> {/* 다이어리 작성 */}
                                             <input
                                                 className='titleBox'
                                                 placeholder='제목을 입력 해 주세요'
