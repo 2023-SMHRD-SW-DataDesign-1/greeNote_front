@@ -18,13 +18,13 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .photo_second_container {
     width: 350px;
-    height: 460px;
+    height: 400px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .photo_second_container {
-    width: 500px;
-    height: 700px;
+    width: 550px;
+    height: 600px;
     margin: auto;
     margin-top: 20px;
   }
@@ -41,7 +41,21 @@
 .photo_container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .photo_container {
+    margin-left: 20px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .photo_container {
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .photo_container {
+    margin-left: 20px;
+  }
 }
 
 .selected {

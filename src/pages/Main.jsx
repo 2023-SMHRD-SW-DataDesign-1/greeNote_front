@@ -15,31 +15,34 @@ const Main = () => {
       <div className='main_container'>
         <div className='main_page1'>
 
-            <Sidebar />
-            <div className='main_pie1'>
-              <br />
-              <Main_left />
-            </div>
-            <div className='main_pie2'>
-              {Array.isArray(dailyDiary) && dailyDiary.length === 0 ? (
-                <img src="/Image/webDiary.PNG" alt="logo" className='webDiary' />
-              ) : (
-                dailyDiary.map((value) => (
-                  <Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />
-                ))
-              )}
-            </div>
-         
+          <Sidebar />
+          <div className='main_pie1'>
+            <br />
+            <Main_left />
+          </div>
+
+
+          <div className='main_pie2'>
+            {Array.isArray(dailyDiary) && dailyDiary.length === 0 ? (
+              <img src="/Image/webDiary.PNG" alt="logo" className='webDiary' />
+            ) : (
+              dailyDiary.map((value) => (
+                <Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />
+              ))
+            )}
+          </div>
+
         </div>
 
-        <br />
+
 
         <div className='main_page2'> {/* 모바일 화면에서만 보이는 부분 */}
+          <br /><br />
           <div>
             <Date />
           </div>
           <br />
-          <div>
+          <div className='main_pie3'>
             {/* {dailyDiary && dailyDiary.map((value) => (<Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />))} */}
             {Array.isArray(dailyDiary) && dailyDiary.length === 0 ? (
               <img src="/Image/mobileDiary.PNG" alt="logo" className='webDiary' />

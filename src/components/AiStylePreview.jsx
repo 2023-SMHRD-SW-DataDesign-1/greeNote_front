@@ -8,69 +8,54 @@ class AiStylePreview extends React.Component {
 
         const style = [
             {
-                img: '0',
+                img: 'Image/1.jpg',
                 style: '모자이크'
             },
             {
-                img: '1',
-                style: '점묘화'
+                img: 'Image/2.jpg',
+                style: '점묘화큐브'
             },
             {
-                img: '2',
-                style: '판화'
-            },
-            {
-                img: '3',
+                img: 'Image/3.jpg',
                 style: '폴리곤'
-            }
+            },
         ]
 
-        const settings1 = {
+        const sliderSettings = {
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
             fade: true,
             asNavFor: '.slider-nav',
-        };
-
-        const settings2 ={
+          };
+      
+          const navSliderSettings = {
             slidesToShow: 3,
             slidesToScroll: 1,
             asNavFor: '.slider-for',
-            dots: true,
+            dot:false,
             centerMode: true,
-            focusOnSelect: true
-        }
-
-
-        return (
+            focusOnSelect: true,
+          };
+      
+          return (
             <div>
-                <div className='top_container'>
-                    <Slider {...settings1}>
-                        {style.map((style, idx) => (
-                            <div className='slide_container' key={idx}>
-                                <div>
-                                    {style.style}
-                                </div>
-
-                            </div>
-                        ))}
-                    </Slider>
-
-                    <Slider {...settings2}>
-                        {style.map((style, idx) => (
-                            <div className='slide_container' key={idx}>
-                                <div>
-                                    {style.style}
-                                </div>
-
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
+              <Slider {...sliderSettings}>
+                {style.map((style,idx)=>(
+                    <div className='style_container' key={idx}>
+                        <img src={style.img}/>
+                    </div>
+                ))}
+              </Slider>
+              <Slider className="slider-nav" {...navSliderSettings}>
+              {style.map((style,idx)=>(
+                    <div className='style_container' key={idx}>
+                        <img src={style.img}/>
+                    </div>
+                ))}
+              </Slider>
             </div>
-
-        );
+          );
     }
 }
 

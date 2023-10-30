@@ -78,7 +78,7 @@ const GreenList = () => {
         </Link>
         <Link to="/addgreen" className='linkPhoto'> {/* 식물추가 */}
           <div className='add'>
-            add
+            ADD
           </div>
           <div className='linkText'>식물추가</div>
         </Link>
