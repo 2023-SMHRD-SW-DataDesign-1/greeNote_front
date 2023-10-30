@@ -21,7 +21,6 @@
 /****************************** 식물리스트 공간 */
 .list_container {
   /* 범위 지정 */
-  padding: 3%;
   height: auto;
   /* 배치 조정 */
   display: flex;
@@ -32,6 +31,8 @@
   overflow: auto;
   text-decoration-line: none;
   color: #000000;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .list_container {
@@ -84,7 +85,10 @@
 }
 
 .linkPhoto {
-  padding: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 3%;
+  padding-bottom: 0;
   color: black;
   text-decoration-line: none;
 }

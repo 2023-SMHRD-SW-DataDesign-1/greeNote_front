@@ -115,7 +115,7 @@ const GreenDiary = () => {
     <div className='web_top_container'>
       <div className='greendiary_container'>
 
-        <div className='main_big_pie1'>
+        <div className='main_page1'>
           <AiPlant />
           <div className='diary_all'>
             <div className='mid_title'>
