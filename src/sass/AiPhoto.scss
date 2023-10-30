@@ -119,6 +119,11 @@
     }
 }
 
+.radio_text_box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .radio_box {
     display: flex;
     justify-content: center;
@@ -132,6 +137,13 @@
      margin-left: 100px;   
     }
 
+}
+
+.img_question{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    cursor: pointer;
 }
 
 .radio_text {
