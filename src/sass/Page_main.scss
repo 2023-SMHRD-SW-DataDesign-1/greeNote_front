@@ -113,6 +113,10 @@
     @include s.mobile {
         width: 100%;
     }
+    @include s.desktop {
+        width: auto;
+        height: auto;
+    }
 }
 
 

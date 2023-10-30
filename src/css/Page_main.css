@@ -128,6 +128,12 @@
     width: 100%;
   }
 }
+@media (min-width: 1200px) {
+  .main_pie1 {
+    width: auto;
+    height: auto;
+  }
+}
 
 .main_left {
   width: 100%;

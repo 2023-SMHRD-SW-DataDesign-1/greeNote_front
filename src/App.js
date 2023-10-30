@@ -20,7 +20,6 @@ import './css/Page_main.css';
 import './css/Page_join.css';
 import './css/Page_login.css';
 import './css/Page_mypage.css';
-import './css/Input_writeDiary.css';
 
 
 /* css파일 */
