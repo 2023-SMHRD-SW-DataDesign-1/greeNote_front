@@ -46,7 +46,7 @@ const AiPhoto = () => {
     const closeModal = () => {
         setIsModalOpen(false);
     };
-    
+
 
     const handleImageClick = (e) => {
         // const clickedImage = e.target;
@@ -66,9 +66,9 @@ const AiPhoto = () => {
         //     clickedImage.style.border = '6px solid #5192B3';
         // }
         // console.log('selectedImage:', e.target.src);
-        if(selectedImage === e.target.src){
+        if (selectedImage === e.target.src) {
             setSelectedImage(null);
-        } else{
+        } else {
             setSelectedImage(e.target.src)
         }
     };
@@ -86,8 +86,26 @@ const AiPhoto = () => {
 
     const [selectedOption, setSelectedOption] = useState(null);
 
+
+    // ai스타일설명 이미지 (라디오버튼에따라 다른걸 보여줌)
+    const [aiStyleImage, setAiStyleImage] = useState('');
+
+
+    // 라디오 버튼 스타일 선택
     const handleRadioChange = (event) => {
-        setSelectedOption(event.target.value);
+        // setSelectedOption(event.target.value);
+        const newValue = event.target.value;
+        setSelectedOption(newValue);
+        // 이미지를 선택한 라디오 버튼에 따라 변경
+        if (newValue === '모자이크') {
+            setAiStyleImage('Image/모자이크.jpg');
+        } else if (newValue === '점묘화') {
+            setAiStyleImage('Image/점묘화큐브.jpg');
+        } else if (newValue === '판화') {
+            setAiStyleImage('Image/woodcut.jpg');
+        } else if (newValue === '폴리곤') {
+            setAiStyleImage('Image/폴리곤.jpg');
+        }
     };
 
     useEffect(() => {
@@ -176,9 +194,44 @@ const AiPhoto = () => {
                                 <span onClick={toggleModal}>X</span>
                             </div>
                         </div>
-                        <div className='modal_plant_container'>
-                            <AiStylePreview />
+                        <div className='image_container'>
+                            {aiStyleImage && <img src={aiStyleImage} alt="Selected Image" />}
                         </div>
+                        <div className='radio_container'>
+                            <div className='radio_box'>
+                                <AiRadio
+                                    label="모자이크"
+                                    name="radioGroup"
+                                    value="모자이크"
+                                    checked={selectedOption === "모자이크"}
+                                    onChange={handleRadioChange}
+                                />
+                                <AiRadio
+                                    label="점묘화"
+                                    name="radioGroup"
+                                    value="점묘화"
+                                    checked={selectedOption === "점묘화"}
+                                    onChange={handleRadioChange}
+                                />
+                                <AiRadio
+                                    label="판화"
+                                    name="radioGroup"
+                                    value="판화"
+                                    checked={selectedOption === "판화"}
+                                    onChange={handleRadioChange}
+                                />
+                                <AiRadio
+                                    label="폴리곤"
+                                    name="radioGroup"
+                                    value="폴리곤"
+                                    checked={selectedOption === "폴리곤"}
+                                    onChange={handleRadioChange}
+                                />
+
+                                {/* <p>Selected option: {selectedOption}</p> */}
+                            </div>
+                        </div>
+                    
                     </div>
                 </div>
             )}

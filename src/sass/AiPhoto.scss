@@ -19,12 +19,12 @@
 
     @include s.mobile {
         width: 350px;
-        height: 460px;
+        height: 400px;
     }
 
     @include s.tablet {
-        width: 500px;
-        height: 700px;
+        width: 550px;
+        height: 600px;
         margin: auto;
         margin-top: 20px;
     }
@@ -38,10 +38,19 @@
     }
 }
 
+// 사진 회색컨테이너 (마진)
 .photo_container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    @include s.mobile{
+        margin-left: 20px;
+    }
+    @include s.tablet{
+        margin-left: 20px;
+    }
+    @include s.desktop{
+        margin-left: 20px;
+    }
 }
 
 // 사진 선택 css

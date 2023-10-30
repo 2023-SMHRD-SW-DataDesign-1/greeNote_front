@@ -23,8 +23,8 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .item_photo {
-    width: 130px;
-    height: 130px;
+    width: 155px;
+    height: 155px;
     margin: 7px;
   }
 }
