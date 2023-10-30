@@ -16,7 +16,7 @@
 .header_container2 {
   background-color: #E7F1E9;
   padding: 1% 0;
-  padding-left: 3%;
+  padding-left: 7%;
   padding-right: 4%;
   /* 크기 지정 */
   height: 10%;
@@ -32,6 +32,7 @@
   .header_container,
   .header_container2 {
     width: 1200px;
+    padding-left: 3%;
   }
 }
 
@@ -57,30 +58,26 @@
 }
 @media (min-width: 1200px) {
   .nav_menu {
-    width: 80px;
+    padding-right: 5%;
   }
 }
 
-.icon_mypage,
-.icon_logout {
+.icon_mypage {
   /* 아이콘 div 거리두기 조정 */
 }
 @media (min-width: 360px) and (max-width: 799px) {
-  .icon_mypage,
-  .icon_logout {
+  .icon_mypage {
     padding-right: 25%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
-  .icon_mypage,
-  .icon_logout {
+  .icon_mypage {
     padding-right: 80%;
   }
 }
 @media (min-width: 1200px) {
-  .icon_mypage,
-  .icon_logout {
-    padding-right: 30%;
+  .icon_mypage {
+    padding-right: 60%;
   }
 }
 

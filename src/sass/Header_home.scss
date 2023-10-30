@@ -20,7 +20,7 @@
 .header_container2 {
   background-color: #E7F1E9;
   padding: 1% 0;
-  padding-left: 3%;
+  padding-left: 7%;
   padding-right: 4%;
 
   /* 크기 지정 */
@@ -36,6 +36,7 @@
 
   @include s.desktop {
     width: 1200px;
+    padding-left: 3%;
   }
 }
 
@@ -46,6 +47,7 @@
 .nav_menu {
   display: flex;
   text-align: center;
+
   /* 아이콘 박스 크기 조정 */
   @include s.mobile {
     width: 80px;
@@ -55,12 +57,11 @@
     width: 120px;
   }
   @include s.desktop {
-    width: 80px;
+    padding-right: 5%;
   }
 }
 
-.icon_mypage,
-.icon_logout {
+.icon_mypage {
   /* 아이콘 div 거리두기 조정 */
   @include s.mobile {
     padding-right: 25%;
@@ -69,7 +70,7 @@
     padding-right: 80%;
   }
   @include s.desktop {
-    padding-right: 30%;
+    padding-right: 60%;
   }
 }
 

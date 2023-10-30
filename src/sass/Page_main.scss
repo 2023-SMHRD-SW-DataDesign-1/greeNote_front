@@ -18,7 +18,7 @@
 .main_container {
     /* 크기 지정 */
     height: 100%;
-    width: 90%;
+    width: 100%;
 
     @include s.desktop {
         width: 1200px;
@@ -33,12 +33,9 @@
     width: 100%;
 
     /* 내용 가운데 정렬 */
-    align-items: center;
     text-align: center;
-}
-
-.main_big_pie1 {
     justify-content: center;
+
     
     /* 헤더 제외 하단 영역 */
     @include s.tablet {
@@ -52,8 +49,10 @@
     }
 }
 
+
+
 /********************************* Sidebar.jsx */
-.main_big_pie1>.sidebar {
+.sidebar {
     @include s.mobile {
         display: none;
     }
@@ -108,17 +107,24 @@
 
 /***************************************** 중간 */
 /* 일자, 캘린더, 식물리스트 */
+.main_pie1 {
+    width: 50%;
+
+    @include s.mobile {
+        width: 100%;
+    }
+}
+
+
 .main_left {
     width: 100%;
     
     @include s.tablet {
-        max-width: 500px;
-        min-width: 400px;
-        padding: 5%;
+        padding: 3%;
     }
     @include s.desktop {
         width: 500px;
-
+        padding: 3%;
     }
 }
 
@@ -128,16 +134,16 @@
     }
 }
 
-/* 다이어리 부분 */
+/***************************************** 다이어리 부분 */
 .main_pie2 {
     @include s.mobile {
         display: none;
     }
     @include s.tablet{
-        width: 70%;
+        width: 50%;
     }
     @include s.desktop {
-        width: 70%;
+        width: 50%;
     }
 }
 
@@ -198,14 +204,6 @@
 }
 
 .webDiary {
-    @include s.desktop {
-        width: 100%;
-    }
-    @include s.tablet {
-        width: 100%;
-    }
-    @include s.mobile {
-        width: 100%;
-    }
+    width: 93%;
 }
 

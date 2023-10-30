@@ -15,7 +15,7 @@ const Main = () => {
       <div className='main_container'>
         <div className='main_page1'>
 
-          <div className='main_big_pie1'>
+          
             <Sidebar />
             <div className='main_pie1'>
               <br />
@@ -31,7 +31,7 @@ const Main = () => {
                 ))
               )}
             </div>
-          </div>
+         
         </div>
 
         <br />
