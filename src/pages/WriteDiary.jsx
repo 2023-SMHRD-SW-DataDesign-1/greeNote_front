@@ -112,11 +112,11 @@ const WriteDiary = () => {
         <div className='web_top_container'>
             <div className='writeDiary_container'>
 
-                <div className='main_big_pie1'>
-                    <div className='forDesktop2'>
+                <div className='main_page1'>
+                    <div className='withDesktop'>
                         <AiPlant />
                     </div>
-                    <div className='main_pie1'>
+                    <div className='diary_Bigpie'>
                         <div className='mid_title'>
                             <div className='mid_title2'>
                                 <img src="/Image/book_logo.PNG" alt="book" className='bookLogo' />
@@ -189,7 +189,7 @@ const WriteDiary = () => {
                                     </div>
 
                                     <div className=''>
-                                        <div className='input_container2'>
+                                        <div className='input_container2'> {/* 다이어리 작성 */}
                                             <input
                                                 className='titleBox'
                                                 placeholder='제목을 입력 해 주세요'

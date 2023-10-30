@@ -51,7 +51,7 @@
 }
 
 @media (min-width: 1200px) {
-  .main_pie1 {
+  .diary_Bigpie {
     width: auto;
     height: auto;
   }
@@ -67,6 +67,13 @@
   .partLeft {
     width: 500px;
     margin-top: 5%;
+  }
+}
+
+/************************************* 사이드 바 */
+@media (min-width: 360px) and (max-width: 799px) {
+  .withDesktop {
+    display: none;
   }
 }
 
@@ -283,5 +290,39 @@
 @media (min-width: 1200px) {
   .text_alarm {
     right: 5%;
+  }
+}
+
+.write_box {
+  /* 내용 가운데 정렬 */
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  /* 상하 위치 조정 */
+  margin-bottom: 7%;
+}
+
+.titleBox,
+.contentBox {
+  /* 위치 지정 */
+  width: 100%;
+  padding: 2%;
+  /* 내용 왼쪽 정렬 */
+  text-align: left;
+  /* css */
+  color: #000000;
+  border: none;
+}
+
+.titleBox {
+  background-color: #DDEFC7;
+}
+
+.contentBox {
+  height: 200px;
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .contentBox {
+    height: 150px;
   }
 }
