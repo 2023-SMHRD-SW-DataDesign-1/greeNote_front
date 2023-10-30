@@ -20,7 +20,7 @@
 @media (min-width: 1200px) {
   .main_container {
     width: 1200px;
-    height: 936px;
+    height: auto;
     border-radius: 5%;
   }
 }
@@ -227,5 +227,5 @@
 }
 
 .webDiary {
-  width: 93%;
+  width: 97%;
 }
