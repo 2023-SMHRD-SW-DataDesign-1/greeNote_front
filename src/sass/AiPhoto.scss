@@ -42,23 +42,37 @@
 .photo_container {
     display: flex;
     flex-wrap: wrap;
-    @include s.mobile{
+
+    @include s.mobile {
         margin-left: 20px;
     }
-    @include s.tablet{
+
+    @include s.tablet {
         margin-left: 20px;
     }
-    @include s.desktop{
+
+    @include s.desktop {
         margin-left: 20px;
     }
 }
 
 // 사진 선택 css
-.selected{
+.selected {
     border: 6px solid #5192B3;
 }
 
+.image_container {
+    margin-top: 20px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
 
+}
+
+.image_container img {
+    width: 200px;
+    height: 200px;
+}
 
 .web_pageInfo {
     @include s.mobile {
@@ -127,32 +141,33 @@
         width: 360px;
     }
 
-    @include s.tablet {
-        width: 500px;
-    }
 }
 
-.radio_text_box{
+.radio_text_box {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 .radio_box {
     display: flex;
     justify-content: center;
-    @include s.tablet{
-        width: 600px;
-        justify-content: start;
-        margin-left: 50px;  
+
+    @include s.mobile {
+        width: 290px;
     }
-    @include s.desktop{
-     justify-content: start;
-     margin-left: 100px;   
+
+    @include s.tablet {
+        // margin-left: 50px;  
+    }
+
+    @include s.desktop {
+        //  margin-left: 100px;   
     }
 
 }
 
-.img_question{
+.img_question {
     width: 25px;
     height: 25px;
     margin-left: 5px;
@@ -162,10 +177,12 @@
 .radio_text {
     font-weight: 700;
     font-size: 20px;
-    @include s.tablet{
+
+    @include s.tablet {
         margin-left: 50px;
     }
-    @include s.desktop{
+
+    @include s.desktop {
         margin-left: 100px;
     }
 }
@@ -176,8 +193,8 @@
 }
 
 .radio_label {
-            margin-top: 10px;
-        width: 100px;
+    margin-top: 10px;
+    width: 100px;
     width: 80px;
     cursor: pointer;
     text-align: center;
@@ -186,12 +203,14 @@
     color: #fff;
     border-radius: 5%;
     margin: 10px 5px 0px 0px;
-    @include s.tablet{
+
+
+    @include s.tablet {
         margin-top: 10px;
         width: 100px;
     }
 
-    @include s.desktop{
+    @include s.desktop {
         margin: 10px 5px;
         width: 140px;
 
@@ -215,7 +234,8 @@ input[type="radio"] {
     margin: 30px;
 }
 
-.uploadBtn {
+.uploadBtn,
+.ai_style_btn {
     width: 130px;
     background-color: #548488;
     border-radius: 10px;
@@ -232,6 +252,18 @@ input[type="radio"] {
     }
 }
 
-.uploadBtn:hover {
+.uploadBtn:hover,
+.ai_style_btn:hover {
     background-color: #33455a;
+}
+
+.ai_style_btn_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ai_style_btn {
+    margin-top: 20px;
+    height: 40px;
 }
