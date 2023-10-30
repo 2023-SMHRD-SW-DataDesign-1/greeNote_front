@@ -5,11 +5,15 @@ import AiHeader from '../components/AiHeader'
 import firebaseApp from "../Firebase";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const AddGreen = () => {
 
   // URL 통합 관리
   const masterURL = process.env.REACT_APP_MASTER_URL;
+
+  // navigate 선언
+  const nav = useNavigate();
 
   // 이미지 핸들러
   const [imageFile, setImageFile] = useState(null);
@@ -49,7 +53,7 @@ const AddGreen = () => {
       nickname: formData.get('nickname'),
       message: formData.get('message'),
       color: formData.get('color'),
-      gardeningDto: {
+      gardening: {
         watering: formData.get('water') === 'on' ? 7 : null,
         repotting: formData.get('repot') === 'on' ? 90 : null,
         nutrition_management: formData.get('nutrition') === 'on' ? 80 : null,
@@ -60,6 +64,7 @@ const AddGreen = () => {
     await axios.post(`${masterURL}/plant/addPlantList`, plantObj)
       .then((res) => {
         console.log(res);
+        nav('/main')
       })
       .catch(async (err) => {
         console.log(err);
@@ -84,7 +89,7 @@ const AddGreen = () => {
             <img src="/Image/book_logo.PNG" alt="book" />
             내 반려 식물의 프로필
           </div>
-              <img src="/Icon/bin.png" alt="bin" className='binLogo'/>
+          <img src="/Icon/bin.png" alt="bin" className='binLogo' />
         </div>
 
         <form onSubmit={addPlantList}>
