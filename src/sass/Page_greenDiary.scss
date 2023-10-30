@@ -141,6 +141,7 @@
     font-size: 15px;
     font-weight: bolder;
     color: #000000;
+    text-align: left;
     
     @include s.mobile {
         font-size: 12px;
@@ -156,6 +157,7 @@
         /* 위치 */
         margin-right: 40px;
         top: -30%;
+        
     }
 }
 
