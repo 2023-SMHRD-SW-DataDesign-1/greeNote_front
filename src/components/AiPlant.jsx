@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ItemPlantChoice from './ItemPlantChoice'
 import { DataContext } from '../contexts/DataContext'
+import { useParams } from 'react-router-dom';
 
 
 const AiPlant = () => {
@@ -8,9 +9,23 @@ const AiPlant = () => {
   // 식물 리스트
   const { plantList, selectedPlantData, setSelectedPlantData } = useContext(DataContext);
 
-  useEffect(()=>{
-    setSelectedPlantData(plantList[0]);
-  },[]);
+  // 식물 목록별 조회하기 위한 id값 가져오기
+  const { plant_id } = useParams();
+
+  // 선택된 plant 감지하는 함수
+  const nowSelected = () => {
+    const selectedData = plantList.find(data => data.plantId === parseInt(plant_id));
+
+    if (selectedData) {
+      setSelectedPlantData(selectedData);
+    } else {
+      setSelectedPlantData(plantList[0]);
+    }
+  }
+
+  useEffect(() => {
+    nowSelected();
+  }, []);
 
   // 모달의 표시 여부를 관리하는 상태
   const [isModalOpen, setIsModalOpen] = useState(false);
