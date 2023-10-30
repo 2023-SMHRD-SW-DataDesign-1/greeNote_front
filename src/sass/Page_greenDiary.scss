@@ -95,17 +95,14 @@
 
     @include s.desktop {
         width: 615px;
-        height: 575px;
     }
 
     @include s.tablet {
         width: 550px;
-        height: 520px;
     }
 
     @include s.mobile {
         width: 319px;
-        height: 455px;
     }
 }
 
