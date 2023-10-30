@@ -38,6 +38,7 @@ const Main = () => {
           <div>
             <Date />
           </div>
+          <br />
           <div>
             {/* {dailyDiary && dailyDiary.map((value) => (<Diary_content key={value.diaryId} diary={value.diary} imgUrl={value.imgUrl} />))} */}
             {Array.isArray(dailyDiary) && dailyDiary.length === 0 ? (

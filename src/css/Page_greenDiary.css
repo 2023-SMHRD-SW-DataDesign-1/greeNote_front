@@ -120,7 +120,6 @@
   /* 내부 text 가운데 정렬 */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-decoration: none;
   /* css */
