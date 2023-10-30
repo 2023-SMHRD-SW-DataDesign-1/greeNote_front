@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header_diary from '../components/Header_diary'
-import Diary_content from '../components/Diary_content'
 import AiPlant from '../components/AiPlant';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
@@ -137,8 +135,7 @@ const GreenDiary = () => {
             <div className='diary_box'>
               <div className='diary_box2'>
                 {diaryList && diaryList.map((item, idx) => (
-                  <GreenDiary_photo key={idx} data={item} selected={selectedImage.url === JSON.parse(item.imgUrl.image_url).image_url}
-                    onClick={() => handleImageClick(JSON.parse(item.imgUrl.image_url).image_url)} />
+                  <GreenDiary_photo key={idx} data={item} />
                 ))}
               </div>
             </div>

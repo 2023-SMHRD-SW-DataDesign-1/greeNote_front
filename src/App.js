@@ -68,6 +68,7 @@ import AiHeader from './components/AiHeader';
 import AiPhotoBox from './pages/AiPhotoBox';
 import AiReturnBox from './pages/AiReturnBox';
 import SlideBox from './pages/SlideBox';
+import Sidebar from './components/Page_main/Sidebar'
 
 // Context
 import { DataContext } from './contexts/DataContext'
@@ -84,6 +85,9 @@ function App() {
   // 선택된 식물 관리 State
   const [selectedPlantData, setSelectedPlantData] = useState([]);
 
+  // 로그인 회원 정보 관리 State
+  const [memberInfo, setMemberInfo] = useState();
+
   const dataContextValue = {
     // 날짜 관리
     dailyDiary: dailyDiary,
@@ -96,6 +100,10 @@ function App() {
     // 선택된 식물
     selectedPlantData: selectedPlantData,
     setSelectedPlantData: setSelectedPlantData,
+
+    // 회원 정보
+    memberInfo: memberInfo,
+    setMemberInfo: setMemberInfo,
   }
 
   return (
@@ -123,7 +131,7 @@ function App() {
           <Route path='/' element={<Intro />}></Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/join' element={<Join />}></Route>
-
+          <Route element={<Sidebar />}></Route>
 
         </Routes>
       </DataContext.Provider >
