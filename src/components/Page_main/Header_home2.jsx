@@ -1,11 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom'
 import { DataContext } from '../../contexts/DataContext';
 
 const Header_home2 = () => {
 
+  // 전체 식물 리스트
   const { plantList } = useContext(DataContext);
+
+  // 첫번째 식물 ID를 담을 State
+  const [firstPlant, setFirstPlant] = useState();
+
+  useEffect(() => {
+    setFirstPlant(plantList[0].plantId);
+  }, [])
 
   return (
 
@@ -20,7 +28,7 @@ const Header_home2 = () => {
           </div>
 
           <div className="header_menu">
-            <Link to={`/greendiary/1`} >
+            <Link to={`/greendiary/${firstPlant}`} >
               다이어리
             </Link>
 
