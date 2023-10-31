@@ -26,6 +26,7 @@ const AiHeader = () => {
                         <img src="Image/ic_leaf_home.png" alt="" />
                         </Link>
                         <div className='m_pageInfo'>
+                        {window.location.pathname === '/greenDiary/1' && '다이어리' }
                         {window.location.pathname === '/ai' && '생성 AI' }
                         {window.location.pathname === '/aiReturn' &&'AI 이미지'}
                         {window.location.pathname === '/slide' &&'슬라이드'}
