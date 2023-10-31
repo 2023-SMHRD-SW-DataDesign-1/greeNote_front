@@ -49,7 +49,7 @@ const DiaryDetail = ({ data }) => {
     return (
         <div className='web_top_container'>
             <div className='writeDiary_container'>
-                <div className='main_big_pie1'>
+                <div className='main_page1'>
                     <Diary_Sidebar />
                     <div className='diaryPie'>
 
@@ -74,7 +74,7 @@ const DiaryDetail = ({ data }) => {
                             <div className='forDesktop'>
                                 <div className='date_container'> {/* 작성된 날자 */}
                                     <div className='date'>
-                                        {data.diary.registrationDate}
+                                        {diaryDetail.registrationDate}
                                     </div>
                                     <div className='week'>
                                         
@@ -92,7 +92,7 @@ const DiaryDetail = ({ data }) => {
                             </div>
 
                             <div className='forDesktop2'>
-                                <div className='input_container2'>
+                                <div className='input_container3'>
                                     <div className='titleBox'>
                                         {diaryDetail.title}
                                     </div>

@@ -175,6 +175,7 @@
 }
 @media (min-width: 1200px) {
   .main_pie2 {
+    margin-top: 3.5%;
     width: 50%;
   }
 }

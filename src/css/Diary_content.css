@@ -53,7 +53,6 @@
   align-items: center;
   /* css */
   color: black;
-  border: 1px solid grey;
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .diaryFile {

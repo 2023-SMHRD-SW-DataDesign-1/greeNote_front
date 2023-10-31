@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (min-width: 1200px) {
   .forMobile {
     display: none;
@@ -10,16 +11,19 @@
 }
 
 @media (min-width: 1200px) {
+  .forDesktop,
   .forDesktop2 {
     width: 50%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
+  .forDesktop,
   .forDesktop2 {
-    width: 45%;
+    width: 50%;
   }
 }
 @media (min-width: 360px) and (max-width: 799px) {
+  .forDesktop,
   .forDesktop2 {
     display: none;
   }
@@ -30,8 +34,35 @@
     width: 1000px;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .diaryPie {
+    width: 800px;
+  }
+}
 
 .diaryBottom {
   display: flex;
   justify-content: center;
+}
+
+/*************************************  일기 작성하는 곳 */
+.input_container3 {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .input_container3 {
+    margin: 5%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .input_container3 {
+    margin-top: 20%;
+  }
+}
+@media (min-width: 1200px) {
+  .input_container3 {
+    width: 90%;
+    height: 90%;
+  }
 }
