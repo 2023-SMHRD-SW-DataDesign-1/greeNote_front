@@ -9,11 +9,11 @@ const Header_home2 = () => {
   const { plantList } = useContext(DataContext);
 
   // 첫번째 식물 ID를 담을 State
-  const [firstPlant, setFirstPlant] = useState();
+  const [firstPlant, setFirstPlant] = useState(1);
 
-  useEffect(() => {
-    setFirstPlant(plantList[0].plantId);
-  }, [])
+  // useEffect(() => {
+  //   setFirstPlant(plantList[0].plantId);
+  // }, [])
 
   return (
 
