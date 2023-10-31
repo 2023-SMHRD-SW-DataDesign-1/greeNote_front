@@ -56,9 +56,6 @@
     @include s.mobile {
         display: none;
     }
-    @include s.tablet{
-        display: none;
-    }
 }
 
 .user_image img {

@@ -30,13 +30,24 @@
 }
 
 @media (min-width: 1200px) {
+  .forDesktop2 {
+    margin-top: 5.5%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .forDesktop2 {
+    margin-top: 7%;
+  }
+}
+
+@media (min-width: 1200px) {
   .diaryPie {
     width: 1000px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .diaryPie {
-    width: 800px;
+    width: 600px;
   }
 }
 
@@ -45,19 +56,39 @@
   justify-content: center;
 }
 
+.infoDisease {
+  width: 250px;
+  height: 30px;
+  padding-right: none;
+  position: relative;
+  /* CSS */
+  font-weight: bolder;
+  text-align: right;
+}
+@media (min-width: 1200px) {
+  .infoDisease {
+    left: 40%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .infoDisease {
+    left: 5%;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .infoDisease {
+    left: 2%;
+  }
+}
+
 /*************************************  일기 작성하는 곳 */
 .input_container3 {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .input_container3 {
     margin: 5%;
-  }
-}
-@media (min-width: 800px) and (max-width: 1199px) {
-  .input_container3 {
-    margin-top: 20%;
   }
 }
 @media (min-width: 1200px) {

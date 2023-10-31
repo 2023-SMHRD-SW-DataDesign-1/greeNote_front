@@ -1,11 +1,9 @@
 /* 개별 다이어리 보는 페이지 */
 
 import React, { useEffect, useState } from 'react'
-import Switch_ai from '../components/Switch_ai'
-import Date from '../components/Page_main/Date'
 import Diary_Sidebar from '../components/Page_Diary/Diary_Sidebar'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const DiaryDetail = ({ data }) => {
 
@@ -54,13 +52,15 @@ const DiaryDetail = ({ data }) => {
                     <div className='diaryPie'>
 
                         <div className='diaryTop'>
-                            <div className='web_pageInfo'>
-                                <img src='/Image/book_logo.png' className='web_pageInfo_img'></img>
-                                <div className='web_infoText'>다이어리 보기</div>
+                        <div className='mid_title'>
+                            <div className='mid_title2'>
+                                <img src="/Image/book_logo.PNG" alt="book" className='bookLogo' />
+                                다이어리 보기
                             </div>
-                            <div className='forMobile'>
-                                <Switch_ai /> {/* AI 진단정보 받아와야함 */}
-                            </div>
+                            <Link to="/greendiary/a" className='mid_title_edit'>
+                                <img src="/Icon/back.png" alt="bin" />
+                            </Link>
+                        </div>
 
                             <div className='profile_container2'> {/* 사진(모바일만) */}
                                 <div className='profile_green'>
@@ -77,7 +77,7 @@ const DiaryDetail = ({ data }) => {
                                         {diaryDetail.registrationDate}
                                     </div>
                                     <div className='week'>
-                                        
+
                                     </div>
                                 </div>
                                 <br />
@@ -92,6 +92,9 @@ const DiaryDetail = ({ data }) => {
                             </div>
 
                             <div className='forDesktop2'>
+                                <div className='infoDisease'>
+                                    AI 진단명: {diaryDetail.aiResult}
+                                </div>
                                 <div className='input_container3'>
                                     <div className='titleBox'>
                                         {diaryDetail.title}

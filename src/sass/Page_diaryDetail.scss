@@ -21,12 +21,21 @@
     }
 }
 
+.forDesktop2{
+    @include s.desktop{
+        margin-top: 5.5%;
+    }
+    @include s.tablet {
+        margin-top: 7%;
+    }
+}
+
 .diaryPie {
     @include s.desktop{
         width: 1000px;
     }
     @include s.tablet {
-        width: 800px;
+        width: 600px;
     }
 }
 
@@ -36,17 +45,38 @@
 }
 
 
+.infoDisease {
+    width: 250px;
+    height: 30px;
+    padding-right: none;
+
+    position: relative;
+    
+    /* CSS */
+    font-weight: bolder;
+    text-align: right;
+    
+    @include s.desktop {
+        left: 40%;
+    }
+    @include s.tablet {
+        left: 5%;
+    }
+    @include s.mobile {
+        left: 2%;
+    }
+}
+
 /*************************************  일기 작성하는 곳 */
 .input_container3 {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
 
     @include s.mobile {
         margin: 5%;
     }
 
     @include s.tablet {
-        margin-top: 20%;
     }
 
     @include s.desktop {
