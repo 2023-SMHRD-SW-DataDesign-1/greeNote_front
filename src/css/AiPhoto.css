@@ -62,6 +62,18 @@
   border: 6px solid #5192B3;
 }
 
+.image_container {
+  margin-top: 20px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+}
+
+.image_container img {
+  width: 200px;
+  height: 200px;
+}
+
 @media (min-width: 360px) and (max-width: 799px) {
   .web_pageInfo {
     display: none;
@@ -134,11 +146,6 @@
     width: 360px;
   }
 }
-@media (min-width: 800px) and (max-width: 1199px) {
-  .radio_container {
-    width: 500px;
-  }
-}
 
 .radio_text_box {
   display: flex;
@@ -150,20 +157,11 @@
   display: flex;
   justify-content: center;
 }
-@media (min-width: 800px) and (max-width: 1199px) {
+@media (min-width: 360px) and (max-width: 799px) {
   .radio_box {
-    width: 600px;
-    justify-content: start;
-    margin-left: 50px;
+    width: 290px;
   }
 }
-@media (min-width: 1200px) {
-  .radio_box {
-    justify-content: start;
-    margin-left: 100px;
-  }
-}
-
 .img_question {
   width: 25px;
   height: 25px;
@@ -231,7 +229,8 @@ input[type=radio] {
   margin: 30px;
 }
 
-.uploadBtn {
+.uploadBtn,
+.ai_style_btn {
   width: 130px;
   background-color: #548488;
   border-radius: 10px;
@@ -240,16 +239,30 @@ input[type=radio] {
   text-align: center;
 }
 @media (min-width: 800px) and (max-width: 1199px) {
-  .uploadBtn {
+  .uploadBtn,
+  .ai_style_btn {
     width: 200px;
   }
 }
 @media (min-width: 1200px) {
-  .uploadBtn {
+  .uploadBtn,
+  .ai_style_btn {
     width: 300px;
   }
 }
 
-.uploadBtn:hover {
+.uploadBtn:hover,
+.ai_style_btn:hover {
   background-color: #33455a;
+}
+
+.ai_style_btn_div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ai_style_btn {
+  margin-top: 20px;
+  height: 40px;
 }

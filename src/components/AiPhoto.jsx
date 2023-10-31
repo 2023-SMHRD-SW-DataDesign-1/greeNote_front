@@ -190,9 +190,6 @@ const AiPhoto = () => {
                                 <img src='/Image/ic_leaf_home.png' />
                                 <div className='modal_info'>AI 스타일</div>
                             </div>
-                            <div className="modal_close">
-                                <span onClick={toggleModal}>X</span>
-                            </div>
                         </div>
                         <div className='image_container'>
                             {aiStyleImage && <img src={aiStyleImage} alt="Selected Image" />}
@@ -227,12 +224,13 @@ const AiPhoto = () => {
                                     checked={selectedOption === "폴리곤"}
                                     onChange={handleRadioChange}
                                 />
-
-                                {/* <p>Selected option: {selectedOption}</p> */}
                             </div>
                         </div>
-                    
+                        <div className='ai_style_btn_div'>
+                        <button className='ai_style_btn' onClick={closeModal}>선택완료</button>
                     </div>
+                    </div>
+
                 </div>
             )}
 

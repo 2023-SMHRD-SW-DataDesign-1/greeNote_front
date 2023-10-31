@@ -217,11 +217,15 @@
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   /* 약간의 회색 그림자 */
-  min-width: 300px;
+  min-width: 320px;
   width: 45%;
   max-width: 850px;
   max-height: 500px;
   z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* 모달 내용 내에 있는 닫기 버튼 스타일링 */

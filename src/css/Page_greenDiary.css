@@ -151,6 +151,7 @@
   font-size: 15px;
   font-weight: bolder;
   color: #000000;
+  text-align: left;
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_info {
