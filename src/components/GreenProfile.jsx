@@ -123,19 +123,20 @@ const GreenProfile = () => {
 
   return (
     <div className='plant_container2'>
-      <div className='plant_data'>
 
+
+      <div className='plant_data'>
         <div className='circle plant_image_color' style={bgStyle} >
           <div className='circle' >
             <img className="circle plant_main_image" src={selectedPlantData.image_url} alt="Plant" onClick={toggleModal} />
           </div>
         </div>
 
-        <div className='plant_text_data'>
-          <div className='plant_species'>{selectedPlantData.species}</div>
-          <div className='plant_date'>{selectedPlantData.start_date}</div>
+        <div className='plant_text_data2'>
+          <div className='plant_nickname2'>{selectedPlantData.nickname}</div>
+          <div className='plant_species2'>{selectedPlantData.species}</div>
+          <div className='plant_date2'>{selectedPlantData.start_date}</div>
         </div>
-
       </div>
 
 

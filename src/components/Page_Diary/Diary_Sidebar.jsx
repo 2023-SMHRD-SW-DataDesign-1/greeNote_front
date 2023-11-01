@@ -4,7 +4,7 @@ import { DataContext } from '../../contexts/DataContext';
 
 const Diary_Sidebar = () => {
 
-    // 임시 식물
+/*     // 임시 식물
     const defaultPlant = {
         image_url: '/Image/plant_ex.jpg',
         color: 'blue',
@@ -38,7 +38,7 @@ const Diary_Sidebar = () => {
     const bgStyle = {
         backgroundColor: selectedPlantData.color,
     }
-
+ */
 
     /*     // 식물 전체 리스트 받아오기
         const plantList = [
@@ -126,48 +126,29 @@ const Diary_Sidebar = () => {
     const masterURL = process.env.REACT_APP_MASTER_URL;
 
     // 식물 목록 저장 State
-    const { plantList, setPlantList } = useContext(DataContext);
-
-    // 식물 목록 가져오는 함수
-    const readPlantList = async () => {
-        await axios.get(`${masterURL}/plant/readPlantList`)
-            .then((res) => {
-                console.log(res.data); // 리스트 형태로 들어있음
-                setPlantList(res.data)
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-    }
-
+    const { selectedPlantData } = useContext(DataContext);
 
     return (
-        <div className='sidebar'>
+        <div className='sidebar'> {/* 사이드바 */}
             <div className='ai_plant_container'>
                 <div className='plant_container'>
                     <div className='plant_data'>
-
-                        {plantList.map((value) => (
-                            <div className='plant_container'>
-                                <div className='plant_nickname'>
-                                    {value.nickname}
+                        <div className='plant_container'>
+                            <div className='plant_nickname'>
+                                {selectedPlantData.nickname}
+                            </div>
+                            <div className='plant_data'>
+                                <div className='circle plant_image_color' style={{ backgroundColor: selectedPlantData.color }} >
+                                    <div className='circle' >
+                                        <img className="circle plant_main_image" src={`${selectedPlantData.image}`} alt="Plant" />
+                                    </div>
                                 </div>
-                                <div className='plant_data'>
-                                    <div className='circle plant_image_color' style={{ backgroundColor: value.color }} >
-                                        <div className='circle' >
-                                            <img className="circle plant_main_image" src={`${value.image}`} alt="Plant" onClick={toggleModal} />
-                                        </div>
-                                    </div>
-
-                                    <div className='plant_text_data'>
-                                        <div className='plant_species'>{value.title}</div>
-                                        <div className='plant_date'>{value.start_date}</div>
-                                    </div>
+                                <div className='plant_text_data'>
+                                    <div className='plant_species'>{selectedPlantData.title}</div>
+                                    <div className='plant_date'>{selectedPlantData.start_date}</div>
                                 </div>
                             </div>
-                        ))}
-
-
+                        </div>
                     </div>
                 </div>
             </div>

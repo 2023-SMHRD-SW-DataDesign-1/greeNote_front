@@ -120,20 +120,21 @@ const WriteDiary = () => {
     return (
         <div className='web_top_container'>
             <div className='writeDiary_container'>
-
                 <div className='main_page1'>
-                    <div className='withDesktop'>
+                    <div>
                         <AiPlant />
                     </div>
                     <div className='diary_Bigpie'>
                         <div className='mid_title'>
-                            <div className='mid_title2'>
+                            <div className='mid_title3'>
                                 <img src="/Image/book_logo.PNG" alt="book" className='bookLogo' />
                                 다이어리 작성하기
                             </div>
-                            <Link to="/greendiary/a" className='mid_title_edit'>
-                                <img src="/Icon/back.png" alt="bin" />
-                            </Link>
+                            <div className='withDesktop'>
+                                <Link to="/greendiary/a" className='mid_title_edit'>
+                                    <img src="/Icon/back.png" alt="bin" />
+                                </Link>
+                            </div>
                         </div>
 
                         <div className='diary_pie'> {/* PC/tablet에서 보이는 부분 */}
@@ -161,6 +162,11 @@ const WriteDiary = () => {
 
                             <div className='partLeft'> {/* 모바일에서 보이는 부분 */}
                                 <form onSubmit={addDiary}>
+
+                                    {/*  <div className='profile_container2'> {/* 사진(모바일만)
+                                        <GreenProfile />
+                                    </div> */}
+
                                     <div className='diaryDate2'> {/* 날짜 */}
                                         <div className='date'>
                                             {Today2}
@@ -168,10 +174,6 @@ const WriteDiary = () => {
                                         <div className='week'>
                                             {dayOfWeek2}
                                         </div>
-                                    </div>
-
-                                    <div className='profile_container2'> {/* 사진(모바일만) */}
-                                        <GreenProfile />
                                     </div>
 
 
@@ -189,7 +191,7 @@ const WriteDiary = () => {
                                             AI 진단
                                         </div>
                                         <div className="check">
-                                            <input id="check-5" type="checkbox" onChange={aiPlantDisease}/>
+                                            <input id="check-5" type="checkbox" onChange={aiPlantDisease} />
                                             <label for="check-5" />
                                         </div>
                                     </div>
@@ -209,7 +211,7 @@ const WriteDiary = () => {
                                                 placeholder='내용을 입력 해 주세요'
                                                 name='content' />
                                         </div>
-                                        <div className='footer-container'>
+                                        <div className='footer-container'> {/* 하단 버튼 */}
                                             <input
                                                 type='file'
                                                 accept="image/*"
@@ -233,15 +235,13 @@ const WriteDiary = () => {
                                     </div>
                                 </form>
                             </div>
+
+
+
+
                         </div>
-
-
-
                     </div>
-
                 </div>
-
-
             </div>
         </div >
     )
