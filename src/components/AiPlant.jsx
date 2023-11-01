@@ -23,6 +23,25 @@ const AiPlant = () => {
     }
   }
 
+  // 선택된 plant의 날짜를 xx일째로 바꿔주는 함수
+  const changeDate = (targetDateStr) => {
+  const targetDate = new Date(targetDateStr);
+  
+  if (isNaN(targetDate)) {
+    return "날짜 형식이 올바르지 않습니다.";
+  }
+
+  const currentDate = new Date();
+  const timeDifference = targetDate - currentDate;
+  const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+  if (daysDifference === 0) {
+    return "오늘";
+  } else {
+    return `${Math.abs(daysDifference)}일째`;
+  }
+  }
+
   useEffect(() => {
     nowSelected();
   }, []);
@@ -68,7 +87,7 @@ const AiPlant = () => {
 
           <div className='plant_text_data'>
             <div className='plant_species'>{selectedPlantData.title}</div>
-            <div className='plant_date'>{selectedPlantData.start_date}</div>
+            <div className='plant_date'>{changeDate(selectedPlantData.start_date)}</div>
           </div>
         </div>
 
