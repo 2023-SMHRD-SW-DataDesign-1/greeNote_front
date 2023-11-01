@@ -74,7 +74,7 @@ const DiaryDetail = ({ data }) => {
                             <div className='forDesktop'>
                                 <div className='date_container'> {/* 작성된 날자 */}
                                     <div className='date'>
-                                        {data.diary.registrationDate}
+                                        {diaryDetail.registrationDate}
                                     </div>
                                     <div className='week'>
                                         
