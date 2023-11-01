@@ -50,8 +50,8 @@
         display: flex;
         justify-content: center;
 
-        /* 상하 위치 조정 */
-        margin-top: 4%;
+        width: 1200px;
+        height: 930px;
     }
 }
 
@@ -77,7 +77,74 @@
 
 }
 
-/* 파일선택 css */
+/********************************* 오른쪽 부분 / 타이틀 빼고  */
+.join_box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 350px;
+}
+
+/********************************* 유저 사진 */
+.join_photo {
+    background-color: #335A3B;
+    color: white;
+    border: 2px solid #ccc;
+    overflow: hidden;
+    
+    /* 모양 만들기 */
+    border-radius: 50%;
+
+    /* 내부 text 가운데 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* 서로 상하 위치 조정 */
+    margin-top: 2%;
+    margin-bottom: 1%;
+    position: relative;
+
+    @include s.mobile {
+        width: 200px;
+        height: 200px;
+    }
+
+    @include s.tablet {
+        width: 200px;
+        height: 200px;
+    }
+
+    @include s.desktop {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.join_photo img {
+    border-radius: 50%;
+
+    @include s.mobile {
+        /* 가운데 정렬 */
+        width: 200px;
+        height: 200px;
+    }
+
+    @include s.tablet {
+        width: 200px;
+        height: 200px;
+    }
+
+    @include s.desktop {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+/********************************* 파일선택 css */
 .inputJoin {
     width: 180px;
     font-size: 13px;
@@ -86,7 +153,6 @@
         margin-left: 20px; 
     }
     @include s.tablet {
-        margin-left: 170px;
     }
     @include s.mobile {
   }
@@ -105,8 +171,8 @@
     border: none;
 
     /* 범위 지정 */
-    margin-left: 15%;
-    margin-right: 15%;
+/*     margin-left: 15%;
+    margin-right: 15%; */
     padding: 2%;
     padding-left: 4%;
 
@@ -136,97 +202,28 @@
     }
 
     @include s.desktop {
+        font-size: 15px;
+
         /* 서로 상하 위치 조정 */
-        margin-top: 5%;
+        margin-top: 7%;
 
         /* 크기 지정 */
-        width: 55%;
+        width: 85%;
         height: auto;
     }
 }
 
 .id_check {
     color: red;
-    text-align: right;
+    text-align: left;
+    font-size: 10px;
+    left: 11%;
 
     /* 위치 조정 */
     position: relative;
 
-    @include s.mobile {
-        font-size: 10px;
-        right: 20%;
-    }
-
-    @include s.tablet {
-        font-size: 10px;
-        right: 20%;
-    }
-
     @include s.desktop {
         font-size: 12px;
-        right: 22%;
-    }
-}
-
-/* 유저 사진 */
-.join_photo {
-    background-color: #335A3B;
-    color: white;
-    border: 2px solid #ccc;
-    overflow: hidden;
-    
-    /* 모양 만들기 */
-    border-radius: 50%;
-
-    /* 내부 text 가운데 정렬 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    /* 서로 상하 위치 조정 */
-    margin-top: 2%;
-    margin-bottom: 1%;
-    position: relative;
-
-    @include s.mobile {
-        left: 24%;
-        width: 200px;
-        height: 200px;
-    }
-
-    @include s.tablet {
-        left: 22%;
-        width: 200px;
-        height: 200px;
-    }
-
-    @include s.desktop {
-        left: 29%;
-        width: 250px;
-        height: 250px;
-    }
-}
-
-.join_photo img {
-    border-radius: 50%;
-
-    @include s.mobile {
-        /* 가운데 정렬 */
-        left: 24%;
-        width: 200px;
-        height: 200px;
-    }
-
-    @include s.tablet {
-        left: 22%;
-        width: 200px;
-        height: 200px;
-    }
-
-    @include s.desktop {
-        left: 29%;
-        width: 250px;
-        height: 250px;
+        left: 12%;
     }
 }

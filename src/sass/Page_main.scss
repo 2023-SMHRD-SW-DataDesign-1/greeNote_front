@@ -65,12 +65,13 @@
     
         /* 모양 만들기 */
         border-radius: 50%;
-
         width: 150px;
         height: 150px;
     }
     @include s.tablet {
-        display: none;
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
     }
     @include s.mobile {
         display: none;
@@ -82,7 +83,7 @@
         display: none;
     }
     @include s.tablet {
-        display: none;
+        font-size: 190%;
     }
     @include s.desktop {
         font-size: 200%;
@@ -95,7 +96,7 @@
         display: none;
     }
     @include s.tablet {
-        display: none;
+        font-size: 120%;
     }
     @include s.desktop {
         font-size: 150%;
@@ -109,6 +110,9 @@
 
     @include s.mobile {
         width: 100%;
+    }
+    @include s.tablet {
+        width: 37.5%;
     }
     @include s.desktop {
         width: auto;

@@ -1,48 +1,49 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ItemSlide from './ItemSlide'
+import { DataContext } from '../contexts/DataContext';
+import axios from 'axios';
 
 const SlideItemBox = () => {
 
-  // 다이어리 사진 가져오기
-  const arr = [
-    {
-      url: '123',
-      name: '무몬',
-      season: '가을',
-      date: '2023.01.01'
-    },
-    {
-      url: '123',
-      name: '무몬',
-      season: '여름',
-      date: '2023.01.01'
-    },
-    {
-      url: '123',
-      name: '무몬',
-      season: '겨울',
-      date: '2023.01.01'
-    },
-    {
-      url: '123',
-      name: '무몬',
-      season: '봄',
-      date: '2023.01.01'
-    },
-    {
-      url: '123',
-      name: '무몬',
-      season: '가을',
-      date: '2023.01.01'
-    },
-    {
-      url: '123',
-      name: '무몬',
-      season: '가을',
-      date: '2023.01.01'
-    },
+  // URL 통합 관리
+  const masterURL = process.env.REACT_APP_MASTER_URL;
 
-  ]
+  // 현재 선택된 식물 정보
+  const { selectedPlantData } = useContext(DataContext);
+
+  // 사진 정보 저장할 State
+  const [diaryImages, setDiaryImages] = useState([]);
+
+  // 선택된 식물의 다이어리 사진들 가져오기
+  const readDiaryImg = () => {
+    axios.get(`${masterURL}/diary/readDiaryImg?plantId=${selectedPlantData.plantId}`)
+      .then((res) => {
+        setDiaryImages(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
+  // 라벨링 끝난 사진 데이터 담을 State
+  const [imgArr, setImgArr] = useState([]);
+  // 가져온 사진들 계절 라벨링
+  const labelingImg = () => {
+    const seasons = ['겨울', '봄', '여름', '가을'];
+    const parsedImages = [].concat(...diaryImages.map(item => {
+      return JSON.parse(item.image_url).map(imageItem => ({
+        image_url: imageItem.image_url,
+        season: seasons[Math.floor((new Date(item.registration_date).getMonth()) / 3)],
+        registration_date: item.registration_date
+      }));
+    })).filter(item => item.image_url);
+    setImgArr(parsedImages);
+  }
+
+  useEffect(() => {
+    readDiaryImg();
+    labelingImg();
+  }, [selectedPlantData])
 
   return (
     <div>
@@ -51,7 +52,7 @@ const SlideItemBox = () => {
         <div className='web_infoText'>슬라이드</div>
       </div>
       <div className='slide_setBox'>
-        <ItemSlide data={arr} />
+        <ItemSlide data={imgArr} />
       </div>
     </div>
   )

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* 모든 페이지 전역 CSS */
+/********************************* 폰트 설정 */
+* {
+  font-family: "NanumSquareNeo-Variable";
+}
+
+.logo_font {
+  font-family: "KCC-Ganpan";
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .logo_font {
+    font-size: 200%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .logo_font {
+    font-size: 260%;
+  }
+}
+@media (min-width: 1200px) {
+  .logo_font {
+    font-size: 300%;
+  }
+}
+
+.etc_font {
+  font-family: "NanumSquareNeo-Variable";
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .etc_font {
+    font-size: 100%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .etc_font {
+    font-size: 140%;
+  }
+}
+@media (min-width: 1200px) {
+  .etc_font {
+    font-size: 180%;
+  }
+}
+
+.bodyController {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
