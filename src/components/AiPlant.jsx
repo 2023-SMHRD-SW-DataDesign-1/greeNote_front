@@ -67,7 +67,7 @@ const AiPlant = () => {
           </div>
 
           <div className='plant_text_data'>
-            <div className='plant_species'>{selectedPlantData.species}</div>
+            <div className='plant_species'>{selectedPlantData.title}</div>
             <div className='plant_date'>{selectedPlantData.start_date}</div>
           </div>
         </div>
