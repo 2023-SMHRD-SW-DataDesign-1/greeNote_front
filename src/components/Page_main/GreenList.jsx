@@ -15,7 +15,7 @@ const GreenList = () => {
   const readPlantList = async () => {
     await axios.get(`${masterURL}/plant/readPlantList`)
       .then((res) => {
-        console.log(res.data); // 리스트 형태로 들어있음
+        console.log('Main/식물 목록 가져오기', res.data); // 리스트 형태로 들어있음
         setPlantList(res.data)
         alarmDate(res.data);
       })

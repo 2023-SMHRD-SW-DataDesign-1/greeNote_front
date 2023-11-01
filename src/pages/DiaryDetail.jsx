@@ -1,6 +1,7 @@
 /* 개별 다이어리 보는 페이지 */
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import { DataContext } from '../contexts/DataContext';
 import Diary_Sidebar from '../components/Page_Diary/Diary_Sidebar'
 import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
@@ -24,7 +25,7 @@ const DiaryDetail = ({ data }) => {
         try {
             await axios.get(`${masterURL}/diary/readOneDiary?diaryId=${diaryId}`)
                 .then((res) => {
-                    console.log(res);
+                    console.log('개별 다이어리 조회', res);
                     const image = JSON.parse(res.data.imgUrl.image_url);
 
                     setDiaryDetail(res.data.diary);
@@ -44,23 +45,69 @@ const DiaryDetail = ({ data }) => {
         readOneDiary();
     }, []);
 
+    /*************************  사이드바 */
+    // 식물 목록 저장 State
+    const { plantList, setPlantList } = useContext(DataContext);
+
+    // 식물목록에서 id를 filter로 하나만 빼오기 개별다이어리 id랑 일치하는 걸로
+    const detailOneDiary = plantList.filter(value => value.plantId === diaryDetail.plantId)
+        console.log(detailOneDiary);
+
+
     return (
         <div className='web_top_container'>
             <div className='writeDiary_container'>
                 <div className='main_page1'>
-                    <Diary_Sidebar />
+
+
+                    <div className='sidebar'> {/* 사이드바 */}
+                        <div className='ai_plant_container'>
+                            <div className='plant_container'>
+                                <div className='plant_data'>
+
+                                 
+                                        <div className='plant_container'>
+                                            <div className='plant_nickname'>
+                                                {detailOneDiary[0].nickname}
+                                            </div>
+                                            <div className='plant_data'>
+                                                <div className='circle plant_image_color' style={{ backgroundColor: detailOneDiary[0].color }} >
+                                                    <div className='circle' >
+                                                        <img className="circle plant_main_image" src={`${detailOneDiary[0].image}`} alt="Plant" />
+                                                    </div>
+                                                </div>
+
+                                                <div className='plant_text_data'>
+                                                    <div className='plant_species'>{detailOneDiary[0].title}</div>
+                                                    <div className='plant_date'>{detailOneDiary[0].start_date}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                             
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
                     <div className='diaryPie'>
 
                         <div className='diaryTop'>
-                        <div className='mid_title'>
-                            <div className='mid_title2'>
-                                <img src="/Image/book_logo.PNG" alt="book" className='bookLogo' />
-                                다이어리 보기
+                            <div className='mid_title'>
+                                <div className='mid_title2'>
+                                    <img src="/Image/book_logo.PNG" alt="book" className='bookLogo' />
+                                    다이어리 보기
+                                </div>
+                                <Link to="/greendiary/a" className='mid_title_edit'>
+                                    <img src="/Icon/back.png" alt="bin" />
+                                </Link>
                             </div>
-                            <Link to="/greendiary/a" className='mid_title_edit'>
-                                <img src="/Icon/back.png" alt="bin" />
-                            </Link>
-                        </div>
 
                             <div className='profile_container2'> {/* 사진(모바일만) */}
                                 <div className='profile_green'>

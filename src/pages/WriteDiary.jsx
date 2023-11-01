@@ -37,9 +37,7 @@ const WriteDiary = () => {
     const dayOfWeek2 = today2.toLocaleDateString('ko-KR', options);
 
     // 이미지 핸들 함수와 스테이트들
-    const [imageFile, setImageFile] = useState(null);
     const [previewURL, setPreviewURL] = useState(null);
-    const [imageUpload, setImageUpload] = useState(null);
     const [imageUrls, setImageUrls] = useState("");
     const storage = getStorage(firebaseApp);
 
@@ -47,10 +45,8 @@ const WriteDiary = () => {
         const file = e.target.files[0];
         const files = Array.from(e.target.files);
         console.log(files);
-        setImageUpload(file)
         if (file) {
             const imageURL = URL.createObjectURL(file);
-            setImageFile(file);
             setPreviewURL(imageURL);
         }
         if (file === null) return;
@@ -69,40 +65,34 @@ const WriteDiary = () => {
         }
     };
 
-    // 위에 있는 함수에서 Flask 서버로 전송할 데이터 획득해서 사용하기!! (나중에)
-    // 아직 제작 중
-    const aiPlantDisease = async () => {
-        try {
-            await axios.post(`http://127.0.0.1:5000/plant_disease`, {
+    // 질병 분류기 함수
+    const [disease, setDisease] = useState();
+    const aiPlantDisease = (e) => {
+        if (e.target.checked === true) {
+            console.log(imageUrls);
+            axios.post(`http://127.0.0.1:5000/plant_disease`, {
                 imageUrl: imageUrls[0]
             })
                 .then((res) => {
                     console.log(res);
-                    return res.data;
+                    setDisease(res.data);
                 })
                 .catch((err) => {
                     console.log(err);
                 })
-
-        }
-        catch (err) {
-            console.log(err);
         }
     }
-
 
     // 다이어리 작성 함수
     const addDiary = async (e) => {
         e.preventDefault();
-        // const ai_result = aiPlantDisease();
-
         const obj = {};
         const formData = new FormData(e.target);
         formData.forEach((value, key) => {
             obj[key] = value;
         });
         obj['plant_id'] = plant_id;
-        obj['ai_result'] = '흰가루 병'; // 나중에 제대로 만들 것
+        obj['ai_result'] = disease; // 나중에 제대로 만들 것
         obj['diary_imageDto'] = imageUrls;
         obj['registration_date'] = registration_date;
 
@@ -126,10 +116,6 @@ const WriteDiary = () => {
                 }
             })
     }
-
-
-
-
 
     return (
         <div className='web_top_container'>
@@ -203,7 +189,7 @@ const WriteDiary = () => {
                                             AI 진단
                                         </div>
                                         <div className="check">
-                                            <input id="check-5" type="checkbox" />
+                                            <input id="check-5" type="checkbox" onChange={aiPlantDisease}/>
                                             <label for="check-5" />
                                         </div>
                                     </div>
