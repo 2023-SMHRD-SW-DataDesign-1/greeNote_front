@@ -7,7 +7,7 @@ class Ai3 extends React.Component {
     render() {
     const settings = {
         infinite: true, // 무한 루프
-        speed: 150, // 슬라이드 전환 속도 (밀리초)
+        speed: 100, // 슬라이드 전환 속도 (밀리초)
         slidesToShow: 1, // 보여질 슬라이드 수
         slidesToScroll: 1, // 슬라이드 전환 시 이동할 슬라이드 수
         autoplay: true,

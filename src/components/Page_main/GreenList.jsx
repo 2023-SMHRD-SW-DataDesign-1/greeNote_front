@@ -42,6 +42,7 @@ const GreenList = () => {
             currentDate = addDays(new Date(currentDate), value.gardening[field]);
             if (currentDate.toISOString().slice(0, 10) === registration_date.toISOString().slice(0, 10)) {
               onOff = true;
+              setAlarm(onOff);
               break;
             } else if (currentDate > registration_date) {
               break;
