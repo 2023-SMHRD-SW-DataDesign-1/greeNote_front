@@ -61,6 +61,7 @@ const Login = () => {
                 name='memberid'
               />
               <input
+                type='password'
                 className='join_pw'
                 placeholder='비밀번호'
                 name='password'

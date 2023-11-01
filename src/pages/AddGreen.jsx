@@ -51,7 +51,7 @@ const AddGreen = () => {
       start_date: formData.get('startDate'),
       watering_date: formData.get('wateringDate'),
       nickname: formData.get('nickname'),
-      message: formData.get('message'),
+      message: "더미 데이터",
       color: formData.get('color'),
       gardening: {
         watering: formData.get('water') === 'on' ? 7 : null,

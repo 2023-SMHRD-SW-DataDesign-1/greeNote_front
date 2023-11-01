@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import firebaseApp from "../Firebase";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { useNavigate } from 'react-router-dom';
 
 const Join = () => {
 
@@ -9,6 +10,8 @@ const Join = () => {
   const masterURL = process.env.REACT_APP_MASTER_URL;
   // axios 설정
   axios.defaults.withCredentials = true;
+  // navigate 선언
+  const nav = useNavigate();
 
   // 회원가입 요청 전송
   const signupMember = async (e) => {
@@ -25,6 +28,7 @@ const Join = () => {
     await axios.post(`${masterURL}/auth/signup`, obj)
       .then((res) => {
         console.log(res);
+        nav('/login');
       })
       .catch((err) => {
         console.log(err);

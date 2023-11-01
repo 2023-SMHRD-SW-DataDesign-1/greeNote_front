@@ -17,7 +17,7 @@
 }
 @media (min-width: 1200px) {
   .switch_ai {
-    left: 60%;
+    left: 66%;
     width: 30%;
   }
 }
@@ -49,9 +49,7 @@
 .switch_ai .check label::before,
 .switch_ai .check label::after,
 .switch_ai .check {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   display: inline-block;
   border-radius: var(--size);
   border: 0;
