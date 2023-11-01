@@ -68,7 +68,6 @@
   .plant_nickname {
     width: 300px;
     height: 40px;
-    border-radius: 30px;
     background-color: rgb(243, 243, 243);
   }
 }
