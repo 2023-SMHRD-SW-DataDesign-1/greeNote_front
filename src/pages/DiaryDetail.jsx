@@ -49,6 +49,10 @@ const DiaryDetail = ({ data }) => {
     // 식물 목록 저장 State
     const { plantList, setPlantList } = useContext(DataContext);
 
+    // 식물목록에서 id를 filter로 하나만 빼오기 개별다이어리 id랑 일치하는 걸로
+    const detailOneDiary = plantList.filter(value => value.plantId === diaryDetail.plantId)
+        console.log(detailOneDiary);
+
 
     return (
         <div className='web_top_container'>
@@ -61,25 +65,25 @@ const DiaryDetail = ({ data }) => {
                             <div className='plant_container'>
                                 <div className='plant_data'>
 
-                                    {plantList.map((value) => (
+                                 
                                         <div className='plant_container'>
                                             <div className='plant_nickname'>
-                                                {value.nickname}
+                                                {detailOneDiary[0].nickname}
                                             </div>
                                             <div className='plant_data'>
-                                                <div className='circle plant_image_color' style={{ backgroundColor: value.color }} >
+                                                <div className='circle plant_image_color' style={{ backgroundColor: detailOneDiary[0].color }} >
                                                     <div className='circle' >
-                                                        <img className="circle plant_main_image" src={`${value.image}`} alt="Plant" />
+                                                        <img className="circle plant_main_image" src={`${detailOneDiary[0].image}`} alt="Plant" />
                                                     </div>
                                                 </div>
 
                                                 <div className='plant_text_data'>
-                                                    <div className='plant_species'>{value.title}</div>
-                                                    <div className='plant_date'>{value.start_date}</div>
+                                                    <div className='plant_species'>{detailOneDiary[0].title}</div>
+                                                    <div className='plant_date'>{detailOneDiary[0].start_date}</div>
                                                 </div>
                                             </div>
                                         </div>
-                                    ))}
+                             
 
 
                                 </div>
