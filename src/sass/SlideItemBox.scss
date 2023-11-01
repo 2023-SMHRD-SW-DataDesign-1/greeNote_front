@@ -20,14 +20,13 @@
     }
 
     @include s.tablet{
-        width: 500px;
+        width: 600px;
         height: 600px;
-        margin: 50px;
     }
 
     @include s.desktop{
-        width: 930px;
-        margin: 50px;
+        width: 1000px;
+
     }
 
 }

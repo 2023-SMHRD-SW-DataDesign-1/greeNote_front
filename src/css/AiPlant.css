@@ -23,7 +23,7 @@
 @media (min-width: 1200px) {
   .ai_plant_container {
     width: 200px;
-    height: 800px;
+    height: 863px;
     background-color: rgb(243, 243, 243);
   }
 }
@@ -276,4 +276,9 @@
   font-size: 23px;
   font-weight: 900;
   margin-right: 4%;
+  height: 40px;
+}
+
+.modal_close span {
+  cursor: pointer;
 }

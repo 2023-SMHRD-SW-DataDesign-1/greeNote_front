@@ -17,12 +17,12 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
-  /* 상하 위치 조정 */
-  margin-bottom: 7%;
 }
 @media (min-width: 1200px) {
   .writeDiary_container {
+    /* 크기 */
     width: 1200px;
+    height: 863px;
   }
 }
 
@@ -36,7 +36,7 @@
 
 .diary_pie {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 @media (min-width: 1200px) {
   .diary_pie {

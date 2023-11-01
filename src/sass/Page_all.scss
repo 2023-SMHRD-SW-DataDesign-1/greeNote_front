@@ -1,0 +1,42 @@
+/* 모든 페이지 전역 CSS */
+
+@use '../sass/_variables.scss' as s;
+
+/********************************* 폰트 설정 */
+* {
+    font-family: 'NanumSquareNeo-Variable';
+}
+
+.logo_font {
+    font-family: 'KCC-Ganpan';
+    @include s.mobile {
+        font-size: 200%;
+    }
+    @include s.tablet {
+        font-size: 260%;
+    }
+    @include s.desktop {
+        font-size: 300%;
+    }
+}
+
+.etc_font {
+    font-family: 'NanumSquareNeo-Variable';
+    @include s.mobile {
+        font-size: 100%;
+    }
+    @include s.tablet {
+        font-size: 140%;
+    }
+    @include s.desktop {
+        font-size: 180%;
+    }
+}
+
+
+.bodyController {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}

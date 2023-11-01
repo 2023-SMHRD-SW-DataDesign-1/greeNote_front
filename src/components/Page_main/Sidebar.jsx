@@ -8,6 +8,7 @@ const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className='ai_plant_container'>
+
                 <div className='plant_container'>
                     <div className='plant_data'>
 

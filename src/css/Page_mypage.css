@@ -42,8 +42,9 @@
     /* 내용 가운데 정렬 */
     display: flex;
     justify-content: center;
-    /* 상하 위치 조정 */
-    margin-top: 3%;
+    /* 크기 */
+    width: 1200px;
+    height: 863px;
   }
 }
 

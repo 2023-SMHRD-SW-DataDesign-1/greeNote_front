@@ -11,7 +11,7 @@ const Main = () => {
   const { dailyDiary } = useContext(DataContext);
 
   return (
-    <div className='web_top_container'>
+    <div className='bodyController'>
       <div className='main_container'>
         <div className='main_page1'>
 

@@ -66,7 +66,9 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .user_image img {
-    display: none;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
   }
 }
 @media (min-width: 360px) and (max-width: 799px) {
@@ -85,7 +87,7 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .user_name {
-    display: none;
+    font-size: 190%;
   }
 }
 @media (min-width: 1200px) {
@@ -104,7 +106,7 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .user_welcome {
-    display: none;
+    font-size: 120%;
   }
 }
 @media (min-width: 1200px) {
@@ -121,6 +123,11 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .main_pie1 {
     width: 100%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .main_pie1 {
+    width: 37.5%;
   }
 }
 @media (min-width: 1200px) {

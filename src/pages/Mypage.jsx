@@ -60,75 +60,77 @@ const Mypage = () => {
       }
 
     return (
-        <div className='mypage_container'>
-            <div className="input_logo"> {/* 우리 로고 */}
-                <img src="/Image/intro_logo.png" alt="logo" />
-            </div>
-            <div className='mypage_box'>
-                <div className='main_title'>
-                    회원정보수정
+        <div className='bodyController'>
+            <div className='mypage_container'>
+                <div className="input_logo"> {/* 우리 로고 */}
+                    <img src="/Image/intro_logo.png" alt="logo" />
+                </div>
+                <div className='mypage_box'>
+                    <div className='main_title'>
+                        회원정보수정
+                    </div>
+
+                    <form onSubmit={updateMember}>
+                        <div className='mypage_form'>
+                            <div className='mypage_photo'>{/* 사진과 입력 */}
+                                {previewURL ? (
+                                    <img src={previewURL} alt="green" />
+                                ) : (
+                                    <p>No Image</p>
+                                )}
+                            </div>
+                            <input
+                                type='file'
+                                accept="image/jpg,image/png,image/jpeg,image/gif"
+                                onChange={thumbnail}
+                                name='image'
+                                className='inputMypage'
+                            />
+                            <div className='mypage_form2'>
+                                <div className='text2'>
+                                    이름
+                                </div>
+                                <div className='session_info'>
+                                    {memberInfo.membername}
+                                </div>
+                                <div className='text2'>
+                                    아이디
+                                </div>
+                                <div className='session_info'>
+                                    {memberInfo.memberid}
+                                </div>
+                                <div className='text2'>
+                                    비밀번호
+                                </div>
+                                <input
+                                    className='mypage_pw'
+                                    placeholder='비밀번호를 입력하세요'
+                                    name='password'
+                                />
+                                <div className='text2'>
+                                    별칭
+                                </div>
+                                <input
+                                    className='mypage_nickname'
+                                    placeholder='별칭'
+                                    defaultValue={memberInfo.nickname}
+                                    name='nickname'
+                                />
+                                <br /><br />
+
+                                <button type='submit' className='complete_button2'>
+                                    수정완료
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </form>
+
+
                 </div>
 
-                <form onSubmit={updateMember}>
-                    <div className='mypage_form'>
-                        <div className='mypage_photo'>{/* 사진과 입력 */}
-                            {previewURL ? (
-                                <img src={previewURL} alt="green" />
-                            ) : (
-                                <p>No Image</p>
-                            )}
-                        </div>
-                        <input
-                            type='file'
-                            accept="image/jpg,image/png,image/jpeg,image/gif"
-                            onChange={thumbnail}
-                            name='image'
-                            className='inputMypage'
-                        />
-                        <div className='mypage_form2'>
-                            <div className='text2'>
-                                이름
-                            </div>
-                            <div className='session_info'>
-                                {memberInfo.membername}
-                            </div>
-                            <div className='text2'>
-                                아이디
-                            </div>
-                            <div className='session_info'>
-                                {memberInfo.memberid}
-                            </div>
-                            <div className='text2'>
-                                비밀번호
-                            </div>
-                            <input
-                                className='mypage_pw'
-                                placeholder='비밀번호를 입력하세요'
-                                name='password'
-                            />
-                            <div className='text2'>
-                                별칭
-                            </div>
-                            <input
-                                className='mypage_nickname'
-                                placeholder='별칭'
-                                defaultValue={memberInfo.nickname}
-                                name='nickname'
-                            />
-                            <br /><br />
-
-                            <button type='submit' className='complete_button2'>
-                                수정완료
-                            </button>
-
-                        </div>
-
-                    </div>
-                </form>
-
-
             </div>
-
         </div>
     )
 }

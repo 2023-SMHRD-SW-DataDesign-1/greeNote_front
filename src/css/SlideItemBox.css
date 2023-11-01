@@ -20,14 +20,12 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .slide_setBox {
-    width: 500px;
+    width: 600px;
     height: 600px;
-    margin: 50px;
   }
 }
 @media (min-width: 1200px) {
   .slide_setBox {
-    width: 930px;
-    margin: 50px;
+    width: 1000px;
   }
 }

@@ -12,10 +12,10 @@ const ItemSlide = (props) => {
     slidesToShow: 1, // 보여질 슬라이드 수
     slidesToScroll: 1, // 슬라이드 전환 시 이동할 슬라이드 수
     autoplay: true,
+    arrows:false
   };
 
   return (
-    <div>
       <div className='top_container'>
         <Slider {...settings}>
           {props.data.map((img, idx) => (
@@ -30,7 +30,6 @@ const ItemSlide = (props) => {
           ))}
         </Slider>
       </div>
-    </div>
   );
 }
 

@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
-import ItemPhoto from './ItemPhoto'
 import axios from 'axios';
 import AiRadio from './AiRadio';
-import AiStylePreview from './AiStylePreview';
 import { DataContext } from '../contexts/DataContext';
 import Ai1 from './AIStyleInfo/Ai1';
+import Ai2 from './AIStyleInfo/Ai2';
+import Ai3 from './AIStyleInfo/Ai3';
+import Ai4 from './AIStyleInfo/Ai4';
 
 const AiPhoto = () => {
 
@@ -50,23 +51,6 @@ const AiPhoto = () => {
 
 
     const handleImageClick = (e) => {
-        // const clickedImage = e.target;
-        // if (selectedImage === e.target.src) {
-        //     // console.log('e.target:', e.target)
-        //     setSelectedImage(0); // 이미 선택된 이미지를 다시 클릭하면 선택 해제
-        //     clickedImage.style.border = 'none';
-        // } else {
-        //     // 이미 선택된 이미지에 선택 해제 스타일 적용
-        //     if (selectedImage) {
-        //         const previouslySelectedImage = document.querySelector(`[src="${selectedImage}"]`);
-
-        //         previouslySelectedImage.style.border = 'none'; // 선택 해제 스타일 적용
-
-        //     }
-        //     setSelectedImage(e.target.src); // 새 이미지를 선택
-        //     clickedImage.style.border = '6px solid #5192B3';
-        // }
-        // console.log('selectedImage:', e.target.src);
         if (selectedImage === e.target.src) {
             setSelectedImage(null);
         } else {
@@ -85,28 +69,13 @@ const AiPhoto = () => {
         }
     };
 
-    const [selectedOption, setSelectedOption] = useState(null);
-
-
-    // ai스타일설명 이미지 (모달창 라디오버튼에따라 다른걸 보여줌)
-    const [aiStyleImage, setAiStyleImage] = useState('');
+    const [selectedOption, setSelectedOption] = useState('모자이크');
 
 
     // 라디오 버튼 스타일 선택
     const handleRadioChange = (event) => {
-        // setSelectedOption(event.target.value);
-        const newValue = event.target.value;
-        setSelectedOption(newValue);
-        // 이미지를 선택한 라디오 버튼에 따라 변경
-        if (newValue === '모자이크') {
-            setAiStyleImage('Image/모자이크.jpg');
-        } else if (newValue === '점묘화') {
-            setAiStyleImage('Image/점묘화큐브.jpg');
-        } else if (newValue === '판화') {
-            setAiStyleImage('Image/woodcut.jpg');
-        } else if (newValue === '폴리곤') {
-            setAiStyleImage('Image/폴리곤.jpg');
-        }
+        setSelectedOption(event.target.value);
+
     };
 
     useEffect(() => {
@@ -186,7 +155,7 @@ const AiPhoto = () => {
             {/* Ai스타일 모달창 */}
             {isModalOpen && (
                 <div className="modal_background">
-                    <div className="modal_content">
+                    <div className="modal_content style">
                         <div className='modal_header'>
                             <div className='modal_info_container'>
                                 <img src='/Image/ic_leaf_home.png' />
@@ -194,7 +163,10 @@ const AiPhoto = () => {
                             </div>
                         </div>
                         <div className='image_container'>
-                            <Ai1/>
+                            {selectedOption === '모자이크' && <Ai1 />}
+                            {selectedOption === '점묘화' && <Ai2 />}
+                            {selectedOption === '판화' && <Ai3 />}
+                            {selectedOption === '폴리곤' && <Ai4 />}
                         </div>
                         <div className='radio_container'>
                             <div className='radio_box'>
@@ -229,8 +201,8 @@ const AiPhoto = () => {
                             </div>
                         </div>
                         <div className='ai_style_btn_div'>
-                        <button className='ai_style_btn' onClick={closeModal}>선택완료</button>
-                    </div>
+                            <button className='ai_style_btn' onClick={closeModal}>선택완료</button>
+                        </div>
                     </div>
 
                 </div>
