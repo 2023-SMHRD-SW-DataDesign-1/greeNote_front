@@ -93,7 +93,7 @@ const GreenList = () => {
 
         {plantList && plantList.map((value) => (
           <Link to={`/greendiary/${value.plantId}`} className='linkPhoto'> {/* 대표식물 */}
-            <div className='alarm_circle' style={alarmCircleStyle}></div>
+          <div className='alarm_circle' style={alarmCircleStyle}></div>
             <div className='photo' style={{ backgroundColor: value.color }}>
               <img src={`${value.image}`} alt="green" />
             </div>
