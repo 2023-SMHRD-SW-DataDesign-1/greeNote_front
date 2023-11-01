@@ -59,7 +59,11 @@
 
 // 사진 선택 css
 .selected {
-    border: 6px solid #5192B3;
+    // border: 6px solid #5192B3;
+    border: 6px double transparent;
+    /* 기본 테두리 색상을 투명하게 설정합니다. */
+    border-image: linear-gradient(#7bc48b, #2cbd64) 6;
+    /* #ff0000과 #00ff00을 원하는 색상으로 바꿉니다. */
 }
 
 .image_container {
@@ -264,14 +268,14 @@ input[type="radio"] {
     display: flex;
     justify-content: center;
 
-    @include s.mobile{
+    @include s.mobile {
         margin-top: 10px;
     }
 
-    @include s.tablet{
+    @include s.tablet {
         margin-top: 10px;
     }
-    
+
 }
 
 .ai_style_btn {
@@ -279,4 +283,3 @@ input[type="radio"] {
     margin-top: 20px;
     height: 40px;
 }
-

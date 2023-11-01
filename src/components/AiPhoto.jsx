@@ -69,6 +69,7 @@ const AiPhoto = () => {
         }
     };
 
+    // 라디오 버튼 선택 기본
     const [selectedOption, setSelectedOption] = useState('피카소');
 
 

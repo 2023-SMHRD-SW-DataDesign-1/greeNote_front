@@ -8,15 +8,15 @@ class ItemIntroSlide extends React.Component {
   
       const introImage =[
         {
-            url:'./Image/monstera.jpg',
+            url:'./Image/ai_millet.jpg',
             idx:'0'
         },
         {
-            url:'./Image/home_logo.png',
+            url:'./Image/van_gogh.jpg',
             idx:'1'
         },
         {
-            url:'./Image/web_logo.png',
+            url:'./Image/millet.jpg',
             idx:'2'
         }
       ]
@@ -28,12 +28,13 @@ class ItemIntroSlide extends React.Component {
         slidesToShow: 1, // 보여질 슬라이드 수
         slidesToScroll: 1, // 슬라이드 전환 시 이동할 슬라이드 수
         autoplay: true,
+        arrows:false
       };
   
       
       return (
         <div>
-            <div className='top_container'>
+            
             <Slider {...settings}>
               {introImage.map((img) => (
                 <div className='intro_slide_container' key={img.idx}>
@@ -43,7 +44,7 @@ class ItemIntroSlide extends React.Component {
   
   
             </Slider>
-          </div>
+          
         </div>
        
       );
