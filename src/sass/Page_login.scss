@@ -15,36 +15,6 @@
     font-style: normal;
 }
 
-/********************************* 폰트 설정 */
-* {
-    font-family: 'NanumSquareNeo-Variable';
-}
-
-.logo_font {
-    font-family: 'KCC-Ganpan';
-    @include s.mobile {
-        font-size: 200%;
-    }
-    @include s.tablet {
-        font-size: 260%;
-    }
-    @include s.desktop {
-        font-size: 300%;
-    }
-}
-
-.etc_font {
-    font-family: 'NanumSquareNeo-Variable';
-    @include s.mobile {
-        font-size: 100%;
-    }
-    @include s.tablet {
-        font-size: 140%;
-    }
-    @include s.desktop {
-        font-size: 180%;
-    }
-}
 
 .login_container {
     /* 크기 지정 */
@@ -80,26 +50,23 @@
         display: flex;
         justify-content: center;
 
-        /* 상하 위치 조정 */
-        margin-top: 10%;
+        width: 1200px;
+        height: 930px;
     }
 }
 
-.login {
-    margin-bottom: 2%;
-}
 
 /********************************* 로고 이미지 css */
 .input_logo {
     @include s.mobile {
         display: none;
     }
-
+    
     @include s.tablet {
         height: 150px;
         width: 250px;
     }
-
+    
     @include s.desktop {
         height: 350px;
         width: 400px;
@@ -111,21 +78,14 @@
         position: relative;
         height: 100px;
     }
-
+    
     @include s.tablet {
         height: 130px;
     }
-
+    
     @include s.desktop {
-        height: 300px;
+        height: 200px;
     }
-}
-
-.login {
-    /* 내용 가운데 정렬 */
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
 }
 
 .login_box {
@@ -135,4 +95,19 @@
     justify-content: space-around;
     align-items: center;
     text-align: center;
+}
+
+/* 로그인 환영 문구 */
+.login {
+    margin-bottom: 2%;
+
+    /* 내용 가운데 정렬 */
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+/* 로그인 인풋 */
+.login_box2 {
+    width: 350px;
 }

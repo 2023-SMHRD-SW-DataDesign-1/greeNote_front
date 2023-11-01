@@ -40,6 +40,7 @@ import './css/Header_etc.css';
 import './css/Page_writeDiary.css';
 import './css/Switch_ai.css';
 import './css/Footer_diary.css';
+import './css/Page_all.css';
 
 
 
