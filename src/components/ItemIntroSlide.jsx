@@ -8,7 +8,7 @@ class ItemIntroSlide extends React.Component {
   
       const introImage =[
         {
-            url:'./Image/green_logo.png',
+            url:'./Image/monstera.jpg',
             idx:'0'
         },
         {
@@ -37,7 +37,7 @@ class ItemIntroSlide extends React.Component {
             <Slider {...settings}>
               {introImage.map((img) => (
                 <div className='intro_slide_container' key={img.idx}>
-                  <img src={img.url}></img>
+                  <img src={img.url} className='introImg'></img>
                 </div>
               ))}
   

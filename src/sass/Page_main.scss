@@ -56,9 +56,6 @@
     @include s.mobile {
         display: none;
     }
-    @include s.tablet{
-        display: none;
-    }
 }
 
 .user_image img {
@@ -153,6 +150,7 @@
         width: 50%;
     }
     @include s.desktop {
+        margin-top: 3.5%;
         width: 50%;
     }
 }
