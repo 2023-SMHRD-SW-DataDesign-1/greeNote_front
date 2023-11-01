@@ -1,0 +1,28 @@
+@media (min-width: 360px) and (max-width: 799px) {
+  .style_top_container {
+    width: 300px;
+    margin: 0px auto;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .style_top_container {
+    width: 400px;
+    height: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .style_top_container {
+    width: 550px;
+    height: 500px;
+  }
+}
+
+.style_photo {
+  width: 200px;
+}
+
+.style_photo img {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}

@@ -4,6 +4,7 @@ import axios from 'axios';
 import AiRadio from './AiRadio';
 import AiStylePreview from './AiStylePreview';
 import { DataContext } from '../contexts/DataContext';
+import Ai1 from './AIStyleInfo/Ai1';
 
 const AiPhoto = () => {
 
@@ -87,7 +88,7 @@ const AiPhoto = () => {
     const [selectedOption, setSelectedOption] = useState(null);
 
 
-    // ai스타일설명 이미지 (라디오버튼에따라 다른걸 보여줌)
+    // ai스타일설명 이미지 (모달창 라디오버튼에따라 다른걸 보여줌)
     const [aiStyleImage, setAiStyleImage] = useState('');
 
 
@@ -135,6 +136,7 @@ const AiPhoto = () => {
                 </div>
             </div>
 
+            {/* AI 스타일 선택창 라디오버튼 */}
             <div className='radio_container'>
                 <div className='radio_text_box'>
                     <div className='radio_text'>스타일 선택</div>
@@ -181,10 +183,10 @@ const AiPhoto = () => {
             </div>
 
 
+            {/* Ai스타일 모달창 */}
             {isModalOpen && (
                 <div className="modal_background">
                     <div className="modal_content">
-                        {/* 모달 내용을 이곳에 추가 */}
                         <div className='modal_header'>
                             <div className='modal_info_container'>
                                 <img src='/Image/ic_leaf_home.png' />
@@ -192,7 +194,7 @@ const AiPhoto = () => {
                             </div>
                         </div>
                         <div className='image_container'>
-                            {aiStyleImage && <img src={aiStyleImage} alt="Selected Image" />}
+                            <Ai1/>
                         </div>
                         <div className='radio_container'>
                             <div className='radio_box'>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const GreenDiary_photo = ({ data }) => {
-    console.log('다이어리 디테일', data);
+    console.log('다이어리 모아보기', data);
     return (
         <div className='diaryFile2'>
             <Link to={`/diarydetail/${data.diary.diaryId}`} className='button_links'>
