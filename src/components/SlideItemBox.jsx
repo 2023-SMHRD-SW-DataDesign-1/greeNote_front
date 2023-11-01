@@ -3,6 +3,7 @@ import ItemSlide from './ItemSlide'
 
 const SlideItemBox = () => {
 
+  // 다이어리 사진 가져오기
   const arr = [
     {
       url: '123',

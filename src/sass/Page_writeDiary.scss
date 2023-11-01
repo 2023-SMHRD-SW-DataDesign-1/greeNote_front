@@ -26,7 +26,6 @@
 
     @include s.desktop {
         width: 1200px;
-        height: 936px;
     }
 }
 
@@ -225,7 +224,7 @@
         max-width: 90%;
     }
     @include s.tablet{
-        max-height: 300px;
+        max-height: 325px;
         max-width: 90%;
     }
     @include s.mobile {

@@ -23,7 +23,6 @@
 @media (min-width: 1200px) {
   .writeDiary_container {
     width: 1200px;
-    height: 936px;
   }
 }
 
@@ -231,7 +230,7 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .green_photo img {
-    max-height: 300px;
+    max-height: 325px;
     max-width: 90%;
   }
 }

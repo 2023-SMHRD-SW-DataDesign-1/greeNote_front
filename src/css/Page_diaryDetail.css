@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (min-width: 1200px) {
   .forMobile {
     display: none;
@@ -10,18 +11,32 @@
 }
 
 @media (min-width: 1200px) {
+  .forDesktop,
   .forDesktop2 {
     width: 50%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
+  .forDesktop,
   .forDesktop2 {
-    width: 45%;
+    width: 50%;
   }
 }
 @media (min-width: 360px) and (max-width: 799px) {
+  .forDesktop,
   .forDesktop2 {
     display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .forDesktop2 {
+    margin-top: 5.5%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .forDesktop2 {
+    margin-top: 7%;
   }
 }
 
@@ -30,8 +45,55 @@
     width: 1000px;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .diaryPie {
+    width: 600px;
+  }
+}
 
 .diaryBottom {
   display: flex;
   justify-content: center;
+}
+
+.infoDisease {
+  width: 250px;
+  height: 30px;
+  padding-right: none;
+  position: relative;
+  /* CSS */
+  font-weight: bolder;
+  text-align: right;
+}
+@media (min-width: 1200px) {
+  .infoDisease {
+    left: 40%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .infoDisease {
+    left: 5%;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .infoDisease {
+    left: 2%;
+  }
+}
+
+/*************************************  일기 작성하는 곳 */
+.input_container3 {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .input_container3 {
+    margin: 5%;
+  }
+}
+@media (min-width: 1200px) {
+  .input_container3 {
+    width: 90%;
+    height: 90%;
+  }
 }

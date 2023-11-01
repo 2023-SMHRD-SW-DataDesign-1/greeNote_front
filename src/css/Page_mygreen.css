@@ -62,7 +62,7 @@
   }
 }
 
-/* 이미지 */
+/* 북 로고 이미지 */
 @media (min-width: 360px) and (max-width: 799px) {
   .mid_title2 img {
     width: 70px;
@@ -70,7 +70,7 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .mid_title2 img {
-    width: 70px;
+    width: 85px;
   }
 }
 @media (min-width: 1200px) {

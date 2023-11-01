@@ -12,6 +12,8 @@ const WriteDiary = () => {
 
     // URL 통합 관리
     const masterURL = process.env.REACT_APP_MASTER_URL;
+    // axios 설정
+    axios.defaults.withCredentials = true;
 
     // 식물 목록별 조회하기 위한 id값 가져오기
     const { plant_id } = useParams();
@@ -68,10 +70,31 @@ const WriteDiary = () => {
     };
 
     // 위에 있는 함수에서 Flask 서버로 전송할 데이터 획득해서 사용하기!! (나중에)
+    // 아직 제작 중
+    const aiPlantDisease = async () => {
+        try {
+            await axios.post(`http://127.0.0.1:5000/plant_disease`, {
+                imageUrl: imageUrls[0]
+            })
+                .then((res) => {
+                    console.log(res);
+                    return res.data;
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
+
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
 
     // 다이어리 작성 함수
     const addDiary = async (e) => {
         e.preventDefault();
+        // const ai_result = aiPlantDisease();
 
         const obj = {};
         const formData = new FormData(e.target);
@@ -79,7 +102,7 @@ const WriteDiary = () => {
             obj[key] = value;
         });
         obj['plant_id'] = plant_id;
-        obj['ai_result'] = '흰가루병'; // 나중에 제대로 만들 것
+        obj['ai_result'] = '흰가루 병'; // 나중에 제대로 만들 것
         obj['diary_imageDto'] = imageUrls;
         obj['registration_date'] = registration_date;
 

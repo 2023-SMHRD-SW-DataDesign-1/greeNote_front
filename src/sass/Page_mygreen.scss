@@ -68,14 +68,14 @@
     }
 }
 
-/* 이미지 */
+/* 북 로고 이미지 */
 .mid_title2 img {
     @include s.mobile {
         width: 70px;
     }
 
     @include s.tablet {
-        width: 70px;
+        width: 85px;
     }
 
     @include s.desktop {
