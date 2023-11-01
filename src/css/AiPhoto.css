@@ -202,8 +202,8 @@
   cursor: pointer;
   text-align: center;
   padding: 1%;
-  background: linear-gradient(to bottom, #9ecc9c, #57a548);
-  color: #fff;
+  background-color: #DDEFC7;
+  font-weight: 600;
   border-radius: 5%;
   margin: 10px 5px 0px 0px;
 }
@@ -221,7 +221,8 @@
 }
 
 .checked {
-  background: linear-gradient(to bottom, rgba(27, 132, 173, 0.6588235294), #6272a7);
+  background-color: #335A3B;
+  color: white;
 }
 
 input[type=radio] {
@@ -238,11 +239,12 @@ input[type=radio] {
 .uploadBtn,
 .ai_style_btn {
   width: 130px;
-  background-color: #548488;
+  border-color: #b8c7a5;
+  background-color: #DDEFC7;
   border-radius: 10px;
   height: 40px;
-  color: rgb(255, 255, 255);
   text-align: center;
+  font-weight: 600;
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .uploadBtn,
@@ -259,7 +261,8 @@ input[type=radio] {
 
 .uploadBtn:hover,
 .ai_style_btn:hover {
-  background-color: #33455a;
+  background-color: #335A3B;
+  color: white;
 }
 
 .ai_style_btn_div {
@@ -279,7 +282,7 @@ input[type=radio] {
 }
 
 .ai_style_btn {
-  background-color: #548488;
+  background-color: #DDEFC7;
   margin-top: 20px;
   height: 40px;
 }
