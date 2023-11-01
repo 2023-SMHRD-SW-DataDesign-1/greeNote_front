@@ -1,11 +1,12 @@
 /* 식물 별 정리된 다이어리 */
 
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AiPlant from '../components/AiPlant';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 import GreenDiary_photo from '../components/GreenDiary_photo';
+import { DataContext } from '../contexts/DataContext';
 
 const GreenDiary = () => {
 
@@ -15,13 +16,15 @@ const GreenDiary = () => {
   // 식물 목록별 조회하기 위한 id값 가져오기
   const { plant_id } = useParams();
 
+  const { selectedPlantData } = useContext(DataContext);
+
   // 다이어리 목록을 담을 State
   const [diaryList, setDiaryList] = useState([]);
 
   // 식물 목록별 다이어리 조회
   const readDiary = () => {
     console.log(plant_id);
-    axios.get(`${masterURL}/diary/readDiary/${plant_id}`)
+    axios.get(`${masterURL}/diary/readDiary/${selectedPlantData.plantId}`)
       .then((res) => {
         console.log('식물 목록별 다이어리', res);
         setDiaryList(res.data);
@@ -33,7 +36,7 @@ const GreenDiary = () => {
 
   useEffect(() => {
     readDiary();
-  }, [])
+  }, [selectedPlantData])
 
   const [selectedImage, setSelectedImage] = useState(0);
 
@@ -63,7 +66,7 @@ const GreenDiary = () => {
                 <div className='mid_title_bin2'> 
                   <img src="/Icon/bin.png" alt="bin" />
                 </div>
-                <Link to={`/writediary/${plant_id}`} className='mid_title_edit'>
+                <Link to={`/writediary/${selectedPlantData.plantId}`} className='mid_title_edit'>
                   <img src="/Icon/edit.png" alt="edit" />
                 </Link>
               </div>

@@ -27,7 +27,8 @@
 .slide_container img {
   margin-top: 20px;
   border-radius: 10px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .slide_container img {

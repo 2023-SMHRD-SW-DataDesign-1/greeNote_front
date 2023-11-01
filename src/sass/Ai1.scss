@@ -1,29 +1,34 @@
 @use '../sass/_variables.scss' as s;
 
-.style_top_container{
-    @include s.mobile {
-        width: 300px;
-        margin: 0px auto;
-    }
+// .style_top_container{
+//     width: 100%;
+//     margin-bottom: 30px;
+//     @include s.mobile {
+//         margin: 0px auto;
+//     }
 
-    @include s.tablet {
-        width: 400px;
-        height: 500px;
+//     @include s.tablet {
+//         height: 500px;
+//     }
 
-    }
-
-    @include s.desktop {
-        width: 550px;
-        height: 500px;
-    }
-}
+//     @include s.desktop {
+//         height: 500px;
+//     }
+// }
 
 
 .style_photo{
-    width: 200px;
+    width: 100%;
 }
+
 .style_photo img{
-    width: 200px;
-    height: 200px;
-    margin: auto;
-  }
+    width: 250px;
+    height: 250px;
+    margin: auto
+}
+
+// style 모달창 크기
+.style{
+    height: 500px;
+
+}

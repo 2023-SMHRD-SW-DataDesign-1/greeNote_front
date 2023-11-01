@@ -83,7 +83,7 @@ const AiPlant = () => {
                 <div className='modal_info'>내 반려식물</div>
               </div>
               <div className="modal_close">
-                <span onClick={toggleModal}>X</span>
+                <span onClick={closeModal}>X</span>
               </div>
             </div>
             <div className='modal_plant_container'>

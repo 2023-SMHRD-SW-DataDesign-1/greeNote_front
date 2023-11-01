@@ -65,13 +65,13 @@
 .image_container {
   margin-top: 20px;
   height: 220px;
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 .image_container img {
   width: 200px;
   height: 200px;
+  margin: auto;
 }
 
 @media (min-width: 360px) and (max-width: 799px) {
@@ -139,7 +139,7 @@
 }
 
 .radio_container {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .radio_container {
@@ -260,6 +260,16 @@ input[type=radio] {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .ai_style_btn_div {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .ai_style_btn_div {
+    margin-top: 10px;
+  }
 }
 
 .ai_style_btn {

@@ -64,14 +64,13 @@
 .image_container {
     margin-top: 20px;
     height: 220px;
-    display: flex;
-    justify-content: center;
-
+    width: 100%;
 }
 
 .image_container img {
     width: 200px;
     height: 200px;
+    margin: auto;
 }
 
 .web_pageInfo {
@@ -135,7 +134,7 @@
 
 // 라디오 버튼 css
 .radio_container {
-    margin-top: 20px;
+    margin-top: 50px;
 
     @include s.mobile {
         width: 360px;
@@ -257,10 +256,21 @@ input[type="radio"] {
     background-color: #33455a;
 }
 
+
+// 스타일 선택 모달창 버튼
 .ai_style_btn_div {
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @include s.mobile{
+        margin-top: 10px;
+    }
+
+    @include s.tablet{
+        margin-top: 10px;
+    }
+    
 }
 
 .ai_style_btn {
@@ -268,3 +278,4 @@ input[type="radio"] {
     margin-top: 20px;
     height: 40px;
 }
+
