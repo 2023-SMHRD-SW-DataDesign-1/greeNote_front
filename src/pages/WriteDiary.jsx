@@ -161,6 +161,10 @@ const WriteDiary = () => {
 
                             <div className='partLeft'> {/* 모바일에서 보이는 부분 */}
                                 <form onSubmit={addDiary}>
+
+                                    <div className='profile_container2'> {/* 사진(모바일만) */}
+                                        <GreenProfile />
+                                    </div>
                                     <div className='diaryDate2'> {/* 날짜 */}
                                         <div className='date'>
                                             {Today2}
@@ -168,10 +172,6 @@ const WriteDiary = () => {
                                         <div className='week'>
                                             {dayOfWeek2}
                                         </div>
-                                    </div>
-
-                                    <div className='profile_container2'> {/* 사진(모바일만) */}
-                                        <GreenProfile />
                                     </div>
 
 
@@ -209,7 +209,7 @@ const WriteDiary = () => {
                                                 placeholder='내용을 입력 해 주세요'
                                                 name='content' />
                                         </div>
-                                        <div className='footer-container'>
+                                        <div className='footer-container'> {/* 하단 버튼 */}
                                             <input
                                                 type='file'
                                                 accept="image/*"

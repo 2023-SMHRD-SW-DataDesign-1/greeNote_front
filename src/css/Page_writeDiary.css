@@ -76,7 +76,6 @@
   }
 }
 
-/************************************* 모바일 식물정보 화면 */
 .profile_container2 {
   /* 배치 조정 */
   display: flex;
@@ -91,24 +90,6 @@
 @media (min-width: 800px) and (max-width: 1199px) {
   .profile_container2 {
     display: none;
-  }
-}
-
-.plant_container2 {
-  margin-bottom: 2%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-@media (min-width: 360px) and (max-width: 799px) {
-  .plant_container2 {
-    width: 360px;
-  }
-}
-@media (min-width: 800px) and (max-width: 1199px) {
-  .plant_container2 {
-    width: 100%;
   }
 }
 

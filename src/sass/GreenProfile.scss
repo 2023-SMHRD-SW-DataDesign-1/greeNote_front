@@ -1,0 +1,32 @@
+@use '../sass/_variables.scss' as s;
+
+/************************************* 모바일 식물정보 화면 */
+
+
+.plant_container2 {
+    margin-bottom: 2%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    @include s.mobile {
+        width: 360px;
+    }
+
+    @include s.tablet {
+        width: 100%;
+    }
+}
+
+
+.plant_nickname2,
+.plant_species2,
+.plant_date2 {
+    @include s.mobile {
+        font-size: 18px;
+        text-align: left;
+        
+    }
+}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/************************************* 모바일 식물정보 화면 */
+.plant_container2 {
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .plant_container2 {
+    width: 360px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .plant_container2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 799px) {
+  .plant_nickname2,
+  .plant_species2,
+  .plant_date2 {
+    font-size: 18px;
+    text-align: left;
+  }
+}

@@ -5,6 +5,8 @@ import { DataContext } from '../contexts/DataContext';
 import Diary_Sidebar from '../components/Page_Diary/Diary_Sidebar'
 import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
+import GreenProfile from '../components/GreenProfile';
+import Date from  '../components/Page_main/Date';
 
 const DiaryDetail = ({ data }) => {
 
@@ -47,55 +49,16 @@ const DiaryDetail = ({ data }) => {
 
     /*************************  사이드바 */
     // 식물 목록 저장 State
-    const { plantList, setPlantList, selectedPlantData } = useContext(DataContext);
+    const { selectedPlantData } = useContext(DataContext);
 
-    // 식물목록에서 id를 filter로 하나만 빼오기 개별다이어리 id랑 일치하는 걸로
-    const detailOneDiary = plantList.filter(value => value.plantId === diaryDetail.plantId)
-        console.log(detailOneDiary);
+
 
 
     return (
         <div className='web_top_container'>
             <div className='writeDiary_container'>
                 <div className='main_page1'>
-
-
-                    <div className='sidebar'> {/* 사이드바 */}
-                        <div className='ai_plant_container'>
-                            <div className='plant_container'>
-                                <div className='plant_data'>
-
-                                 
-                                        <div className='plant_container'>
-                                            <div className='plant_nickname'>
-                                                {selectedPlantData.nickname}
-                                            </div>
-                                            <div className='plant_data'>
-                                                <div className='circle plant_image_color' style={{ backgroundColor: selectedPlantData.color }} >
-                                                    <div className='circle' >
-                                                        <img className="circle plant_main_image" src={`${selectedPlantData.image}`} alt="Plant" />
-                                                    </div>
-                                                </div>
-
-                                                <div className='plant_text_data'>
-                                                    <div className='plant_species'>{selectedPlantData.title}</div>
-                                                    <div className='plant_date'>{selectedPlantData.start_date}</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                             
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
+                    <Diary_Sidebar /> {/* 사이드바 */}
                     <div className='diaryPie'>
 
                         <div className='diaryTop'>
@@ -110,10 +73,10 @@ const DiaryDetail = ({ data }) => {
                             </div>
 
                             <div className='profile_container2'> {/* 사진(모바일만) */}
-                                <div className='profile_green'>
-                                    <img src="/Image/monstera.jpg" alt="green" />
-                                </div>
+                                <GreenProfile />
+                                <Date />
                             </div>
+
                             <br />
                         </div>
 
