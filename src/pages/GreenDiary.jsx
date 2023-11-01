@@ -23,7 +23,7 @@ const GreenDiary = () => {
     console.log(plant_id);
     axios.get(`${masterURL}/diary/readDiary/${plant_id}`)
       .then((res) => {
-        console.log(res);
+        console.log('식물 목록별 다이어리', res);
         setDiaryList(res.data);
       })
       .catch((err) => {
