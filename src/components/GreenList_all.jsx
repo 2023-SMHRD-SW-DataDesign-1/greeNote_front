@@ -66,7 +66,7 @@ const GreenList_all = () => {
     readPlantList()
   }, [])
 
- // 알람 on off에따른 색 o/x
+  // 알람 on off에따른 색 o/x
   const alarmCircleStyle = {
     backgroundColor: alarm ? '#2dda50' : 'none',
   };
@@ -75,20 +75,22 @@ const GreenList_all = () => {
     <div className='greenlist'>
 
       <div className='list_container2'>
-        <Link to="/mygreen" className='linkPhoto'> {/* 전체선택 */}
-        <div className='alarm_circle_all_none'></div>
+        <Link to="/mygreen" className='linkPhoto2'> {/* 전체선택 */}
+          <div className='alarm_circle_all_none'></div>
           <div className='select_all'>
             ALL
           </div>
         </Link>
 
         {plantList && plantList.map((value) => (
-          <Link to={`/greendiary/${value.plantId}`} className='linkPhoto'>
-            <div className='alarm_circle_all'style={alarmCircleStyle}/>
+          <Link to={`/greendiary/${value.plantId}`} className='linkPhoto2'>
+            <div className='alarm_circle_all' style={alarmCircleStyle} />
             <div className='green' style={{ backgroundColor: value.color }}>
               <img src={`${value.image}`} alt="green" />
             </div>
-            {value.nickname}
+            <div className='linkText2'>
+              {value.nickname}
+            </div>
           </Link>
         ))}
       </div>
