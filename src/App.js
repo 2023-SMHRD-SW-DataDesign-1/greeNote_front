@@ -48,6 +48,7 @@ import './css/AiHeader.css';
 import './css/AiPlant.css';
 import './css/AiPhoto.css';
 import './css/ItemPhoto.css';
+import './css/Ai1.css';
 
 import './css/ItemAiReturn.css';
 import './css/AiReturnPhoto.css'
