@@ -69,7 +69,7 @@ const AiPhoto = () => {
         }
     };
 
-    const [selectedOption, setSelectedOption] = useState('모자이크');
+    const [selectedOption, setSelectedOption] = useState('피카소');
 
 
     // 라디오 버튼 스타일 선택
@@ -113,31 +113,31 @@ const AiPhoto = () => {
                 </div>
                 <div className='radio_box'>
                     <AiRadio
-                        label="모자이크"
+                        label="피카소"
                         name="radioGroup"
-                        value="모자이크"
-                        checked={selectedOption === "모자이크"}
+                        value="피카소"
+                        checked={selectedOption === "피카소"}
                         onChange={handleRadioChange}
                     />
                     <AiRadio
-                        label="점묘화"
+                        label="밀레"
                         name="radioGroup"
-                        value="점묘화"
-                        checked={selectedOption === "점묘화"}
+                        value="밀레"
+                        checked={selectedOption === "밀레"}
                         onChange={handleRadioChange}
                     />
                     <AiRadio
-                        label="판화"
+                        label="고흐"
                         name="radioGroup"
-                        value="판화"
-                        checked={selectedOption === "판화"}
+                        value="고흐"
+                        checked={selectedOption === "고흐"}
                         onChange={handleRadioChange}
                     />
                     <AiRadio
-                        label="폴리곤"
+                        label="호쿠사이"
                         name="radioGroup"
-                        value="폴리곤"
-                        checked={selectedOption === "폴리곤"}
+                        value="호쿠사이"
+                        checked={selectedOption === "호쿠사이"}
                         onChange={handleRadioChange}
                     />
 
@@ -163,39 +163,39 @@ const AiPhoto = () => {
                             </div>
                         </div>
                         <div className='image_container'>
-                            {selectedOption === '모자이크' && <Ai1 />}
-                            {selectedOption === '점묘화' && <Ai2 />}
-                            {selectedOption === '판화' && <Ai3 />}
-                            {selectedOption === '폴리곤' && <Ai4 />}
+                            {selectedOption === '피카소' && <Ai1 />}
+                            {selectedOption === '밀레' && <Ai2 />}
+                            {selectedOption === '고흐' && <Ai3 />}
+                            {selectedOption === '호쿠사이' && <Ai4 />}
                         </div>
                         <div className='radio_container'>
                             <div className='radio_box'>
                                 <AiRadio
-                                    label="모자이크"
+                                    label="피카소"
                                     name="radioGroup"
-                                    value="모자이크"
-                                    checked={selectedOption === "모자이크"}
+                                    value="피카소"
+                                    checked={selectedOption === "피카소"}
                                     onChange={handleRadioChange}
                                 />
                                 <AiRadio
-                                    label="점묘화"
+                                    label="밀레"
                                     name="radioGroup"
-                                    value="점묘화"
-                                    checked={selectedOption === "점묘화"}
+                                    value="밀레"
+                                    checked={selectedOption === "밀레"}
                                     onChange={handleRadioChange}
                                 />
                                 <AiRadio
-                                    label="판화"
+                                    label="고흐"
                                     name="radioGroup"
-                                    value="판화"
-                                    checked={selectedOption === "판화"}
+                                    value="고흐"
+                                    checked={selectedOption === "고흐"}
                                     onChange={handleRadioChange}
                                 />
                                 <AiRadio
-                                    label="폴리곤"
+                                    label="호쿠사이"
                                     name="radioGroup"
-                                    value="폴리곤"
-                                    checked={selectedOption === "폴리곤"}
+                                    value="호쿠사이"
+                                    checked={selectedOption === "호쿠사이"}
                                     onChange={handleRadioChange}
                                 />
                             </div>
