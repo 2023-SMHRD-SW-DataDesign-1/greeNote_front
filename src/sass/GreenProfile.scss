@@ -26,7 +26,8 @@
 .plant_date2 {
     @include s.mobile {
         font-size: 18px;
+        font-weight: bolder;
         text-align: left;
-        
+
     }
 }

@@ -194,7 +194,7 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .green_photo {
     width: 100%;
-    min-height: 70px;
+    min-height: 100px;
     height: auto;
   }
 }
@@ -304,5 +304,10 @@
 @media (min-width: 800px) and (max-width: 1199px) {
   .contentBox {
     height: 150px;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .contentBox {
+    height: 100px;
   }
 }
