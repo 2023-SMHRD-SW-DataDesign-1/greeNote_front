@@ -25,7 +25,7 @@ const GreenList_all = () => {
   }
 
   // 알람 on/off State
-  const [alarm, setAlarm] = useState(false);
+  const [alarm, setAlarm] = useState(true);
 
   // 알람 날짜 판단 함수
   const alarmDate = (list) => {
@@ -66,12 +66,17 @@ const GreenList_all = () => {
     readPlantList()
   }, [])
 
+ // 알람 on off에따른 색 o/x
+  const alarmCircleStyle = {
+    backgroundColor: alarm ? '#2dda50' : 'none',
+  };
 
   return (
     <div className='greenlist'>
 
       <div className='list_container2'>
         <Link to="/mygreen" className='linkPhoto'> {/* 전체선택 */}
+        <div className='alarm_circle_all_none'></div>
           <div className='select_all'>
             ALL
           </div>
@@ -79,6 +84,7 @@ const GreenList_all = () => {
 
         {plantList && plantList.map((value) => (
           <Link to={`/greendiary/${value.plantId}`} className='linkPhoto'>
+            <div className='alarm_circle_all'style={alarmCircleStyle}/>
             <div className='green' style={{ backgroundColor: value.color }}>
               <img src={`${value.image}`} alt="green" />
             </div>

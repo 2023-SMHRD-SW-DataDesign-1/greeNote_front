@@ -73,6 +73,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 
@@ -100,4 +101,19 @@
   padding-top: 3%;
   color: black;
   text-decoration-line: none;
+}
+
+/**********************************알람 동그라미*/
+.alarm_circle{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 75px;
+}
+
+.alarm_circle_none{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 75px;
 }
