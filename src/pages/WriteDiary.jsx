@@ -66,7 +66,7 @@ const WriteDiary = () => {
     };
 
     // 질병 분류기 함수
-    const [disease, setDisease] = useState();
+    const [disease, setDisease] = useState('진단결과 없음');
     const aiPlantDisease = (e) => {
         if (e.target.checked === true) {
             console.log(imageUrls);
