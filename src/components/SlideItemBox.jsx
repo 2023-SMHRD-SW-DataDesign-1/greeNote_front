@@ -18,6 +18,7 @@ const SlideItemBox = () => {
   const readDiaryImg = () => {
     axios.get(`${masterURL}/diary/readDiaryImg?plantId=${selectedPlantData.plantId}`)
       .then((res) => {
+        console.log('res.data', res.data);
         setDiaryImages(res.data);
       })
       .catch((err) => {
@@ -38,12 +39,16 @@ const SlideItemBox = () => {
       }));
     })).filter(item => item.image_url);
     setImgArr(parsedImages);
+    console.log(parsedImages);
   }
 
   useEffect(() => {
     readDiaryImg();
-    labelingImg();
   }, [selectedPlantData])
+
+  useEffect(() => {
+    labelingImg();
+  }, [diaryImages]);
 
   return (
     <div>
@@ -52,7 +57,11 @@ const SlideItemBox = () => {
         <div className='web_infoText'>슬라이드</div>
       </div>
       <div className='slide_setBox'>
-        <ItemSlide data={imgArr} />
+        {imgArr.length > 0 ? (
+          <ItemSlide data={imgArr} />
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </div>
   )

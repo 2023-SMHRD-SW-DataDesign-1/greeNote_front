@@ -6,7 +6,7 @@ import Diary_Sidebar from '../components/Page_Diary/Diary_Sidebar'
 import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
 import GreenProfile from '../components/GreenProfile';
-import Date from  '../components/Page_main/Date';
+import Date from '../components/Page_main/Date';
 
 const DiaryDetail = ({ data }) => {
 
@@ -74,7 +74,6 @@ const DiaryDetail = ({ data }) => {
 
                             <div className='profile_container2'> {/* 사진(모바일만) */}
                                 <GreenProfile />
-                                <Date />
                             </div>
 
                             <br />

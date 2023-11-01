@@ -31,25 +31,25 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .list_container2 {
-    width: 90%;
+    width: 85%;
+    height: 455px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .list_container2 {
-    width: 80%;
-    height: 410px;
+    width: 88%;
+    height: 445px;
   }
 }
 @media (min-width: 1200px) {
   .list_container2 {
-    width: 90%;
-    height: 680px;
+    width: 96%;
+    height: 715px;
   }
 }
 
 /****************************** 동그라미 사진 공간 */
 .green,
-.green2,
 .select_all {
   background-color: #335A3B;
   color: white;
@@ -63,7 +63,6 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .green,
-  .green2,
   .select_all {
     width: 100px;
     height: 100px;
@@ -71,7 +70,6 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .green,
-  .green2,
   .select_all {
     width: 150px;
     height: 150px;
@@ -79,98 +77,125 @@
 }
 @media (min-width: 1200px) {
   .green,
-  .green2,
   .select_all {
     width: 275px;
     height: 275px;
   }
 }
 
-.green2 {
-  background-color: lightskyblue;
-}
-
 /* 저장된 사진 이미지 */
-.green img,
-.green2 img {
+.green img {
   /* 모양 만들기 */
   border-radius: 50%;
 }
 @media (min-width: 360px) and (max-width: 799px) {
-  .green img,
-  .green2 img {
+  .green img {
     width: 90px;
     height: 90px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
-  .green img,
-  .green2 img {
+  .green img {
     width: 140px;
     height: 140px;
   }
 }
 @media (min-width: 1200px) {
-  .green img,
-  .green2 img {
+  .green img {
     width: 260px;
     height: 260px;
   }
 }
 
-/****************************** 동그라미 아래 title 공간 */
-.allList_all,
-.allList_new,
-.allList_add {
-  margin-top: 1%;
+.linkPhoto2 {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 3%;
+  color: black;
+  text-decoration-line: none;
 }
 @media (min-width: 360px) and (max-width: 799px) {
-  .allList_all,
-  .allList_new,
-  .allList_add {
-    font-size: 15px;
+  .linkPhoto2 {
+    padding-top: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
-  .allList_all,
-  .allList_new,
-  .allList_add {
-    font-size: 15px;
+  .linkPhoto2 {
+    padding-top: 4%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+.linkText2 {
+  position: relative;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .linkText2 {
+    right: 9%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .linkText2 {
+    right: 10%;
   }
 }
 @media (min-width: 1200px) {
-  .allList_all,
-  .allList_new,
-  .allList_add {
-    font-size: 17px;
+  .linkText2 {
+    font-size: 20px;
+    right: 4%;
   }
-}
-
-.allList_all {
-  position: relative;
-}
-
-.allList_new {
-  position: relative;
-  left: 0.5%;
-}
-
-.allList_add {
-  position: relative;
-  left: 0.5%;
 }
 
 /**********************************알람 동그라미*/
 .alarm_circle_all {
-  width: 20px;
-  height: 20px;
   border-radius: 50%;
-  margin-left: 260px;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .alarm_circle_all {
+    width: 13px;
+    height: 13px;
+    margin-left: 100px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .alarm_circle_all {
+    width: 15px;
+    height: 15px;
+    margin-left: 150px;
+  }
+}
+@media (min-width: 1200px) {
+  .alarm_circle_all {
+    width: 20px;
+    height: 20px;
+    margin-left: 275px;
+  }
 }
 
 .alarm_circle_all_none {
-  width: 20px;
-  height: 20px;
   border-radius: 50%;
-  margin-left: 260px;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .alarm_circle_all_none {
+    width: 13px;
+    height: 13px;
+    margin-left: 100px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .alarm_circle_all_none {
+    width: 20px;
+    height: 20px;
+    margin-left: 150px;
+  }
+}
+@media (min-width: 1200px) {
+  .alarm_circle_all_none {
+    width: 20px;
+    height: 20px;
+    margin-left: 275px;
+  }
 }

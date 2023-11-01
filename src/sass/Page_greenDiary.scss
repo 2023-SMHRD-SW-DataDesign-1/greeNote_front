@@ -29,9 +29,11 @@
 /* 작성 및 삭제 아이콘 */
 .icons2 {
     display: flex;
+    position: relative;
 
     @include s.mobile {
         width: 80px;
+        left: 75%;
     }
 
     @include s.tablet {
@@ -43,6 +45,7 @@
     }
 }
 
+/*************************************** 소제목  */
 .mid_title {
     font-weight: bolder;
     align-items: center;
@@ -56,6 +59,28 @@
 
     @include s.mobile {
         font-size: 20px;
+    }
+}
+
+.mid_title3 {
+    font-weight: bolder;
+
+    @include s.mobile {
+        display: none;
+    }
+
+    @include s.tablet {
+        font-size: 20px;
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+    }
+
+    @include s.desktop {
+        font-size: 23px;
+        font-weight: bolder;
+
+
     }
 }
 
@@ -94,6 +119,7 @@
 
     @include s.desktop {
         width: 615px;
+
     }
 
     @include s.tablet {
@@ -102,6 +128,7 @@
 
     @include s.mobile {
         width: 319px;
+        height: 312px;
     }
 }
 

@@ -25,23 +25,24 @@ const GreenList_all = () => {
   }
 
   // 알람 on/off State
-  const [alarm, setAlarm] = useState(true);
+  const [alarms, setAlarms] = useState([]);
 
   // 알람 날짜 판단 함수
   const alarmDate = (list) => {
     const registration_date = new Date();
     registration_date.setHours(0, 0, 0, 0);
     const fields = ['watering', 'repotting', 'ventilation', 'nutrition_management'];
-    let onOff = false;
-    list.forEach((value) => {
+    const newAlarms = new Array(list.length).fill(false);
+
+    list.forEach((value, index) => {
       const date = new Date(value.start_date);
       fields.forEach((field) => {
         let currentDate = new Date(date);
-        if (value.gardening[field] != 0) {
+        if (value.gardening[field] !== 0) {
           while (true) {
             currentDate = addDays(new Date(currentDate), value.gardening[field]);
             if (currentDate.toISOString().slice(0, 10) === registration_date.toISOString().slice(0, 10)) {
-              onOff = true;
+              newAlarms[index] = true;
               break;
             } else if (currentDate > registration_date) {
               break;
@@ -50,8 +51,8 @@ const GreenList_all = () => {
         }
       });
     });
-    // alarm 값에 따라서 사용하면 됨, DB의 alarm 컬럼은 현재 미사용중, 반영할지 안할지는 나중에 결정할 것
-    setAlarm(onOff);
+
+    setAlarms(newAlarms);
   }
 
   // 날짜 더하는 함수
@@ -66,29 +67,31 @@ const GreenList_all = () => {
     readPlantList()
   }, [])
 
- // 알람 on off에따른 색 o/x
-  const alarmCircleStyle = {
-    backgroundColor: alarm ? '#2dda50' : 'none',
-  };
+  // // 알람 on off에따른 색 o/x
+  // const alarmCircleStyle = {
+  //   backgroundColor: alarm ? '#2dda50' : 'none',
+  // };
 
   return (
     <div className='greenlist'>
 
       <div className='list_container2'>
-        <Link to="/mygreen" className='linkPhoto'> {/* 전체선택 */}
-        <div className='alarm_circle_all_none'></div>
+        <Link to="/mygreen" className='linkPhoto2'> {/* 전체선택 */}
+          <div className='alarm_circle_all_none'></div>
           <div className='select_all'>
             ALL
           </div>
         </Link>
 
-        {plantList && plantList.map((value) => (
-          <Link to={`/greendiary/${value.plantId}`} className='linkPhoto'>
-            <div className='alarm_circle_all'style={alarmCircleStyle}/>
+        {plantList && plantList.map((value, index) => (
+          <Link to={`/greendiary/${value.plantId}`} className='linkPhoto2'>
+            <div className='alarm_circle_all' style={{ backgroundColor: alarms[index] ? '#2dda50' : 'transparent' }} />
             <div className='green' style={{ backgroundColor: value.color }}>
               <img src={`${value.image}`} alt="green" />
             </div>
-            {value.nickname}
+            <div className='linkText2'>
+              {value.nickname}
+            </div>
           </Link>
         ))}
       </div>

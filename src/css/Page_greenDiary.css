@@ -26,10 +26,12 @@
 /* 작성 및 삭제 아이콘 */
 .icons2 {
   display: flex;
+  position: relative;
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .icons2 {
     width: 80px;
+    left: 75%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -43,6 +45,7 @@
   }
 }
 
+/*************************************** 소제목  */
 .mid_title {
   font-weight: bolder;
   align-items: center;
@@ -58,6 +61,29 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .mid_title {
     font-size: 20px;
+  }
+}
+
+.mid_title3 {
+  font-weight: bolder;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .mid_title3 {
+    display: none;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .mid_title3 {
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .mid_title3 {
+    font-size: 23px;
+    font-weight: bolder;
   }
 }
 
@@ -112,6 +138,7 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_box2 {
     width: 319px;
+    height: 312px;
   }
 }
 

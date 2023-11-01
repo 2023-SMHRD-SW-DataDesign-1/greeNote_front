@@ -143,11 +143,11 @@ const AddGreen = () => {
                 placeholder='애칭'
                 name='nickname'
               />
-              <input
+              {/* <input
                 className='greenText'
                 placeholder='한 줄 메세지'
                 name='message'
-              />
+              /> */}
               <div className='title_text'>
                 색상 선택
               </div>
