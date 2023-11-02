@@ -21,21 +21,22 @@ const TestFlask = () => {
         setStyleImageFile(file);
     };
 
-    const test = async (e) => {
-        e.preventDefault();
+    // // 내가 만든 생성 AI
+    // const test = async (e) => {
+    //     e.preventDefault();
 
-        const formData = new FormData();
-        formData.append('content_image', contentImageFile);
-        formData.append('style_image', styleImageFile);
-        await axios.post(`http://127.0.0.1:5000/perform_nst`, formData)
-            .then((res) => {
-                console.log(res);
-                setImageData(res.data.imageData);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-    }
+    //     const formData = new FormData();
+    //     formData.append('content_image', contentImageFile);
+    //     formData.append('style_image', styleImageFile);
+    //     await axios.post(`http://127.0.0.1:5000/perform_nst`, formData)
+    //         .then((res) => {
+    //             console.log(res);
+    //             setImageData(res.data.imageData);
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         })
+    // }
 
     const [imageTest, setImageTest] = useState();
     const storage = getStorage(firebaseApp);
@@ -75,19 +76,41 @@ const TestFlask = () => {
         }
     }
 
+    // 찬호가 만든 생성 AI
+
+    const test3 = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData();
+        formData.append('content_image', contentImageFile);
+        formData.append('style_image', styleImageFile);
+
+        await axios.post(`http://127.0.0.1:5000/chano`, formData)
+            .then((res) => {
+                console.log(res);
+                setImageData(res.data.imageData);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
     return (
         <div>
-            <form onSubmit={test} enctype="multipart/form-data">
-                <input type="file" name="content_image" accept="image/*" onChange={handleContentImageChange} />
-                <input type="file" name="style_image" accept="image/*" onChange={handleStyleImageChange} />
-                <button type='submit'>클릭</button>
-            </form>
+            <h1> 질병 분류기 테스트 </h1>
             <form onSubmit={test2}>
                 <input type="file" name="image" accept='image/*' onChange={imageChange} />
                 <button type='submit'> 분류기 테스트 </button>
             </form>
+            <h1> 찬호 테스트 </h1>
+            <form onSubmit={test3} encType='multipart/form-data'>
+                <input type="file" name="content_image" accept="image/*" onChange={handleContentImageChange} />
+                <input type="file" name="style_image" accept="image/*" onChange={handleStyleImageChange} />
+                <button type='submit'>클릭</button>
+            </form>
 
             {imageData && <img src={`data:image/*;base64,${imageData}`} alt="NST Image" />}
+            <img src="" alt="NST Image" />
         </div>
     )
 }

@@ -90,6 +90,10 @@ function App() {
   // 로그인 회원 정보 관리 State
   const [memberInfo, setMemberInfo] = useState();
 
+  // 생성 Ai에 전송할 url 담을 State
+  const [contentImg, setContentImg] = useState();
+  const [styleImg, setStyleImg] = useState();
+
   const dataContextValue = {
     // 날짜 관리
     dailyDiary: dailyDiary,
@@ -106,6 +110,12 @@ function App() {
     // 회원 정보
     memberInfo: memberInfo,
     setMemberInfo: setMemberInfo,
+
+    // 생성 AI
+    contentImg: contentImg,
+    setContentImg: setContentImg,
+    styleImg: styleImg,
+    setStyleImg: setStyleImg,
   }
 
   return (
