@@ -87,7 +87,10 @@ const AiPlant = () => {
 
           <div className='plant_text_data'>
             <div className='plant_species'>{selectedPlantData.title}</div>
+            <div className='days_div'>
+              <img className='sprout' src='Image/sprout.png'/>
             <div className='plant_date'>{changeDate(selectedPlantData.start_date)}</div>
+            </div>
           </div>
         </div>
 

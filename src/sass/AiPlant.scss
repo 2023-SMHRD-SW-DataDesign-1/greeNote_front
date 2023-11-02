@@ -159,7 +159,7 @@
     @include s.mobile {
         background-color: rgb(255, 255, 255);
         width: 60%;
-        height: 50px;
+        height: 70px;
         margin: 10px;
         margin-top: 25px;
     }
@@ -188,12 +188,29 @@
 
 }
 
+.days_div{
+    display: flex;
+    flex-direction: row;
+    @include s.mobile{
+        margin-left: 50px;
+    }
+}
+
+.sprout{
+    width: 30px;
+    height: 30px;
+}
+
 .plant_species,
 .plant_date {
     font-family: 'NanumSquareNeo-Variable';
     font-size: 18px;
     font-weight: 900;
     text-align: center;
+}
+
+.plant_date{
+    margin: 5px
 }
 
 /* 모달을 열 때 배경이 회색이 되도록 스타일링 */
@@ -297,5 +314,6 @@
 .modal_close span{
     cursor: pointer;
 }
+
 
 
