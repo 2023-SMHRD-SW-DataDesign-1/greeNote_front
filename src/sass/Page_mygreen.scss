@@ -128,6 +128,14 @@
 /* 부트스트랩 아이콘 */
 .icon_add {
     width: 30px;
+    position: relative;
+
+    @include s.mobile {
+        top: 5px;
+    }
+    @include s.desktop {
+        top: -3px;
+    }
 }
 
 .icon_add a {
