@@ -15,6 +15,8 @@ const MyGreen = () => {
   // 식물 목록 저장 State
   const { plantList, setPlantList } = useContext(DataContext);
 
+  const nav = useNavigate();
+
   // 식물 목록 가져오는 함수
   const readPlantList = async () => {
     await axios.get(`${masterURL}/plant/readPlantList`)
@@ -79,58 +81,60 @@ const MyGreen = () => {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [selectedPlant, setSelectedPlant] = useState(null);
 
-  
+
   // 삭제 버튼 onClick
-  const handleDeleteIconClick = () => {
+  const handleDeleteIconClick = async () => {
     if (isDeletionMode) {
       if (selectedPlant) {
         console.log('삭제 할 이미지', selectedPlant);
-        // axios.post(`${masterURL}/plant/delete`, { plantId: selectedPlant.plantId })
-        //   .then((response) => {
-          //     if (response.data.success) {
-            //       alert(`${selectedPlant.nickname} 파일이 삭제되었습니다.`);
-        //     } else {
-          //       alert(`${selectedPlant.nickname} 파일 삭제 실패.`);
-          //     }
-          //   })
-          //   .catch((error) => {
-            //     console.error(`${selectedPlant.nickname} 삭제 에러:`, error);
-            //   });
-            setSelectedPlant(null);
-          }
-          setIsDeletionMode(false);
-        } else {
-          setIsDeletionMode(true);
-        }
-      };
-      
-      // 파일 선택
-      const [selectedImage, setSelectedImage] = useState(1);
-    
-      const handleImageClick = (e, value) => {
-        console.log('선택된 이미지', value);
-        if (isDeletionMode) {
-          if (selectedPlant === value) {
-            setSelectedPlant(null);
-          } else {
-            setSelectedPlant(value);
-          }
-        } else {
-          if (selectedImage === e.target.src) {
-            setSelectedImage(null);
-          } else {
-            setSelectedImage(e.target.src);
-          }
-        }
-      };
-    
-      const selectedStyle = {
-        backgroundColor: selectedImage ? '{value.color}' : 'none', // 선택된 이미지에 테두리 스타일 추가
-        borderRadius: selectedImage ? '50%' : 'none',
-        width: selectedImage ? '100px' : 'none',
-        height: selectedImage ? '100px' : 'none',
-        boxShadow: selectedImage ? '0px 1px 10px 4px grey' : 'none',
-      };
+        await axios.get(`${masterURL}/plant/deletePlant?plantId=${selectedPlant.plantId}`)
+          .then((response) => {
+            if (response.data === 'success') {
+              alert(`${selectedPlant.nickname} 파일이 삭제되었습니다.`);
+              nav('/main');
+            } else {
+              alert(`${selectedPlant.nickname} 파일 삭제 실패.`);
+
+            }
+          })
+          .catch((error) => {
+            console.error(`${selectedPlant.nickname} 삭제 에러:`, error);
+          });
+        setSelectedPlant(null);
+      }
+      setIsDeletionMode(false);
+    } else {
+      setIsDeletionMode(true);
+    }
+  };
+
+  // 파일 선택
+  const [selectedImage, setSelectedImage] = useState(1);
+
+  const handleImageClick = (e, value) => {
+    console.log('선택된 이미지', value);
+    if (isDeletionMode) {
+      if (selectedPlant === value) {
+        setSelectedPlant(null);
+      } else {
+        setSelectedPlant(value);
+      }
+    } else {
+      if (selectedImage === e.target.src) {
+        setSelectedImage(null);
+      } else {
+        setSelectedImage(e.target.src);
+      }
+    }
+  };
+
+  const selectedStyle = {
+    backgroundColor: selectedImage ? '{value.color}' : 'none', // 선택된 이미지에 테두리 스타일 추가
+    borderRadius: selectedImage ? '50%' : 'none',
+    width: selectedImage ? '100px' : 'none',
+    height: selectedImage ? '100px' : 'none',
+    boxShadow: selectedImage ? '0px 1px 10px 4px grey' : 'none',
+  };
 
 
 
@@ -161,7 +165,7 @@ const MyGreen = () => {
         </div>
 
         <div className='greenlist'> {/* 식물 리스트 부분 GreenList_all */}
-        <div className={`list_container2 ${isDeletionMode ? 'deletionModeBackground' : ''}`}>
+          <div className={`list_container2 ${isDeletionMode ? 'deletionModeBackground' : ''}`}>
             <Link to="/mygreen" className='linkPhoto2'> {/* 전체선택 */}
               <div className='alarm_circle_all_none'></div>
               <div className='select_all'>
@@ -173,9 +177,10 @@ const MyGreen = () => {
               <Link to={isDeletionMode ? '#' : `/greendiary?plant_id=${value.plantId}`} className='linkPhoto2' >
                 <div className='alarm_circle_all' style={{ backgroundColor: alarms[index] ? '#2dda50' : 'transparent' }} />
 
-                <div className='green' style={selectedImage === value.image ? selectedStyle : { backgroundColor: value.color }}>
+                <div className='green'
+                  style={selectedImage === value.image ? selectedStyle : { backgroundColor: value.color }}>
                   <img
-                    src={selectedPlant === value ? (isDeletionMode ? 'Icon/bin.png' : value.image) : value.image}
+                    src={selectedPlant === value ? (isDeletionMode ? 'Icon/bin2.png' : value.image) : value.image}
                     alt="green"
                     onClick={(e) => handleImageClick(e, value)}
                   />

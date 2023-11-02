@@ -132,6 +132,17 @@
 /* 부트스트랩 아이콘 */
 .icon_add {
   width: 30px;
+  position: relative;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .icon_add {
+    top: 5px;
+  }
+}
+@media (min-width: 1200px) {
+  .icon_add {
+    top: -3px;
+  }
 }
 
 .icon_add a {
