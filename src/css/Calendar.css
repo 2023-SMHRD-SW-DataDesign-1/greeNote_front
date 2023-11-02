@@ -68,7 +68,9 @@
   text-align: center;
   line-height: 38px;
   font-size: 1.9rem;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   border-radius: 50%;
 }
 

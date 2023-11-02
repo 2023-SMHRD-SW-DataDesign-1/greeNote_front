@@ -20,16 +20,16 @@ const AiHeader = () => {
     return (
         <div className='ai_header_container'>
             <div className='ai_header_box'>
-                
                     <div className='m_logo'>
                     <Link to='/main'>
                         <img src="Image/ic_leaf_home.png" alt="" />
                         </Link>
                         <div className='m_pageInfo'>
-                        {window.location.pathname === '/greenDiary/1' && '다이어리' }
+                        {window.location.pathname === '/greendiary' && '다이어리' }
                         {window.location.pathname === '/ai' && '생성 AI' }
                         {window.location.pathname === '/aiReturn' &&'AI 이미지'}
                         {window.location.pathname === '/slide' &&'슬라이드'}
+                        {window.location.pathname === '/mypage' &&'마이페이지'}
                         </div>
                     </div>
 
@@ -37,14 +37,17 @@ const AiHeader = () => {
                     <img src='Image/ic_meatball.png' className='ic_meat' /> {/*미트볼 아이콘 */}
                     {isMenuOpen && (
                         <div >
-                            <Link to='/greenDiary/1' className='menuLink'>
-                                <div className='meat_menu'>Diary</div>
+                            <Link to='/greendiary?plant_id=1' className='menuLink'>
+                                <div className='meat_menu'>다이어리</div>
                             </Link>
                             <Link to='/ai' className='menuLink'>
-                                <div className='meat_menu'>ai</div>
+                                <div className='meat_menu'>생성 AI</div>
                             </Link>
                             <Link to='/slide' className='menuLink'>
-                                <div className='meat_menu'>slide</div>
+                                <div className='meat_menu'>슬라이드</div>
+                            </Link>
+                            <Link to='/mypage' className='menuLink'>
+                                <div className='meat_menu'>마이페이지</div>
                             </Link>
                         </div>
                     )}
