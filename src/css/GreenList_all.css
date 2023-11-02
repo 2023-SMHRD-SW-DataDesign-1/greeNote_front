@@ -51,7 +51,6 @@
 /****************************** 동그라미 사진 공간 */
 .green,
 .select_all {
-  background-color: #335A3B;
   color: white;
   /* 모양 만들기 */
   border-radius: 50%;
@@ -81,6 +80,10 @@
     width: 275px;
     height: 275px;
   }
+}
+
+.select_all {
+  background-color: #335A3B;
 }
 
 /* 저장된 사진 이미지 */
