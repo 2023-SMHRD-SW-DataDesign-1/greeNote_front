@@ -63,6 +63,12 @@
     bottom: 0;
     position: relative;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
     color: rgb(255, 255, 255);
+    text-shadow:
+    -1px -1px 0 black, /* 왼쪽 위 방향으로 검은색 테두리 */
+    1px -1px 0 black, /* 오른쪽 위 방향으로 검은색 테두리 */
+    -1px 1px 0 black, /* 왼쪽 아래 방향으로 검은색 테두리 */
+    1px 1px 0 black; /* 오른쪽 아래 방향으로 검은색 테두리 */
+    
 }

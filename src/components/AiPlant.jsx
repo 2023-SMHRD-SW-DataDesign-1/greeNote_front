@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ItemPlantChoice from './ItemPlantChoice'
 import { DataContext } from '../contexts/DataContext'
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 
 const AiPlant = () => {
@@ -10,7 +10,10 @@ const AiPlant = () => {
   const { plantList, selectedPlantData, setSelectedPlantData } = useContext(DataContext);
 
   // 식물 목록별 조회하기 위한 id값 가져오기
-  const { plant_id } = useParams();
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+
+  const plant_id = queryParams.get('plant_id');
 
   // 선택된 plant 감지하는 함수
   const nowSelected = () => {
@@ -25,21 +28,21 @@ const AiPlant = () => {
 
   // 선택된 plant의 날짜를 xx일째로 바꿔주는 함수
   const changeDate = (targetDateStr) => {
-  const targetDate = new Date(targetDateStr);
-  
-  if (isNaN(targetDate)) {
-    return "날짜 형식이 올바르지 않습니다.";
-  }
+    const targetDate = new Date(targetDateStr);
 
-  const currentDate = new Date();
-  const timeDifference = targetDate - currentDate;
-  const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    if (isNaN(targetDate)) {
+      return "날짜 형식이 올바르지 않습니다.";
+    }
 
-  if (daysDifference === 0) {
-    return "오늘";
-  } else {
-    return `${Math.abs(daysDifference)}일째`;
-  }
+    const currentDate = new Date();
+    const timeDifference = targetDate - currentDate;
+    const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+    if (daysDifference === 0) {
+      return "오늘";
+    } else {
+      return `${Math.abs(daysDifference)}일째`;
+    }
   }
 
   useEffect(() => {
@@ -88,8 +91,8 @@ const AiPlant = () => {
           <div className='plant_text_data'>
             <div className='plant_species'>{selectedPlantData.title}</div>
             <div className='days_div'>
-              <img className='sprout' src='Image/sprout.png'/>
-            <div className='plant_date'>{changeDate(selectedPlantData.start_date)}</div>
+              <img className='sprout' src='Image/sprout.png' />
+              <div className='plant_date'>{changeDate(selectedPlantData.start_date)}</div>
             </div>
           </div>
         </div>

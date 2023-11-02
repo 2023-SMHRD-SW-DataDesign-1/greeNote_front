@@ -10,7 +10,6 @@ const AiPhotoReturn = () => {
 
         <button  className='retry_btn'><Link to="/ai" className='button_link'>다시 선택하기</Link></button>
         <br></br>
-        
         <button className='download_btn button_link' >저장하기</button>
 
     </div>
