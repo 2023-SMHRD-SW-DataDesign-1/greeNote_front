@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import firebaseApp from "../Firebase";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { DataContext } from '../contexts/DataContext';
@@ -12,6 +12,9 @@ const Mypage = () => {
 
     // 멤버 정보
     const { memberInfo } = useContext(DataContext);
+
+    // navigate 선언
+    const nav = useNavigate();
 
     // 이미지 핸들러
     const [previewURL, setPreviewURL] = useState(memberInfo.profileImg);
@@ -39,25 +42,26 @@ const Mypage = () => {
     // 회원정보 수정 요청 전송
     const updateMember = async (e) => {
         e.preventDefault();
-    
+
         const formData = new FormData(e.target);
         const obj = {};
-    
+
         formData.forEach((value, key) => {
-          obj[key] = value;
+            obj[key] = value;
         });
         obj['memberid'] = memberInfo.memberid;
         obj['membername'] = memberInfo.membername;
         obj['profileImg'] = imageUrl;
-    
+
         await axios.post(`${masterURL}/auth/update`, obj)
-          .then((res) => {
-            console.log(res);
-          })
-          .catch((err) => {
-            console.log(err);
-          })
-      }
+            .then((res) => {
+                console.log(res);
+                nav('/main');
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
 
     return (
         <div className='bodyController'>
