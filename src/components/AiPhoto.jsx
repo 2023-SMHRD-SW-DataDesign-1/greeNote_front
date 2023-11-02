@@ -148,7 +148,7 @@ const AiPhoto = () => {
                     <div className='radio_text'>스타일 선택</div>
                     <img className='img_question' src='./Image/question.png' onClick={toggleModal}></img>
                 </div>
-                <div className='radio_box'>
+                <div className='web_radio_box'>
                     <AiRadio
                         key="피카소"
                         label="피카소"

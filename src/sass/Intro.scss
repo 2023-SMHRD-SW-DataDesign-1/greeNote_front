@@ -1,0 +1,181 @@
+@use '../sass/variables' as s;
+
+.intro_logo2 {
+    margin: 15px;
+    width: 150px;
+    height: 42px;
+}
+
+.intro_slide_container {
+    // background-color: aquamarine;
+
+    @include s.mobile {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    @include s.tablet {
+        width: 600px;
+        height: 400px;
+    }
+
+    @include s.desktop {
+        width: 800px;
+        height: 550px;
+    }
+
+}
+
+.intro_container2 {
+    /* 크기 지정 */
+    height: 100%;
+    width: 100%;
+
+    /* 내용 가운데 정렬 */
+    align-items: center;
+    text-align: center;
+
+    @include s.mobile {
+        justify-content: space-around;
+        max-height: 500px;
+        margin-top: 0%;
+    }
+
+    @include s.tablet {
+        /* 내용 가운데 정렬 */
+        display: flex;
+        justify-content: center;
+        margin-top: 15%;
+    }
+
+    @include s.desktop {
+        /* 내용 가운데 정렬 */
+        display: flex;
+        justify-content: center;
+        min-width: 1200px;
+        margin-top: 7%;
+
+    }
+}
+
+.intro_slide img {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+    @include s.mobile {
+        width: 360px;
+        height: 320px;
+    }
+
+    @include s.tablet {
+        width: 500px;
+        height: 400px;
+    }
+
+    @include s.desktop {
+        max-width: 800px;
+    }
+}
+
+.intro_buttons {
+    /* 내용 가운데 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    @include s.mobile {
+        width: 100%;
+        height: 100%;
+    }
+
+    @include s.desktop {
+        width: 400px;
+    }
+}
+
+.intro_login_button {
+    margin-top: 70px;
+
+    @include s.desktop {
+        margin-top: 0px;
+    }
+}
+
+.intro_join_button {
+    margin-top: 40px;
+
+    @include s.tablet {
+        margin-top: 50px;
+    }
+
+    @include s.desktop {
+        margin-top: 100px;
+    }
+}
+
+.intro_login_button,
+.intro_join_button {
+    /* css */
+    border: 1px solid #335A3B;
+    border-radius: 10px;
+    background-color: #DDEFC7;
+    font-size: 17px;
+    text-decoration-line: none;
+    font-weight: 600;
+    height: 40px;
+    width: 200px;
+
+    @include s.tablet {
+        margin-left: 40px;
+    }
+
+    @include s.tablet {
+        margin-left: 40px;
+    }
+
+    @include s.desktop {
+        width: 250px;
+        height: 50px;
+        margin-left: 40px;
+    }
+
+}
+
+.intro_join_button:hover,
+.intro_login_button:hover {
+    background-color: #335A3B;
+    color: white;
+
+}
+
+
+/********************************** link 태그 css */
+.button_links {
+    /* css */
+    text-decoration-line: none;
+    color: #272727;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    padding: 8px;
+    @include s.desktop{
+        padding: 11px;
+    }
+}
+
+
+/* Link태그 hover */
+.intro_join_button a:hover,
+.intro_login_button a:hover {
+    background-color: #335A3B;
+    color: white;
+    border-radius: 0.7em;
+}

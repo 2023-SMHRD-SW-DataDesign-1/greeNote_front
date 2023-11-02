@@ -5,6 +5,7 @@ import { DataContext } from '../contexts/DataContext';
 import { Link } from 'react-router-dom'
 import GreenList_all from '../components/GreenList_all'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 const MyGreen = () => {
 
@@ -74,20 +75,106 @@ const MyGreen = () => {
     readPlantList()
   }, [])
 
-  // // 알람 on off에따른 색 o/x
-  // const alarmCircleStyle = {
-  //   backgroundColor: alarm ? '#2dda50' : 'none',
-  // };
-
-
-  // 파일 삭제
   const [isDeletionMode, setIsDeletionMode] = useState(false);
+  const [selectedFiles, setSelectedFiles] = useState([]);
+  const [selectedPlant, setSelectedPlant] = useState(null);
 
-  // "삭제 아이콘"을 클릭했을 때 호출될 함수
-  const handleDeleteIconClick = () => {
-    // 삭제 모드를 활성화하거나 비활성화합니다.
-    setIsDeletionMode(!isDeletionMode);
+  // 파일 선택
+  const [selectedImage, setSelectedImage] = useState(1);
+
+  const handleImageClick = (e, value) => {
+    console.log('선택된 이미지', value);
+    if (isDeletionMode) {
+      if (selectedPlant === value) {
+        setSelectedPlant(null);
+      } else {
+        setSelectedPlant(value);
+      }
+    } else {
+      if (selectedImage === e.target.src) {
+        setSelectedImage(null);
+      } else {
+        setSelectedImage(e.target.src);
+      }
+    }
   };
+
+  /*   const nav = useNavigate();
+  
+    const handleUpload = () => {
+      if (selectedImage) {
+        // 선택된 이미지를 업로드
+        console.log("url", selectedImage);
+        // 여기다가 생성 AI 구문 작성할 것
+        nav('/mygreen');
+      } else {
+        // 이미지를 선택하지 않았을 때 처리
+        console.log('사진을 선택해주세요.');
+      }
+    }; */
+
+  const selectedStyle = {
+    backgroundColor: selectedImage ? '{value.color}' : 'none', // 선택된 이미지에 테두리 스타일 추가
+    borderRadius: selectedImage ? '50%' : 'none',
+    width: selectedImage ? '100px' : 'none',
+    height: selectedImage ? '100px' : 'none',
+    boxShadow: selectedImage ? '0px 1px 10px 4px grey' : 'none',
+  };
+
+  const handleDeleteIconClick = () => {
+    if (isDeletionMode) {
+      if (selectedPlant) {
+        console.log('삭제 할 이미지', selectedPlant);
+        // axios.post(`${masterURL}/plant/delete`, { plantId: selectedPlant.plantId })
+        //   .then((response) => {
+        //     if (response.data.success) {
+        //       alert(`${selectedPlant.nickname} 파일이 삭제되었습니다.`);
+        //     } else {
+        //       alert(`${selectedPlant.nickname} 파일 삭제 실패.`);
+        //     }
+        //   })
+        //   .catch((error) => {
+        //     console.error(`${selectedPlant.nickname} 삭제 에러:`, error);
+        //   });
+        setSelectedPlant(null);
+      }
+      setIsDeletionMode(false);
+    } else {
+      setIsDeletionMode(true);
+    }
+  };
+
+
+  // // 파일 삭제
+  // const [isDeletionMode, setIsDeletionMode] = useState(false);
+  // const [selectedFiles, setSelectedFiles] = useState([]);
+
+  // // "삭제 아이콘"을 클릭했을 때 호출될 함수
+  // const handleDeleteIconClick = () => {
+
+  //   // 삭제 모드를 활성화하거나 비활성화합니다.
+  //   setIsDeletionMode(!isDeletionMode);
+
+  //   if (selectedFiles.length === 0) {
+  //     alert('파일을 선택하세요.');
+  //     return;
+  //   }
+
+  //   // 여러 파일을 순회하며 삭제 요청을 보냅니다.
+  //   selectedFiles.forEach((file) => {
+  //     axios.post('/delete', null, { params: { file: file.name } })
+  //       .then((response) => {
+  //         if (response.data.success) {
+  //           alert(`${file.name} 파일이 삭제되었습니다.`);
+  //         } else {
+  //           alert(`${file.name} 파일 삭제 실패.`);
+  //         }
+  //       })
+  //       .catch((error) => {
+  //         console.error(`${file.name} 삭제 에러:`, error);
+  //       });
+  //   });
+  // };
 
 
   return (
@@ -101,9 +188,9 @@ const MyGreen = () => {
             내 반려식물
           </div>
           <div className='icons'>
-            <div className='mid_title_bin' onClick={handleDeleteIconClick}> {/* 삭제 아이콘 */}
+            <button className='mid_title_bin' onClick={handleDeleteIconClick}>
               <img src="/Icon/bin.png" alt="bin" />
-            </div>
+            </button>
 
             <div className="icon_add"> {/* 추가 아이콘 */}
               <Link to="/addgreen" className='button_links'>
@@ -126,11 +213,16 @@ const MyGreen = () => {
             </Link>
 
             {plantList && plantList.map((value, index) => (
-              <Link to={isDeletionMode ? '#' : `/greendiary/${value.plantId}`} className='linkPhoto2' >
+              <Link to={isDeletionMode ? '#' : `/greendiary?plant_id=${value.plantId}`} className='linkPhoto2' >
                 <div className='alarm_circle_all' style={{ backgroundColor: alarms[index] ? '#2dda50' : 'transparent' }} />
-                <div className='green' style={{ backgroundColor: value.color }}>
-                  <img src={`${value.image}`} alt="green" />
+
+                <div className='green'
+                  style={selectedImage === value.image ? selectedStyle : { backgroundColor: value.color }} >
+                  <img src={`${value.image}`} alt="green"
+                    className={`${selectedImage === value.image ? 'selectedImage' : ''}`}
+                    onClick={(e) => handleImageClick(e, value)} />
                 </div>
+
                 <div className='linkText2'>
                   {value.nickname}
                 </div>

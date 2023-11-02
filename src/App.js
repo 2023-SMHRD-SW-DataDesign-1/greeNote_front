@@ -20,6 +20,7 @@ import './css/Page_main.css';
 import './css/Page_join.css';
 import './css/Page_login.css';
 import './css/Page_mypage.css';
+import './css/Intro.css';
 
 
 /* css파일 */

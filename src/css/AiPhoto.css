@@ -21,6 +21,7 @@
   .photo_second_container {
     width: 350px;
     height: 400px;
+    margin-top: 10px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -38,6 +39,22 @@
     margin: auto;
     margin-top: 40px;
   }
+}
+
+.photo_second_container::-webkit-scrollbar {
+  width: 10px;
+  /* 스크롤바 너비 설정 */
+}
+
+.photo_second_container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  /* 스크롤바 썸의 배경 색상 설정 */
+}
+
+.photo_second_container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* 스크롤바 썸에 마우스 호버했을 때의 배경 색상 설정 */
 }
 
 .photo_container {
@@ -145,11 +162,12 @@
 }
 
 .radio_container {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .radio_container {
     width: 360px;
+    margin-top: 30px;
   }
 }
 
@@ -166,8 +184,42 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .radio_box {
     width: 290px;
+    height: 40px;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .radio_box {
+    height: 42px;
+  }
+}
+@media (min-width: 1200px) {
+  .radio_box {
+    height: 55px;
+  }
+}
+
+.web_radio_box {
+  display: flex;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .web_radio_box {
+    width: 290px;
+    height: 40px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .web_radio_box {
+    height: 45px;
+    margin-left: 45px;
+  }
+}
+@media (min-width: 1200px) {
+  .web_radio_box {
+    height: 60px;
+    margin-left: 90px;
+  }
+}
+
 .img_question {
   width: 25px;
   height: 25px;
@@ -233,7 +285,7 @@ input[type=radio] {
   display: flex;
   justify-content: center;
   height: 50px;
-  margin: 30px;
+  margin-top: 30px;
 }
 
 .uploadBtn,
@@ -270,19 +322,14 @@ input[type=radio] {
   display: flex;
   justify-content: center;
 }
-@media (min-width: 360px) and (max-width: 799px) {
-  .ai_style_btn_div {
-    margin-top: 10px;
-  }
-}
-@media (min-width: 800px) and (max-width: 1199px) {
-  .ai_style_btn_div {
-    margin-top: 10px;
-  }
-}
 
 .ai_style_btn {
   background-color: #DDEFC7;
   margin-top: 20px;
   height: 40px;
+}
+@media (min-width: 1200px) {
+  .ai_style_btn {
+    margin-top: 10px;
+  }
 }

@@ -291,9 +291,25 @@
   overflow: auto;
 }
 
+.modal_plant_list::-webkit-scrollbar {
+  width: 10px;
+  /* 스크롤바 너비 설정 */
+}
+
+.modal_plant_list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  /* 스크롤바 썸의 배경 색상 설정 */
+}
+
+.modal_plant_list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* 스크롤바 썸에 마우스 호버했을 때의 배경 색상 설정 */
+}
+
 .modal_close {
   display: flex;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 900;
   margin-right: 4%;
   height: 40px;
