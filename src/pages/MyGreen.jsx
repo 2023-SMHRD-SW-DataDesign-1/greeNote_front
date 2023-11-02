@@ -161,7 +161,7 @@ const MyGreen = () => {
         </div>
 
         <div className='greenlist'> {/* 식물 리스트 부분 GreenList_all */}
-          <div className='list_container2'>
+        <div className={`list_container2 ${isDeletionMode ? 'deletionModeBackground' : ''}`}>
             <Link to="/mygreen" className='linkPhoto2'> {/* 전체선택 */}
               <div className='alarm_circle_all_none'></div>
               <div className='select_all'>
@@ -173,17 +173,12 @@ const MyGreen = () => {
               <Link to={isDeletionMode ? '#' : `/greendiary?plant_id=${value.plantId}`} className='linkPhoto2' >
                 <div className='alarm_circle_all' style={{ backgroundColor: alarms[index] ? '#2dda50' : 'transparent' }} />
 
-{/*                 <div className='green'
-                  style={selectedImage === value.image ? selectedStyle : { backgroundColor: value.color }} >
-                  <img src={`${value.image}`} alt="green"
-                    className={`${selectedImage === value.image ? 'selectedImage' : ''}`}
-                    onClick={(e) => handleImageClick(e, value)} />
-                </div> */}
-
-                <div className='green'
-                  style={{ backgroundColor: value.color }} >
-                  <img src={`${value.image}`} alt="green"
-                    onClick={(e) => handleImageClick(e, value)} />
+                <div className='green' style={selectedImage === value.image ? selectedStyle : { backgroundColor: value.color }}>
+                  <img
+                    src={selectedPlant === value ? (isDeletionMode ? 'Icon/bin.png' : value.image) : value.image}
+                    alt="green"
+                    onClick={(e) => handleImageClick(e, value)}
+                  />
                 </div>
 
                 <div className='linkText2'>
@@ -191,7 +186,6 @@ const MyGreen = () => {
                 </div>
               </Link>
             ))}
-
           </div>
         </div>
 
