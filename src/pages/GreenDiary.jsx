@@ -13,8 +13,6 @@ const GreenDiary = () => {
   // URL 통합 관리
   const masterURL = process.env.REACT_APP_MASTER_URL;
 
-  // 식물 목록별 조회하기 위한 id값 가져오기
-
   const { selectedPlantData } = useContext(DataContext);
 
   // 다이어리 목록을 담을 State

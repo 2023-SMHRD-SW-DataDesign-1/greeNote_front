@@ -67,11 +67,6 @@ const GreenList_all = () => {
     readPlantList()
   }, [])
 
-  // // 알람 on off에따른 색 o/x
-  // const alarmCircleStyle = {
-  //   backgroundColor: alarm ? '#2dda50' : 'none',
-  // };
-
   return (
     <div className='greenlist'>
 
@@ -84,7 +79,7 @@ const GreenList_all = () => {
         </Link>
 
         {plantList && plantList.map((value, index) => (
-          <Link to={`/greendiary/${value.plantId}`} className='linkPhoto2' >
+          <Link to={`/greendiary?plant_id=${value.plantId}`} className='linkPhoto2' >
             <div className='alarm_circle_all' style={{ backgroundColor: alarms[index] ? '#2dda50' : 'transparent' }} />
             <div className='green' style={{ backgroundColor: value.color }}>
               <img src={`${value.image}`} alt="green" />
@@ -94,6 +89,7 @@ const GreenList_all = () => {
             </div>
           </Link>
         ))}
+
       </div>
 
     </div>
