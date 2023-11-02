@@ -87,7 +87,7 @@ const GreenList = () => {
         </Link>
 
         {plantList && plantList.map((value, index) => (
-          <Link to={`/greendiary/${value.plantId}`} className='linkPhoto'> {/* 대표식물 */}
+          <Link to={`/greendiary`} className='linkPhoto'> {/* 대표식물 */}
             <div className="alarm_circle" style={{ backgroundColor: alarms[index] ? '#2dda50' : 'transparent' }} />
             <div className='photo' style={{ backgroundColor: value.color }}>
               <img src={`${value.image}`} alt="green" />
