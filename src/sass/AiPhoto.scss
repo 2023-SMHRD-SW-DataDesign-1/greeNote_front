@@ -21,6 +21,7 @@
     @include s.mobile {
         width: 350px;
         height: 400px;
+        margin-top: 10px;
     }
 
     @include s.tablet {
@@ -37,6 +38,22 @@
         margin-top: 40px;
 
     }
+}
+
+.photo_second_container::-webkit-scrollbar {
+    width: 10px;
+    /* 스크롤바 너비 설정 */
+}
+
+.photo_second_container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    /* 스크롤바 썸의 배경 색상 설정 */
+}
+
+.photo_second_container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* 스크롤바 썸에 마우스 호버했을 때의 배경 색상 설정 */
 }
 
 // 사진 회색컨테이너 (마진)
@@ -139,10 +156,11 @@
 
 // 라디오 버튼 css
 .radio_container {
-    margin-top: 50px;
+    margin-top: 30px;
 
     @include s.mobile {
         width: 360px;
+        margin-top: 30px;
     }
 
 }
@@ -159,14 +177,36 @@
 
     @include s.mobile {
         width: 290px;
+        height: 40px;
+
     }
 
     @include s.tablet {
-        // margin-left: 50px;  
+        height: 42px;
     }
 
     @include s.desktop {
-        //  margin-left: 100px;   
+        height: 55px;
+    }
+
+}
+
+.web_radio_box {
+    display: flex;
+
+    @include s.mobile {
+        width: 290px;
+        height: 40px;
+    }
+
+    @include s.tablet {
+        height: 45px;
+        margin-left: 45px;
+    }
+
+    @include s.desktop {
+        height: 60px;
+        margin-left: 90px;
     }
 
 }
@@ -236,7 +276,7 @@ input[type="radio"] {
     display: flex;
     justify-content: center;
     height: 50px;
-    margin: 30px;
+    margin-top: 30px;
 }
 
 .uploadBtn,
@@ -271,18 +311,14 @@ input[type="radio"] {
     display: flex;
     justify-content: center;
 
-    @include s.mobile {
-        margin-top: 10px;
-    }
-
-    @include s.tablet {
-        margin-top: 10px;
-    }
-
 }
 
 .ai_style_btn {
     background-color: #DDEFC7;
     margin-top: 20px;
     height: 40px;
+
+    @include s.desktop {
+        margin-top: 10px;
+    }
 }

@@ -188,15 +188,16 @@
 
 }
 
-.days_div{
+.days_div {
     display: flex;
     flex-direction: row;
-    @include s.mobile{
+
+    @include s.mobile {
         margin-left: 50px;
     }
 }
 
-.sprout{
+.sprout {
     width: 30px;
     height: 30px;
 }
@@ -209,7 +210,7 @@
     text-align: center;
 }
 
-.plant_date{
+.plant_date {
     margin: 5px
 }
 
@@ -245,7 +246,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
 }
 
 
@@ -259,7 +260,7 @@
 //     cursor: pointer;
 // }
 
-.modal_header{
+.modal_header {
     display: flex;
     justify-content: space-between;
     height: 60px;
@@ -286,7 +287,8 @@
     margin-left: 15px;
     margin-top: 10px;
 }
-.modal_plant_container{
+
+.modal_plant_container {
     display: flex;
     justify-content: center;
 }
@@ -295,7 +297,7 @@
     display: flex;
     flex-wrap: wrap;
     min-width: 260px;
-    width:90%;
+    width: 90%;
     max-height: 370px;
     // background-color: rgb(63, 107, 92);
     align-items: center;
@@ -303,17 +305,30 @@
     overflow: auto;
 }
 
-.modal_close{
+.modal_plant_list::-webkit-scrollbar {
+    width: 10px;
+    /* 스크롤바 너비 설정 */
+}
+
+.modal_plant_list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    /* 스크롤바 썸의 배경 색상 설정 */
+}
+
+.modal_plant_list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* 스크롤바 썸에 마우스 호버했을 때의 배경 색상 설정 */
+}
+
+.modal_close {
     display: flex;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 900;
     margin-right: 4%;
     height: 40px;
 }
 
-.modal_close span{
+.modal_close span {
     cursor: pointer;
 }
-
-
-
