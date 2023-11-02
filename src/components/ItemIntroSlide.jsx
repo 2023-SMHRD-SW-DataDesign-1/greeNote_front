@@ -33,8 +33,7 @@ class ItemIntroSlide extends React.Component {
   
       
       return (
-        <div>
-            
+        <div className='intro_top_container'> 
             <Slider {...settings}>
               {introImage.map((img) => (
                 <div className='intro_slide_container' key={img.idx}>
@@ -43,8 +42,7 @@ class ItemIntroSlide extends React.Component {
               ))}
   
   
-            </Slider>
-          
+            </Slider>         
         </div>
        
       );
