@@ -166,12 +166,12 @@ const MyGreen = () => {
 
         <div className='greenlist'> {/* 식물 리스트 부분 GreenList_all */}
           <div className={`list_container2 ${isDeletionMode ? 'deletionModeBackground' : ''}`}>
-            <Link to="/mygreen" className='linkPhoto2'> {/* 전체선택 */}
+            {/*             <Link to="/mygreen" className='linkPhoto2'> {/* 전체선택
               <div className='alarm_circle_all_none'></div>
               <div className='select_all'>
                 ALL
               </div>
-            </Link>
+            </Link> */}
 
             {plantList && plantList.map((value, index) => (
               <Link to={isDeletionMode ? '#' : `/greendiary?plant_id=${value.plantId}`} className='linkPhoto2' >

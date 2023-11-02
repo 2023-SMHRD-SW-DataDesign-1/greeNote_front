@@ -33,21 +33,23 @@
   text-decoration-line: none;
   color: #000000;
   padding-left: 5%;
-  padding-right: 5%;
 
   @include s.mobile {
     width: 95%;
-    height: 455px;
+    height: auto;
+    max-height: 470px;
   }
 
   @include s.tablet {
     width: 95%;
-    height: 445px;
+    height: auto;
+    max-height: 450px;
   }
 
   @include s.desktop {
     width: 94%;
-    height: 715px;
+    height: auto;
+    max-height: 765px;
   }
 
 }
@@ -113,19 +115,16 @@
 .linkPhoto2 {
   padding-left: 2%;
   padding-right: 2%;
-  padding-top: 3%;
+  padding-top: 1%;
+  padding-bottom: 3%;
   color: black;
   text-decoration-line: none;
 
   @include s.mobile {
-    padding-top: 5%;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 7%;
   }
   @include s.tablet {
-    padding-top: 4%;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 4%;
   }
 }
 
@@ -137,7 +136,7 @@
   }
 
   @include s.tablet {
-    right: 10%;
+    right: 7%;
   }
 
   @include s.desktop {

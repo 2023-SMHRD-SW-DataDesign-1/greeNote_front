@@ -171,18 +171,18 @@
     
     @include s.mobile {
         font-size: 12px;
-        top: -35%;
+        top: 53%;
         margin-right: 10px;
     }
     @include s.tablet {
         /* 위치 */
         margin-right: 20px;
-        top: -33%;
+        top: 54%;
     }
     @include s.desktop {
         /* 위치 */
-        margin-right: 40px;
-        top: -30%;
+        margin-right: 29px;
+        top: 60%;
         
     }
 }

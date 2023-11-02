@@ -182,7 +182,7 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_info {
     font-size: 12px;
-    top: -35%;
+    top: 53%;
     margin-right: 10px;
   }
 }
@@ -190,14 +190,14 @@
   .diary_info {
     /* 위치 */
     margin-right: 20px;
-    top: -33%;
+    top: 54%;
   }
 }
 @media (min-width: 1200px) {
   .diary_info {
     /* 위치 */
-    margin-right: 40px;
-    top: -30%;
+    margin-right: 29px;
+    top: 60%;
   }
 }
 
