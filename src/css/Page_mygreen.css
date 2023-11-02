@@ -15,7 +15,7 @@
 .myGreen_container {
   /* 크기 지정 */
   height: 100%;
-  width: 100%;
+  width: 90%;
 }
 @media (min-width: 1200px) {
   .myGreen_container {

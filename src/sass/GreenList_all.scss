@@ -36,17 +36,17 @@
   padding-right: 5%;
 
   @include s.mobile {
-    width: 85%;
+    width: 95%;
     height: 455px;
   }
 
   @include s.tablet {
-    width: 88%;
+    width: 95%;
     height: 445px;
   }
 
   @include s.desktop {
-    width: 96%;
+    width: 94%;
     height: 715px;
   }
 

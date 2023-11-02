@@ -31,19 +31,19 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .list_container2 {
-    width: 85%;
+    width: 95%;
     height: 455px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .list_container2 {
-    width: 88%;
+    width: 95%;
     height: 445px;
   }
 }
 @media (min-width: 1200px) {
   .list_container2 {
-    width: 96%;
+    width: 94%;
     height: 715px;
   }
 }
