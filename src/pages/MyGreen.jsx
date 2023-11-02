@@ -1,6 +1,6 @@
 /* 저장된 내 식물들이 보이는 리스트페이지 */
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import AiHeader from '../components/AiHeader'
 import { Link } from 'react-router-dom'
 import GreenList_all from '../components/GreenList_all'
@@ -26,6 +26,35 @@ const MyGreen = () => {
     readPlantList();
   }, [])
 
+  // 파일 삭제
+  const [selectedFiles, setSelectedFiles] = useState([]);
+
+  const FileChange = (event) => {
+    setSelectedFiles(Array.from(event.target.files));
+  };
+
+  const FileDelete = () => {
+    if (selectedFiles.length === 0) {
+      alert('파일을 선택하세요.');
+      return;
+    }
+
+    // 여러 파일을 순회하며 삭제 요청을 보냅니다.
+    selectedFiles.forEach((file) => {
+      axios.post('/delete', null, { params: { file: file.name } })
+        .then((response) => {
+          if (response.data.success) {
+            alert(`${file.name} 파일이 삭제되었습니다.`);
+          } else {
+            alert(`${file.name} 파일 삭제 실패.`);
+          }
+        })
+        .catch((error) => {
+          console.error(`${file.name} 삭제 에러:`, error);
+        });
+    });
+  };
+
   return (
     <div className='web_top_container'>
       <div className='myGreen_container'>
@@ -37,9 +66,10 @@ const MyGreen = () => {
             내 반려식물
           </div>
           <div className='icons'>
-            <div className='mid_title_bin'>
-              <img src="/Icon/bin.png" alt="bin" />
+            <div className='mid_title_bin'> {/* 삭제 아이콘 */}
+              <img src="/Icon/bin.png" alt="bin" onClick={FileDelete} />
             </div>
+
             <div className="icon_add"> {/* 추가 아이콘 */}
               <Link to="/addgreen" className='button_links'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
