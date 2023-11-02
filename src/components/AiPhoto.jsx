@@ -6,6 +6,7 @@ import Ai1 from './AIStyleInfo/Ai1';
 import Ai2 from './AIStyleInfo/Ai2';
 import Ai3 from './AIStyleInfo/Ai3';
 import Ai4 from './AIStyleInfo/Ai4';
+import { useNavigate } from 'react-router-dom';
 
 const AiPhoto = () => {
 
@@ -17,6 +18,8 @@ const AiPhoto = () => {
 
     // 사진 정보 저장할 State
     const [diaryImages, setDiaryImages] = useState([]);
+
+    const nav = useNavigate();
 
 
     // 선택된 식물의 다이어리 사진들 가져오기
@@ -63,6 +66,7 @@ const AiPhoto = () => {
             // 선택된 이미지를 업로드
             console.log("url", selectedImage);
             // 여기다가 생성 AI 구문 작성할 것
+            nav('/aiReturn');
         } else {
             // 이미지를 선택하지 않았을 때 처리
             console.log('사진을 선택해주세요.');

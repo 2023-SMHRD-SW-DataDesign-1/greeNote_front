@@ -93,7 +93,7 @@ const GreenList = () => {
               <img src={`${value.image}`} alt="green" />
             </div>
             <div className='linkText'>
-              {value.title}
+              {value.nickname}
             </div>
           </Link>
         ))}
