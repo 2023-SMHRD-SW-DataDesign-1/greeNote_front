@@ -1,7 +1,7 @@
 /* 저장된 내 식물들이 보이는 리스트페이지 */
 
-import React, { useEffect, useState } from 'react'
-import AiHeader from '../components/AiHeader'
+import React, { useContext, useEffect, useState } from 'react'
+import { DataContext } from '../contexts/DataContext';
 import { Link } from 'react-router-dom'
 import GreenList_all from '../components/GreenList_all'
 import axios from 'axios'
@@ -10,6 +10,9 @@ const MyGreen = () => {
 
   // URL 통합 관리
   const masterURL = process.env.REACT_APP_MASTER_URL;
+
+  // 식물 목록 저장 State
+  const { plantList, setPlantList } = useContext(DataContext);
 
   // 식물 목록 가져오는 함수
   const readPlantList = async () => {
@@ -26,34 +29,66 @@ const MyGreen = () => {
     readPlantList();
   }, [])
 
-/*   // 파일 삭제
-  const [selectedFiles, setSelectedFiles] = useState([]);
 
-  const FileChange = (event) => {
-    setSelectedFiles(Array.from(event.target.files));
+
+  // 알람 on/off State
+  const [alarms, setAlarms] = useState([]);
+
+  // 알람 날짜 판단 함수
+  const alarmDate = (list) => {
+    const registration_date = new Date();
+    registration_date.setHours(0, 0, 0, 0);
+    const fields = ['watering', 'repotting', 'ventilation', 'nutrition_management'];
+    const newAlarms = new Array(list.length).fill(false);
+
+    list.forEach((value, index) => {
+      const date = new Date(value.start_date);
+      fields.forEach((field) => {
+        let currentDate = new Date(date);
+        if (value.gardening[field] !== 0) {
+          while (true) {
+            currentDate = addDays(new Date(currentDate), value.gardening[field]);
+            if (currentDate.toISOString().slice(0, 10) === registration_date.toISOString().slice(0, 10)) {
+              newAlarms[index] = true;
+              break;
+            } else if (currentDate > registration_date) {
+              break;
+            }
+          }
+        }
+      });
+    });
+
+    setAlarms(newAlarms);
+  }
+
+  // 날짜 더하는 함수
+  const addDays = (date, days) => {
+    const result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
+  }
+
+  // 마운트 시 실행
+  useEffect(() => {
+    readPlantList()
+  }, [])
+
+  // // 알람 on off에따른 색 o/x
+  // const alarmCircleStyle = {
+  //   backgroundColor: alarm ? '#2dda50' : 'none',
+  // };
+
+
+  // 파일 삭제
+  const [isDeletionMode, setIsDeletionMode] = useState(false);
+
+  // "삭제 아이콘"을 클릭했을 때 호출될 함수
+  const handleDeleteIconClick = () => {
+    // 삭제 모드를 활성화하거나 비활성화합니다.
+    setIsDeletionMode(!isDeletionMode);
   };
 
-  const FileDelete = () => {
-    if (selectedFiles.length === 0) {
-      alert('파일을 선택하세요.');
-      return;
-    }
-
-    // 여러 파일을 순회하며 삭제 요청을 보냅니다.
-    selectedFiles.forEach((file) => {
-      axios.post('/delete', null, { params: { file: file.name } })
-        .then((response) => {
-          if (response.data.success) {
-            alert(`${file.name} 파일이 삭제되었습니다.`);
-          } else {
-            alert(`${file.name} 파일 삭제 실패.`);
-          }
-        })
-        .catch((error) => {
-          console.error(`${file.name} 삭제 에러:`, error);
-        });
-    });
-  }; */
 
   return (
     <div className='web_top_container'>
@@ -66,8 +101,8 @@ const MyGreen = () => {
             내 반려식물
           </div>
           <div className='icons'>
-            <div className='mid_title_bin'> {/* 삭제 아이콘 */}
-              <img src="/Icon/bin.png" alt="bin"  />
+            <div className='mid_title_bin' onClick={handleDeleteIconClick}> {/* 삭제 아이콘 */}
+              <img src="/Icon/bin.png" alt="bin" />
             </div>
 
             <div className="icon_add"> {/* 추가 아이콘 */}
@@ -81,11 +116,32 @@ const MyGreen = () => {
           </div>
         </div>
 
-        <GreenList_all />
+        <div className='greenlist'> {/* 식물 리스트 부분 GreenList_all */}
+          <div className='list_container2'>
+            <Link to="/mygreen" className='linkPhoto2'> {/* 전체선택 */}
+              <div className='alarm_circle_all_none'></div>
+              <div className='select_all'>
+                ALL
+              </div>
+            </Link>
+
+            {plantList && plantList.map((value, index) => (
+              <Link to={isDeletionMode ? '#' : `/greendiary/${value.plantId}`} className='linkPhoto2' >
+                <div className='alarm_circle_all' style={{ backgroundColor: alarms[index] ? '#2dda50' : 'transparent' }} />
+                <div className='green' style={{ backgroundColor: value.color }}>
+                  <img src={`${value.image}`} alt="green" />
+                </div>
+                <div className='linkText2'>
+                  {value.nickname}
+                </div>
+              </Link>
+            ))}
+
+          </div>
+        </div>
 
 
       </div>
-
     </div>
   )
 }
