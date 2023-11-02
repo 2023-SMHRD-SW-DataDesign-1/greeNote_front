@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (min-width: 360px) and (max-width: 799px) {
   .top_container {
     width: 330px;
@@ -57,6 +58,7 @@
   bottom: 0;
   position: relative;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 600;
   color: rgb(255, 255, 255);
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* 오른쪽 아래 방향으로 검은색 테두리 */
 }
