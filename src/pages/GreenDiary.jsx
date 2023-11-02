@@ -14,7 +14,6 @@ const GreenDiary = () => {
   const masterURL = process.env.REACT_APP_MASTER_URL;
 
   // 식물 목록별 조회하기 위한 id값 가져오기
-  const { plant_id } = useParams();
 
   const { selectedPlantData } = useContext(DataContext);
 
@@ -23,7 +22,6 @@ const GreenDiary = () => {
 
   // 식물 목록별 다이어리 조회
   const readDiary = () => {
-    console.log(plant_id);
     axios.get(`${masterURL}/diary/readDiary/${selectedPlantData.plantId}`)
       .then((res) => {
         console.log('식물 목록별 다이어리', res);

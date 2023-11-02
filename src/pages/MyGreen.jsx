@@ -26,7 +26,7 @@ const MyGreen = () => {
     readPlantList();
   }, [])
 
-  // 파일 삭제
+/*   // 파일 삭제
   const [selectedFiles, setSelectedFiles] = useState([]);
 
   const FileChange = (event) => {
@@ -53,7 +53,7 @@ const MyGreen = () => {
           console.error(`${file.name} 삭제 에러:`, error);
         });
     });
-  };
+  }; */
 
   return (
     <div className='web_top_container'>
@@ -67,7 +67,7 @@ const MyGreen = () => {
           </div>
           <div className='icons'>
             <div className='mid_title_bin'> {/* 삭제 아이콘 */}
-              <img src="/Icon/bin.png" alt="bin" onClick={FileDelete} />
+              <img src="/Icon/bin.png" alt="bin"  />
             </div>
 
             <div className="icon_add"> {/* 추가 아이콘 */}

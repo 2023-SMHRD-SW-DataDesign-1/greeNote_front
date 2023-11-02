@@ -84,7 +84,7 @@ const GreenList_all = () => {
         </Link>
 
         {plantList && plantList.map((value, index) => (
-          <Link to={`/greendiary/${value.plantId}`} className='linkPhoto2' onChange={FileChange} accept="image/*" multiple >
+          <Link to={`/greendiary/${value.plantId}`} className='linkPhoto2' >
             <div className='alarm_circle_all' style={{ backgroundColor: alarms[index] ? '#2dda50' : 'transparent' }} />
             <div className='green' style={{ backgroundColor: value.color }}>
               <img src={`${value.image}`} alt="green" />
