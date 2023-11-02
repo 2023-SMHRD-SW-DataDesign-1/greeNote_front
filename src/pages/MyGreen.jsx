@@ -5,6 +5,7 @@ import { DataContext } from '../contexts/DataContext';
 import { Link } from 'react-router-dom'
 import GreenList_all from '../components/GreenList_all'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 const MyGreen = () => {
 
@@ -75,6 +76,38 @@ const MyGreen = () => {
   }, [])
 
 
+
+  // 파일 선택
+  const [selectedImage, setSelectedImage] = useState(0);
+
+  const handleImageClick = (e) => {
+    if (selectedImage === e.target.src) {
+      setSelectedImage(null);
+    } else {
+      setSelectedImage(e.target.src);
+    }
+  };
+
+  const nav = useNavigate();
+
+  const handleUpload = () => {
+    if (selectedImage) {
+      // 선택된 이미지를 업로드
+      console.log("url", selectedImage);
+      // 여기다가 생성 AI 구문 작성할 것
+      nav('/mygreen');
+    } else {
+      // 이미지를 선택하지 않았을 때 처리
+      console.log('사진을 선택해주세요.');
+    }
+  };
+
+  const selectedStyle = {
+    border: selectedImage ? '6px solid #5192B3' : 'none' // 선택된 이미지에 테두리 스타일 추가
+  };
+
+
+
   // 파일 삭제
   const [isDeletionMode, setIsDeletionMode] = useState(false);
   const [selectedFiles, setSelectedFiles] = useState([]);
@@ -84,7 +117,7 @@ const MyGreen = () => {
 
     // 삭제 모드를 활성화하거나 비활성화합니다.
     setIsDeletionMode(!isDeletionMode);
-    
+
     if (selectedFiles.length === 0) {
       alert('파일을 선택하세요.');
       return;
@@ -99,7 +132,7 @@ const MyGreen = () => {
           } else {
             alert(`${file.name} 파일 삭제 실패.`);
           }
-        }) 
+        })
         .catch((error) => {
           console.error(`${file.name} 삭제 에러:`, error);
         });
@@ -146,7 +179,12 @@ const MyGreen = () => {
               <Link to={isDeletionMode ? '#' : `/greendiary?plant_id=${value.plantId}`} className='linkPhoto2' >
                 <div className='alarm_circle_all' style={{ backgroundColor: alarms[index] ? '#2dda50' : 'transparent' }} />
                 <div className='green' style={{ backgroundColor: value.color }}>
-                  <img src={`${value.image}`} alt="green" />
+                  <img src={`${value.image}`} 
+                       className={`${selectedImage === value.image ? 'selected' : ''}`}
+                       alt="green" 
+                       style={selectedStyle} 
+                       onClick={(e) => handleImageClick(e)} />
+                  
                 </div>
                 <div className='linkText2'>
                   {value.nickname}
