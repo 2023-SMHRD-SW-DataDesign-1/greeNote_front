@@ -74,19 +74,36 @@ const MyGreen = () => {
     readPlantList()
   }, [])
 
-  // // 알람 on off에따른 색 o/x
-  // const alarmCircleStyle = {
-  //   backgroundColor: alarm ? '#2dda50' : 'none',
-  // };
-
 
   // 파일 삭제
   const [isDeletionMode, setIsDeletionMode] = useState(false);
+  const [selectedFiles, setSelectedFiles] = useState([]);
 
   // "삭제 아이콘"을 클릭했을 때 호출될 함수
   const handleDeleteIconClick = () => {
+
     // 삭제 모드를 활성화하거나 비활성화합니다.
     setIsDeletionMode(!isDeletionMode);
+    
+    if (selectedFiles.length === 0) {
+      alert('파일을 선택하세요.');
+      return;
+    }
+
+    // 여러 파일을 순회하며 삭제 요청을 보냅니다.
+    selectedFiles.forEach((file) => {
+      axios.post('/delete', null, { params: { file: file.name } })
+        .then((response) => {
+          if (response.data.success) {
+            alert(`${file.name} 파일이 삭제되었습니다.`);
+          } else {
+            alert(`${file.name} 파일 삭제 실패.`);
+          }
+        }) 
+        .catch((error) => {
+          console.error(`${file.name} 삭제 에러:`, error);
+        });
+    });
   };
 
 
@@ -101,9 +118,9 @@ const MyGreen = () => {
             내 반려식물
           </div>
           <div className='icons'>
-            <div className='mid_title_bin' onClick={handleDeleteIconClick}> {/* 삭제 아이콘 */}
+            <button className='mid_title_bin' onClick={handleDeleteIconClick}> {/* 삭제 아이콘 */}
               <img src="/Icon/bin.png" alt="bin" />
-            </div>
+            </button>
 
             <div className="icon_add"> {/* 추가 아이콘 */}
               <Link to="/addgreen" className='button_links'>
@@ -126,7 +143,7 @@ const MyGreen = () => {
             </Link>
 
             {plantList && plantList.map((value, index) => (
-              <Link to={isDeletionMode ? '#' : `/greendiary/${value.plantId}`} className='linkPhoto2' >
+              <Link to={isDeletionMode ? '#' : `/greendiary?plant_id=${value.plantId}`} className='linkPhoto2' >
                 <div className='alarm_circle_all' style={{ backgroundColor: alarms[index] ? '#2dda50' : 'transparent' }} />
                 <div className='green' style={{ backgroundColor: value.color }}>
                   <img src={`${value.image}`} alt="green" />

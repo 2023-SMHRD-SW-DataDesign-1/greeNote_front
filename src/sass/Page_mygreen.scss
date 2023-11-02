@@ -101,8 +101,14 @@
 }
 
 /* 오른쪽 삭제 아이콘 */
+.mid_title_bin {
+    border: none;
+    background-color: white;
+}
+
 .binLogo,
 .mid_title_bin img {
+
     @include s.mobile {
         margin-right: 15px;
         width: 20px;

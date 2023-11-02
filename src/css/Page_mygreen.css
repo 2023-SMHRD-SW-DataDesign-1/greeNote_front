@@ -102,6 +102,11 @@
 }
 
 /* 오른쪽 삭제 아이콘 */
+.mid_title_bin {
+  border: none;
+  background-color: white;
+}
+
 @media (min-width: 360px) and (max-width: 799px) {
   .binLogo,
   .mid_title_bin img {
