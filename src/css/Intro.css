@@ -24,7 +24,7 @@
   }
 }
 
-.intro_container {
+.intro_container2 {
   /* 크기 지정 */
   height: 100%;
   width: 100%;
@@ -33,14 +33,14 @@
   text-align: center;
 }
 @media (min-width: 360px) and (max-width: 799px) {
-  .intro_container {
+  .intro_container2 {
     justify-content: space-around;
     max-height: 500px;
     margin-top: 0%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
-  .intro_container {
+  .intro_container2 {
     /* 내용 가운데 정렬 */
     display: flex;
     justify-content: center;
@@ -48,7 +48,7 @@
   }
 }
 @media (min-width: 1200px) {
-  .intro_container {
+  .intro_container2 {
     /* 내용 가운데 정렬 */
     display: flex;
     justify-content: center;
