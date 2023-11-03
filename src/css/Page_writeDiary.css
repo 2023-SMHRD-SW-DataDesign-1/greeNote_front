@@ -217,7 +217,7 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .green_photo img {
-    max-height: 200px;
+    max-height: 290px;
     max-width: 90%;
   }
 }

@@ -42,6 +42,28 @@
 .diaryBottom {
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    @include s.mobile {
+        flex-direction: column;
+    }
+}
+
+.leftPart {
+    max-width: 500px;
+    width: 50%;
+
+    @include s.mobile {
+        width: 90%;
+    }
+}
+.rightPart {
+    max-width: 500px;
+    width: 50%;
+
+    @include s.mobile {
+        width: 90%;
+    }
 }
 
 
@@ -57,13 +79,13 @@
     text-align: right;
     
     @include s.desktop {
-        left: 40%;
+        left: 42%;
     }
     @include s.tablet {
-        left: 5%;
+        left: 12%;
     }
     @include s.mobile {
-        left: 2%;
+        left: 17%;
     }
 }
 

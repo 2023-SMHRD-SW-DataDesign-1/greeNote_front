@@ -127,7 +127,7 @@
 }
 @media (min-width: 1200px) {
   .diary_box2 {
-    width: 615px;
+    width: 623px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -137,7 +137,7 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_box2 {
-    width: 319px;
+    width: 320px;
     height: 312px;
   }
 }
