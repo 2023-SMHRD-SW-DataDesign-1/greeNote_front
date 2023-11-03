@@ -43,13 +43,12 @@
 @include s.mobile {
   .meat {
     flex-direction: column;
-    justify-content: end;
+    justify-content: start;
     cursor: pointer;
     margin-left: 25px;
-    margin-top: 5px;
+    margin-top: 8px;
     z-index: 2;
-
-    padding-right: 3%;
+    padding-right: 10%;
   }
 
   .meat_menu {
@@ -123,7 +122,7 @@
 //모바일 소개text
 .m_pageInfo {
   @include s.mobile {
-    width: 190px;
+    width: 100px;
     height: 30px;
     font-size: 20px;
     font-weight: 700;

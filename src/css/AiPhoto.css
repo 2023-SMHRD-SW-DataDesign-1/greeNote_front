@@ -80,7 +80,8 @@
 .selected {
   border: 6px double transparent;
   /* 기본 테두리 색상을 투명하게 설정합니다. */
-  border-image: linear-gradient(#7bc48b, #2cbd64) 6;
+  -o-border-image: linear-gradient(#7bc48b, #2cbd64) 6;
+     border-image: linear-gradient(#7bc48b, #2cbd64) 6;
   /* #ff0000과 #00ff00을 원하는 색상으로 바꿉니다. */
 }
 
@@ -202,6 +203,7 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .web_radio_box {
+    margin-left: 8px;
     width: 290px;
     height: 40px;
   }
@@ -227,6 +229,7 @@
 }
 
 .radio_text {
+  margin-left: 10px;
   font-weight: 700;
   font-size: 20px;
 }
