@@ -132,6 +132,22 @@
     }
 }
 
+.diary_box2::-webkit-scrollbar {
+    width: 10px;
+    /* 스크롤바 너비 설정 */
+}
+
+.diary_box2::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    /* 스크롤바 썸의 배경 색상 설정 */
+}
+
+.diary_box2::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* 스크롤바 썸에 마우스 호버했을 때의 배경 색상 설정 */
+}
+
 .diaryFile2 {
     /* 내부 text 가운데 정렬 */
     display: flex;
@@ -162,28 +178,30 @@
 
 .diary_info {
     position: relative;
-    
+
     /* CSS */
     font-size: 15px;
     font-weight: bolder;
     color: #000000;
     text-align: left;
-    
+
     @include s.mobile {
         font-size: 12px;
         top: 53%;
         margin-right: 10px;
     }
+
     @include s.tablet {
         /* 위치 */
         margin-right: 20px;
         top: 54%;
     }
+
     @include s.desktop {
         /* 위치 */
         margin-right: 29px;
         top: 60%;
-        
+
     }
 }
 
