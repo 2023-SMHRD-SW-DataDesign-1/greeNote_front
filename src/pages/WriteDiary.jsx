@@ -1,7 +1,7 @@
 /* 다이어리 작성하는 페이지 */
 
 import React, { useContext, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import firebaseApp from "../Firebase";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import axios from 'axios';
@@ -17,7 +17,9 @@ const WriteDiary = () => {
     axios.defaults.withCredentials = true;
 
     // 식물 목록별 조회하기 위한 id값 가져오기
-    const { plant_id } = useParams();
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const plant_id = queryParams.get('plant_id');
 
     // navigate 선언
     const nav = useNavigate();
