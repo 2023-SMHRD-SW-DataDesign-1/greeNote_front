@@ -8,7 +8,7 @@ class ItemIntroSlide extends React.Component {
   
       const introImage =[
         {
-            url:'./Image/ai_millet.jpg',
+            url:'./Image/intro.jpg',
             idx:'0'
         },
         {
