@@ -35,7 +35,7 @@
         width: 1000px;
     }
     @include s.tablet {
-        width: 600px;
+        width: 800px;
     }
 }
 
@@ -82,7 +82,7 @@
         left: 42%;
     }
     @include s.tablet {
-        left: 12%;
+        left: 33%;
     }
     @include s.mobile {
         left: 17%;

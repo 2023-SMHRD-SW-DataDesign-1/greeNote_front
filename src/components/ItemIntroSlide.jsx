@@ -8,16 +8,20 @@ class ItemIntroSlide extends React.Component {
   
       const introImage =[
         {
-            url:'./Image/ai_millet.jpg',
+            url:'./Image/intro1.png',
             idx:'0'
         },
         {
-            url:'./Image/van_gogh.jpg',
+            url:'./Image/intro2.png',
             idx:'1'
         },
         {
-            url:'./Image/millet.jpg',
+            url:'./Image/intro3.png',
             idx:'2'
+        },
+        {
+            url:'./Image/intro4.png',
+            idx:'3'
         }
       ]
   

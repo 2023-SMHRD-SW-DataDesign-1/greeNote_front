@@ -45,6 +45,7 @@
         /* 내용 가운데 정렬 */
         display: flex;
         justify-content: center;
+        max-height: 800px;
         margin-top: 15%;
     }
 
@@ -67,13 +68,17 @@
     margin: 0 auto;
 
     @include s.mobile {
-        width: 360px;
-        height: 320px;
+        max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 너비에 맞춥니다. */
+        // max-height: 100%; /* 이미지의 최대 높이를 부모 요소의 높이에 맞춥니다. */
+        height: auto;
+        // width: 360px;
+        // height: 320px;
     }
 
     @include s.tablet {
-        width: 500px;
-        height: 400px;
+        max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 너비에 맞춥니다. */
+        max-height: 100%; /* 이미지의 최대 높이를 부모 요소의 높이에 맞춥니다. */
+        height: auto;
     }
 
     @include s.desktop {
@@ -100,7 +105,7 @@
 }
 
 .intro_login_button {
-    margin-top: 70px;
+    margin-top: 30px;
 
     @include s.desktop {
         margin-top: 0px;
