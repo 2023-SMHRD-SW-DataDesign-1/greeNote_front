@@ -20,7 +20,16 @@
 @media (min-width: 1200px) {
   .myGreen_container {
     width: 1200px;
-    border-radius: 5%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .myGreen_container {
+    width: 800px;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .myGreen_container {
+    width: 360px;
   }
 }
 

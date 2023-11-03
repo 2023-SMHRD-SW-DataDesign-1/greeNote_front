@@ -77,9 +77,9 @@ const MyGreen = () => {
     readPlantList()
   }, [])
 
+  // 삭제와 선택
   const [isDeletionMode, setIsDeletionMode] = useState(false);
   const [selectedPlant, setSelectedPlant] = useState(null);
-
 
   // 삭제 버튼 onClick
   const handleDeleteIconClick = async () => {
@@ -127,14 +127,6 @@ const MyGreen = () => {
     }
   };
 
-  const selectedStyle = {
-    backgroundColor: selectedImage ? '{value.color}' : 'none', // 선택된 이미지에 테두리 스타일 추가
-    borderRadius: selectedImage ? '50%' : 'none',
-    width: selectedImage ? '100px' : 'none',
-    height: selectedImage ? '100px' : 'none',
-    boxShadow: selectedImage ? '0px 1px 10px 4px grey' : 'none',
-  };
-
 
 
   return (
@@ -171,7 +163,7 @@ const MyGreen = () => {
                 <div className='alarm_circle_all' style={{ backgroundColor: alarms[index] ? '#2dda50' : 'transparent' }} />
 
                 <div className='green'
-                  style={selectedImage === value.image ? selectedStyle : { backgroundColor: value.color }}>
+                  style={{ backgroundColor: value.color }}>
                   <img
                     src={selectedPlant === value ? (isDeletionMode ? 'Icon/bin2.png' : value.image) : value.image}
                     alt="green"

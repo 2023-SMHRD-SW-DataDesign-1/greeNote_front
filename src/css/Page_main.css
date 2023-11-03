@@ -24,6 +24,16 @@
     border-radius: 5%;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .main_container {
+    width: 800px;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .main_container {
+    width: 360px;
+  }
+}
 
 .main_page1 {
   /* 크기 지정 */

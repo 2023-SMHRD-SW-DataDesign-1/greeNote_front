@@ -10,6 +10,16 @@
     height: 863px;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .greendiary_container {
+    width: 800px;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .greendiary_container {
+    width: 360px;
+  }
+}
 
 @media (min-width: 360px) and (max-width: 799px) {
   .main_big_pie1 > .ai_plant_container {

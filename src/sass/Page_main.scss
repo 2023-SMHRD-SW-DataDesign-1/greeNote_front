@@ -25,6 +25,12 @@
         height: auto;
         border-radius: 5%;
     }
+    @include s.tablet {
+        width: 800px;
+    }
+    @include s.mobile {
+        width: 360px;
+    }
 }
 
 .main_page1 {

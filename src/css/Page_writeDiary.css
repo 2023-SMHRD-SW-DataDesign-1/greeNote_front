@@ -25,6 +25,16 @@
     height: 863px;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .writeDiary_container {
+    width: 800px;
+  }
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .writeDiary_container {
+    width: 360px;
+  }
+}
 
 .header_diary {
   /* 배치 조정 */

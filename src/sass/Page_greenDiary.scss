@@ -10,6 +10,12 @@
         width: 1200px;
         height: 863px;
     }
+    @include s.tablet {
+        width: 800px;
+    }
+    @include s.mobile {
+        width: 360px;
+    }
 }
 
 .main_big_pie1>.ai_plant_container {

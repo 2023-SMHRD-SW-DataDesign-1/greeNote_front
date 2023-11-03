@@ -26,6 +26,12 @@
         width: 1200px;
         height: 863px;
     }
+    @include s.tablet {
+        width: 800px;
+    }
+    @include s.mobile {
+        width: 360px;
+    }
 }
 
 .header_diary {
