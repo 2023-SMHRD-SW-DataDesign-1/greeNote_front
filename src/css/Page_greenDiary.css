@@ -198,22 +198,22 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_info {
     font-size: 12px;
-    top: 53%;
-    margin-right: 10px;
+    margin-right: 5px;
+    bottom: 30%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .diary_info {
     /* 위치 */
-    margin-right: 20px;
-    top: 54%;
+    margin-right: 30px;
+    bottom: 30%;
   }
 }
 @media (min-width: 1200px) {
   .diary_info {
     /* 위치 */
-    margin-right: 29px;
-    top: 60%;
+    margin-right: 30px;
+    bottom: 30%;
   }
 }
 

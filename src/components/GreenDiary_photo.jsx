@@ -5,7 +5,7 @@ const GreenDiary_photo = ({ data }) => {
     console.log('다이어리 모아보기', data);
     return (
         <div className='diaryFile2'>
-            <Link to={`/diarydetail?diaryId=${data.diary.diaryId}`} className='button_links'>
+            <Link to={`/diarydetail?diaryId=${data.diary.diaryId}`} >
                 <img className='diaryFile2'
                 src={JSON.parse(data.imgUrl.image_url)[0].image_url}
                 />

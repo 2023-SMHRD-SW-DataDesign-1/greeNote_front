@@ -15,6 +15,7 @@ const GreenDiary = () => {
 
   const { selectedPlantData } = useContext(DataContext);
 
+
   // 식물 목록별 조회하기 위한 id값 가져오기
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -39,16 +40,21 @@ const GreenDiary = () => {
     readDiary();
   }, [plant_id])
 
-  const [selectedImage, setSelectedImage] = useState(0);
+  /*   const [selectedImage, setSelectedImage] = useState(0);
+  
+    const handleImageClick = (image) => {
+      if (selectedImage.url === image.url) {
+        setSelectedImage(0); // 이미 선택된 이미지를 다시 클릭하면 선택 해제
+      } else {
+        setSelectedImage(image); // 새 이미지를 선택
+      }
+      console.log('selectedImage:', selectedImage);
+    }; */
 
-  const handleImageClick = (image) => {
-    if (selectedImage.url === image.url) {
-      setSelectedImage(0); // 이미 선택된 이미지를 다시 클릭하면 선택 해제
-    } else {
-      setSelectedImage(image); // 새 이미지를 선택
-    }
-    console.log('selectedImage:', selectedImage);
-  };
+
+
+
+
 
   return (
     <div className='web_top_container'>
@@ -73,12 +79,24 @@ const GreenDiary = () => {
               </div>
             </div>
 
-            {/* {diaryList.map((value) => <Diary_content key={value.diary_id} diary={value.diary} imgUrl={value.imgUrl} />)} */}
-            <div className='diary_box'>
+
+            <div className='diary_box'> {/* 다이어리 사진들 보이는 공간 */}
               <div className='diary_box2'>
-                {diaryList && diaryList.map((item, idx) => (
-                  <GreenDiary_photo key={idx} data={item} />
+                
+                {diaryList && diaryList.map((item, idx)=>(
+                <div className='diaryFile2'>
+                  <Link to={`/diarydetail?diaryId=${item.diary.diaryId}`} >
+                    <img className='diaryFile2'
+                      src={JSON.parse(item.imgUrl.image_url)[0].image_url}
+                    />
+                  </Link>
+                  <div className='diary_info'>
+                    <div className='diary_title'>{item.diary.title}</div>
+                    <div className='diary_date'>{item.diary.registrationDate}</div>
+                  </div>
+                </div>
                 ))}
+
               </div>
             </div>
 
