@@ -1,29 +1,31 @@
 @charset "UTF-8";
 .retry_btn,
 .download_btn {
-  background-color: #548488;
+  background-color: #DDEFC7;
   width: 310px;
   padding: 1%;
   margin-bottom: 20px;
   border-radius: 10px;
   margin: 10px;
+  font-weight: 600;
+  font-size: 17px;
 }
 
 .retry_btn:hover,
 .download_btn:hover {
-  background-color: #33455a;
+  background-color: #335A3B;
+  color: white;
 }
 
 .download_btn {
   font-size: 17px;
-  color: rgb(255, 255, 255);
 }
 
 /********************************* link 태그 css */
 .button_link {
   border-radius: 0.7em;
   font-size: 17px;
-  color: rgb(255, 255, 255);
+  color: black;
   text-decoration-line: none;
   /* div태그와 hover같이 작동 */
   display: block;
