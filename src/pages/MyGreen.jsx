@@ -141,7 +141,8 @@ const MyGreen = () => {
           </div>
           <div className='icons'>
             <button className='mid_title_bin' onClick={handleDeleteIconClick}>
-              <img src="/Icon/bin.png" alt="bin" />
+              <img src="/Icon/bin2.png" alt="bin"
+                className={`${isDeletionMode ? 'deletionModeMyGreen' : ''}`} />
             </button>
 
             <div className="icon_add"> {/* 추가 아이콘 */}
@@ -156,7 +157,7 @@ const MyGreen = () => {
         </div>
 
         <div className='greenlist'> {/* 식물 리스트 부분 GreenList_all */}
-          <div className={`list_container2 ${isDeletionMode ? 'deletionModeBackground' : ''}`}>
+          <div className='list_container2'>
 
             {plantList && plantList.map((value, index) => (
               <Link to={isDeletionMode ? '#' : `/greendiary?plant_id=${value.plantId}`} className='linkPhoto2' >

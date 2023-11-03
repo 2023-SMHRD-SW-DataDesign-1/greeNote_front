@@ -41,7 +41,7 @@
   }
 
   @include s.tablet {
-    width: 95%;
+    width: 86%;
     height: auto;
     max-height: 450px;
   }
@@ -208,6 +208,3 @@
   }
 }
 
-.deletionModeBackground{
-  background-color: rgb(206, 248, 205);
-}

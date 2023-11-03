@@ -37,7 +37,7 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .list_container2 {
-    width: 95%;
+    width: 86%;
     height: auto;
     max-height: 450px;
   }
@@ -216,8 +216,4 @@
     height: 20px;
     margin-left: 275px;
   }
-}
-
-.deletionModeBackground {
-  background-color: rgb(206, 248, 205);
 }

@@ -36,6 +36,7 @@
 /* 작성 및 삭제 아이콘 */
 .icons2 {
   display: flex;
+  align-items: center;
   position: relative;
 }
 @media (min-width: 360px) and (max-width: 799px) {
@@ -46,12 +47,12 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .icons2 {
-    width: 130px;
+    width: 135px;
   }
 }
 @media (min-width: 1200px) {
   .icons2 {
-    width: 125px;
+    width: 145px;
   }
 }
 
@@ -98,25 +99,51 @@
 }
 
 @media (min-width: 360px) and (max-width: 799px) {
-  .mid_title_edit img,
-  .mid_title_bin2 img {
+  .mid_title_edit img {
     margin-right: 20px;
     width: 20px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
-  .mid_title_edit img,
-  .mid_title_bin2 img {
+  .mid_title_edit img {
     margin-right: 30px;
     width: 25px;
   }
 }
 @media (min-width: 1200px) {
-  .mid_title_edit img,
-  .mid_title_bin2 img {
+  .mid_title_edit img {
     margin-right: 38px;
     width: 25px;
   }
+}
+
+/**************************************** 삭제!! bin 버튼 */
+@media (min-width: 360px) and (max-width: 799px) {
+  .mid_title_bin2 img {
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .mid_title_bin2 img {
+    margin-right: 35px;
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  .mid_title_bin2 img {
+    margin-right: 38px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* 삭제 버튼 눌렀을 때 */
+.deletionModeGreenDiary {
+  background-color: #EDF113;
+  border-radius: 50%;
 }
 
 /********************************** 다이어리 아랫 공간 */

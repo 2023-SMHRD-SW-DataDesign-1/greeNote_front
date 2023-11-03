@@ -120,8 +120,11 @@ const GreenDiary = () => {
                 다이어리 모아보기
               </div>
               <div className='icons2'>
-                <div className='mid_title_bin2' onClick={handleDeleteIconClick}>
-                  <img src="/Icon/bin.png" alt="bin" />
+                <div className='mid_title_bin2'
+                  onClick={handleDeleteIconClick}>
+                  <img src="/Icon/bin2.png" alt="bin"
+                    className={`${isDeletionMode ? 'deletionModeGreenDiary' : ''}`}
+                  />
                 </div>
                 <Link to={`/writediary?plant_id=${selectedPlantData.plantId}`} className='mid_title_edit'>
                   <img src="/Icon/edit.png" alt="edit" />
@@ -132,10 +135,10 @@ const GreenDiary = () => {
 
             <div className='diary_box'> {/* 다이어리 사진들 보이는 공간 */}
 
-              <div className={`diary_box2 ${isDeletionMode ? 'deletionModeBackground' : ''}`}>
+              <div className="diary_box2">
                 {diaryList && diaryList.map((item, idx) => (
                   <div className='diaryFile2'>
-                    <Link to={ isDeletionMode ? '#' : `/diarydetail?diaryId=${item.diary.diaryId}`} >
+                    <Link to={isDeletionMode ? '#' : `/diarydetail?diaryId=${item.diary.diaryId}`} >
                       <img className='diaryFile2'
                         src={selectedPlant === item ? (isDeletionMode ? 'Icon/bin2.png' : JSON.parse(item.imgUrl.image_url)[0].image_url) : JSON.parse(item.imgUrl.image_url)[0].image_url}
                         onClick={(e) => handleImageClick(e, item)}
