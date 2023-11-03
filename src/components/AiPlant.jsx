@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ItemPlantChoice from './ItemPlantChoice'
 import { DataContext } from '../contexts/DataContext'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const AiPlant = () => {
@@ -11,9 +11,11 @@ const AiPlant = () => {
 
   // 식물 목록별 조회하기 위한 id값 가져오기
   const location = useLocation();
+  const currentPath = location.pathname;
   const queryParams = new URLSearchParams(location.search);
-
   const plant_id = queryParams.get('plant_id');
+
+  const nav = useNavigate();
 
   // 선택된 plant 감지하는 함수
   const nowSelected = () => {
@@ -66,6 +68,13 @@ const AiPlant = () => {
   const handleItemChoiceClick = (selectedPlant) => {
     console.log('Selected Plant:', selectedPlant);
     setSelectedPlantData(selectedPlant)
+    if(currentPath === '/greendiary'){
+      nav(`/greendiary?plant_id=${selectedPlant.plantId}`)
+    }else if (currentPath === '/ai'){
+      nav(`/ai?plant_id=${selectedPlant.plantId}`)
+    }else if (currentPath === '/slide'){
+      nav(`/slide?plant_id=${selectedPlant.plantId}`)
+    }
   };
 
   const bgStyle = {

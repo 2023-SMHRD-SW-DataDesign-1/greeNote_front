@@ -6,7 +6,7 @@ import { DataContext } from '../../contexts/DataContext';
 const Header_home2 = () => {
 
   // 전체 식물 리스트
-  const { plantList } = useContext(DataContext);
+  const { plantList, selectedPlantData } = useContext(DataContext);
 
   // 첫번째 식물 ID를 담을 State
   const [firstPlant, setFirstPlant] = useState(1);
@@ -14,6 +14,8 @@ const Header_home2 = () => {
   useEffect(() => {
     if (plantList.length > 0) {
       setFirstPlant(plantList[0].plantId);
+      console.log('설정됨',plantList[0].plantId);
+      console.log(firstPlant);
     }
   }, [plantList])
 
@@ -30,15 +32,15 @@ const Header_home2 = () => {
           </div>
 
           <div className="header_menu">
-            <Link to={`/greendiary?plant_id=${firstPlant}`} >
+            <Link to={`/greendiary?plant_id=${selectedPlantData.plantId}`} >
               다이어리
             </Link>
 
-            <Link to="/ai" >
+            <Link to={`/ai?plant_id=${selectedPlantData.plantId}`} >
               생성AI사진
             </Link>
 
-            <Link to="/slide" >
+            <Link to={`/slide?plant_id=${selectedPlantData.plantId}`} >
               슬라이드
             </Link>
           </div>

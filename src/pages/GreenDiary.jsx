@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AiPlant from '../components/AiPlant';
 import axios from 'axios';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import GreenDiary_photo from '../components/GreenDiary_photo';
 import { DataContext } from '../contexts/DataContext';
 
@@ -15,12 +15,17 @@ const GreenDiary = () => {
 
   const { selectedPlantData } = useContext(DataContext);
 
+  // 식물 목록별 조회하기 위한 id값 가져오기
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const plant_id = queryParams.get('plant_id');
+
   // 다이어리 목록을 담을 State
   const [diaryList, setDiaryList] = useState([]);
 
   // 식물 목록별 다이어리 조회
   const readDiary = () => {
-    axios.get(`${masterURL}/diary/readDiary/${selectedPlantData.plantId}`)
+    axios.get(`${masterURL}/diary/readDiary/${plant_id}`)
       .then((res) => {
         console.log('식물 목록별 다이어리', res);
         setDiaryList(res.data);
@@ -32,7 +37,7 @@ const GreenDiary = () => {
 
   useEffect(() => {
     readDiary();
-  }, [selectedPlantData])
+  }, [plant_id])
 
   const [selectedImage, setSelectedImage] = useState(0);
 
@@ -51,7 +56,7 @@ const GreenDiary = () => {
 
         <div className='main_page1'>
           <AiPlant />
-          
+
           <div className='diary_all'>
             <div className='mid_title'>
               <div className='mid_title3'>
@@ -59,10 +64,10 @@ const GreenDiary = () => {
                 다이어리 모아보기
               </div>
               <div className='icons2'>
-                <div className='mid_title_bin2'> 
+                <div className='mid_title_bin2'>
                   <img src="/Icon/bin.png" alt="bin" />
                 </div>
-                <Link to={`/writediary/${selectedPlantData.plantId}`} className='mid_title_edit'>
+                <Link to={`/writediary?plant_id=${selectedPlantData.plantId}`} className='mid_title_edit'>
                   <img src="/Icon/edit.png" alt="edit" />
                 </Link>
               </div>

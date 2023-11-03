@@ -43,8 +43,8 @@ const AiPhoto = () => {
     ]
 
     // 선택된 식물의 다이어리 사진들 가져오기
-    const readDiaryImg = () => {
-        axios.get(`${masterURL}/diary/readDiaryImg?plantId=${selectedPlantData.plantId}`)
+    const readDiaryImg = async () => {
+        await axios.get(`${masterURL}/diary/readDiaryImg?plantId=${selectedPlantData.plantId}`)
             .then((res) => {
                 setDiaryImages(res.data);
                 console.log(res.data);
