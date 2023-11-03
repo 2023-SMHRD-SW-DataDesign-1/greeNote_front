@@ -101,7 +101,7 @@ const WriteDiary = () => {
         await axios.post(`${masterURL}/diary/addDiary`, obj)
             .then((res) => {
                 console.log(res);
-                nav(`/greendiary/${res.data[0].plantId}`)
+                nav(`/greendiary?plant_id=${res.data[0].plantId}`)
             })
             .catch(async (err) => {
                 console.log(err);
