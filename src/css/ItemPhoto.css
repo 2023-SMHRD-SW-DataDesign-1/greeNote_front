@@ -9,6 +9,28 @@
   }
 }
 
+@media (min-width: 360px) and (max-width: 799px) {
+  .item_photo_div {
+    margin: 5px;
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .item_photo_div {
+    width: 130px;
+    height: 130px;
+    margin: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .item_photo_div {
+    margin: 10px;
+    width: 230px;
+    height: 230px;
+  }
+}
+
 .item_photo {
   background-color: rgb(155, 202, 151);
   border-radius: 5%;
@@ -25,7 +47,6 @@
   .item_photo {
     width: 155px;
     height: 155px;
-    margin: 7px;
   }
 }
 @media (min-width: 1200px) {

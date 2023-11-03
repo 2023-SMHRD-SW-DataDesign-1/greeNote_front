@@ -60,13 +60,15 @@
 .photo_container {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    
 
     @include s.mobile {
         margin-left: 20px;
     }
 
     @include s.tablet {
-        margin-left: 20px;
+        margin-left: 10px;
     }
 
     @include s.desktop {
@@ -149,7 +151,7 @@
     }
 
     @include s.desktop {
-        font-size: 20px;
+        font-size: 23px;
         font-weight: 900;
     }
 }
