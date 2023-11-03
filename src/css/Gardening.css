@@ -65,6 +65,11 @@
     left: 18%;
   }
 }
+@media (min-width: 800px) and (max-width: 1199px) {
+  .info_text {
+    left: 10%;
+  }
+}
 @media (min-width: 360px) and (max-width: 799px) {
   .info_text {
     left: -6%;

@@ -89,7 +89,7 @@ const AddGreen = () => {
             <img src="/Image/book_logo.PNG" alt="book" />
             내 반려 식물의 프로필
           </div>
-          <img src="/Icon/bin.png" alt="bin" className='binLogo' />
+          
         </div>
 
         <form onSubmit={addPlantList}>
@@ -163,9 +163,6 @@ const AddGreen = () => {
               <div className='mini_title2'>
                 관리 주기 설정
               </div>
-              <div className='info_text'>
-                관리주기는 비설정 가능
-              </div>
               <div className="switch_control"> {/* 스위치 버튼 */}
                 <div className='text3'>
                   물 주기
@@ -177,7 +174,7 @@ const AddGreen = () => {
               </div>
               <div className="switch_control"> {/* 스위치 버튼 */}
                 <div className='text3'>
-                  분갈이하기
+                  분갈이하기 
                 </div>
                 <div className="check">
                   <input id="check-2" type="checkbox" name='repot' />
@@ -186,7 +183,7 @@ const AddGreen = () => {
               </div>
               <div className="switch_control"> {/* 스위치 버튼 */}
                 <div className='text3'>
-                  영양관리
+                  영양관리 
                 </div>
                 <div className="check">
                   <input id="check-3" type="checkbox" name='nutrition' />
@@ -195,13 +192,20 @@ const AddGreen = () => {
               </div>
               <div class="switch_control"> {/* 스위치 버튼 */}
                 <div className='text3'>
-                  환기하기
+                  환기하기 
                 </div>
                 <div className="check">
                   <input id="check-4" type="checkbox" name='ventilation' />
                   <label for="check-4" />
                 </div>
               </div>
+              <div className='info_text'>
+                관리주기는 비설정 가능하며,<br/>
+                물주기(7일),<br/>분갈이하기(90일),<br/>
+                영양관리(80일),<br/>환기하기(40일)<br/>
+                주기로 알람이 생성됩니다.
+              </div>
+
               <button type='submit' className='complete_button'>
                 작성완료
               </button>
