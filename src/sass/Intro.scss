@@ -15,7 +15,7 @@
     }
 
     @include s.tablet {
-        width: 600px;
+        width: 570px;
         height: 400px;
     }
 
@@ -90,7 +90,6 @@
     /* 내용 가운데 정렬 */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     text-align: center;
 
@@ -134,14 +133,11 @@
     text-decoration-line: none;
     font-weight: 600;
     height: 40px;
-    width: 200px;
+    width: 180px;
 
     @include s.tablet {
         margin-left: 40px;
-    }
-
-    @include s.tablet {
-        margin-left: 40px;
+        margin-right: 40px;
     }
 
     @include s.desktop {
