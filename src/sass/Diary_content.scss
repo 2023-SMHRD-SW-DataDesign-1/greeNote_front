@@ -82,6 +82,22 @@
     overflow: auto;
 }
 
+.diary_content::-webkit-scrollbar {
+    width: 10px;
+    /* 스크롤바 너비 설정 */
+}
+
+.diary_content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    /* 스크롤바 썸의 배경 색상 설정 */
+}
+
+.diary_content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* 스크롤바 썸에 마우스 호버했을 때의 배경 색상 설정 */
+}
+
 .top {
     display: flex;
     align-items: flex-start;
