@@ -80,7 +80,7 @@ const DiaryDetail = ({ data }) => {
                         </div>
 
                         <div className='diaryBottom'>
-                            <div className='forDesktop'>
+                            <div className='leftPart'>
                                 <div className='date_container'> {/* 작성된 날자 */}
                                     <div className='date'>
                                         {diaryDetail.registrationDate}
@@ -100,7 +100,7 @@ const DiaryDetail = ({ data }) => {
                                 )}
                             </div>
 
-                            <div className='forDesktop2'>
+                            <div className='rightPart'>
                                 <div className='infoDisease'>
                                     AI 진단명: {diaryDetail.aiResult}
                                 </div>

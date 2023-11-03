@@ -1,12 +1,13 @@
 /* 다이어리 작성하는 페이지 */
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import firebaseApp from "../Firebase";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import axios from 'axios';
 import AiPlant from '../components/AiPlant';
 import GreenProfile from '../components/GreenProfile';
+import { DataContext } from '../contexts/DataContext';
 
 const WriteDiary = () => {
 
@@ -20,6 +21,10 @@ const WriteDiary = () => {
 
     // navigate 선언
     const nav = useNavigate();
+
+    const { selectedPlantData } = useContext(DataContext);
+
+
 
     const today2 = new Date();
 
@@ -131,7 +136,7 @@ const WriteDiary = () => {
                                 다이어리 작성하기
                             </div>
                             <div className='withDesktop'>
-                                <Link to="/greendiary/a" className='mid_title_edit'>
+                                <Link to={`/greendiary?plant_id=${selectedPlantData.plantId}`} className='mid_title_edit'>
                                     <img src="/Icon/back.png" alt="bin" />
                                 </Link>
                             </div>

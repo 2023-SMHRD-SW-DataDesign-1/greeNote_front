@@ -127,19 +127,35 @@
 }
 @media (min-width: 1200px) {
   .diary_box2 {
-    width: 615px;
+    width: 623px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .diary_box2 {
-    width: 550px;
+    width: 557px;
   }
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_box2 {
-    width: 319px;
+    width: 330px;
     height: 312px;
   }
+}
+
+.diary_box2::-webkit-scrollbar {
+  width: 10px;
+  /* 스크롤바 너비 설정 */
+}
+
+.diary_box2::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  /* 스크롤바 썸의 배경 색상 설정 */
+}
+
+.diary_box2::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* 스크롤바 썸에 마우스 호버했을 때의 배경 색상 설정 */
 }
 
 .diaryFile2 {
