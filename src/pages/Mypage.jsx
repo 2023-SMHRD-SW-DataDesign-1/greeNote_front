@@ -108,7 +108,7 @@ const Mypage = () => {
                                 </div>
                                 <input
                                     className='mypage_pw'
-                                    placeholder='비밀번호를 입력하세요'
+                                    placeholder='수정 할 비밀번호를 입력 후 완료버튼 클릭'
                                     name='password'
                                 />
                                 <div className='text2'>
