@@ -195,6 +195,7 @@
     display: flex;
 
     @include s.mobile {
+        margin-left: 8px;
         width: 290px;
         height: 40px;
     }
@@ -219,6 +220,7 @@
 }
 
 .radio_text {
+    margin-left: 10px;
     font-weight: 700;
     font-size: 20px;
 
