@@ -99,7 +99,7 @@ const AiPhoto = () => {
             //     console.log(err);
             // })
 
-            nav(`/aiReturn`);
+            nav(`/aiReturn?plant_id=${selectedPlantData.plantId}`);
         } else {
             // 이미지를 선택하지 않았을 때 처리
             console.log('사진을 선택해주세요.');

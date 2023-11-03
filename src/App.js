@@ -130,7 +130,7 @@ function App() {
           <Route path='/mygreen' element={<><AiHeader /><MyGreen /></>} />
           <Route path='/greendiary' element={<><AiHeader /><GreenDiary /></>} />
           <Route path='/writediary' element={<><AiHeader /><WriteDiary /></>} />
-          <Route path='/diarydetail/:diaryId' element={<><AiHeader /><DiaryDetail /></>} />
+          <Route path='/diarydetail' element={<><AiHeader /><DiaryDetail /></>} />
           <Route path='/ai' element={<><AiHeader /><AiPhotoBox /></>} />
           <Route path='/slide' element={<><AiHeader /><SlideBox /></>} />
           <Route path='/aiReturn' element={<><AiHeader /><AiReturnBox /></>} />
