@@ -67,7 +67,7 @@
 
 /* 다이어리 오른쪽 제목,내용 박스 */
 .diary_content {
-  width: 59%;
+  width: 341px;
   height: 100%;
   /* 내부 text 가운데 정렬 */
   display: flex;
