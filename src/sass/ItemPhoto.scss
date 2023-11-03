@@ -17,6 +17,26 @@
 
 }
 
+.item_photo_div{
+    @include s.mobile{
+        margin: 5px;
+        width: 140px;
+        height: 140px;
+    }
+
+    @include s.tablet{
+        width: 130px;
+        height: 130px;
+        margin: 20px;
+    }
+
+    @include s.desktop{
+        margin: 10px;
+        width: 230px;
+        height: 230px;
+
+    }
+}
 
 .item_photo {
     background-color: rgb(155, 202, 151);
@@ -31,7 +51,6 @@
     @include s.tablet{
         width: 155px;
         height: 155px;
-        margin: 7px;
     }
 
     @include s.desktop{

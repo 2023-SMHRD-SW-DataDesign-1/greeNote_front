@@ -130,7 +130,7 @@ const AiPhoto = () => {
                 <div className="photo_container">
                     {diaryImages.map((data, idx) => (
                         JSON.parse(data.image_url).map((url) => (
-                            <div key={idx}>
+                            <div key={idx} className='item_photo_div'>
                                 <img
                                     className={`item_photo ${selectedImage === url.image_url ? 'selected' : ''}`}
                                     onClick={(e) => handleImageClick(e)}
