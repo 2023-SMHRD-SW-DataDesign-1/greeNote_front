@@ -163,7 +163,7 @@
     }
 
     @include s.tablet {
-        margin-bottom: 2%;
+        margin-bottom: 5%;
     }
 
 }
@@ -175,6 +175,9 @@
     @include s.desktop {
         margin-bottom: 2%;
         left: -15%;
+    }
+    @include s.tablet {
+        margin-bottom: 5%;
     }
 }
 
@@ -199,9 +202,6 @@
 .greenName,
 .greenNickname,
 .greenText {
-    /* 서로 상하 위치 조정 */
-    margin-top: 7%;
-
     /* 범위 및 크기 지정 */
     height: 35px;
     padding: 2%;
@@ -230,6 +230,10 @@
         width: 70%;
         padding-left: 7%;
     }
+}
+
+.Lastwater {
+    margin-bottom: 7%;
 }
 
 .greenStart,
@@ -293,8 +297,12 @@
     align-items: center;
     text-align: center;
 
+    @include s.mobile {
+        margin-top: 30px;
+    }
+
     @include s.tablet {
-        margin-top: 100px;
+        margin-top: 30px;
     }
 
     @include s.desktop {

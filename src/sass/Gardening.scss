@@ -69,9 +69,13 @@
     @include s.desktop {
         left: 18%;
     }
+    @include s.tablet {
+        left: 10%;
+    }
     @include s.mobile {
         left: -6%;
     }
+    
 }
 
 

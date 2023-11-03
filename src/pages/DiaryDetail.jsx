@@ -4,7 +4,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import { DataContext } from '../contexts/DataContext';
 import Diary_Sidebar from '../components/Page_Diary/Diary_Sidebar'
 import axios from 'axios'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import GreenProfile from '../components/GreenProfile';
 import Date from '../components/Page_main/Date';
 
@@ -14,7 +14,9 @@ const DiaryDetail = ({ data }) => {
     const masterURL = process.env.REACT_APP_MASTER_URL;
 
     // 식물 목록별 조회하기 위한 id값 가져오기
-    const { diaryId } = useParams();
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const diaryId = queryParams.get('diaryId');
 
     // 다이어리 정보 State
     const [diaryDetail, setDiaryDetail] = useState([]);
