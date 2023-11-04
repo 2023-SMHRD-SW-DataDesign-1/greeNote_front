@@ -4,6 +4,9 @@ import { DataContext } from '../contexts/DataContext';
 
 const ItemAiReturn = () => {
 
+  // URL 통합 관리
+  const flaskURL = process.env.REACT_APP_FLASK_URL;
+
   const { contentImg, styleImg } = useContext(DataContext);
 
   const [imageData, setImageData] = useState();
@@ -12,7 +15,7 @@ const ItemAiReturn = () => {
   console.log(styleImg);
 
   const styleTransfer = async () => {
-    await axios.post(`http://127.0.0.1:5000/styleTransfer`, {
+    await axios.post(`${flaskURL}/styleTransfer`, {
       content_image: contentImg,
       style_image: styleImg
     })

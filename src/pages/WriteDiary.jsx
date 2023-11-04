@@ -13,6 +13,8 @@ const WriteDiary = () => {
 
     // URL 통합 관리
     const masterURL = process.env.REACT_APP_MASTER_URL;
+    const flaskURL = process.env.REACT_APP_FLASK_URL;
+
     // axios 설정
     axios.defaults.withCredentials = true;
 
@@ -77,7 +79,7 @@ const WriteDiary = () => {
     const aiPlantDisease = (e) => {
         if (e.target.checked === true) {
             console.log(imageUrls);
-            axios.post(`http://127.0.0.1:5000/plant_disease`, {
+            axios.post(`${flaskURL}/plant_disease`, {
                 imageUrl: imageUrls[0]
             })
                 .then((res) => {
