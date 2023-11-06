@@ -1,51 +1,20 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import { DataContext } from '../../contexts/DataContext';
+import { useLocation } from 'react-router-dom';
 
 const Diary_Sidebar = () => {
-
-    /*     // 임시 식물
-        const defaultPlant = {
-            image_url: '/Image/plant_ex.jpg',
-            color: 'blue',
-            plant_id: 2,
-            nickname: '무몬',
-            species: '식물종',
-            start_date: '2023년 5월 27일'
-        }
-        const [selectedPlantData, setSelectedPlantData] = useState(defaultPlant);
-    
-        // 모달의 표시 여부를 관리하는 상태
-        const [isModalOpen, setIsModalOpen] = useState(false);
-    
-    
-        // 식물 클릭시 모달창 열리고 x누르면 닫힘
-        const toggleModal = () => {
-            setIsModalOpen(!isModalOpen);
-        };
-    
-        // 아이템 클릭시 모달창 닫힘
-        const closeModal = () => {
-            setIsModalOpen(false);
-        };
-    
-        // 리스트에서 꺼내온 식물 정보
-        const handleItemChoiceClick = (selectedPlant) => {
-            console.log('Selected Plant:', selectedPlant);
-            setSelectedPlantData(selectedPlant)
-        };
-    
-        const bgStyle = {
-            backgroundColor: selectedPlantData.color,
-        }
-     */
-
 
     // URL 통합 관리
     const masterURL = process.env.REACT_APP_MASTER_URL;
 
+    // 식물 목록별 조회하기 위한 id값 가져오기
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const plant_id = queryParams.get('plant_id');
+
     // 식물 목록 저장 State
-    const { selectedPlantData, setSelectedPlantData } = useContext(DataContext);
+    const { plantList, selectedPlantData, setSelectedPlantData } = useContext(DataContext);
 
     // 선택된 plant의 날짜를 xx일째로 바꿔주는 함수
     const changeDate = (targetDateStr) => {
