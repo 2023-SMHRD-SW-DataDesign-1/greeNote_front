@@ -136,7 +136,7 @@ const WriteDiary = () => {
                     <div className='diary_Bigpie'>
                         <div className='mid_title'>
                             <div className='mid_title3'>
-                                <img src="/Image/book_logo.PNG" alt="book" className='bookLogo' />
+                                <img src="/Image/book_logo.png" alt="book" className='bookLogo' />
                                 다이어리 작성하기
                             </div>
                             <div className='withDesktop'>
