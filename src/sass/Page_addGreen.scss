@@ -279,8 +279,6 @@
 
 /********************************** 버튼 태그 css */
 .complete_button {
-    position: relative;
-    top: 50%;
 
     /* 범위 및 크기 지정 */
     display: inline-block;
@@ -288,7 +286,6 @@
     margin-left: 15%;
     margin-right: 15%;
     padding: 2%;
-    width: 70%;
     height: auto;
 
     /* css */
@@ -304,14 +301,19 @@
 
     @include s.mobile {
         margin-top: 30px;
+        width: 70%;
     }
 
     @include s.tablet {
         margin-top: 30px;
+        width: 70%;
     }
 
     @include s.desktop {
-        margin-top: 140px;
+        margin-top: 30px;
+        width: 60%;
+        margin-left: 10%;
+        margin-right: 15%;
     }
 }
 
@@ -322,4 +324,25 @@
 .complete_button:hover {
     background-color: #335A3B;
     color: white;
+}
+
+.info_text2 {
+    color: red;
+    text-align: right;
+    font-size: small;
+
+    margin-bottom: 1%;
+
+    /* 위치 조정 */
+    position: relative;
+
+    @include s.desktop {
+        left: 12%;
+    }
+    @include s.tablet {
+        left: 12%;
+    }
+    @include s.mobile {
+        left: -6%;
+    }
 }

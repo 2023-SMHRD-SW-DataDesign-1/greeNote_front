@@ -186,6 +186,7 @@
   align-items: center;
   /* css */
   color: black;
+  margin-top: 5%;
 }
 @media (min-width: 1200px) {
   .green_photo {

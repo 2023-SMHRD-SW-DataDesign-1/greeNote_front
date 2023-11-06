@@ -199,7 +199,7 @@ const AddGreen = () => {
                   <label for="check-4" />
                 </div>
               </div>
-              <div className='info_text'>
+              <div className='info_text2'>
                 관리주기는 비설정 가능하며,<br/>
                 물주기(7일),<br/>분갈이하기(90일),<br/>
                 영양관리(80일),<br/>환기하기(40일)<br/>
