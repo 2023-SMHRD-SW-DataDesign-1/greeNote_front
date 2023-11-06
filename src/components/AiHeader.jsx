@@ -33,6 +33,7 @@ const AiHeader = () => {
                         {window.location.pathname === '/aiReturn' && 'AI 이미지'}
                         {window.location.pathname === '/slide' && '슬라이드'}
                         {window.location.pathname === '/mypage' && '마이페이지'}
+                        {window.location.pathname === '/' && '로그아웃'}
                     </div>
                 </div>
 
@@ -51,6 +52,9 @@ const AiHeader = () => {
                             </Link>
                             <Link to='/mypage' className='menuLink'>
                                 <div className='meat_menu'>마이페이지</div>
+                            </Link>
+                            <Link to='/' className='menuLink'>
+                                <div className='meat_menu'>로그아웃</div>
                             </Link>
                         </div>
                     )}
