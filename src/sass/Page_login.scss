@@ -57,6 +57,7 @@
 
 
 /********************************* 로고 이미지 css */
+/* 회원가입/마이페이지 */
 .input_logo {
     @include s.mobile {
         display: none;
@@ -87,6 +88,41 @@
         height: 200px;
     }
 }
+
+/* 로그인페이지 */
+.input_logo2 {
+    @include s.mobile {
+        height: auto;
+        width: 100%;
+    }
+    
+    @include s.tablet {
+        height: 150px;
+        width: 250px;
+    }
+    
+    @include s.desktop {
+        height: 350px;
+        width: 400px;
+    }
+}
+
+.input_logo2 img {
+    @include s.mobile {
+        position: relative;
+        height: 150px;
+    }
+    
+    @include s.tablet {
+        height: 130px;
+    }
+    
+    @include s.desktop {
+        height: 200px;
+    }
+}
+
+/********************************* 로그인박스  */
 
 .login_box {
     /* 내용 가운데 정렬 */

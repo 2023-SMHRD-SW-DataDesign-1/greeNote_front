@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import ItemPlantChoice from '../components/ItemPlantChoice'
+import { DataContext } from '../contexts/DataContext'
 
 const GreenProfile = () => {
 
@@ -12,11 +13,9 @@ const GreenProfile = () => {
     species: '식물종',
     start_date: '2023년 5월 27일'
   }
-  const [selectedPlantData, setSelectedPlantData] = useState(defaultPlant);
 
   // 모달의 표시 여부를 관리하는 상태
   const [isModalOpen, setIsModalOpen] = useState(false);
-
 
   // 식물 클릭시 모달창 열리고 x누르면 닫힘
   const toggleModal = () => {
@@ -34,91 +33,31 @@ const GreenProfile = () => {
     setSelectedPlantData(selectedPlant)
   };
 
-  const bgStyle = {
-    backgroundColor: selectedPlantData.color,
 
+  // URL 통합 관리
+  const masterURL = process.env.REACT_APP_MASTER_URL;
+
+  // 식물 목록 저장 State
+  const { plantList, selectedPlantData, setSelectedPlantData } = useContext(DataContext);
+
+  // 선택된 plant의 날짜를 xx일째로 바꿔주는 함수
+  const changeDate = (targetDateStr) => {
+    const targetDate = new Date(targetDateStr);
+
+    if (isNaN(targetDate)) {
+      return "날짜 형식이 올바르지 않습니다.";
+    }
+
+    const currentDate = new Date();
+    const timeDifference = targetDate - currentDate;
+    const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+    if (daysDifference === 0) {
+      return "오늘";
+    } else {
+      return `${Math.abs(daysDifference)}일째`;
+    }
   }
-
-
-
-  // 식물 전체 리스트 받아오기
-  const plantList = [
-    {
-      image_url: '/Image/monstera.jpg',
-      color: '#E17E0E',
-      plant_id: 0,
-      nickname: '별명1',
-      species: '식물종1',
-      start_date: '2023년 5월 1일'
-    },
-    {
-      image_url: '/Image/monstera2.jpg',
-      color: '#87E04C',
-      plant_id: 1,
-      nickname: '별명2',
-      species: '식물종2',
-      start_date: '2023년 6월 1일'
-    },
-    {
-      image_url: '/Image/plant_ex.jpg',
-      color: '#DE5DAC',
-      plant_id: 2,
-      nickname: '별명3',
-      species: '식물종3',
-      start_date: '2023년 7월 1일'
-
-    },
-    {
-      image_url: '/Image/monstera.jpg',
-      color: '#DE5D5F',
-      plant_id: 0,
-      nickname: '별명4',
-      species: '식물종4',
-      start_date: '2023년 8월 10일'
-    }
-    ,
-    {
-      image_url: '/Image/monstera2.jpg',
-      color: '#97DE5D',
-      plant_id: 1,
-      nickname: '별명5',
-      species: '식물종5',
-      start_date: '2023년 9월 15일'
-    },
-    {
-      image_url: '/Image/plant_ex.jpg',
-      color: '#DEC45D',
-      plant_id: 2,
-      nickname: '별명6',
-      species: '식물종6',
-      start_date: '2023년 10월 20일'
-    }
-    ,
-    {
-      image_url: '/Image/monstera.jpg',
-      color: '#69E0D8',
-      plant_id: 0,
-      nickname: '별명7',
-      species: '식물종7',
-      start_date: '2023년 11월 15일'
-    },
-    {
-      image_url: '/Image/monstera2.jpg',
-      color: '#5E72E0',
-      plant_id: 1,
-      nickname: '별명8',
-      species: '식물종8',
-      start_date: '2023년 11월 30일'
-    },
-    {
-      image_url: '/Image/plant_ex.jpg',
-      color: '#E63C2C',
-      plant_id: 2,
-      nickname: '별명9',
-      species: '식물종9',
-      start_date: '2023년 12월 20일'
-    }
-  ]
 
 
   return (
@@ -126,16 +65,19 @@ const GreenProfile = () => {
 
 
       <div className='plant_data'>
-        <div className='circle plant_image_color' style={bgStyle} >
+        <div className='circle plant_image_color' style={{ backgroundColor: selectedPlantData.color }} >
           <div className='circle' >
-            <img className="circle plant_main_image" src={selectedPlantData.image_url} alt="Plant" onClick={toggleModal} />
+            <img className="circle plant_main_image" src={`${selectedPlantData.image}`} alt="Plant" onClick={toggleModal} />
           </div>
         </div>
 
         <div className='plant_text_data2'>
           <div className='plant_nickname2'>{selectedPlantData.nickname}</div>
-          <div className='plant_species2'>{selectedPlantData.species}</div>
-          <div className='plant_date2'>{selectedPlantData.start_date}</div>
+          <div className='plant_species2'>{selectedPlantData.title}</div>
+          <div className='days_div2'>
+            <img className='sprout' src='Image/sprout.png' />
+            <div className='plant_date'>{changeDate(selectedPlantData.start_date)}</div>
+          </div>
         </div>
       </div>
 

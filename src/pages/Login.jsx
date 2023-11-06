@@ -28,7 +28,7 @@ const Login = () => {
 
     await axios.post(`${masterURL}/auth/login`, obj)
       .then((res) => {
-        console.log(res);
+        console.log('로그인 요청', res);
         setMemberInfo(res.data);
         sessionStorage.setItem('id', res.data.id);
         sessionStorage.setItem('memberid', res.data.memberid);
@@ -42,8 +42,8 @@ const Login = () => {
   return (
     <div className='bodyController'>
       <div className='login_container'>
-        <div className="input_logo"> {/* 우리 로고 */}
-          <img src="/Image/intro_logo.png" alt="logo" />
+        <div className="input_logo2"> {/* 우리 로고 */}
+          <img src="/Image/book_logo.png" alt="logo" />
         </div>
 
         <div className='login_box'>

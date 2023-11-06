@@ -50,6 +50,7 @@
 }
 
 /********************************* 로고 이미지 css */
+/* 회원가입/마이페이지 */
 @media (min-width: 360px) and (max-width: 799px) {
   .input_logo {
     display: none;
@@ -85,6 +86,44 @@
   }
 }
 
+/* 로그인페이지 */
+@media (min-width: 360px) and (max-width: 799px) {
+  .input_logo2 {
+    height: auto;
+    width: 100%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .input_logo2 {
+    height: 150px;
+    width: 250px;
+  }
+}
+@media (min-width: 1200px) {
+  .input_logo2 {
+    height: 350px;
+    width: 400px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 799px) {
+  .input_logo2 img {
+    position: relative;
+    height: 150px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .input_logo2 img {
+    height: 130px;
+  }
+}
+@media (min-width: 1200px) {
+  .input_logo2 img {
+    height: 200px;
+  }
+}
+
+/********************************* 로그인박스  */
 .login_box {
   /* 내용 가운데 정렬 */
   display: flex;
