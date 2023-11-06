@@ -1,11 +1,11 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .flipText {
     margin: 20px;
-    text-align: center;
     font-family: "NanumSquareNeo-Variable";
     font-size: 25px;
     font-weight: 600;
     color: rgb(12, 12, 12);
+    text-align: center;
   }
 }
 .slide_setBox {
@@ -14,8 +14,8 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .slide_setBox {
-    width: 360px;
     margin: 10px;
+    width: 360px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
