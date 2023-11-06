@@ -192,9 +192,6 @@
     display: flex;
     flex-direction: row;
 
-    @include s.mobile {
-        margin-left: 50px;
-    }
 }
 
 .sprout {
