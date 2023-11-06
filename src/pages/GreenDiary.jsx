@@ -138,7 +138,7 @@ const GreenDiary = () => {
               <div className="diary_box2">
                 {diaryList && diaryList.map((item, idx) => (
                   <div className='diaryFile2'>
-                    <Link to={isDeletionMode ? '#' : `/diarydetail?diaryId=${item.diary.diaryId}`} >
+                    <Link to={isDeletionMode ? '#' : `/diarydetail?diaryId=${item.diary.diaryId}&plant_id=${item.diary.plantId}`} >
                       <img className='diaryFile2'
                         src={selectedPlant === item ? (isDeletionMode ? 'Icon/bin2.png' : JSON.parse(item.imgUrl.image_url)[0].image_url) : JSON.parse(item.imgUrl.image_url)[0].image_url}
                         onClick={(e) => handleImageClick(e, item)}
