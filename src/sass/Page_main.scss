@@ -154,6 +154,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
 
     @include s.mobile {
         display: none;
@@ -161,12 +162,12 @@
     @include s.tablet{
         margin-top: 4.5%;
         width: 50%;
+        height: 785px;
     }
     @include s.desktop {
         margin-top: 3.5%;
         width: 50%;
-        height: 863px;
-        overflow: auto;
+        height: 795px;
     }
 }
 .main_pie3 {
