@@ -86,7 +86,7 @@ const AddGreen = () => {
 
         <div className='mid_title1'>
           <div className='mid_title2'>
-            <img src="/Image/book_logo.PNG" alt="book" />
+            <img src="/Image/book_logo.png" alt="book" />
             내 반려 식물의 프로필
           </div>
           
