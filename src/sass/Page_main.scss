@@ -165,6 +165,8 @@
     @include s.desktop {
         margin-top: 3.5%;
         width: 50%;
+        height: 863px;
+        overflow: auto;
     }
 }
 .main_pie3 {

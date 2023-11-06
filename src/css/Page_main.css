@@ -194,6 +194,8 @@
   .main_pie2 {
     margin-top: 3.5%;
     width: 50%;
+    height: 863px;
+    overflow: auto;
   }
 }
 
