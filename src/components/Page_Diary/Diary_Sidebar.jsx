@@ -40,93 +40,12 @@ const Diary_Sidebar = () => {
         }
      */
 
-    /*     // 식물 전체 리스트 받아오기
-        const plantList = [
-            {
-                image_url: '/Image/monstera.jpg',
-                color: '#E17E0E',
-                plant_id: 0,
-                nickname: '별명1',
-                species: '식물종1',
-                start_date: '2023년 5월 1일'
-            },
-            {
-                image_url: '/Image/monstera2.jpg',
-                color: '#87E04C',
-                plant_id: 1,
-                nickname: '별명2',
-                species: '식물종2',
-                start_date: '2023년 6월 1일'
-            },
-            {
-                image_url: '/Image/plant_ex.jpg',
-                color: '#DE5DAC',
-                plant_id: 2,
-                nickname: '별명3',
-                species: '식물종3',
-                start_date: '2023년 7월 1일'
-    
-            },
-            {
-                image_url: '/Image/monstera.jpg',
-                color: '#DE5D5F',
-                plant_id: 0,
-                nickname: '별명4',
-                species: '식물종4',
-                start_date: '2023년 8월 10일'
-            }
-            ,
-            {
-                image_url: '/Image/monstera2.jpg',
-                color: '#97DE5D',
-                plant_id: 1,
-                nickname: '별명5',
-                species: '식물종5',
-                start_date: '2023년 9월 15일'
-            },
-            {
-                image_url: '/Image/plant_ex.jpg',
-                color: '#DEC45D',
-                plant_id: 2,
-                nickname: '별명6',
-                species: '식물종6',
-                start_date: '2023년 10월 20일'
-            }
-            ,
-            {
-                image_url: '/Image/monstera.jpg',
-                color: '#69E0D8',
-                plant_id: 0,
-                nickname: '별명7',
-                species: '식물종7',
-                start_date: '2023년 11월 15일'
-            },
-            {
-                image_url: '/Image/monstera2.jpg',
-                color: '#5E72E0',
-                plant_id: 1,
-                nickname: '별명8',
-                species: '식물종8',
-                start_date: '2023년 11월 30일'
-            },
-            {
-                image_url: '/Image/plant_ex.jpg',
-                color: '#E63C2C',
-                plant_id: 2,
-                nickname: '별명9',
-                species: '식물종9',
-                start_date: '2023년 12월 20일'
-            }
-    
-    
-        ] */
-
 
     // URL 통합 관리
     const masterURL = process.env.REACT_APP_MASTER_URL;
 
     // 식물 목록 저장 State
-    const { selectedPlantData } = useContext(DataContext);
+    const { selectedPlantData, setSelectedPlantData } = useContext(DataContext);
 
     // 선택된 plant의 날짜를 xx일째로 바꿔주는 함수
     const changeDate = (targetDateStr) => {
@@ -146,6 +65,21 @@ const Diary_Sidebar = () => {
             return `${Math.abs(daysDifference)}일째`;
         }
     }
+
+    // 선택된 plant 감지하는 함수
+    const nowSelected = () => {
+        const selectedData = plantList.find(data => data.plantId === parseInt(plant_id));
+
+        if (selectedData) {
+            setSelectedPlantData(selectedData);
+        } else {
+            setSelectedPlantData(plantList[0]);
+        }
+    }
+
+    useEffect(() => {
+        nowSelected();
+    }, []);
 
     return (
         <div className='sidebar'> {/* 사이드바 */}
