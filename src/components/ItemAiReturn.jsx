@@ -34,7 +34,7 @@ const ItemAiReturn = () => {
 
   return (
     <div className='item_ai_return'>
-      {imageData ? <img src={`data:image/*;base64,${imageData}`} alt="NST Image" /> : <img width='250px' height='250px' src='https://i.gifer.com/74H8.gif' alt='대기중'></img>}
+      {imageData ? <img src={`data:image/*;base64,${imageData}`} alt="NST Image" /> : <img width='250px' height='250px' src='https://firebasestorage.googleapis.com/v0/b/greenote-d2774.appspot.com/o/KakaoTalk_20231106_172717154.gif?alt=media&token=61de47d6-dec9-4e98-ab2e-bd5fd2f00c5b' alt='대기중'></img>}
     </div>
   )
 }
