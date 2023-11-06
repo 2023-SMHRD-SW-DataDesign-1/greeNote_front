@@ -116,7 +116,7 @@ const GreenDiary = () => {
           <div className='diary_all'>
             <div className='mid_title'>
               <div className='mid_title3'>
-                <img src="/Image/book_logo.PNG" alt="book" />
+                <img src="/Image/book_logo.png" alt="book" />
                 다이어리 모아보기
               </div>
               <div className='icons2'>
