@@ -66,7 +66,7 @@ const DiaryDetail = ({ data }) => {
                         <div className='diaryTop'>
                             <div className='mid_title'>
                                 <div className='mid_title2'>
-                                    <img src="/Image/book_logo.PNG" alt="book" className='bookLogo' />
+                                    <img src="/Image/book_logo.png" alt="book" className='bookLogo' />
                                     다이어리 보기
                                 </div>
                                 <Link to={`/greendiary?plant_id=${selectedPlantData.plantId}`} className='mid_title_edit'>

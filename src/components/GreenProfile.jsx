@@ -4,17 +4,8 @@ import { DataContext } from '../contexts/DataContext'
 
 const GreenProfile = () => {
 
-  // 임시 식물
-  const defaultPlant = {
-    image_url: '/Image/plant_ex.jpg',
-    color: '#3b53d8',
-    plant_id: 2,
-    nickname: '무몬',
-    species: '식물종',
-    start_date: '2023년 5월 27일'
-  }
 
-  // 모달의 표시 여부를 관리하는 상태
+/*   // 모달의 표시 여부를 관리하는 상태
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // 식물 클릭시 모달창 열리고 x누르면 닫힘
@@ -25,7 +16,7 @@ const GreenProfile = () => {
   // 아이템 클릭시 모달창 닫힘
   const closeModal = () => {
     setIsModalOpen(false);
-  };
+  }; */
 
   // 리스트에서 꺼내온 식물 정보
   const handleItemChoiceClick = (selectedPlant) => {
@@ -67,7 +58,7 @@ const GreenProfile = () => {
       <div className='plant_data'>
         <div className='circle plant_image_color' style={{ backgroundColor: selectedPlantData.color }} >
           <div className='circle' >
-            <img className="circle plant_main_image" src={`${selectedPlantData.image}`} alt="Plant" onClick={toggleModal} />
+            <img className="circle plant_main_image" src={`${selectedPlantData.image}`} alt="Plant" /* onClick={toggleModal} */ />
           </div>
         </div>
 
@@ -82,10 +73,10 @@ const GreenProfile = () => {
       </div>
 
 
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div className="modal_background">
           <div className="modal_content">
-            {/* 모달 내용을 이곳에 추가 */}
+            {/* 모달 내용을 이곳에 추가
             <div className='modal_header'>
               <div className='modal_info_container'>
                 <img src='/Image/ic_leaf_home.png' />
@@ -105,7 +96,7 @@ const GreenProfile = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   )
 }
