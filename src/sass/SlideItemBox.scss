@@ -3,11 +3,11 @@
 @include s.mobile {
     .flipText {
         margin: 20px;
-        text-align: center;
         font-family: 'NanumSquareNeo-Variable';
         font-size: 25px;
         font-weight: 600;
         color: rgb(12, 12, 12);
+        text-align: center;
     }
 }
 
@@ -15,8 +15,8 @@
     display: flex;
     justify-content: center;
     @include s.mobile{
-        width: 360px;
         margin: 10px;
+        width: 360px;
     }
 
     @include s.tablet{

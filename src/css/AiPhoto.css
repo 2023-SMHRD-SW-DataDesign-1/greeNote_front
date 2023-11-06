@@ -7,37 +7,37 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .photo_top_container {
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
 }
 
 .photo_second_container {
-  overflow: auto;
   display: flex;
+  overflow: auto;
   background-color: rgb(230, 230, 230);
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .photo_second_container {
+    margin-top: 10px;
     width: 350px;
     height: 400px;
-    margin-top: 10px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .photo_second_container {
-    width: 550px;
-    height: 600px;
     margin: auto;
     margin-top: 20px;
+    width: 550px;
+    height: 600px;
   }
 }
 @media (min-width: 1200px) {
   .photo_second_container {
-    width: 800px;
-    height: 700px;
     margin: auto;
     margin-top: 40px;
+    width: 800px;
+    height: 700px;
   }
 }
 
@@ -59,8 +59,8 @@
 
 .photo_container {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .photo_container {
@@ -81,22 +81,30 @@
 .selected {
   border: 6px double transparent;
   /* 기본 테두리 색상을 투명하게 설정합니다. */
-  border-image: linear-gradient(#7bc48b, #2cbd64) 6;
+  -o-border-image: linear-gradient(#7bc48b, #2cbd64) 6;
+     border-image: linear-gradient(#7bc48b, #2cbd64) 6;
   /* #ff0000과 #00ff00을 원하는 색상으로 바꿉니다. */
 }
 
 .image_container {
   margin-top: 20px;
-  height: 220px;
   width: 100%;
+  height: 220px;
 }
 
 .image_container img {
+  margin: auto;
   width: 200px;
   height: 200px;
-  margin: auto;
 }
 
+.web_pageInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: auto;
+  margin-bottom: auto;
+}
 @media (min-width: 360px) and (max-width: 799px) {
   .web_pageInfo {
     display: none;
@@ -104,24 +112,14 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .web_pageInfo {
-    display: flex;
-    flex-direction: row;
     width: 600px;
     height: 90px;
-    align-items: center;
-    margin-right: auto;
-    margin-bottom: auto;
   }
 }
 @media (min-width: 1200px) {
   .web_pageInfo {
-    display: flex;
-    flex-direction: row;
     width: 500px;
     height: 90px;
-    align-items: center;
-    margin-right: auto;
-    margin-bottom: auto;
   }
 }
 
@@ -166,15 +164,15 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .radio_container {
-    width: 360px;
     margin-top: 30px;
+    width: 360px;
   }
 }
 
 .radio_text_box {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  flex-direction: row;
 }
 
 .radio_box {
@@ -210,28 +208,27 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .web_radio_box {
-    height: 45px;
     margin-left: 45px;
+    height: 45px;
   }
 }
 @media (min-width: 1200px) {
   .web_radio_box {
-    height: 60px;
     margin-left: 90px;
+    height: 60px;
   }
 }
 
 .img_question {
+  margin-left: 5px;
   width: 25px;
   height: 25px;
-  margin-left: 5px;
-  cursor: pointer;
 }
 
 .radio_text {
   margin-left: 10px;
-  font-weight: 700;
   font-size: 20px;
+  font-weight: 700;
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .radio_text {
@@ -245,21 +242,20 @@
 }
 
 .radio {
-  font-size: 18px;
   margin: 5px 10px 0px 0px;
+  font-size: 18px;
 }
 
 .radio_label {
+  margin: 10px 5px 0px 0px;
   margin-top: 10px;
+  padding: 1%;
   width: 100px;
   width: 80px;
-  cursor: pointer;
-  text-align: center;
-  padding: 1%;
   background-color: #DDEFC7;
   font-weight: 600;
+  text-align: center;
   border-radius: 5%;
-  margin: 10px 5px 0px 0px;
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .radio_label {
@@ -286,19 +282,19 @@ input[type=radio] {
 .photo_btn_div {
   display: flex;
   justify-content: center;
-  height: 50px;
   margin-top: 30px;
+  height: 50px;
 }
 
 .uploadBtn,
 .ai_style_btn {
-  width: 130px;
   border-color: #b8c7a5;
-  background-color: #DDEFC7;
-  border-radius: 10px;
+  width: 130px;
   height: 40px;
-  text-align: center;
+  background-color: #DDEFC7;
   font-weight: 600;
+  text-align: center;
+  border-radius: 10px;
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .uploadBtn,
@@ -320,15 +316,15 @@ input[type=radio] {
 }
 
 .ai_style_btn_div {
-  width: 100%;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .ai_style_btn {
-  background-color: #DDEFC7;
   margin-top: 20px;
   height: 40px;
+  background-color: #DDEFC7;
 }
 @media (min-width: 1200px) {
   .ai_style_btn {

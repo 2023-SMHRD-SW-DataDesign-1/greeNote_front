@@ -7,35 +7,35 @@
     background-color: white;
 
     @include s.mobile {
-        justify-content: center;
         align-items: center;
+        justify-content: center;
     }
 }
 
 // 사진3개씩 n줄 큰컨테이너
 .photo_second_container {
-    overflow: auto;
     display: flex;
+    overflow: auto;
     background-color: rgb(230, 230, 230);
 
     @include s.mobile {
+        margin-top: 10px;
         width: 350px;
         height: 400px;
-        margin-top: 10px;
     }
 
     @include s.tablet {
-        width: 550px;
-        height: 600px;
         margin: auto;
         margin-top: 20px;
+        width: 550px;
+        height: 600px;
     }
 
     @include s.desktop {
-        width: 800px;
-        height: 700px;
         margin: auto;
         margin-top: 40px;
+        width: 800px;
+        height: 700px;
 
     }
 }
@@ -59,9 +59,8 @@
 // 사진 회색컨테이너 (마진)
 .photo_container {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    
+    flex-wrap: wrap;
 
     @include s.mobile {
         margin-left: 20px;
@@ -87,39 +86,34 @@
 
 .image_container {
     margin-top: 20px;
-    height: 220px;
     width: 100%;
+    height: 220px;
 }
 
 .image_container img {
+    margin: auto;
     width: 200px;
     height: 200px;
-    margin: auto;
 }
 
 .web_pageInfo {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-right: auto;
+        margin-bottom: auto;
     @include s.mobile {
         display: none;
     }
 
-    @include s.tablet {
-        display: flex;
-        flex-direction: row;
+    @include s.tablet {      
         width: 600px;
         height: 90px;
-        align-items: center;
-        margin-right: auto;
-        margin-bottom: auto;
     }
 
     @include s.desktop {
-        display: flex;
-        flex-direction: row;
         width: 500px;
         height: 90px;
-        align-items: center;
-        margin-right: auto;
-        margin-bottom: auto;
     }
 }
 
@@ -161,16 +155,16 @@
     margin-top: 30px;
 
     @include s.mobile {
-        width: 360px;
         margin-top: 30px;
+        width: 360px;
     }
 
 }
 
 .radio_text_box {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    flex-direction: row;
 }
 
 .radio_box {
@@ -203,28 +197,27 @@
     }
 
     @include s.tablet {
-        height: 45px;
         margin-left: 45px;
+        height: 45px;
     }
 
     @include s.desktop {
-        height: 60px;
         margin-left: 90px;
+        height: 60px;
     }
 
 }
 
 .img_question {
+    margin-left: 5px;
     width: 25px;
     height: 25px;
-    margin-left: 5px;
-    cursor: pointer;
 }
 
 .radio_text {
     margin-left: 10px;
-    font-weight: 700;
     font-size: 20px;
+    font-weight: 700;
 
     @include s.tablet {
         margin-left: 50px;
@@ -236,21 +229,20 @@
 }
 
 .radio {
-    font-size: 18px;
     margin: 5px 10px 0px 0px;
+    font-size: 18px;
 }
 
 .radio_label {
+    margin: 10px 5px 0px 0px;
     margin-top: 10px;
+    padding: 1%;
     width: 100px;
     width: 80px;
-    cursor: pointer;
-    text-align: center;
-    padding: 1%;
     background-color: #DDEFC7;
     font-weight: 600;
+    text-align: center;
     border-radius: 5%;
-    margin: 10px 5px 0px 0px;
 
 
     @include s.tablet {
@@ -279,19 +271,19 @@ input[type="radio"] {
 .photo_btn_div {
     display: flex;
     justify-content: center;
-    height: 50px;
     margin-top: 30px;
+    height: 50px;
 }
 
 .uploadBtn,
 .ai_style_btn {
-    width: 130px;
     border-color: #b8c7a5;
-    background-color: #DDEFC7;
-    border-radius: 10px;
+    width: 130px;
     height: 40px;
-    text-align: center;
+    background-color: #DDEFC7;
     font-weight: 600;
+    text-align: center;
+    border-radius: 10px;
 
     @include s.tablet {
         width: 200px;
@@ -311,16 +303,16 @@ input[type="radio"] {
 
 // 스타일 선택 모달창 버튼
 .ai_style_btn_div {
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
 
 }
 
 .ai_style_btn {
-    background-color: #DDEFC7;
     margin-top: 20px;
     height: 40px;
+    background-color: #DDEFC7;
 
     @include s.desktop {
         margin-top: 10px;
