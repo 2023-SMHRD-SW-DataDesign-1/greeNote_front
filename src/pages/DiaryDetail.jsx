@@ -53,9 +53,6 @@ const DiaryDetail = ({ data }) => {
     // 식물 목록 저장 State
     const { selectedPlantData } = useContext(DataContext);
 
-
-
-
     return (
         <div className='web_top_container'>
             <div className='writeDiary_container'>
