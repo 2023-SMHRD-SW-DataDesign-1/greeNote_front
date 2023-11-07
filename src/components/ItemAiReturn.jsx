@@ -7,9 +7,7 @@ const ItemAiReturn = () => {
   // URL 통합 관리
   const flaskURL = process.env.REACT_APP_FLASK_URL;
 
-  const { contentImg, styleImg } = useContext(DataContext);
-
-  const [imageData, setImageData] = useState();
+  const { contentImg, styleImg, imageData, setImageData } = useContext(DataContext);
 
   console.log(contentImg);
   console.log(styleImg);
@@ -31,6 +29,12 @@ const ItemAiReturn = () => {
   useEffect(() => {
     styleTransfer();
   }, [])
+
+  useEffect(()=>{
+    return(
+      setImageData(null)
+    )
+  },[])
 
   return (
     <div className='item_ai_return'>

@@ -95,6 +95,9 @@ function App() {
   const [contentImg, setContentImg] = useState();
   const [styleImg, setStyleImg] = useState();
 
+  // 생성 Ai의 결과값을 담을 State
+  const [imageData, setImageData] = useState();
+
   const dataContextValue = {
     // 날짜 관리
     dailyDiary: dailyDiary,
@@ -117,6 +120,8 @@ function App() {
     setContentImg: setContentImg,
     styleImg: styleImg,
     setStyleImg: setStyleImg,
+    imageData: imageData,
+    setImageData, setImageData,
   }
 
   return (
