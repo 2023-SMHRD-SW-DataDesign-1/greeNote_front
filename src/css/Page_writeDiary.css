@@ -249,11 +249,6 @@
     margin: 5%;
   }
 }
-@media (min-width: 800px) and (max-width: 1199px) {
-  .input_container2 {
-    margin: 5%;
-  }
-}
 @media (min-width: 1200px) {
   .input_container2 {
     width: 90%;
@@ -314,7 +309,7 @@
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .contentBox {
-    height: 150px;
+    height: 120px;
   }
 }
 @media (min-width: 360px) and (max-width: 799px) {
