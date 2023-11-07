@@ -24,8 +24,6 @@
   .mypage_container {
     /* 내용 가운데 정렬 */
     justify-content: space-around;
-    /* 상하 위치 조정 */
-    margin-top: 10%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
