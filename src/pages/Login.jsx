@@ -44,16 +44,12 @@ const Login = () => {
     <div className='bodyController'>
       <div className='login_container'>
         <div className="input_logo2"> {/* 우리 로고 */}
-          <img src="/Image/book_logo.png" alt="logo" />
+          <Link to="/" >
+            <img src="/Image/book_logo.png" alt="logo" />
+          </Link>
         </div>
 
         <div className='login_box'>
-          <div className='loginBack'>
-            <Link to="/" className='mid_title_edit'>
-              <img src="/Icon/back.png" alt="bin" />
-            </Link>
-          </div>
-          <br/>
           <div className='login'>
             <span className="logo_font">greeNote</span>
             <span className="etc_font">의 서비스

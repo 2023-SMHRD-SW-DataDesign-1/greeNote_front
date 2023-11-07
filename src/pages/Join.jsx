@@ -85,9 +85,12 @@ const Join = () => {
   return (
     <div className='bodyController'>
       <div className='join_container'>
-        <div className="input_logo"> {/* 우리 로고 */}
-          <img src="/Image/intro_logo.png" alt="logo" />
-        </div>
+        <Link to="/" >
+          <div className="input_logo"> {/* 우리 로고 */}
+            <img src="/Image/intro_logo.png" alt="logo" />
+          </div>
+        </Link>
+
 
         <div className='join_box'>
 

@@ -229,16 +229,16 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .joinBack {
-    display: none;
+    left: 40%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .joinBack {
-    left: 40%;
+    display: none;
   }
 }
 @media (min-width: 1200px) {
   .joinBack {
-    left: 45%;
+    display: none;
   }
 }

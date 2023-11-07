@@ -146,22 +146,3 @@
 .login_box2 {
   width: 350px;
 }
-
-.loginBack {
-  position: relative;
-}
-@media (min-width: 360px) and (max-width: 799px) {
-  .loginBack {
-    display: none;
-  }
-}
-@media (min-width: 800px) and (max-width: 1199px) {
-  .loginBack {
-    left: 45%;
-  }
-}
-@media (min-width: 1200px) {
-  .loginBack {
-    left: 50%;
-  }
-}

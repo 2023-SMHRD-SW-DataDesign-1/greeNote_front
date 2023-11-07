@@ -232,12 +232,12 @@
     position: relative;
 
     @include s.mobile{
-        display: none;
-    }
-    @include s.tablet {
         left: 40%;
     }
+    @include s.tablet {
+        display: none;
+    }
     @include s.desktop {
-        left: 45%;
+        display: none;
     }
 }
