@@ -227,3 +227,17 @@
         left: 20%;
     }
 }
+
+.joinBack {
+    position: relative;
+
+    @include s.mobile{
+        display: none;
+    }
+    @include s.tablet {
+        left: 40%;
+    }
+    @include s.desktop {
+        left: 45%;
+    }
+}

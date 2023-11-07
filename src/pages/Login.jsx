@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { DataContext } from '../contexts/DataContext';
+import { Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -47,6 +48,12 @@ const Login = () => {
         </div>
 
         <div className='login_box'>
+          <div className='loginBack'>
+            <Link to="/" className='mid_title_edit'>
+              <img src="/Icon/back.png" alt="bin" />
+            </Link>
+          </div>
+          <br/>
           <div className='login'>
             <span className="logo_font">greeNote</span>
             <span className="etc_font">의 서비스

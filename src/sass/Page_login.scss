@@ -147,3 +147,17 @@
 .login_box2 {
     width: 350px;
 }
+
+.loginBack {
+    position: relative;
+    
+    @include s.mobile{
+        display: none;
+    }
+    @include s.tablet {
+        left: 45%;
+    }
+    @include s.desktop {
+        left: 50%;
+    }
+}
