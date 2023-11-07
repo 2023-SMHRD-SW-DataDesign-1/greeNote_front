@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { DataContext } from '../contexts/DataContext';
+import { Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -43,7 +44,9 @@ const Login = () => {
     <div className='bodyController'>
       <div className='login_container'>
         <div className="input_logo2"> {/* 우리 로고 */}
-          <img src="/Image/book_logo.png" alt="logo" />
+          <Link to="/" >
+            <img src="/Image/book_logo.png" alt="logo" />
+          </Link>
         </div>
 
         <div className='login_box'>

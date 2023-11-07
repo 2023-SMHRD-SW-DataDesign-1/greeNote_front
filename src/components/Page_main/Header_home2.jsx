@@ -30,17 +30,23 @@ const Header_home2 = () => {
           </div>
 
           <div className="header_menu">
-            <Link to={`/greendiary?plant_id=${selectedPlantData.plantId}`} >
-              다이어리
-            </Link>
+            <div className='menu1'>
+              <Link to={`/greendiary?plant_id=${selectedPlantData.plantId}`} >
+                다이어리
+              </Link>
+            </div>
 
-            <Link to={`/ai?plant_id=${selectedPlantData.plantId}`} >
-              생성AI사진
-            </Link>
+            <div className='menu2'>
+              <Link to={`/ai?plant_id=${selectedPlantData.plantId}`} >
+                생성AI사진
+              </Link>
+            </div>
 
-            <Link to={`/slide?plant_id=${selectedPlantData.plantId}`} >
-              슬라이드
-            </Link>
+            <div className='menu3'>
+              <Link to={`/slide?plant_id=${selectedPlantData.plantId}`} >
+                슬라이드
+              </Link>
+            </div>
           </div>
         </div>
 

@@ -248,7 +248,6 @@
     }
 
     @include s.tablet {
-        margin: 5%;
     }
 
     @include s.desktop {
@@ -310,7 +309,7 @@
     height: 200px;
 
     @include s.tablet {
-        height: 150px;
+        height: 120px;
     }
     @include s.mobile {
         height: 100px;

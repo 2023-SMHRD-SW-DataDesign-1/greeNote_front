@@ -16,7 +16,7 @@
 @media (min-width: 800px) and (max-width: 1199px) {
   .ai_plant_container {
     width: 200px;
-    height: 800px;
+    height: 900px;
     background-color: rgb(243, 243, 243);
   }
 }

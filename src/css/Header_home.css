@@ -149,7 +149,28 @@
   color: #000000;
 }
 
-.header_menu a:hover {
+@media (min-width: 1200px) {
+  .menu1, .menu2, .menu3 {
+    width: 100px;
+    height: 30px;
+  }
+}
+
+.menu1 a:hover {
+  background-color: #65c265;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: border;
+}
+
+.menu2 a:hover {
+  background-color: #65c265;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: border;
+}
+
+.menu3 a:hover {
   background-color: #65c265;
   border-radius: 50%;
   font-size: 20px;
