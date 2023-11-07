@@ -133,6 +133,7 @@ const Join = () => {
 
               <input
                 className='join_pw'
+                type='password'
                 placeholder='비밀번호'
                 name='password'
               />
