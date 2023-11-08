@@ -27,13 +27,11 @@
 
     @include s.mobile {
         /* 내용 가운데 정렬 */
+        display: flex;
         justify-content: space-around;
 
         /* 크기 지정 */
-        max-height: 500px;
-
-        /* 상하 위치 조정 */
-        margin-top: 20%;
+        height: 710px;
     }
 
     @include s.tablet {
@@ -52,6 +50,20 @@
 
         width: 1200px;
         height: 930px;
+    }
+}
+
+.joinBack {
+    position: relative;
+
+    @include s.mobile{
+        left: 45%;
+    }
+    @include s.tablet {
+        display: none;
+    }
+    @include s.desktop {
+        display: none;
     }
 }
 
@@ -228,16 +240,3 @@
     }
 }
 
-.joinBack {
-    position: relative;
-
-    @include s.mobile{
-        left: 40%;
-    }
-    @include s.tablet {
-        display: none;
-    }
-    @include s.desktop {
-        display: none;
-    }
-}

@@ -23,11 +23,10 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .join_container {
     /* 내용 가운데 정렬 */
+    display: flex;
     justify-content: space-around;
     /* 크기 지정 */
-    max-height: 500px;
-    /* 상하 위치 조정 */
-    margin-top: 20%;
+    height: 710px;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -46,6 +45,25 @@
     justify-content: center;
     width: 1200px;
     height: 930px;
+  }
+}
+
+.joinBack {
+  position: relative;
+}
+@media (min-width: 360px) and (max-width: 799px) {
+  .joinBack {
+    left: 45%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .joinBack {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .joinBack {
+    display: none;
   }
 }
 
@@ -221,24 +239,5 @@
   .id_check {
     font-size: 12px;
     left: 20%;
-  }
-}
-
-.joinBack {
-  position: relative;
-}
-@media (min-width: 360px) and (max-width: 799px) {
-  .joinBack {
-    left: 40%;
-  }
-}
-@media (min-width: 800px) and (max-width: 1199px) {
-  .joinBack {
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
-  .joinBack {
-    display: none;
   }
 }
