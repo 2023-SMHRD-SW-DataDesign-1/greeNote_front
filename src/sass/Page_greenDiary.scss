@@ -221,19 +221,18 @@
 
     @include s.mobile {
         font-size: 12px;
-        margin-right: 5px;
-        bottom: 30%;
+        margin-left: 28px;
+        right: 20px;
+        bottom: 28%;
     }
 
     @include s.tablet {
         /* 위치 */
-        margin-right: 30px;
         bottom: 30%;
     }
 
     @include s.desktop {
         /* 위치 */
-        margin-right: 30px;
         bottom: 30%;
 
     }
@@ -241,14 +240,31 @@
 
 .diary_title {
     /* 크기 */
-    width: 120px;
+    width: 150px;
     height: 22.5px;
 
     /* CSS */
     overflow: hidden;
+    color: rgb(255, 255, 255);
+    text-shadow:
+    -1px -1px 0 black, /* 왼쪽 위 방향으로 검은색 테두리 */
+    1px -1px 0 black, /* 오른쪽 위 방향으로 검은색 테두리 */
+    -1px 1px 0 black, /* 왼쪽 아래 방향으로 검은색 테두리 */
+    1px 1px 0 black; /* 오른쪽 아래 방향으로 검은색 테두리 */
 
     @include s.mobile {
+        width: 120px;
         height: 17px;
     }
+}
+
+.diary_date {
+    /* CSS */
+    color: rgb(255, 255, 255);
+    text-shadow:
+    -1px -1px 0 black, /* 왼쪽 위 방향으로 검은색 테두리 */
+    1px -1px 0 black, /* 오른쪽 위 방향으로 검은색 테두리 */
+    -1px 1px 0 black, /* 왼쪽 아래 방향으로 검은색 테두리 */
+    1px 1px 0 black; /* 오른쪽 아래 방향으로 검은색 테두리 */
 }
 

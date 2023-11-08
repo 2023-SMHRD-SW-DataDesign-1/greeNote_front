@@ -235,34 +235,42 @@
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_info {
     font-size: 12px;
-    margin-right: 5px;
-    bottom: 30%;
+    margin-left: 28px;
+    right: 20px;
+    bottom: 28%;
   }
 }
 @media (min-width: 800px) and (max-width: 1199px) {
   .diary_info {
     /* 위치 */
-    margin-right: 30px;
     bottom: 30%;
   }
 }
 @media (min-width: 1200px) {
   .diary_info {
     /* 위치 */
-    margin-right: 30px;
     bottom: 30%;
   }
 }
 
 .diary_title {
   /* 크기 */
-  width: 120px;
+  width: 150px;
   height: 22.5px;
   /* CSS */
   overflow: hidden;
+  color: rgb(255, 255, 255);
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* 오른쪽 아래 방향으로 검은색 테두리 */
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_title {
+    width: 120px;
     height: 17px;
   }
+}
+
+.diary_date {
+  /* CSS */
+  color: rgb(255, 255, 255);
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* 오른쪽 아래 방향으로 검은색 테두리 */
 }
