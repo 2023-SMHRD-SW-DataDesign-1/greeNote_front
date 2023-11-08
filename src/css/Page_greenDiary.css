@@ -236,7 +236,7 @@
   .diary_info {
     font-size: 12px;
     margin-left: 28px;
-    right: 20px;
+    right: 13px;
     bottom: 28%;
   }
 }
@@ -264,7 +264,7 @@
 }
 @media (min-width: 360px) and (max-width: 799px) {
   .diary_title {
-    width: 120px;
+    width: 130px;
     height: 17px;
   }
 }
