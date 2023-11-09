@@ -16,7 +16,7 @@ const Sidebar = () => {
                             <img className='circle plant_main_image' src={memberInfo.profileImg} alt='프로필 이미지'/>
                         </div>
                         <div>
-                            <span className='user_name'>{memberInfo.membername}</span>
+                            <span className='user_name'>{memberInfo.nickname}</span>
                             <span className='user_welcome'>님<br />안녕하세요?</span>
                         </div>
                     </div>
